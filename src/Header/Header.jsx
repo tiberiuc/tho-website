@@ -9,7 +9,7 @@ export default function Header() {
     <nav className="relative bg-blueHeader">
       <div className="flex justify-between items-start pt-10 px-10">
         <div className="flex justify-start lg:flex-1">
-          <a href="#">
+          <a href="/">
             <img className="" src="./horeca-orders-logo.png" alt="" />
           </a>
         </div>
