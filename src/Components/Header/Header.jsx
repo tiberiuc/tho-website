@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CustomButton from "../ReusableComponents/Button";
+import Button from "Atoms/Button";
 import "./style.css";
 
 export default function Header() {
@@ -79,11 +79,11 @@ export default function Header() {
         PLATFORMA DE COMENZI <br /> PENTRU INDUSTRIA OSPITALITATII
       </h1>
       <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 pb-32 ">
-        <CustomButton
+        <Button
           text={"Pentru Restaurante"}
           styles="w-48 justify-center"
         />
-        <CustomButton
+        <Button
           text={"Pentru Furnizori"}
           styles="mt-4 lg:mt-0 w-48 justify-center"
         />
