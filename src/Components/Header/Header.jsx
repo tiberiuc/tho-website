@@ -7,15 +7,15 @@ export default function Header() {
 
   return (
     <nav className="relative bg-blueHeader">
-      <div className="flex justify-between items-start pt-10 px-10">
+      <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
           <a href="/">
             <img className="" src="./horeca-orders-logo.png" alt="" />
           </a>
         </div>
-        <section className="MOBILE-MENU flex lg:hidden">
+        <section className="flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className="space-y-2 mt-2 mr-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <span className="block h-0.5 w-8 bg-white"></span>
@@ -75,39 +75,19 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <h1 className="flex justify-center text-center text-white font-extrabold text-5xl lg:text-7xl px-8 mt-12">
+      <h1 className="flex justify-center text-center text-white font-extrabold font-openSans italic text-5xl lg:text-7xl lg:px-8 px-16 mt-12">
         PLATFORMA DE COMENZI <br /> PENTRU INDUSTRIA OSPITALITATII
       </h1>
-      <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 pb-32 ">
+      <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">
         <Button
           text={"Pentru Restaurante"}
-          styles="w-48 justify-center"
+          styles="lg:w-48 w-64 justify-center"
         />
         <Button
           text={"Pentru Furnizori"}
-          styles="mt-4 lg:mt-0 w-48 justify-center"
+          styles="mt-4 lg:mt-0 lg:w-48 w-64 justify-center"
         />
       </div>
-
-      {/* <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style> */}
     </nav>
   );
 }
