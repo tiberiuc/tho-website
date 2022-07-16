@@ -11,10 +11,21 @@ module.exports = {
       colors: {
         'blueHeader': '#485696',
         'yellowButton': '#ffdc0a',
+        'greyHairline': 'rgb(151,151,151)',
+        'greyBg': '#f5f5f5'
       },
       fontFamily: {
         openSans: ["OpenSans", ...defaultTheme.fontFamily.sans],
       },
+      maxHeight: {
+        '128': '32rem',
+      },
+      margin: {
+        '15': '3.75rem',
+      },
+      width: {
+        '185': '45.125rem',
+      }
     },
   },
   plugins: [],

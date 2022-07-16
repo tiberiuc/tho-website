@@ -10,7 +10,7 @@ export default function Header() {
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
           <a href="/">
-            <img className="" src="./horeca-orders-logo.png" alt="" />
+            <img className="" src="SVGs/horeca-orders-logo.svg" alt="" />
           </a>
         </div>
         <section className="flex lg:hidden">
@@ -23,33 +23,51 @@ export default function Header() {
             <span className="block h-0.5 w-8 bg-white"></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div className={isNavOpen ? "showMenuNav mt-4 flex" : "hideMenuNav"}>
             <div
-              className="absolute top-0 right-0 px-8 py-8"
+              className="absolute top-0 right-0 px-8 py-4"
               onClick={() => setIsNavOpen(false)}
             >
-              <svg
-                className="h-8 w-8 text-grey-400"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
+              <img
+                className="w-7 h-7"
+                src="SVGs/closeBtn.svg"
+                alt="Close Header Dropdown"
+              />
             </div>
-            <ul className="flex flex-col items-center justify-between min-h-[250px]">
-              <li className="my-4 uppercase">
+            <img
+              src="SVGs/horeca-orders-logo-yellow.svg"
+              alt="Logo of Horeca Orders"
+            />
+            <div className="w-full bg-greyHairline h-px my-4" />
+            <ul className="flex flex-col items-center justify-start ">
+              <li className="my-4 text-white uppercase font-openSans">
                 <a href="/about">Restaurante</a>
               </li>
-              <li className="my-4 uppercase">
+              <li className="my-4 text-white uppercase font-openSans">
                 <a href="/portfolio">Furnizori</a>
               </li>
-              <li className="my-4 uppercase">
+              <li className="my-4 text-white uppercase font-openSans">
                 <a href="/contact">Povesti</a>
+              </li>
+            </ul>
+            <div className="w-full bg-greyHairline h-px my-4" />
+            <ul className="flex flex-col items-center justify-start ">
+              <li className="my-4 text-white uppercase font-openSans">
+                <a href="/portfolio">Despre</a>
+              </li>
+              <li className="my-4 text-white uppercase font-openSans">
+                <a href="/contact">Intrebari frecvente</a>
+              </li>
+            </ul>
+            <div className="w-full bg-greyHairline h-px my-4" />
+            <ul className="flex flex-col items-center justify-start">
+              <li className="flex items-center my-4 text-white uppercase font-openSans">
+                <img
+                  className="w-4 h-4 mr-2"
+                  src="SVGs/translationIcon.svg"
+                  alt="Translations"
+                />
+                <a href="/portfolio">RO</a>
               </li>
             </ul>
           </div>
@@ -57,19 +75,19 @@ export default function Header() {
         <div className="hidden lg:flex md:space-x-10">
           <a
             href="/restaurante"
-            className="text-base font-medium text-white hover:text-gray-900"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
           >
             Restaurante
           </a>
           <a
             href="/furnizori"
-            className="text-base font-medium text-white hover:text-gray-900"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
           >
             Furnizori
           </a>
           <a
             href="/povesti"
-            className="text-base font-medium text-white hover:text-gray-900"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
           >
             Povesti
           </a>
