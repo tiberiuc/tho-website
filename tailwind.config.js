@@ -21,10 +21,15 @@ module.exports = {
         '128': '32rem',
       },
       margin: {
+        '13': '3.25rem',
         '15': '3.75rem',
+        '34': '8.5rem',
       },
       width: {
         '185': '45.125rem',
+      },
+      maxWidth: {
+        '3.5xl': '870px',
       }
     },
   },
