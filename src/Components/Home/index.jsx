@@ -1,90 +1,36 @@
+import FirstSection from "Components/FirstSection";
+import SecondSection from "Components/SecondSection";
+const secondSection = [
+  {
+    subTitle: "Pentru restaurante",
+    description:
+      "Scapa de formularele de comandă și de asteptatul nesfarsit la telefon noaptea târziu. Aplicația noastră gratuită este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasa mai devreme.",
+    buttonLink: "/",
+    img: "images/i-phone-x.png",
+    img2: "images/i-phone-x@2x.png",
+    img3: "images/i-phone-x@3x.png",
+    componentStyles: "bg-yellowSection justify-items-center items-end",
+    textColor: "text-black",
+    pictureStyles: "object-scale-down h-85 w-64",
+  },
+  {
+    subTitle: "Pentru furnizori",
+    description:
+      "Indiferent dacă sunteți o fermă de familie sau un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri. Economisiți timp cu sarcinile manuale, reduceți comenzile gresite și vindeți mai multe produse.",
+    buttonLink: "/",
+    img: "images/comenzi.png",
+    img2: "images/comenzi@2x.png",
+    img3: "images/comenzi@3x.png",
+    componentStyles: "bg-blueHeader justify-items-end items-center ",
+    textColor: "text-white",
+    pictureStyles: "object-scale-down w-85 h-72 ml-4 mb-3 lg:mb-0 lg:ml-0",
+  },
+];
 function Home() {
-  const info = [
-    {
-      img: "images/castiga-timp.png",
-      img2: "images/castiga-timp@2x.png",
-      img3: "images/castiga-timp@3x.png",
-      subtitle: "Gata cu hartia",
-      description: "Totul este in aplicatie, gata cu teancurile de hartie.",
-    },
-    {
-      img: "images/castiga-timp.png",
-      img2: "images/castiga-timp@2x.png",
-      img3: "images/castiga-timp@3x.png",
-      subtitle: "Castiga timp",
-      description:
-        "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri castiga peste 4 ore pe săptămână.",
-    },
-    {
-      img: "images/castiga-timp.png",
-      img2: "images/castiga-timp@2x.png",
-      img3: "images/castiga-timp@3x.png",
-      subtitle: "Risipeste mai putin, salveaza mai mult",
-      description:
-        "Comenzi mai precise înseamnă mai puține greșeli, mai puțina risipa și costuri mai mici.",
-    },
-  ];
   return (
     <>
-      <div className="grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center bg-greyBg">
-        <div className="flex flex-col justify-start w-full lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7">
-          <span className="text-4xl font-extrabold font-openSans max-w-sm mt-15">
-            ALEGE SA MUNCESTI MAI EFICIENT
-          </span>
-          <span className="font-medium font-openSans mt-5">
-            HORECA ORDERS face plasarea și primirea comenzilor mai eficientă.
-            <br />
-            Aplicația noastră intuitivă și instrumentele web simplifică
-            operațiunile pentru bucătari, proprietari și reprezentanții de
-            vânzări.
-          </span>
-          <span className="font-semibold font-openSans mt-5">
-            Salveaza timp. Salveaza bani. Salveaza mancare.
-          </span>
-        </div>
-        <div>
-          <picture>
-            <source
-              media="(max-width: 799px)"
-              srcset="images/manCooking@3x.png"
-            />
-            <source
-              media="(min-width: 800px)"
-              srcset="images/manCooking@2x.png"
-            />
-            <img
-              className="object-cover max-h-128 w-screen"
-              src="images/manCooking.png"
-              alt="Man cooking"
-            />
-          </picture>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 lg:mb-13 mb-34 max-w-3.5xl">
-          {info.map((item) => {
-            return (
-              <div className="flex flex-col items-center w-60 w-full mt-34">
-                <picture>
-                  <source media="(max-width: 799px)" srcset={item.img3} />
-                  <source media="(min-width: 800px)" srcset={item.img2} />
-                  <img
-                    className="object-cover w-52 h-52"
-                    src={item.img}
-                    alt=""
-                  />
-                </picture>
-                <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
-                  {item.subtitle}
-                </span>
-                <span className="font-openSans lg:font-semibold lg:text-base text-lg lg:mt-11 mt-7 text-center">
-                  {item.description}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <FirstSection />
+      <SecondSection information={secondSection} />
     </>
   );
 }
