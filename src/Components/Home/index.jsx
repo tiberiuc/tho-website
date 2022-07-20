@@ -16,14 +16,14 @@ const secondSection = [
   {
     subTitle: "Pentru furnizori",
     description:
-      "Indiferent dacă sunteți o fermă de familie sau un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri. Economisiți timp cu sarcinile manuale, reduceți comenzile gresite și vindeți mai multe produse.",
+      "Indiferent dacă aveti o fermă de familie sau un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri. Economisiți timp cu sarcinile manuale, reduceți comenzile gresite și vindeți mai multe produse.",
     buttonLink: "/",
     img: "images/comenzi.png",
     img2: "images/comenzi@2x.png",
     img3: "images/comenzi@3x.png",
     componentStyles: "bg-blueHeader justify-items-end items-center ",
     textColor: "text-white",
-    pictureStyles: "object-scale-down w-85 h-72 ml-4 mb-3 lg:mb-0 lg:ml-0",
+    pictureStyles: "object-scale-down lg:w-85 w-80 h-72",
   },
 ];
 function Home() {

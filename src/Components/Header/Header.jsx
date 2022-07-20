@@ -93,7 +93,7 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <h1 className="flex justify-center text-center text-white font-extrabold font-openSans italic text-5xl lg:text-7xl lg:px-8 px-16 mt-12">
+      <h1 className="flex justify-center text-center text-white font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12">
         PLATFORMA DE COMENZI <br /> PENTRU INDUSTRIA OSPITALITATII
       </h1>
       <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">

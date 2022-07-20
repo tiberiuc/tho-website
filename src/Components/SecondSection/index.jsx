@@ -1,8 +1,9 @@
+import Button from "Atoms/Button";
 import React from "react";
 
 const SecondSection = ({ information }) => {
   return (
-    <div className="mb-22 px-4 lg:px-0">
+    <div>
       {information.map((item) => {
         return (
           <div className="flex justify-center mt-4">
@@ -40,6 +41,23 @@ const SecondSection = ({ information }) => {
           </div>
         );
       })}
+      <div className="mt-22 bg-black bg-opacity-50 flex flex-col items-center lg:py-44 py-20 lg:px-0 px-12">
+        <span className="font-openSans font-extrabold lg:text-7xl text-5xl text-center max-w-3xl">
+          PUNE-TI COMENZILE IN ORDINE
+        </span>
+        <Button
+          text={"Rezerva o sesiune demonstrativa"}
+          styles="w-auto justify-center mt-8 rounded-full"
+        />
+      </div>
+      <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
+        <div className="bg-yellowButton uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11">
+          Restaurante
+        </div>
+        <div className="bg-yellowButton uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11">
+          Furnizori
+        </div>
+      </div>
     </div>
   );
 };
