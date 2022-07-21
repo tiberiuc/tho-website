@@ -41,7 +41,10 @@ const SecondSection = ({ information }) => {
           </div>
         );
       })}
-      <div className="lg:mt-22 mt-4 bg-black bg-opacity-50 flex flex-col items-center lg:py-44 py-20 lg:px-0 px-12">
+      <div
+        style={{ backgroundImage: "url(/images/comenziInOrdine.png)" }}
+        className={`lg:mt-22 mt-4  bg-opacity-50 flex flex-col items-center lg:py-44 py-20 lg:px-0 px-12`}
+      >
         <span className="font-openSans font-extrabold lg:text-7xl text-5xl text-center max-w-3xl">
           PUNE-TI COMENZILE IN ORDINE
         </span>

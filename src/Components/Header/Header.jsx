@@ -6,7 +6,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className="relative bg-blueHeader">
+    <nav className="relative bg-bluePrimary">
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
           <a href="/">

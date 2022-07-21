@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blueHeader': '#485696',
+        'bluePrimary': '#485696',
         'yellowButton': '#ffdc0a',
         'yellowSection': '#fff2a4',
         'greyHairline': 'rgb(151,151,151)',
@@ -29,6 +29,7 @@ module.exports = {
         '34': '8.5rem',
       },
       width: {
+        '30': '7.5rem',
         '85': '22rem',
         '185': '45.125rem',
       },
@@ -41,7 +42,6 @@ module.exports = {
       padding: {
         '17': '4.25rem',
       }
-
     },
   },
   plugins: [],

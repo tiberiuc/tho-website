@@ -21,7 +21,7 @@ const secondSection = [
     img: "images/comenzi.png",
     img2: "images/comenzi@2x.png",
     img3: "images/comenzi@3x.png",
-    componentStyles: "bg-blueHeader justify-items-end items-center ",
+    componentStyles: "bg-bluePrimary justify-items-end items-center ",
     textColor: "text-white",
     pictureStyles: "object-scale-down lg:w-85 w-80 h-72",
   },
