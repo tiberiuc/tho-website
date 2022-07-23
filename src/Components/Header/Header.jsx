@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "Atoms/Button";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -73,12 +74,12 @@ export default function Header() {
           </div>
         </section>
         <div className="hidden lg:flex md:space-x-10">
-          <a
-            href="/restaurante"
+          <Link
+            to="/restaurante"
             className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
           >
             Restaurante
-          </a>
+          </Link>
           <a
             href="/furnizori"
             className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
