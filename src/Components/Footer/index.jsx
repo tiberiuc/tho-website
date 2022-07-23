@@ -57,8 +57,8 @@ function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-3.5xl items-center mx-auto py-12">
-        <div className="flex justify-center grid-cols-4 gap-22">
+      <div className="max-w-3.5xl items-center w-full lg:pt-12 pt-24">
+        <div className="flex lg:flex-row flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
             <h3 className="text-base font-bold text-white uppercase font-openSans">
               Info
@@ -93,7 +93,7 @@ function Footer() {
               ))}
             </ul>
           </div>
-          <div className="mt-12 md:mt-0">
+          <div className="">
             <h3 className="text-base font-bold text-white uppercase font-openSans">
               Povesti
             </h3>
@@ -111,31 +111,35 @@ function Footer() {
             </ul>
           </div>
           <img
-            className="w-30 h-24 -center"
+            className="w-30 h-24 lg:mt-0 mt-8"
             src="SVGs/horeca-orders-logo.svg"
             alt="Horeca Orders Logo"
           />
         </div>
       </div>
-      <div className="flex justify-between w-full items-end max-w-3.5xl mt-8">
+      <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
           <p className="font-openSans text-white font-extrabold">
             Pune-ti comenzile in ordine
           </p>
-          <div className="flex flex-row">
-            <img
-              className="w-28 h-9"
-              src="SVGs/appstore.svg"
-              alt="Appstore button"
-            />
-            <img
-              className="w-28 h-9 ml-1"
-              src="SVGs/google-play.svg"
-              alt="Google play button"
-            />
+          <div className="flex flex-row lg:mt-0 mt-4">
+            <a href="https://play.google.com/store/apps/details?id=com.horecaorders.app">
+              <img
+                className="w-28 h-9"
+                src="SVGs/appstore.svg"
+                alt="Appstore button"
+              />
+            </a>
+            <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
+              <img
+                className="w-28 h-9 ml-1"
+                src="SVGs/google-play.svg"
+                alt="Google play button"
+              />
+            </a>
           </div>
         </div>
-        <div className="flex space-x-3">
+        <div className="flex space-x-3 lg:mt-0 mt-14">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -153,7 +157,7 @@ function Footer() {
           ))}
         </div>
       </div>
-      <div className="flex justify-between w-full items-end max-w-5xl mt-16 mb-10">
+      <div className="flex justify-between w-full items-end max-w-3.5xl mt-16 mb-10">
         <div className="flex flex-row space-x-10">
           <p className="text-xs text-white opacity-50 font-openSans">
             2022 &copy; HORECA ORDERS Inc
