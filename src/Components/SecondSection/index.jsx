@@ -43,13 +43,13 @@ const SecondSection = ({ information }) => {
       })}
       <div
         style={{ backgroundImage: "url(/images/comenziInOrdine.png)" }}
-        className={`lg:mt-22 mt-4  bg-opacity-50 flex flex-col items-center lg:py-44 py-20 lg:px-0 px-12`}
+        className={`lg:mt-22 mt-4 bg-opacity-50 flex flex-col items-center lg:py-40 py-20 lg:px-0 px-12`}
       >
-        <span className="font-openSans font-extrabold lg:text-7xl text-5xl text-center max-w-3xl">
+        <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl text-center max-w-3xl">
           PUNE-TI COMENZILE IN ORDINE
         </span>
         <Button
-          text={"Rezerva o sesiune demonstrativa"}
+          text={"Inregistrare"}
           styles="w-auto justify-center mt-8 rounded-full"
         />
       </div>

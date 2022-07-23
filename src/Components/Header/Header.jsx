@@ -75,19 +75,19 @@ export default function Header() {
         <div className="hidden lg:flex md:space-x-10">
           <a
             href="/restaurante"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
           >
             Restaurante
           </a>
           <a
             href="/furnizori"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
           >
             Furnizori
           </a>
           <a
             href="/povesti"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans"
+            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
           >
             Povesti
           </a>

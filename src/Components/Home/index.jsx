@@ -4,7 +4,7 @@ const secondSection = [
   {
     subTitle: "Pentru restaurante",
     description:
-      "Scapa de formularele de comandă și de asteptatul nesfarsit la telefon noaptea târziu. Aplicația noastră gratuită este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasa mai devreme.",
+      "Scapa de formularele de comandă și de asteptatul nesfarsit la telefon noaptea târziu. Aplicația noastră este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasa mai devreme.",
     buttonLink: "/",
     img: "images/i-phone-x.png",
     img2: "images/i-phone-x@2x.png",
@@ -16,7 +16,7 @@ const secondSection = [
   {
     subTitle: "Pentru furnizori",
     description:
-      "Indiferent dacă aveti o fermă de familie sau un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri. Economisiți timp cu sarcinile manuale, reduceți comenzile gresite și vindeți mai multe produse.",
+      "Indiferent dacă aveti o afacere de familie sau sunteti un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri.",
     buttonLink: "/",
     img: "images/comenzi.png",
     img2: "images/comenzi@2x.png",

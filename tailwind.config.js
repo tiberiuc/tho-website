@@ -41,6 +41,9 @@ module.exports = {
       },
       padding: {
         '17': '4.25rem',
+      },
+      gap: {
+        '22': '5.5rem',
       }
     },
   },
