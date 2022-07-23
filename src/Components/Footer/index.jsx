@@ -57,10 +57,10 @@ function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-3.5xl items-center w-full lg:pt-12 pt-24">
+      <div className="max-w-3.5xl items-center w-full lg:pt-12">
         <div className="flex lg:flex-row flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
-            <h3 className="text-base font-bold text-white uppercase font-openSans">
+            <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
               Info
             </h3>
             <ul className="mt-4">
@@ -68,7 +68,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans text-base text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
                   >
                     {item.name}
                   </a>
@@ -77,7 +77,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-base font-bold text-white uppercase font-openSans">
+            <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
               Horeca Orders
             </h3>
             <ul className="mt-4">
@@ -85,7 +85,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans text-base text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
                   >
                     {item.name}
                   </a>
@@ -94,7 +94,7 @@ function Footer() {
             </ul>
           </div>
           <div className="">
-            <h3 className="text-base font-bold text-white uppercase font-openSans">
+            <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
               Povesti
             </h3>
             <ul className="mt-4">
@@ -102,7 +102,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans text-base text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
                   >
                     {item.name}
                   </a>
@@ -119,20 +119,20 @@ function Footer() {
       </div>
       <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
-          <p className="font-openSans text-white font-extrabold">
+          <p className="font-openSans text-white font-extrabold lg:text-base text-xl">
             Pune-ti comenzile in ordine
           </p>
           <div className="flex flex-row lg:mt-0 mt-4">
-            <a href="https://play.google.com/store/apps/details?id=com.horecaorders.app">
+            <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
               <img
-                className="w-28 h-9"
+                className="lg:h-9 h-12"
                 src="SVGs/appstore.svg"
                 alt="Appstore button"
               />
             </a>
-            <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
+            <a href="https://play.google.com/store/apps/details?id=com.horecaorders.app">
               <img
-                className="w-28 h-9 ml-1"
+                className="lg:h-9 h-12 ml-1"
                 src="SVGs/google-play.svg"
                 alt="Google play button"
               />
@@ -150,15 +150,15 @@ function Footer() {
               <img
                 src={item.icon}
                 alt={item.name}
-                className="h-6 w-6"
+                className="lg:h-6 lg:w-6 h-12 w-12"
                 aria-hidden="true"
               />
             </a>
           ))}
         </div>
       </div>
-      <div className="flex justify-between w-full items-end max-w-3.5xl mt-16 mb-10">
-        <div className="flex flex-row space-x-10">
+      <div className="flex justify-between w-full items-end max-w-3.5xl mt-16 mb-12">
+        <div className="flex lg:flex-row flex-col lg:space-x-10 space-x-0 lg:px-0 px-5 lg:gap-0 gap-1">
           <p className="text-xs text-white opacity-50 font-openSans">
             2022 &copy; HORECA ORDERS Inc
           </p>
