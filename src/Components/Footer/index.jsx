@@ -58,7 +58,7 @@ function Footer() {
         Footer
       </h2>
       <div className="max-w-3.5xl items-center w-full lg:pt-12">
-        <div className="flex lg:flex-row flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
+        <div className="flex lg:flex-row justify-between flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
             <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
               Info
@@ -93,7 +93,7 @@ function Footer() {
               ))}
             </ul>
           </div>
-          <div className="">
+          <div className="hidden">
             <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
               Povesti
             </h3>
@@ -122,7 +122,7 @@ function Footer() {
           <p className="font-openSans text-white font-extrabold lg:text-base text-xl">
             Pune-ti comenzile in ordine
           </p>
-          <div className="flex flex-row lg:mt-0 mt-4">
+          <div className="flex flex-row lg:mt-1 mt-4">
             <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
               <img
                 className="lg:h-9 h-12"
