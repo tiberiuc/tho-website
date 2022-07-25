@@ -1,4 +1,5 @@
 import FirstSection from "Components/FirstSection";
+import Header from "Components/Header/Header";
 import SecondSection from "Components/SecondSection";
 const secondSection = [
   {
@@ -29,6 +30,7 @@ const secondSection = [
 function Home() {
   return (
     <>
+      <Header />
       <FirstSection />
       <SecondSection information={secondSection} />
     </>

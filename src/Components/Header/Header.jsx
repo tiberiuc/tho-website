@@ -3,15 +3,21 @@ import Button from "Atoms/Button";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ bgHeader, restaurant }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
   return (
-    <nav className="relative bg-bluePrimary">
+    <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
           <a href="/">
-            <img className="" src="SVGs/horeca-orders-logo.svg" alt="" />
+            <img
+              src={
+                !!restaurant
+                  ? "SVGs/horeca-orders-logo-yellow.svg"
+                  : "SVGs/horeca-orders-logo.svg"
+              }
+              alt="Logo of Horeca Orders"
+            />
           </a>
         </div>
         <section className="flex lg:hidden">
@@ -41,22 +47,42 @@ export default function Header() {
             />
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
-              <li className="my-4 text-white uppercase font-openSans">
-                <a href="/about">Restaurante</a>
+              <li
+                className={`my-4 ${
+                  !!restaurant ? "text-bluePrimary" : "text-white"
+                } uppercase font-openSans`}
+              >
+                <Link to="/restaurante">Restaurante</Link>
               </li>
-              <li className="my-4 text-white uppercase font-openSans">
+              <li
+                className={`my-4 ${
+                  !!restaurant ? "text-bluePrimary" : "text-white"
+                } uppercase font-openSans`}
+              >
                 <a href="/portfolio">Furnizori</a>
               </li>
-              <li className="my-4 text-white uppercase font-openSans">
+              <li
+                className={`my-4 ${
+                  !!restaurant ? "text-red-400" : "text-white"
+                } uppercase font-openSans`}
+              >
                 <a href="/contact">Povesti</a>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
-              <li className="my-4 text-white uppercase font-openSans">
+              <li
+                className={`my-4 ${
+                  !!restaurant ? "text-bluePrimary" : "text-white"
+                } uppercase font-openSans`}
+              >
                 <a href="/portfolio">Despre</a>
               </li>
-              <li className="my-4 text-white uppercase font-openSans">
+              <li
+                className={`my-4 ${
+                  !!restaurant ? "text-bluePrimary" : "text-white"
+                } uppercase font-openSans`}
+              >
                 <a href="/contact">Intrebari frecvente</a>
               </li>
             </ul>
@@ -76,25 +102,35 @@ export default function Header() {
         <div className="hidden lg:flex md:space-x-10">
           <Link
             to="/restaurante"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
+            className={`text-base font-medium ${
+              !!restaurant ? "text-bluePrimary" : "text-white"
+            } hover:text-gray-900 font-openSans uppercase`}
           >
             Restaurante
           </Link>
           <a
             href="/furnizori"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
+            className={`text-base font-medium ${
+              !!restaurant ? "text-bluePrimary" : "text-white"
+            } hover:text-gray-900 font-openSans uppercase`}
           >
             Furnizori
           </a>
           <a
             href="/povesti"
-            className="text-base font-medium text-white hover:text-gray-900 font-openSans uppercase"
+            className={`text-base font-medium ${
+              !!restaurant ? "text-bluePrimary" : "text-white"
+            } hover:text-gray-900 font-openSans uppercase`}
           >
             Povesti
           </a>
         </div>
       </div>
-      <h1 className="flex justify-center text-center text-white font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12">
+      <h1
+        className={`flex justify-center text-center ${
+          !!restaurant ? "text-bluePrimary" : "text-white"
+        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12`}
+      >
         PLATFORMA DE COMENZI <br /> PENTRU INDUSTRIA OSPITALITATII
       </h1>
       <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">
