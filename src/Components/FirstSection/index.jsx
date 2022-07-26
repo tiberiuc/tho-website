@@ -1,6 +1,6 @@
 import React from "react";
 
-function FirstSection() {
+function FirstSection({ colors }) {
   const info = [
     {
       img: "images/Gata-cu-hartia.png",
@@ -28,8 +28,12 @@ function FirstSection() {
   ];
   return (
     <div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center bg-greyBg">
-        <div className="flex flex-col justify-start w-full lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7">
+      <div
+        className={`grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center ${colors?.background}`}
+      >
+        <div
+          className={`flex flex-col justify-start w-full lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 ${colors.text}`}
+        >
           <span className="text-4xl font-extrabold font-openSans max-w-sm mt-15">
             ALEGE SA MUNCESTI MAI EFICIENT
           </span>

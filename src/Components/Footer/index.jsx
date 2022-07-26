@@ -26,28 +26,27 @@ const navigation = {
   social: [
     {
       name: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/channel/UCZEmGsfqjxY-i1MDt4SAC2g",
       icon: "SVGs/youtube.svg",
     },
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/HORECAORDERS",
       icon: "SVGs/facebook.svg",
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/horeca.orders/",
       icon: "SVGs/instagram.svg",
     },
     {
       name: "Linkedin",
-      href: "#",
+      href: "https://www.linkedin.com/company/82645202",
       icon: "SVGs/linkedin.svg",
     },
   ],
 };
 
-console.log(navigation.solutions);
 function Footer() {
   return (
     <footer
@@ -60,7 +59,7 @@ function Footer() {
       <div className="max-w-3.5xl items-center w-full lg:pt-12">
         <div className="flex lg:flex-row justify-between flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
-            <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
+            <h3 className="lg:text-base text-xl font-bold text-white font-openSans">
               Info
             </h3>
             <ul className="mt-4">
@@ -110,16 +109,18 @@ function Footer() {
               ))}
             </ul>
           </div>
-          <img
-            className="w-30 h-24 lg:mt-0 mt-8"
-            src="SVGs/horeca-orders-logo.svg"
-            alt="Horeca Orders Logo"
-          />
+          <a href="/">
+            <img
+              className="w-30 h-24 lg:mt-0 mt-8"
+              src="SVGs/horeca-orders-logo.svg"
+              alt="Horeca Orders Logo"
+            />
+          </a>
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
-          <p className="font-openSans text-white font-extrabold lg:text-base text-xl">
+          <p className="font-openSans text-white font-bold lg:text-base text-xl">
             Pune-ti comenzile in ordine
           </p>
           <div className="flex flex-row lg:mt-1 mt-4">
@@ -160,7 +161,7 @@ function Footer() {
       <div className="flex justify-between w-full items-end max-w-3.5xl mt-16 mb-12">
         <div className="flex lg:flex-row flex-col lg:space-x-10 space-x-0 lg:px-0 px-5 lg:gap-0 gap-1">
           <p className="text-xs text-white opacity-50 font-openSans">
-            2022 &copy; HORECA ORDERS Inc
+            2022 &copy; HORECA ORDERS SRL
           </p>
           <a className="text-xs text-white opacity-50 font-openSans" href="/">
             Contact

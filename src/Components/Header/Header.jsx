@@ -3,7 +3,13 @@ import Button from "Atoms/Button";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-export default function Header({ bgHeader, restaurant }) {
+export default function Header({
+  bgHeader,
+  restaurant,
+  headingText,
+  headerButtonLeft,
+  headerButtonRight,
+}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
@@ -59,14 +65,14 @@ export default function Header({ bgHeader, restaurant }) {
                   !!restaurant ? "text-bluePrimary" : "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/portfolio">Furnizori</a>
+                <Link to="/furnizori">Furnizori</Link>
               </li>
               <li
                 className={`my-4 ${
                   !!restaurant ? "text-red-400" : "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/contact">Povesti</a>
+                <Link to="/povesti">Povesti</Link>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
@@ -102,46 +108,50 @@ export default function Header({ bgHeader, restaurant }) {
         <div className="hidden lg:flex md:space-x-10">
           <Link
             to="/restaurante"
-            className={`text-base font-medium ${
+            className={`text-base font-semibold ${
               !!restaurant ? "text-bluePrimary" : "text-white"
-            } hover:text-gray-900 font-openSans uppercase`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Restaurante
           </Link>
-          <a
-            href="/furnizori"
-            className={`text-base font-medium ${
+          <Link
+            to="/furnizori"
+            className={`text-base font-semibold ${
               !!restaurant ? "text-bluePrimary" : "text-white"
-            } hover:text-gray-900 font-openSans uppercase`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Furnizori
-          </a>
-          <a
-            href="/povesti"
-            className={`text-base font-medium ${
+          </Link>
+          <Link
+            to="/povesti"
+            className={`text-base font-semibold ${
               !!restaurant ? "text-bluePrimary" : "text-white"
-            } hover:text-gray-900 font-openSans uppercase`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Povesti
-          </a>
+          </Link>
         </div>
       </div>
       <h1
         className={`flex justify-center text-center ${
           !!restaurant ? "text-bluePrimary" : "text-white"
-        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12`}
+        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12 lg:whitespace-pre-line`}
       >
-        PLATFORMA DE COMENZI <br /> PENTRU INDUSTRIA OSPITALITATII
+        {headingText}
       </h1>
       <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">
-        <Button
-          text={"Pentru Restaurante"}
-          styles="lg:w-48 w-64 justify-center"
-        />
-        <Button
-          text={"Pentru Furnizori"}
-          styles="mt-4 lg:mt-0 lg:w-48 w-64 justify-center"
-        />
+        <Link to={headerButtonLeft.link}>
+          <Button
+            text={headerButtonLeft.text}
+            styles="lg:w-48 w-64 justify-center"
+          />
+        </Link>
+        <Link to={headerButtonRight.link}>
+          <Button
+            text={headerButtonRight.text}
+            styles="mt-4 lg:mt-0 lg:w-48 w-64 justify-center"
+          />
+        </Link>
       </div>
     </nav>
   );

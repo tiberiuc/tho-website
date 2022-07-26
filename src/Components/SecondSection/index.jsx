@@ -1,5 +1,6 @@
 import Button from "Atoms/Button";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SecondSection = ({ information }) => {
   return (
@@ -21,12 +22,9 @@ const SecondSection = ({ information }) => {
                 >
                   {item.description}
                 </span>
-                <button
-                  onClick={item.buttonLink}
-                  className="rounded-3xl px-4 py-2 bg-yellow-400 font-openSans font-semibold mt-6"
-                >
-                  Afla mai multe
-                </button>
+                <Link to={item.buttonLink}>
+                  <Button styles="mt-6 font-semibold" text="Afla mai multe" />
+                </Link>
               </div>
               <picture>
                 <source media="(max-width: 799px)" srcset={item.img3} />
@@ -48,18 +46,26 @@ const SecondSection = ({ information }) => {
         <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl text-center max-w-3xl">
           PUNE-TI COMENZILE IN ORDINE
         </span>
-        <Button
-          text={"Inregistrare"}
-          styles="w-auto justify-center mt-8 rounded-full"
-        />
+        <a href="https://app.horecaorders.com/users/register">
+          <Button
+            text={"Inregistrare"}
+            styles="w-auto justify-center mt-8 rounded-full"
+          />
+        </a>
       </div>
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
-        <div className="bg-yellowButton uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11">
+        <a
+          href="/restaurante"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11"
+        >
           Restaurante
-        </div>
-        <div className="bg-yellowButton uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11">
+        </a>
+        <a
+          href="/furnizori"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11"
+        >
           Furnizori
-        </div>
+        </a>
       </div>
     </div>
   );

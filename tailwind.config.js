@@ -13,7 +13,8 @@ module.exports = {
         'yellowButton': '#ffdc0a',
         'yellowSection': '#fff2a4',
         'greyHairline': 'rgb(151,151,151)',
-        'greyBg': '#f5f5f5'
+        'greyBg': '#f5f5f5',
+        'blue': '#D4D6FF',
       },
       fontFamily: {
         openSans: ["OpenSans", ...defaultTheme.fontFamily.sans],

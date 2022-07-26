@@ -6,7 +6,7 @@ const secondSection = [
     subTitle: "Pentru restaurante",
     description:
       "Scapa de formularele de comandă și de asteptatul nesfarsit la telefon noaptea târziu. Aplicația noastră este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasa mai devreme.",
-    buttonLink: "/",
+    buttonLink: "/restaurante",
     img: "images/i-phone-x.png",
     img2: "images/i-phone-x@2x.png",
     img3: "images/i-phone-x@3x.png",
@@ -18,7 +18,7 @@ const secondSection = [
     subTitle: "Pentru furnizori",
     description:
       "Indiferent dacă aveti o afacere de familie sau sunteti un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri.",
-    buttonLink: "/",
+    buttonLink: "/furnizori",
     img: "images/comenzi.png",
     img2: "images/comenzi@2x.png",
     img3: "images/comenzi@3x.png",
@@ -30,8 +30,19 @@ const secondSection = [
 function Home() {
   return (
     <>
-      <Header />
-      <FirstSection />
+      <Header
+        headingText={`PLATFORMA DE COMENZI 
+        PENTRU INDUSTRIA OSPITALITATII`}
+        headerButtonLeft={{
+          text: "Pentru Restaurante",
+          link: "/restaurante",
+        }}
+        headerButtonRight={{
+          text: "Pentru Furnizori",
+          link: "/furnizori",
+        }}
+      />
+      <FirstSection colors={{ background: "bg-greyBg", text: "text-black" }} />
       <SecondSection information={secondSection} />
     </>
   );
