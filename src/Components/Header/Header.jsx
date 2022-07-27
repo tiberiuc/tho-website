@@ -31,14 +31,26 @@ export default function Header({
             className="space-y-2 mt-2 mr-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 bg-white"></span>
-            <span className="block h-0.5 w-8 bg-white"></span>
-            <span className="block h-0.5 w-8 bg-white"></span>
+            <span
+              className={`block h-0.5 w-8 ${
+                restaurant ? "bg-bluePrimary" : "bg-white "
+              }`}
+            ></span>
+            <span
+              className={`block h-0.5 w-8 ${
+                restaurant ? "bg-bluePrimary" : "bg-white "
+              }`}
+            ></span>
+            <span
+              className={`block h-0.5 w-8 ${
+                restaurant ? "bg-bluePrimary" : "bg-white "
+              }`}
+            ></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav mt-4 flex" : "hideMenuNav"}>
+          <div className={isNavOpen ? "showMenuNav pt-4 flex" : "hideMenuNav"}>
             <div
-              className="absolute top-0 right-0 px-8 py-4"
+              className="absolute top-0 right-0 px-6 py-6"
               onClick={() => setIsNavOpen(false)}
             >
               <img
@@ -55,21 +67,21 @@ export default function Header({
             <ul className="flex flex-col items-center justify-start ">
               <li
                 className={`my-4 ${
-                  !!restaurant ? "text-bluePrimary" : "text-white"
+                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/restaurante">Restaurante</Link>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "text-bluePrimary" : "text-white"
+                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/furnizori">Furnizori</Link>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "text-red-400" : "text-white"
+                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/povesti">Povesti</Link>
@@ -79,14 +91,14 @@ export default function Header({
             <ul className="flex flex-col items-center justify-start ">
               <li
                 className={`my-4 ${
-                  !!restaurant ? "text-bluePrimary" : "text-white"
+                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
                 } uppercase font-openSans`}
               >
                 <a href="/portfolio">Despre</a>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "text-bluePrimary" : "text-white"
+                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
                 } uppercase font-openSans`}
               >
                 <a href="/contact">Intrebari frecvente</a>

@@ -9,7 +9,7 @@ const SecondSection = ({ information }) => {
         return (
           <div className="flex justify-center mt-4">
             <div
-              className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl ${item.componentStyles}  `}
+              className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl lg:h-98 ${item.componentStyles}  `}
             >
               <div className="flex flex-col items-start w-full lg:pl-17 pl-5 pr-5 lg:pr-0 my-17">
                 <span

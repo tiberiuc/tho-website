@@ -42,7 +42,46 @@ function Home() {
           link: "/furnizori",
         }}
       />
-      <FirstSection colors={{ background: "bg-greyBg", text: "text-black" }} />
+      <FirstSection
+        colors={{ background: "bg-greyBg", text: "text-black" }}
+        subHeader={{
+          textTitle: "ALEGE SA MUNCESTI MAI EFICIENT",
+          paragraph: `HORECA ORDERS face plasarea și primirea comenzilor mai eficientă. 
+            Aplicația noastră intuitivă și instrumentele web simplifică operațiunile pentru bucătari, proprietari și reprezentanții de vânzări.`,
+          secondParagraph: `Salveaza timp. Salveaza bani. Salveaza mancare.`,
+          imgSet: {
+            img: "images/manCooking.png",
+            img2x: "images/manCooking@2x.png",
+            img3x: "images/manCooking@3x.png",
+          },
+          info: [
+            {
+              img: "images/Gata-cu-hartia.png",
+              img2: "images/Gata-cu-hartia@2x.png",
+              img3: "images/Gata-cu-hartia@3x.png",
+              subtitle: "Gata cu hartia",
+              description:
+                "Totul este in aplicatie, gata cu teancurile de hartie.",
+            },
+            {
+              img: "images/castiga-timp.png",
+              img2: "images/castiga-timp@2x.png",
+              img3: "images/castiga-timp@3x.png",
+              subtitle: "Castiga timp",
+              description:
+                "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri castiga peste 4 ore pe săptămână.",
+            },
+            {
+              img: "images/salveaza-mai-mult.png",
+              img2: "images/salveaza-mai-mult@2x.png",
+              img3: "images/salveaza-mai-mult@3x.png",
+              subtitle: "Risipeste mai putin, salveaza mai mult",
+              description:
+                "Comenzi mai precise înseamnă mai puține greșeli, mai puțina risipa și costuri mai mici.",
+            },
+          ],
+        }}
+      />
       <SecondSection information={secondSection} />
     </>
   );
