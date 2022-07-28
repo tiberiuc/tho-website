@@ -1,6 +1,6 @@
 import React from "react";
 
-function FirstSection({ colors, info, subHeader }) {
+function FirstSection({ colors, subHeader }) {
   return (
     <div>
       <div

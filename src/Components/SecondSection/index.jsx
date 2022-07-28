@@ -1,44 +1,11 @@
 import Button from "Atoms/Button";
+import InformationsCard from "Components/InformationsCard";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const SecondSection = ({ information }) => {
   return (
     <div>
-      {information.map((item) => {
-        return (
-          <div className="flex justify-center mt-4">
-            <div
-              className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl lg:h-98 ${item.componentStyles}  `}
-            >
-              <div className="flex flex-col items-start w-full lg:pl-17 pl-5 pr-5 lg:pr-0 my-17">
-                <span
-                  className={`font-openSans font-bold text-3xl ${item.textColor}`}
-                >
-                  {item.subTitle}
-                </span>
-                <span
-                  className={`font-openSans font-semibold text-base mt-3 ${item.textColor}`}
-                >
-                  {item.description}
-                </span>
-                <Link to={item.buttonLink}>
-                  <Button styles="mt-6 font-semibold" text="Afla mai multe" />
-                </Link>
-              </div>
-              <picture>
-                <source media="(max-width: 799px)" srcset={item.img3} />
-                <source media="(min-width: 800px)" srcset={item.img2} />
-                <img
-                  className={`${item.pictureStyles}`}
-                  src={item.img}
-                  alt=""
-                />
-              </picture>
-            </div>
-          </div>
-        );
-      })}
+      <InformationsCard data={information} />
       <div
         style={{ backgroundImage: "url(/images/comenziInOrdine.png)" }}
         className={`lg:mt-22 mt-4 bg-opacity-50 flex flex-col items-center lg:py-40 py-20 lg:px-0 px-12`}
