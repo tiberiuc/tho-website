@@ -20,12 +20,14 @@ module.exports = {
         openSans: ["OpenSans", ...defaultTheme.fontFamily.sans],
       },
       maxHeight: {
+        '104': '26rem',
         '128': '32rem',
       },
       margin: {
         '13': '3.25rem',
         '15': '3.75rem',
         '17': '4.25rem',
+        '18': '4.5rem',
         '22': '5.5rem',
         '34': '8.5rem',
       },
@@ -35,7 +37,8 @@ module.exports = {
         '185': '45.125rem',
       },
       height: {
-        '85': '22rem',
+        '85': '21.25rem',
+        '86': '22rem',
         '98': '24.5rem',
         '104': '26rem',
         '113': '28.25rem',

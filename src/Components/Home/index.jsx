@@ -12,7 +12,7 @@ const secondSection = [
     img3: "images/i-phone-x@3x.png",
     componentStyles: "bg-yellowSection justify-items-center items-end lg:h-98",
     textColor: "text-black",
-    pictureStyles: "object-scale-down h-85 w-64",
+    pictureStyles: "object-scale-down h-86 w-64",
   },
   {
     subTitle: "Pentru furnizori",
@@ -24,7 +24,7 @@ const secondSection = [
     img3: "images/comenzi@3x.png",
     componentStyles: "bg-bluePrimary justify-items-end items-center lg:h-98",
     textColor: "text-white",
-    pictureStyles: "object-scale-down lg:w-85 w-80 h-72",
+    pictureStyles: "object-scale-down lg:w-86 w-80 h-72",
   },
 ];
 function Home() {

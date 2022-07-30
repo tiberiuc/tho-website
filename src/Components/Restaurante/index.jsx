@@ -2,6 +2,7 @@ import Button from "Atoms/Button";
 import FirstSection from "Components/FirstSection";
 import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
+import Whirligig from "react-whirligig";
 
 function Restaurante() {
   const cardSection = [
@@ -47,7 +48,7 @@ function Restaurante() {
       img: "images/i-phone-x.png",
       img2: "images/i-phone-x@2x.png",
       img3: "images/i-phone-x@3x.png",
-      componentStyles: "bg-greyBg justify-items-center items-end h-113",
+      componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
       subComponentStyles: "my-22",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
@@ -59,11 +60,44 @@ function Restaurante() {
       img: "images/iphone-x-mockup-information.png",
       img2: "images/iphone-x-mockup-information@2x.png",
       img3: "images/iphone-x-mockup-information@3x.png",
-      componentStyles: "bg-greyBg justify-items-center items-end h-113",
+      componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
   ];
+
+  const slider = [
+    {
+      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
+      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
+      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
+      pentru că le tastam pe toate. HORECA ORDERS este atât de
+      convenabil și eficient!`,
+      personDescription: `
+      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      `,
+      img: "images/barman-image.png",
+      img2: "images/barman-image@2x.png",
+      img3: "images/barman-image@3x.png",
+    },
+    {
+      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
+      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
+      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
+      pentru că le tastam pe toate. HORECA ORDERS este atât de
+      convenabil și eficient!`,
+      personDescription: `
+      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      `,
+      img: "images/barman-image.png",
+      img2: "images/barman-image@2x.png",
+      img3: "images/barman-image@3x.png",
+    },
+  ];
+
+  let whirligig;
+  const next = () => whirligig.next();
+  const prev = () => whirligig.prev();
   return (
     <div>
       <Header
@@ -91,6 +125,7 @@ function Restaurante() {
             img2x: "images/ustensila-bucatarie@2x.png",
             img3x: "images/ustensila-bucatarie@3x.png",
           },
+          marginOfSection: "mb-0",
           info: [
             {
               img: "images/adio-greseli.png",
@@ -121,16 +156,20 @@ function Restaurante() {
         }}
       />
       <div className="flex flex-col items-center w-full">
-        <Button text="Rezerva o sesiune demonstrativa" link="/" />
-        <div className="flex flex-col w-full items-center mt-20 pt-20 bg-bluePrimary relative">
-          <p className="font-openSans font-extrabold text-5xl text-white">
+        <Button
+          styles="lg:flex hidden"
+          text="Rezerva o sesiune demonstrativa"
+          link="/"
+        />
+        <div className="flex flex-col w-full items-center mt-20 pt-20 lg:pb-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
+          <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center ">
             CUM FUNCTIONEAZA
           </p>
-          <div className="grid grid-cols-4 gap-8 mt-13 max-w-5xl">
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 lg:mt-13 mt-5 max-w-5xl">
             {cardSection.map((card) => {
               return (
-                <div className="flex flex-col items-center relative">
-                  <p className="h-12 w-12 bg-yellowButton rounded-full font-bold text-2xl flex justify-center items-center">
+                <div className="flex flex-col items-center relative lg:px-0 sm:px-24 px-6">
+                  <p className="h-12 w-12 bg-yellowButton rounded-full font-bold text-2xl flex justify-center items-center mt-8 lg:mt-0">
                     {card?.number ? (
                       card?.number
                     ) : (
@@ -156,14 +195,78 @@ function Restaurante() {
               );
             })}
           </div>
-          <div className="absolute bottom-0 left-0 h-7 w-full flex bg-white" />
+          <div className="absolute bottom-0 left-0 h-7 w-full flex bg-white lg:flex hidden" />
         </div>
       </div>
       <div className="flex flex-col w-full items-center mt-13">
-        <p className="uppercase font-openSans font-extrabold text-4xl text-bluePrimary">
+        <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0">
           Plasezi comenzile mult mai bine
         </p>
         <InformationsCard data={information} />
+      </div>
+      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 py-20 px-5">
+        <div className="flex justify-center max-w-4xl">
+          <button onClick={prev}>Prev</button>
+          <Whirligig
+            visibleSlides={1}
+            gutter="1em"
+            ref={(_whirligigInstance) => {
+              whirligig = _whirligigInstance;
+            }}
+            infinte={true}
+            snapToSlide
+            slideClass={"flex justify-center"}
+          >
+            {slider.map((sliderItem) => {
+              return (
+                <div className="flex lg:flex-row flex-col items-center">
+                  <div className=" flex flex-col">
+                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl max-w-md">
+                      {sliderItem.paragraphDescription}
+                    </p>
+                    <p className="font-openSans font-semibold text-base lg:text-start text-center text-white lg:mt-0 mt-6">
+                      {sliderItem.personDescription}
+                    </p>
+                  </div>
+                  <picture>
+                    <source
+                      media="(max-width: 799px)"
+                      srcset={sliderItem.img3}
+                    />
+                    <source
+                      media="(min-width: 800px)"
+                      srcset={sliderItem.img2}
+                    />
+                    <img
+                      className="object-cover h-85 lg:mt-0 mt-8"
+                      src={sliderItem.img}
+                      alt=""
+                    />
+                  </picture>
+                </div>
+              );
+            })}
+          </Whirligig>
+          <button onClick={next}>Next</button>
+        </div>
+        <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
+      </div>
+      <div className="flex justify-center bg-greyBg pt-8">
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="images/i-phone-x-in-hand@3x.png"
+          />
+          <source
+            media="(min-width: 800px)"
+            srcset="images/i-phone-x-in-hand@2x.png"
+          />
+          <img
+            className="object-cover max-h-104"
+            src="images/i-phone-x-in-hand.png"
+            alt=""
+          />
+        </picture>
       </div>
     </div>
   );

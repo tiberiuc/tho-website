@@ -40,7 +40,11 @@ function FirstSection({ colors, subHeader }) {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 lg:mb-13 mb-34 max-w-3.5xl">
+        <div
+          className={`grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 lg:mb-13 ${
+            subHeader.marginOfSection ? subHeader.marginOfSection : "mb-34"
+          } max-w-3.5xl`}
+        >
           {subHeader?.info.map((item) => {
             return (
               <div className="flex flex-col items-center w-60 w-full mt-34 lg:mt-0">
