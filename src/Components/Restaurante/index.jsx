@@ -204,9 +204,11 @@ function Restaurante() {
         </p>
         <InformationsCard data={information} />
       </div>
-      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 py-20 px-5">
+      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 lg:py-20 py-14 px-5">
         <div className="flex justify-center max-w-4xl">
-          <button onClick={prev}>Prev</button>
+          <button onClick={prev}>
+            <img className="w-8" src="SVGs/left-arrow.svg" alt="Arrow left" />
+          </button>
           <Whirligig
             visibleSlides={1}
             gutter="1em"
@@ -216,6 +218,7 @@ function Restaurante() {
             infinte={true}
             snapToSlide
             slideClass={"flex justify-center"}
+            className={"scrollbar-hide"}
           >
             {slider.map((sliderItem) => {
               return (
@@ -247,26 +250,74 @@ function Restaurante() {
               );
             })}
           </Whirligig>
-          <button onClick={next}>Next</button>
+          <button onClick={next}>
+            <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
+          </button>
         </div>
         <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
       </div>
-      <div className="flex justify-center bg-greyBg pt-8">
-        <picture>
-          <source
-            media="(max-width: 799px)"
-            srcset="images/i-phone-x-in-hand@3x.png"
-          />
-          <source
-            media="(min-width: 800px)"
-            srcset="images/i-phone-x-in-hand@2x.png"
-          />
-          <img
-            className="object-cover max-h-104"
-            src="images/i-phone-x-in-hand.png"
-            alt=""
-          />
-        </picture>
+      <div className="flex justify-center bg-greyBg lg:pt-8 pt-28">
+        <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">
+          <div className="flex flex-col items-center justify-center px-10 lg:px-0">
+            <p className="font-openSans font-extrabold text-5xl text-bluePrimary text-center">
+              E GRATIS
+            </p>
+            <p className="font-openSans font-semibold text-base py-6 text-center text-bluePrimary">
+              Platforma HORECA ORDERS este gratuită pentru restaurante și
+              furnizori, având disponibile funcții opționale plătite. Vorbeste
+              cu echipa noastra pentru a afla mai multe!
+            </p>
+            <Button text="Intrebari Frecvente" />
+          </div>
+          <div className="flex lg:justify-center justify-start w-full">
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/i-phone-x-in-hand-mobile@3x.png"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/i-phone-x-in-hand@2x.png"
+              />
+              <img
+                className="object-cover max-h-104 lg:mt-0 mt-11"
+                src="images/i-phone-x-in-hand.png"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
+          <div className="flex justify-center w-full">
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/hands-photo@3x.png"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/hands-photo@2x.png"
+              />
+              <img
+                className="object-cover max-h-180 lg:p-0 p-10"
+                src="images/hands-photo.png"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div className="flex flex-col items-center justify-center px-10 lg:px-0">
+            <p className="font-openSans font-extrabold lg:text-7xl text-5xl text-black italic text-center">
+              HAI SA <br /> EXPLORAM <br /> HORECA <br />
+              ORDERS
+            </p>
+            <Button
+              styles="mt-12 lg:mb-0 mb-10 text-center"
+              text="Rezerva o sesiune demonstrativa"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

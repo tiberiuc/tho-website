@@ -22,6 +22,7 @@ module.exports = {
       maxHeight: {
         '104': '26rem',
         '128': '32rem',
+        '180': '45rem',
       },
       margin: {
         '13': '3.25rem',
@@ -55,5 +56,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
