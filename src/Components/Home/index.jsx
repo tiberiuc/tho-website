@@ -41,6 +41,7 @@ function Home() {
           text: "Pentru Furnizori",
           link: "/furnizori",
         }}
+        home
       />
       <FirstSection
         colors={{ background: "bg-greyBg", text: "text-black" }}

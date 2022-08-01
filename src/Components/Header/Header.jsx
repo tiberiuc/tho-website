@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 
 export default function Header({
   bgHeader,
+  home,
   restaurant,
+  supplier,
   headingText,
   headerButtonLeft,
   headerButtonRight,
+  logoYellow,
 }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
@@ -18,7 +21,7 @@ export default function Header({
           <a href="/">
             <img
               src={
-                !!restaurant
+                logoYellow
                   ? "SVGs/horeca-orders-logo-yellow.svg"
                   : "SVGs/horeca-orders-logo.svg"
               }
@@ -32,19 +35,16 @@ export default function Header({
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <span
-              className={`block h-0.5 w-8 ${
-                restaurant ? "bg-bluePrimary" : "bg-white "
-              }`}
+              className={`block h-0.5 w-8 ${restaurant && "bg-bluePrimary"} 
+              ${home && "bg-white"}  ${supplier && "bg-black"}`}
             ></span>
             <span
-              className={`block h-0.5 w-8 ${
-                restaurant ? "bg-bluePrimary" : "bg-white "
-              }`}
+              className={`block h-0.5 w-8 ${restaurant && "bg-bluePrimary"} 
+              ${home && "bg-white"} ${supplier && "bg-black"}`}
             ></span>
             <span
-              className={`block h-0.5 w-8 ${
-                restaurant ? "bg-bluePrimary" : "bg-white "
-              }`}
+              className={`block h-0.5 w-8 ${restaurant && "bg-bluePrimary"} 
+              ${home && "bg-white"} ${supplier && "bg-black"}`}
             ></span>
           </div>
 
@@ -67,21 +67,27 @@ export default function Header({
             <ul className="flex flex-col items-center justify-start ">
               <li
                 className={`my-4 ${
-                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
+                  restaurant && "lg:text-bluePrimary text-white"
+                } ${
+                  (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/restaurante">Restaurante</Link>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
+                  restaurant && "lg:text-bluePrimary text-white"
+                } ${
+                  (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/furnizori">Furnizori</Link>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
+                  restaurant && "lg:text-bluePrimary text-white"
+                } ${
+                  (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
                 <Link to="/povesti">Povesti</Link>
@@ -91,14 +97,18 @@ export default function Header({
             <ul className="flex flex-col items-center justify-start ">
               <li
                 className={`my-4 ${
-                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
+                  restaurant && "lg:text-bluePrimary text-white"
+                } ${
+                  (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
                 <a href="/portfolio">Despre</a>
               </li>
               <li
                 className={`my-4 ${
-                  !!restaurant ? "lg:text-bluePrimary text-white" : "text-white"
+                  restaurant && "lg:text-bluePrimary text-white"
+                } ${
+                  (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
                 <a href="/contact">Intrebari frecvente</a>
@@ -120,24 +130,33 @@ export default function Header({
         <div className="hidden lg:flex md:space-x-10">
           <Link
             to="/restaurante"
-            className={`text-base font-semibold ${
-              !!restaurant ? "text-bluePrimary" : "text-white"
+            className={`text-base font-semibold 
+            ${restaurant && "text-bluePrimary"} 
+            ${home && "text-white"} 
+            ${
+              supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Restaurante
           </Link>
           <Link
             to="/furnizori"
-            className={`text-base font-semibold ${
-              !!restaurant ? "text-bluePrimary" : "text-white"
+            className={`text-base font-semibold 
+            ${restaurant && "text-bluePrimary"} 
+            ${home && "text-white"} 
+            ${
+              supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Furnizori
           </Link>
           <Link
             to="/povesti"
-            className={`text-base font-semibold ${
-              !!restaurant ? "text-bluePrimary" : "text-white"
+            className={`text-base font-semibold 
+            ${restaurant && "text-bluePrimary"} 
+            ${home && "text-white"} 
+            ${
+              supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8`}
           >
             Povesti
@@ -145,8 +164,11 @@ export default function Header({
         </div>
       </div>
       <h1
-        className={`flex justify-center text-center ${
-          !!restaurant ? "text-bluePrimary" : "text-white"
+        className={`flex justify-center text-center 
+        ${restaurant && "text-bluePrimary"} 
+        ${home && "text-white"} 
+        ${
+          supplier && "text-black"
         } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12 lg:whitespace-pre-line`}
       >
         {headingText}

@@ -1,0 +1,225 @@
+import Button from "Atoms/Button";
+import FirstSection from "Components/FirstSection";
+import Header from "Components/Header/Header";
+import InformationsCard from "Components/InformationsCard";
+import Whirligig from "react-whirligig";
+
+function Suppliers() {
+  const information = [
+    {
+      subTitle: "Comanda de la furnizori",
+      description: `Plasați comenzi și discutați cu toți furnizorii dvs. într-o singură aplicație. Comenzile sunt convertite în formatul dorit de furnizor – 
+        e-mail, WhatsApp, SMS, Fax sau integrare directă in ERP-ul furnizorului. Da, chiar funcționează cu toți furnizorii tăi.`,
+      buttonLink: "/restaurante",
+      img: "images/i-phone-x.png",
+      img2: "images/i-phone-x@2x.png",
+      img3: "images/i-phone-x@3x.png",
+      componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
+      subComponentStyles: "my-22",
+      textColor: "text-black",
+      pictureStyles: "object-scale-down h-104 w-72",
+    },
+    {
+      subTitle: "Organizezi cataloagele de comanda",
+      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de masura și produse/unitatea de masura pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
+      buttonLink: "/furnizori",
+      img: "images/iphone-x-mockup-information.png",
+      img2: "images/iphone-x-mockup-information@2x.png",
+      img3: "images/iphone-x-mockup-information@3x.png",
+      componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
+      textColor: "text-black",
+      pictureStyles: "object-scale-down h-104 w-72",
+    },
+  ];
+
+  const slider = [
+    {
+      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
+      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
+      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
+      pentru că le tastam pe toate. HORECA ORDERS este atât de
+      convenabil și eficient!`,
+      personDescription: `
+      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      `,
+      img: "images/barman-image.png",
+      img2: "images/barman-image@2x.png",
+      img3: "images/barman-image@3x.png",
+    },
+    {
+      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
+      În urmă cu aproximativ 6 luni, afacerea noastră de la "numele restaurantului" era în creștere și era important să ne simplificăm procesul de comandă, mai ales că aveam diferiți oameni care se ocupau de el! Acum, cu Horeca Orders, comandarea ne ia 5 minute în loc de 30.`,
+      personDescription: `
+      Nadia Mihai (Manager) - Sushi Master, Bucuresti
+      `,
+      img: "images/Nadia-Sushi-Master.png",
+      img2: "images/Nadia-Sushi-Master.png",
+      img3: "images/Nadia-Sushi-Master.png",
+    },
+    {
+      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
+      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
+      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
+      personDescription: `
+      Gabi Herdean - Sushi Master, Bucuresti
+      `,
+      img: "",
+      img2: "",
+      img3: "",
+    },
+  ];
+
+  let whirligig;
+  const next = () => whirligig.next();
+  const prev = () => whirligig.prev();
+  return (
+    <div>
+      <Header
+        bgHeader={"bg-white"}
+        headingText={`GESTIONEAZA COMENZILE
+        MAI USOR`}
+        headerButtonLeft={{
+          text: "Inregistrare",
+          link: "/",
+        }}
+        headerButtonRight={{
+          text: "Autentificare",
+          link: "/",
+        }}
+        logoYellow
+        supplier
+      />
+      <FirstSection
+        colors={{ background: "bg-greyBg", text: "text-black" }}
+        subHeader={{
+          textTitle: "COMUNICARE MAI PRECISA CU PARTENERII",
+          paragraph: `Utilizați platforma HORECA ORDERS pentru a gestiona comenzile, edita catalogul sau promova produse - totul într-un singur loc. Permiteți echipei dvs. să economisească timp, să reducă erorile și să îmbunătățească relațiile cu clienții.`,
+          imgSet: {
+            img: "images/ustensila-bucatarie.png",
+            img2x: "images/ustensila-bucatarie@2x.png",
+            img3x: "images/ustensila-bucatarie@3x.png",
+          },
+          marginOfSection: "mb-0",
+          info: [
+            {
+              img: "images/adio-greseli.png",
+              img2: "images/adio-greseli@2x.png",
+              img3: "images/adio-greseli@3x.png",
+              subtitle: "Spune adio greselior",
+              description: `Comanda ca un profesionist – Comenzile au mereu codul unic al produselor, unitatea de masura, data de livrare si confirmarea livrarii. 
+                Reduceti greselile cu 85%.`,
+            },
+            {
+              img: "images/castiga-timp.png",
+              img2: "images/castiga-timp@2x.png",
+              img3: "images/castiga-timp@3x.png",
+              subtitle: "Castiga timp",
+              description:
+                "Plasati rapid toate comenzile furnizorilor dvs. dintr-o singură aplicație. Plasați comenzi în doar trei atingeri. Castigati peste 4 ore pe săptămână.",
+            },
+            {
+              img: "images/suport-rapid.png",
+              img2: "images/suport-rapid@2x.png",
+              img3: "images/suport-rapid@3x.png",
+              subtitle: "Suport rapid",
+              description: `Discutati cu echipa
+                HORECA ORDERS în aplicație. Aveti asistență rapida. 
+               În plus, vă vom configura în mai puțin de 24 de ore.`,
+            },
+          ],
+        }}
+      />
+      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 lg:py-20 py-14 px-5">
+        <div className="flex justify-center max-w-4xl">
+          <button onClick={prev}>
+            <img className="w-8" src="SVGs/left-arrow.svg" alt="Arrow left" />
+          </button>
+          <Whirligig
+            visibleSlides={1}
+            gutter="1em"
+            ref={(_whirligigInstance) => {
+              whirligig = _whirligigInstance;
+            }}
+            infinte
+            snapToSlide
+            slideClass={"flex justify-center"}
+            className={"scrollbar-hide"}
+          >
+            {slider.map((sliderItem) => {
+              return (
+                <div className="flex lg:flex-row flex-col items-center">
+                  <div className=" flex flex-col pr-4">
+                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl max-w-md">
+                      {sliderItem.paragraphDescription}
+                    </p>
+                    <p className="font-openSans font-semibold text-base lg:text-start text-center text-white lg:mt-0 mt-6">
+                      {sliderItem.personDescription}
+                    </p>
+                  </div>
+                  <picture>
+                    <source
+                      media="(max-width: 799px)"
+                      srcset={sliderItem.img3}
+                    />
+                    <source
+                      media="(min-width: 800px)"
+                      srcset={sliderItem.img2}
+                    />
+                    <img
+                      className="object-cover h-85 lg:mt-0 mt-8"
+                      src={sliderItem.img}
+                      alt=""
+                    />
+                  </picture>
+                </div>
+              );
+            })}
+          </Whirligig>
+          <button onClick={next}>
+            <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
+          </button>
+        </div>
+        <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
+      </div>
+      <div className="flex flex-col w-full items-center mt-13">
+        <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0">
+          Plasezi comenzile mult mai bine
+        </p>
+        <InformationsCard data={information} />
+      </div>
+      <div className="flex justify-center">
+        <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
+          <div className="flex justify-center w-full">
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/hands-photo@3x.png"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/hands-photo@2x.png"
+              />
+              <img
+                className="object-cover max-h-180 lg:p-0 p-10"
+                src="images/hands-photo.png"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div className="flex flex-col items-center justify-center px-10 lg:px-0">
+            <p className="font-openSans font-extrabold lg:text-7xl text-5xl text-black italic text-center">
+              HAI SA <br /> EXPLORAM <br /> HORECA <br />
+              ORDERS
+            </p>
+            <Button
+              styles="mt-12 lg:mb-0 mb-10 text-center"
+              text="Rezerva o sesiune demonstrativa"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Suppliers;

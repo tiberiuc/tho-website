@@ -4,7 +4,7 @@ import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
 import Whirligig from "react-whirligig";
 
-function Restaurante() {
+function Restaurants() {
   const cardSection = [
     {
       number: "1",
@@ -81,17 +81,25 @@ function Restaurante() {
       img3: "images/barman-image@3x.png",
     },
     {
-      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
-      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
-      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
-      pentru că le tastam pe toate. HORECA ORDERS este atât de
-      convenabil și eficient!`,
+      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
+      În urmă cu aproximativ 6 luni, afacerea noastră de la "numele restaurantului" era în creștere și era important să ne simplificăm procesul de comandă, mai ales că aveam diferiți oameni care se ocupau de el! Acum, cu Horeca Orders, comandarea ne ia 5 minute în loc de 30.`,
       personDescription: `
-      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      Nadia Mihai (Manager) - Sushi Master, Bucuresti
       `,
-      img: "images/barman-image.png",
-      img2: "images/barman-image@2x.png",
-      img3: "images/barman-image@3x.png",
+      img: "images/Nadia-Sushi-Master.png",
+      img2: "images/Nadia-Sushi-Master.png",
+      img3: "images/Nadia-Sushi-Master.png",
+    },
+    {
+      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
+      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
+      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
+      personDescription: `
+      Gabi Herdean - Sushi Master, Bucuresti
+      `,
+      img: "",
+      img2: "",
+      img3: "",
     },
   ];
 
@@ -113,6 +121,7 @@ function Restaurante() {
           text: "Autentificare",
           link: "/",
         }}
+        logoYellow
       />
       <FirstSection
         colors={{ background: "bg-bluePrimary", text: "text-white" }}
@@ -215,7 +224,7 @@ function Restaurante() {
             ref={(_whirligigInstance) => {
               whirligig = _whirligigInstance;
             }}
-            infinte={true}
+            infinte
             snapToSlide
             slideClass={"flex justify-center"}
             className={"scrollbar-hide"}
@@ -223,7 +232,7 @@ function Restaurante() {
             {slider.map((sliderItem) => {
               return (
                 <div className="flex lg:flex-row flex-col items-center">
-                  <div className=" flex flex-col">
+                  <div className=" flex flex-col pr-4">
                     <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl max-w-md">
                       {sliderItem.paragraphDescription}
                     </p>
@@ -323,4 +332,4 @@ function Restaurante() {
   );
 }
 
-export default Restaurante;
+export default Restaurants;
