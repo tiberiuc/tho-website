@@ -24,9 +24,11 @@ const InformationsCard = ({ data }) => {
                 >
                   {item.description}
                 </span>
-                <Link to={item.buttonLink}>
-                  <Button styles="mt-6 font-semibold" text="Afla mai multe" />
-                </Link>
+                {item?.buttonLink && (
+                  <Link to={item.buttonLink}>
+                    <Button styles="mt-6 font-semibold" text="Afla mai multe" />
+                  </Link>
+                )}
               </div>
               <picture>
                 <source media="(max-width: 799px)" srcset={item.img3} />

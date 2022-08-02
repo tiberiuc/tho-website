@@ -68,17 +68,15 @@ function Restaurants() {
 
   const slider = [
     {
-      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
-      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
-      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
-      pentru că le tastam pe toate. HORECA ORDERS este atât de
-      convenabil și eficient!`,
+      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
+      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
+      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
       personDescription: `
-      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      Gabi Herdean - Papila, Bucuresti
       `,
-      img: "images/barman-image.png",
-      img2: "images/barman-image@2x.png",
-      img3: "images/barman-image@3x.png",
+      img: "images/gabi-papila.jpg",
+      img2: "images/gabi-papila.jpg",
+      img3: "images/gabi-papila.jpg",
     },
     {
       paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
@@ -91,15 +89,17 @@ function Restaurants() {
       img3: "images/Nadia-Sushi-Master.png",
     },
     {
-      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
-      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
-      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
+      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
+      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
+      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
+      pentru că le tastam pe toate. HORECA ORDERS este atât de
+      convenabil și eficient!`,
       personDescription: `
-      Gabi Herdean - Sushi Master, Bucuresti
+      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
       `,
-      img: "",
-      img2: "",
-      img3: "",
+      img: "images/barman-image.png",
+      img2: "images/barman-image@2x.png",
+      img3: "images/barman-image@3x.png",
     },
   ];
 
@@ -214,7 +214,7 @@ function Restaurants() {
         <InformationsCard data={information} />
       </div>
       <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 lg:py-20 py-14 px-5">
-        <div className="flex justify-center max-w-4xl">
+        <div className="flex justify-center w-full lg:max-w-4xl">
           <button onClick={prev}>
             <img className="w-8" src="SVGs/left-arrow.svg" alt="Arrow left" />
           </button>
@@ -227,13 +227,13 @@ function Restaurants() {
             infinte
             snapToSlide
             slideClass={"flex justify-center"}
-            className={"scrollbar-hide"}
+            className={"scrollbar-hide w-full"}
           >
             {slider.map((sliderItem) => {
               return (
                 <div className="flex lg:flex-row flex-col items-center">
-                  <div className=" flex flex-col pr-4">
-                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl max-w-md">
+                  <div className="flex flex-col lg:pr-4">
+                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-md">
                       {sliderItem.paragraphDescription}
                     </p>
                     <p className="font-openSans font-semibold text-base lg:text-start text-center text-white lg:mt-0 mt-6">
@@ -265,7 +265,7 @@ function Restaurants() {
         </div>
         <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
       </div>
-      <div className="flex justify-center bg-greyBg lg:pt-8 pt-28">
+      <div className="flex justify-center bg-greyBg lg:pt-8 pt-10">
         <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">
           <div className="flex flex-col items-center justify-center px-10 lg:px-0">
             <p className="font-openSans font-extrabold text-5xl text-bluePrimary text-center">
