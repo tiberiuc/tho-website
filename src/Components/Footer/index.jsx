@@ -2,18 +2,14 @@ import React from "react";
 
 const navigation = {
   info: [
-    { name: "Home", href: "#" },
-    { name: "Restaurante", href: "#" },
-    { name: "Furnizori", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "Restaurante", href: "/restaurante" },
+    { name: "Furnizori", href: "/furnizori" },
     { name: "FAQ", href: "#" },
-    { name: "Noutati Produs", href: "#" },
   ],
   horecaOrders: [
     { name: "Despre", href: "#" },
-    { name: "Cariere", href: "#" },
-    { name: "Contacteaza-ne", href: "#" },
-    { name: "Presa", href: "#" },
-    { name: "Media Kit", href: "#" },
+    { name: "Contacteaza-ne", href: "mailto:denis@horecaorders.com" },
   ],
   povesti: [
     { name: "Toate povestile", href: "#" },
@@ -163,7 +159,10 @@ function Footer() {
           <p className="text-xs text-white opacity-50 font-openSans">
             2022 &copy; HORECA ORDERS SRL
           </p>
-          <a className="text-xs text-white opacity-50 font-openSans" href="/">
+          <a
+            className="text-xs text-white opacity-50 font-openSans"
+            href="mailto:denis@horecaorders.com"
+          >
             Contact
           </a>
           <a className="text-xs text-white opacity-50 font-openSans" href="/">

@@ -84,7 +84,7 @@ export default function Header({
                 <Link to="/furnizori">Furnizori</Link>
               </li>
               <li
-                className={`my-4 ${
+                className={`my-4 hidden ${
                   restaurant && "lg:text-bluePrimary text-white"
                 } ${
                   (home || supplier) && "text-white"
@@ -135,7 +135,7 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Restaurante
           </Link>
@@ -146,18 +146,18 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Furnizori
           </Link>
           <Link
             to="/povesti"
-            className={`text-base font-semibold 
+            className={`hidden text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Povesti
           </Link>
@@ -174,18 +174,34 @@ export default function Header({
         {headingText}
       </h1>
       <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">
-        <Link to={headerButtonLeft.link}>
+        {!headerButtonLeft?.externalLink ? (
+          <Link to={headerButtonLeft?.link}>
+            <Button
+              text={headerButtonLeft?.text}
+              styles="lg:w-48 w-64 justify-center"
+            />
+          </Link>
+        ) : (
           <Button
-            text={headerButtonLeft.text}
+            text={headerButtonLeft?.text}
             styles="lg:w-48 w-64 justify-center"
+            link={headerButtonLeft?.externalLink}
           />
-        </Link>
-        <Link to={headerButtonRight.link}>
+        )}
+        {!headerButtonRight?.externalLink ? (
+          <Link to={headerButtonRight.link}>
+            <Button
+              text={headerButtonRight?.text}
+              styles="lg:w-48 w-64 justify-center"
+            />
+          </Link>
+        ) : (
           <Button
-            text={headerButtonRight.text}
-            styles="mt-4 lg:mt-0 lg:w-48 w-64 justify-center"
+            text={headerButtonRight?.text}
+            styles="lg:w-48 w-64 justify-center"
+            link={headerButtonRight?.externalLink}
           />
-        </Link>
+        )}
       </div>
     </nav>
   );

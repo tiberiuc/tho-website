@@ -53,6 +53,9 @@ module.exports = {
       },
       gap: {
         '22': '5.5rem',
+      },
+      textDecorationThickness: {
+        3: '3px',
       }
     },
   },

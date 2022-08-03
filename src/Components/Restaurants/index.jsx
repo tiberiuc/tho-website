@@ -115,11 +115,11 @@ function Restaurants() {
         CATRE TOTI FURNIZORII TAI`}
         headerButtonLeft={{
           text: "Inregistrare",
-          link: "/",
+          externalLink: "https://app.horecaorders.com/users/register",
         }}
         headerButtonRight={{
           text: "Autentificare",
-          link: "/",
+          externalLink: "https://app.horecaorders.com/users/log_in",
         }}
         logoYellow
       />
@@ -167,8 +167,8 @@ function Restaurants() {
       <div className="flex flex-col items-center w-full">
         <Button
           styles="lg:flex hidden"
-          text="Rezerva o sesiune demonstrativa"
-          link="/"
+          text="Inregistrare"
+          link="mailto:max.mustermann@example.com"
         />
         <div className="flex flex-col w-full items-center mt-20 pt-20 lg:pb-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center ">
