@@ -41,13 +41,13 @@ function FirstSection({ colors, subHeader }) {
       </div>
       <div className="flex justify-center">
         <div
-          className={`grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 lg:mb-13 ${
-            subHeader.marginOfSection ? subHeader.marginOfSection : "mb-34"
+          className={`grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 ${
+            subHeader?.marginOfSection ? subHeader?.marginOfSection : "mb-0"
           } max-w-3.5xl`}
         >
           {subHeader?.info.map((item) => {
             return (
-              <div className="flex flex-col items-center w-60 w-full mt-34 lg:mt-0">
+              <div className="grid grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-34 lg:mt-0">
                 <picture>
                   <source media="(max-width: 799px)" srcset={item.img3} />
                   <source media="(min-width: 800px)" srcset={item.img2} />
@@ -60,7 +60,7 @@ function FirstSection({ colors, subHeader }) {
                 <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
                   {item.subtitle}
                 </span>
-                <span className="font-openSans lg:font-semibold lg:text-base text-lg lg:mt-11 mt-7 text-center">
+                <span className="font-openSans lg:font-semibold lg:text-base text-lg text-center">
                   {item.description}
                 </span>
               </div>
