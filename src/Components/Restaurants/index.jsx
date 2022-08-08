@@ -134,7 +134,7 @@ function Restaurants() {
             img2x: "images/ustensila-bucatarie@2x.png",
             img3x: "images/ustensila-bucatarie@3x.png",
           },
-          marginOfSection: "mb-0",
+          marginOfSection: "mb-10",
           info: [
             {
               img: "images/adio-greseli.png",
