@@ -1,21 +1,38 @@
-import './App.css';
-import Home from 'Components/Home';
-import Footer from 'Components/Footer';
-import { Route, Routes } from 'react-router-dom';
-import Restaurants from 'Components/Restaurants';
-import Suppliers from 'Components/Suppliers';
+import "./App.css";
+import Home from "Components/Home";
+import Footer from "Components/Footer";
+import { Route, Routes } from "react-router-dom";
+import Restaurants from "Components/Restaurants";
+import Suppliers from "Components/Suppliers";
+// import { useEffect, useState } from "react";
 
 function App() {
+  // const [show, setShow] = useState(false);
+
+  // const controlNavBar = () => {
+  //   if (window.screenY > 50) {
+  //     setShow(true);
+  //   } else {
+  //     setShow(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", controlNavBar);
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavBar);
+  //   };
+  // }, []);
   return (
-    <>
-            <Routes>
-                <Route path="/" element={ <Home />}>
-              </Route>
-                <Route path="restaurante" element={<Restaurants />} />
-                <Route path="furnizori" element={<Suppliers />} />
-            </Routes>
-            <Footer />
-    </>
+    <div className="relative">
+      {/* <nav className={`mt-96 bg-red-400 h-20 ${!show && "hidden"}`}>orice</nav> */}
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="restaurante" element={<Restaurants />} />
+        <Route path="furnizori" element={<Suppliers />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

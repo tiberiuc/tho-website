@@ -3,42 +3,45 @@ import React from "react";
 function FirstSection({ colors, subHeader }) {
   return (
     <div>
-      <div
-        className={`grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center ${colors?.background}`}
-      >
+      <div className="flex justify-center">
         <div
-          className={`flex flex-col justify-start w-full lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 ${colors.text}`}
+          className={`grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center ${colors?.background}`}
         >
-          <span className="text-4xl font-extrabold font-openSans max-w-lg mt-15">
-            {subHeader?.textTitle}
-          </span>
-          <span className="font-medium font-openSans mt-5 whitespace-pre-line">
-            {subHeader?.paragraph}
-          </span>
-          {subHeader?.secondParagraph && (
-            <span className="font-semibold font-openSans mt-5">
-              {subHeader?.secondParagraph}
+          <div
+            className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-3xl justify-items-center ${colors.text}`}
+          >
+            <span className="text-4xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-15">
+              {subHeader?.textTitle}
             </span>
-          )}
-        </div>
-        <div>
-          <picture>
-            <source
-              media="(max-width: 799px)"
-              srcset={subHeader?.imgSet.img3x}
-            />
-            <source
-              media="(min-width: 800px)"
-              srcset={subHeader?.imgSet.img2x}
-            />
-            <img
-              className="object-cover max-h-128 w-screen"
-              src={subHeader?.imgSet.img}
-              alt="Man cooking"
-            />
-          </picture>
+            <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line">
+              {subHeader?.paragraph}
+            </span>
+            {subHeader?.secondParagraph && (
+              <span className="font-semibold font-openSans mt-5 2xl:text-center">
+                {subHeader?.secondParagraph}
+              </span>
+            )}
+          </div>
+          <div>
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset={subHeader?.imgSet.img3x}
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset={subHeader?.imgSet.img2x}
+              />
+              <img
+                className="object-cover max-h-128 w-screen"
+                src={subHeader?.imgSet.img}
+                alt="Man cooking"
+              />
+            </picture>
+          </div>
         </div>
       </div>
+
       <div className="flex justify-center">
         <div
           className={`grid lg:grid-cols-3 grid-cols-1 gap-x-20 justify-items-center lg:mt-14 ${

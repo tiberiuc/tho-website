@@ -74,9 +74,9 @@ function Restaurants() {
       personDescription: `
       Gabi Herdean - Papila, Bucuresti
       `,
-      img: "images/gabi-papila.jpg",
-      img2: "images/gabi-papila.jpg",
-      img3: "images/gabi-papila.jpg",
+      img: "images/gabi-papila.png",
+      img2: "images/gabi-papila.png",
+      img3: "images/gabi-papila.png",
     },
     {
       paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
@@ -310,7 +310,7 @@ function Restaurants() {
                 srcset="images/hands-photo@2x.png"
               />
               <img
-                className="object-cover max-h-180 lg:p-0 p-10"
+                className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10"
                 src="images/hands-photo.png"
                 alt=""
               />

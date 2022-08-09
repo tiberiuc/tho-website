@@ -14,6 +14,7 @@ export default function Header({
   logoYellow,
 }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">

@@ -33,9 +33,9 @@ function Suppliers() {
       subTitle: "Promoveaza-ti catalogul",
       description:
         "Menținerea catalogului actualizat este una, dar să-ti informezi clienții despre el este alta. Gestionarea catalogului dvs. online cu Horeca Orders înseamnă că informațiile despre produse (unități, ID-uri de produse, disponibilitate) sunt întotdeauna actualizate și vizibile pentru clienți.",
-      img: "images/comenzi.png",
-      img2: "images/comenzi@2x.png",
-      img3: "images/comenzi@3x.png",
+      img: "images/ho-catalog.png",
+      img2: "images/ho-catalog@2x.png",
+      img3: "images/ho-catalog@3x.png",
       componentStyles: "bg-greyBg justify-items-end items-center lg:h-98",
       textColor: "text-black",
       pictureStyles: "object-scale-down lg:w-86 w-80 h-72",
@@ -44,9 +44,9 @@ function Suppliers() {
       subTitle: "Creste-ti vanzarile prin mesaje trimise simultan",
       description:
         "Promovați oferte speciale și produsele sezoniere prin mesaje mai multor clienți simultan. Clientii primesc mesajul în aplicația lor Horeca Orders și pot comanda in doar trei pasi simplii.",
-      img: "images/comenzi.png",
-      img2: "images/comenzi@2x.png",
-      img3: "images/comenzi@3x.png",
+      img: "images/ho-oferte.png",
+      img2: "images/ho-oferte@2x.png",
+      img3: "images/ho-oferte@3x.png",
       componentStyles:
         "bg-yellowSection justify-items-end items-center lg:h-98",
       textColor: "text-black",
@@ -73,9 +73,9 @@ function Suppliers() {
       personDescription: `
       Gabi Herdean - Papila, Bucuresti
       `,
-      img: "images/gabi-papila.jpg",
-      img2: "images/gabi-papila.jpg",
-      img3: "images/gabi-papila.jpg",
+      img: "images/gabi-papila.png",
+      img2: "images/gabi-papila.png",
+      img3: "images/gabi-papila.png",
     },
     {
       paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
@@ -128,16 +128,16 @@ function Suppliers() {
           textTitle: "COMUNICARE MAI PRECISA CU PARTENERII",
           paragraph: `Utilizați platforma HORECA ORDERS pentru a gestiona comenzile, edita catalogul sau promova produse - totul într-un singur loc. Permiteți echipei dvs. să economisească timp, să reducă erorile și să îmbunătățească relațiile cu clienții.`,
           imgSet: {
-            img: "images/ustensila-bucatarie.png",
-            img2x: "images/ustensila-bucatarie@2x.png",
-            img3x: "images/ustensila-bucatarie@3x.png",
+            img: "images/comunicare-cu-partenerii.png",
+            img2x: "images/comunicare-cu-partenerii@2x.png",
+            img3x: "images/comunicare-cu-partenerii@3x.png",
           },
           marginOfSection: "mb-16",
           info: [
             {
-              img: "images/adio-greseli.png",
-              img2: "images/adio-greseli@2x.png",
-              img3: "images/adio-greseli@3x.png",
+              img: "images/integrare-erp.png",
+              img2: "images/integrare-erp@2x.png",
+              img3: "images/integrare-erp@3x.png",
               subtitle: "Integrare ERP",
               description: `HORECA ORDERS se integreaza cu ERP-ul pentru a renunta la introducerea manuala a comenzilor pentru totdeauna. Economisiti timp. Reduceti costuri.`,
             },
@@ -150,9 +150,9 @@ function Suppliers() {
                 "Obtineti comenzile de la clienti cu coduri de produs si date de livrare. Adio presupuneri. Cresteti precizia livrarii cu 85%",
             },
             {
-              img: "images/suport-rapid.png",
-              img2: "images/suport-rapid@2x.png",
-              img3: "images/suport-rapid@3x.png",
+              img: "images/vindeti-mai-mult.png",
+              img2: "images/vindeti-mai-mult@2x.png",
+              img3: "images/vindeti-mai-mult@3x.png",
               subtitle: "Vindeti mai mult",
               description: `Deblocati un nou tip de marketing trimitand oferte direct in aplicatia HORECA ORDERS a clientilor. 20-30% din
               produsele promovate clientilor prin HORECA ORDERS sunt achizitionate`,
@@ -223,15 +223,15 @@ function Suppliers() {
           <picture>
             <source
               media="(max-width: 799px)"
-              srcset="images/hands-photo@3x.png"
+              srcset="images/functioneaza-in-scurt-timp@3x.png"
             />
             <source
               media="(min-width: 800px)"
-              srcset="images/hands-photo@2x.png"
+              srcset="images/functioneaza-in-scurt-timp@2x.png"
             />
             <img
-              className="object-cover max-h-180 lg:p-0 p-10 h-full"
-              src="images/hands-photo.png"
+              className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10 h-full"
+              src="images/functioneaza-in-scurt-timp.png"
               alt=""
             />
           </picture>
@@ -246,7 +246,10 @@ function Suppliers() {
           </div>
         </div>
       </div>
-      <div className="bg-black bg-opacity-25 flex flex-col justify-center items-center w-full lg:py-36 py-16 lg:px-0 px-10">
+      <div
+        style={{ backgroundImage: "url(/images/pregatit.png)" }}
+        className="bg-opacity-25 flex flex-col justify-center items-center w-full lg:py-28 py-16 lg:px-0 px-10"
+      >
         <p className="font-openSans font-extrabold italic lg:text-7xl text-4xl text-white text-center">
           ESTI PREGATIT PENTRU <br />
           MAI PUTIN STRES <br />
