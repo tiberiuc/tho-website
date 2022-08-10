@@ -16,6 +16,7 @@ const SecondSection = ({ information }) => {
         <a href="https://app.horecaorders.com/users/register">
           <Button
             text={"Inregistrare"}
+            link="https://app.horecaorders.com/users/register"
             styles="w-auto justify-center mt-8 rounded-full"
           />
         </a>

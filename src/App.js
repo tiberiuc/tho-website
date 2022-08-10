@@ -4,6 +4,9 @@ import Footer from "Components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Restaurants from "Components/Restaurants";
 import Suppliers from "Components/Suppliers";
+import TermsAndConditions from "Components/ Terms&Conditions";
+import PrivacyPolicy from "Components/PrivacyPolicy";
+import FAQs from "Components/FAQs";
 // import { useEffect, useState } from "react";
 
 function App() {
@@ -30,6 +33,12 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="restaurante" element={<Restaurants />} />
         <Route path="furnizori" element={<Suppliers />} />
+        <Route path="termeni-conditii" element={<TermsAndConditions />} />
+        <Route
+          path="politica-de-confidentialitate"
+          element={<PrivacyPolicy />}
+        />
+        <Route path="intrebari-frecvente" element={<FAQs />} />
       </Routes>
       <Footer />
     </div>

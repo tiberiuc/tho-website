@@ -5,7 +5,7 @@ const navigation = {
     { name: "Home", href: "/" },
     { name: "Restaurante", href: "/restaurante" },
     { name: "Furnizori", href: "/furnizori" },
-    { name: "FAQ", href: "#" },
+    { name: "FAQ", href: "/intrebari-frecvente" },
   ],
   horecaOrders: [
     { name: "Despre", href: "#" },
@@ -165,10 +165,16 @@ function Footer() {
           >
             Contact
           </a>
-          <a className="text-xs text-white opacity-50 font-openSans" href="/">
+          <a
+            className="text-xs text-white opacity-50 font-openSans"
+            href="/politica-de-confidentialitate"
+          >
             Politica de confidentialitate
           </a>
-          <a className="text-xs text-white opacity-50 font-openSans" href="/">
+          <a
+            className="text-xs text-white opacity-50 font-openSans"
+            href="/termeni-conditii"
+          >
             Termeni si conditii
           </a>
         </div>

@@ -12,6 +12,9 @@ export default function Header({
   headerButtonLeft,
   headerButtonRight,
   logoYellow,
+  noButtons,
+  lastModificationDate,
+  noButtonsWithoutModificationText,
 }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -165,45 +168,61 @@ export default function Header({
         </div>
       </div>
       <h1
-        className={`flex justify-center text-center 
+        className={`flex ${
+          noButtons
+            ? "lg:ml-52 lg:mx-0 mx-8"
+            : "justify-center lg:px-8 px-16 text-center"
+        }   
         ${restaurant && "text-bluePrimary"} 
         ${home && "text-white"} 
+        ${supplier && "text-black"} 
         ${
-          supplier && "text-black"
-        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl lg:px-8 px-16 mt-12 lg:whitespace-pre-line`}
+          noButtonsWithoutModificationText && "lg:pb-32 pb-14"
+        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl  mt-12 lg:whitespace-pre-line`}
       >
         {headingText}
       </h1>
-      <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 mt-8 lg:pb-32 pb-14">
-        {!headerButtonLeft?.externalLink ? (
-          <Link to={headerButtonLeft?.link}>
+      {(!noButtons || noButtonsWithoutModificationText) && (
+        <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-14">
+          {!headerButtonLeft?.externalLink ? (
+            <Link to={headerButtonLeft?.link}>
+              <Button
+                text={headerButtonLeft?.text}
+                styles="lg:w-48 w-64 justify-center"
+              />
+            </Link>
+          ) : (
             <Button
               text={headerButtonLeft?.text}
               styles="lg:w-48 w-64 justify-center"
+              link={headerButtonLeft?.externalLink}
             />
-          </Link>
-        ) : (
-          <Button
-            text={headerButtonLeft?.text}
-            styles="lg:w-48 w-64 justify-center"
-            link={headerButtonLeft?.externalLink}
-          />
-        )}
-        {!headerButtonRight?.externalLink ? (
-          <Link to={headerButtonRight.link}>
+          )}
+          {!headerButtonRight?.externalLink ? (
+            <Link to={headerButtonRight?.link}>
+              <Button
+                text={headerButtonRight?.text}
+                styles="lg:w-48 w-64 justify-center"
+              />
+            </Link>
+          ) : (
             <Button
               text={headerButtonRight?.text}
               styles="lg:w-48 w-64 justify-center"
+              link={headerButtonRight?.externalLink}
             />
-          </Link>
-        ) : (
-          <Button
-            text={headerButtonRight?.text}
-            styles="lg:w-48 w-64 justify-center"
-            link={headerButtonRight?.externalLink}
-          />
-        )}
-      </div>
+          )}
+        </div>
+      )}
+      {noButtons && (
+        <div
+          className={`${
+            restaurant ? "text-black" : "text-white"
+          } font-bold font-openSans text-3xl lg:ml-52 lg:pb-32 pb-14 mt-10 lg:mx-0 mx-8`}
+        >
+          {lastModificationDate}
+        </div>
+      )}
     </nav>
   );
 }

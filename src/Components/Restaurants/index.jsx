@@ -168,7 +168,7 @@ function Restaurants() {
         <Button
           styles="lg:flex hidden"
           text="Inregistrare"
-          link="mailto:max.mustermann@example.com"
+          link="https://app.horecaorders.com/users/register"
         />
         <div className="flex flex-col w-full items-center mt-20 pt-20 lg:pb-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center ">
@@ -263,7 +263,11 @@ function Restaurants() {
             <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
           </button>
         </div>
-        <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
+        <Button
+          styles="lg:mt-16 mt-8"
+          text="Inregistrare"
+          link="https://app.horecaorders.com/users/register"
+        />
       </div>
       <div className="flex justify-center bg-greyBg lg:pt-8 pt-10">
         <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">

@@ -210,7 +210,11 @@ function Suppliers() {
             <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
           </button>
         </div>
-        <Button styles="lg:mt-16 mt-8" text="Inregistrare" />
+        <Button
+          styles="lg:mt-16 mt-8"
+          text="Inregistrare"
+          link="https://app.horecaorders.com/users/register"
+        />
       </div>
       <div className="flex flex-col w-full items-center lg:mt-13">
         <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0 lg:my-0 my-13">

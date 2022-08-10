@@ -1,0 +1,48 @@
+p.p1 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 12.0px Helvetica;
+    color: 'red'
+}
+
+p.p2 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 12.0px Helvetica;
+    color: #000000;
+    min-height: 14.0px
+}
+
+p.p3 {
+    margin: 0.0px 0.0px 0.0px 18.0px;
+    font: 12.0px Helvetica;
+    color: #000000;
+    min-height: 14.0px
+}
+
+p.p4 {
+    margin: 0.0px 0.0px 0.0px 36.0px;
+    font: 12.0px Helvetica;
+    color: #000000
+}
+
+p.p5 {
+    margin: 0.0px 0.0px 0.0px 36.0px;
+    font: 12.0px Helvetica;
+    color: #000000;
+    min-height: 14.0px
+}
+
+p.p6 {
+    margin: 0.0px 0.0px 5.0px 0.0px;
+    font: 12.0px Helvetica;
+    color: #000000
+}
+
+li.li1 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 12.0px Helvetica;
+    color: #000000
+}
+
+ol.ol1 {
+    list-style-type: decimal
+}
