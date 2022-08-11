@@ -8,7 +8,7 @@ const navigation = {
     { name: "FAQ", href: "/intrebari-frecvente" },
   ],
   horecaOrders: [
-    { name: "Despre", href: "#" },
+    { name: "Despre", href: "/despre" },
     { name: "Contacteaza-ne", href: "mailto:denis@horecaorders.com" },
   ],
   povesti: [

@@ -170,7 +170,7 @@ export default function Header({
       <h1
         className={`flex ${
           noButtons
-            ? "lg:ml-52 lg:mx-0 mx-8"
+            ? `${noButtons}`
             : "justify-center lg:px-8 px-16 text-center"
         }   
         ${restaurant && "text-bluePrimary"} 

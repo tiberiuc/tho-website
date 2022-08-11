@@ -7,6 +7,7 @@ import Suppliers from "Components/Suppliers";
 import TermsAndConditions from "Components/ Terms&Conditions";
 import PrivacyPolicy from "Components/PrivacyPolicy";
 import FAQs from "Components/FAQs";
+import About from "Components/About";
 // import { useEffect, useState } from "react";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           element={<PrivacyPolicy />}
         />
         <Route path="intrebari-frecvente" element={<FAQs />} />
+        <Route path="despre" element={<About />} />
       </Routes>
       <Footer />
     </div>

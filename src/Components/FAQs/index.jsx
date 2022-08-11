@@ -41,9 +41,8 @@ function FAQs() {
       <Header
         headingText={`Intrebari 
         Frecvente`}
-        noButtonsWithoutModificationText="justify-center lg:px-8 px-16 text-center"
         home
-        noButtons
+        noButtons={"justify-center lg:px-8 px-16 text-center ml-0"}
         logoYellow
         bgHeader="bg-bluePrimary"
       />
@@ -51,14 +50,14 @@ function FAQs() {
         {faqs.map((question) => {
           return (
             <div
-              className={`flex justify-center w-full py-14 ${question.styles}`}
+              className={`flex justify-center w-full py-14 px-8 lg:px-0 ${question.styles}`}
             >
               <div className="max-w-xl flex flex-col items-center">
-                <p className="font-openSans font-extrabold text-5xl text-center">
+                <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-center">
                   {question?.title}
                 </p>
 
-                <p className="font-openSans font-semibold text-center mt-4">
+                <p className="font-openSans lg:font-semibold font-normal text-center mt-4 lg:text-base text-xl">
                   {question?.description}
                 </p>
                 {question?.button && (

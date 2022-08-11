@@ -6,7 +6,7 @@ function TermsAndConditions() {
     <>
       <Header
         headingText={`TERMENI SI CONDITII`}
-        noButtons
+        noButtons={"lg:ml-52 lg:mx-0 mx-8 "}
         restaurant
         logoYellow
         bgHeader="bg-greyBg"

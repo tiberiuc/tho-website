@@ -5,7 +5,7 @@ function FirstSection({ colors, subHeader }) {
     <div>
       <div className="flex justify-center">
         <div
-          className={`grid lg:grid-cols-2 grid-cols-1 w-full bg-white items-center ${colors?.background}`}
+          className={`grid lg:grid-cols-2 grid-cols-1 w-full items-center ${colors?.background}`}
         >
           <div
             className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-3xl justify-items-center ${colors.text}`}
