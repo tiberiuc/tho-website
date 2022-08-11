@@ -112,7 +112,7 @@ function About() {
               alt=""
             />
           </picture>
-          <div className="flex flex-col items-center justify-center px-10 lg:px-0 lg:pb-0 pb-10">
+          <div className="flex flex-col items-center justify-center px-10 lg:pb-0 pb-10">
             <p className="font-openSans font-extrabold lg:text-7xl text-4xl text-black italic text-center">
               DE CE <br /> “HORECA <br /> ORDERS”?
             </p>
