@@ -113,11 +113,11 @@ function Suppliers() {
         MAI USOR`}
         headerButtonLeft={{
           text: "Inregistrare",
-          link: "/",
+          externalLink: "https://app.horecaorders.com/users/register",
         }}
         headerButtonRight={{
           text: "Autentificare",
-          link: "/",
+          externalLink: "https://app.horecaorders.com/users/log_in",
         }}
         logoYellow
         supplier
@@ -245,7 +245,8 @@ function Suppliers() {
             </p>
             <Button
               styles="mt-10 lg:mb-0 mb-10 text-center"
-              text="Rezerva o sesiune demonstrativa"
+              text="Inregistrare"
+              link="https://app.horecaorders.com/users/register"
             />
           </div>
         </div>
@@ -261,7 +262,8 @@ function Suppliers() {
         </p>
         <Button
           styles="mt-12 lg:mb-0 text-center"
-          text="Rezerva o sesiune demonstrativa"
+          text="Inregistrare"
+          link="https://app.horecaorders.com/users/register"
         />
       </div>
     </div>

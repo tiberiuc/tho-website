@@ -280,7 +280,7 @@ function Restaurants() {
               furnizori, având disponibile funcții opționale plătite. Vorbeste
               cu echipa noastra pentru a afla mai multe!
             </p>
-            <Button text="Intrebari Frecvente" />
+            <Button link="/intrebari-frecvente" text="Intrebari Frecvente" />
           </div>
           <div className="flex lg:justify-center justify-start w-full">
             <picture>
@@ -327,7 +327,8 @@ function Restaurants() {
             </p>
             <Button
               styles="mt-12 lg:mb-0 mb-10 text-center"
-              text="Rezerva o sesiune demonstrativa"
+              text="Inregistrare"
+              link="https://app.horecaorders.com/users/register"
             />
           </div>
         </div>
