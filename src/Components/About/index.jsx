@@ -36,11 +36,11 @@ function About() {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcset="images/ustensila-bucatarie-fata@3x.png"
+                srcSet="images/ustensila-bucatarie-fata@3x.png"
               />
               <source
                 media="(min-width: 800px)"
-                srcset="images/ustensila-bucatarie-fata@2x.png"
+                srcSet="images/ustensila-bucatarie-fata@2x.png"
               />
               <img
                 className="object-cover max-h-128 w-screen"
@@ -100,11 +100,11 @@ function About() {
           <picture>
             <source
               media="(max-width: 799px)"
-              srcset="images/juan-manuel@3x.png"
+              srcSet="images/juan-manuel@3x.png"
             />
             <source
               media="(min-width: 800px)"
-              srcset="images/juan-manuel@2x.png"
+              srcSet="images/juan-manuel@2x.png"
             />
             <img
               className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10 h-full"

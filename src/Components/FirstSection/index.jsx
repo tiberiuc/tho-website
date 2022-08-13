@@ -26,11 +26,11 @@ function FirstSection({ colors, subHeader }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcset={subHeader?.imgSet.img3x}
+                srcSet={subHeader?.imgSet.img3x}
               />
               <source
                 media="(min-width: 800px)"
-                srcset={subHeader?.imgSet.img2x}
+                srcSet={subHeader?.imgSet.img2x}
               />
               <img
                 className="object-cover max-h-128 w-screen"
@@ -52,8 +52,8 @@ function FirstSection({ colors, subHeader }) {
             return (
               <div className="grid grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-34 lg:mt-0">
                 <picture>
-                  <source media="(max-width: 799px)" srcset={item.img3} />
-                  <source media="(min-width: 800px)" srcset={item.img2} />
+                  <source media="(max-width: 799px)" srcSet={item.img3} />
+                  <source media="(min-width: 800px)" srcSet={item.img2} />
                   <img
                     className="object-cover w-52 h-52"
                     src={item.img}

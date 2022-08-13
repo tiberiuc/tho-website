@@ -67,22 +67,23 @@ function Suppliers() {
 
   const slider = [
     {
-      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
+      paragraphDescription: `Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
       Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
       Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
       personDescription: `
       Gabi Herdean - Papila, Bucuresti
       `,
+      linkOfWebsite: "https://papilakitchen.ro/",
       img: "images/gabi-papila.png",
       img2: "images/gabi-papila.png",
       img3: "images/gabi-papila.png",
     },
     {
-      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
-      În urmă cu aproximativ 6 luni, afacerea noastră de la "numele restaurantului" era în creștere și era important să ne simplificăm procesul de comandă, mai ales că aveam diferiți oameni care se ocupau de el! Acum, cu Horeca Orders, comandarea ne ia 5 minute în loc de 30.`,
+      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.`,
       personDescription: `
       Nadia Mihai (Manager) - Sushi Master, Bucuresti
       `,
+      linkOfWebsite: "https://sushimaster.ro/",
       img: "images/Nadia-Sushi-Master.png",
       img2: "images/Nadia-Sushi-Master.png",
       img3: "images/Nadia-Sushi-Master.png",
@@ -102,9 +103,15 @@ function Suppliers() {
     },
   ];
 
+  var autoplayInterval = setInterval(function () {
+    whirligig.next();
+  }, 5000);
+
   let whirligig;
-  const next = () => whirligig.next();
+
+  const next = () => autoplayInterval;
   const prev = () => whirligig.prev();
+
   return (
     <div>
       <Header
@@ -190,11 +197,11 @@ function Suppliers() {
                   <picture>
                     <source
                       media="(max-width: 799px)"
-                      srcset={sliderItem.img3}
+                      srcSet={sliderItem.img3}
                     />
                     <source
                       media="(min-width: 800px)"
-                      srcset={sliderItem.img2}
+                      srcSet={sliderItem.img2}
                     />
                     <img
                       className="object-cover h-85 lg:mt-0 mt-8"
@@ -227,11 +234,11 @@ function Suppliers() {
           <picture>
             <source
               media="(max-width: 799px)"
-              srcset="images/functioneaza-in-scurt-timp@3x.png"
+              srcSet="images/functioneaza-in-scurt-timp@3x.png"
             />
             <source
               media="(min-width: 800px)"
-              srcset="images/functioneaza-in-scurt-timp@2x.png"
+              srcSet="images/functioneaza-in-scurt-timp@2x.png"
             />
             <img
               className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10 h-full"

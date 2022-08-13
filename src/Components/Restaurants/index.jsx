@@ -26,7 +26,7 @@ function Restaurants() {
       number: "3",
       subTitle: `Comanda 
       trimisa`,
-      details: "Whatsapp, SMS, e-mail, ERP",
+      details: "SMS, e-mail, ERP",
       img: "images/comanda-trimisa-img.png",
       img2: "images/comanda-trimisa-img@2x.png",
       img3: "images/comanda-trimisa-img@3x.png",
@@ -43,24 +43,23 @@ function Restaurants() {
     {
       subTitle: "Comanda de la furnizori",
       description: `Plasați comenzi și discutați cu toți furnizorii dvs. într-o singură aplicație. Comenzile sunt convertite în formatul dorit de furnizor – 
-        e-mail, WhatsApp, SMS, Fax sau integrare directă in ERP-ul furnizorului. Da, chiar funcționează cu toți furnizorii tăi.`,
-      buttonLink: "/restaurante",
+        e-mail, SMS sau integrare directă in ERP-ul furnizorului. Da, chiar funcționează cu toți furnizorii tăi.`,
       img: "images/i-phone-x.png",
       img2: "images/i-phone-x@2x.png",
       img3: "images/i-phone-x@3x.png",
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
-      subComponentStyles: "my-22",
+      subComponentStyles: "my-28",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
     {
       subTitle: "Organizezi cataloagele de comanda",
-      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de masura și produse/unitatea de masura pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
-      buttonLink: "/furnizori",
+      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de masura și numarul de produse incluse intr-o unitate de masura pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
       img: "images/iphone-x-mockup-information.png",
       img2: "images/iphone-x-mockup-information@2x.png",
       img3: "images/iphone-x-mockup-information@3x.png",
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
+      subComponentStyles: "my-22",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
@@ -68,22 +67,23 @@ function Restaurants() {
 
   const slider = [
     {
-      paragraphDescription: `Am facut un pas foarte mare in organizarea comenzilor in restaurantul nostru. Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
+      paragraphDescription: `Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
       Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
       Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
       personDescription: `
       Gabi Herdean - Papila, Bucuresti
       `,
+      linkOfWebsite: "https://papilakitchen.ro/",
       img: "images/gabi-papila.png",
       img2: "images/gabi-papila.png",
       img3: "images/gabi-papila.png",
     },
     {
-      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.
-      În urmă cu aproximativ 6 luni, afacerea noastră de la "numele restaurantului" era în creștere și era important să ne simplificăm procesul de comandă, mai ales că aveam diferiți oameni care se ocupau de el! Acum, cu Horeca Orders, comandarea ne ia 5 minute în loc de 30.`,
+      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.`,
       personDescription: `
       Nadia Mihai (Manager) - Sushi Master, Bucuresti
       `,
+      linkOfWebsite: "https://sushimaster.ro/",
       img: "images/Nadia-Sushi-Master.png",
       img2: "images/Nadia-Sushi-Master.png",
       img3: "images/Nadia-Sushi-Master.png",
@@ -103,8 +103,13 @@ function Restaurants() {
     },
   ];
 
+  var autoplayInterval = setInterval(function () {
+    whirligig.next();
+  }, 5000);
+
   let whirligig;
-  const next = () => whirligig.next();
+
+  const next = () => autoplayInterval;
   const prev = () => whirligig.prev();
   return (
     <div>
@@ -119,7 +124,7 @@ function Restaurants() {
         }}
         headerButtonRight={{
           text: "Autentificare",
-          externalLink: "https://app.horecaorders.com/users/log_in",
+          externalLink: "https://app.horecaorders.com/login",
         }}
         logoYellow
       />
@@ -166,7 +171,7 @@ function Restaurants() {
       />
       <div className="flex flex-col items-center w-full">
         <Button
-          styles="lg:flex hidden"
+          styles="lg:flex hidden px-10 py-4"
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />
@@ -185,8 +190,8 @@ function Restaurants() {
                       <img className="w-4 h-6" src={card?.icon} alt="" />
                     )}
                   </p>
-                  <div className="flex flex-col items-center justify-start text-center h-24 mt-3">
-                    <p className="font-openSans font-bold text-2xl text-white text-center whitespace-pre-line">
+                  <div className="flex flex-col items-center justify-start text-center h-20 mt-3">
+                    <p className="font-openSans font-bold leading-7	text-2xl text-white text-center whitespace-pre-line">
                       {card.subTitle}
                     </p>
                     {card.details && (
@@ -196,9 +201,9 @@ function Restaurants() {
                     )}
                   </div>
                   <picture>
-                    <source media="(max-width: 799px)" srcset={card.img3} />
-                    <source media="(min-width: 800px)" srcset={card.img2} />
-                    <img src={card.img} alt="" />
+                    <source media="(max-width: 799px)" srcSet={card.img3} />
+                    <source media="(min-width: 800px)" srcSet={card.img2} />
+                    <img className="mt-2" src={card.img} alt="" />
                   </picture>
                 </div>
               );
@@ -224,7 +229,7 @@ function Restaurants() {
             ref={(_whirligigInstance) => {
               whirligig = _whirligigInstance;
             }}
-            infinte
+            infinite
             snapToSlide
             slideClass={"flex justify-center"}
             className={"scrollbar-hide w-full"}
@@ -236,18 +241,26 @@ function Restaurants() {
                     <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-md">
                       {sliderItem.paragraphDescription}
                     </p>
-                    <p className="font-openSans font-semibold text-base lg:text-start text-center text-white lg:mt-0 mt-6">
+                    <p className="font-openSans font-semibold text-base text-center text-white lg:mt-2 mt-6">
                       {sliderItem.personDescription}
                     </p>
+                    {sliderItem.linkOfWebsite && (
+                      <a
+                        href={sliderItem.linkOfWebsite}
+                        className="font-openSans font-semibold text-base text-center text-white lg:mt-0 mt-6"
+                      >
+                        {sliderItem.linkOfWebsite}
+                      </a>
+                    )}
                   </div>
                   <picture>
                     <source
                       media="(max-width: 799px)"
-                      srcset={sliderItem.img3}
+                      srcSet={sliderItem.img3}
                     />
                     <source
                       media="(min-width: 800px)"
-                      srcset={sliderItem.img2}
+                      srcSet={sliderItem.img2}
                     />
                     <img
                       className="object-cover h-85 lg:mt-0 mt-8"
@@ -264,7 +277,7 @@ function Restaurants() {
           </button>
         </div>
         <Button
-          styles="lg:mt-16 mt-8"
+          styles="lg:mt-16 mt-8 px-10 py-4"
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />
@@ -286,11 +299,11 @@ function Restaurants() {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcset="images/i-phone-x-in-hand-mobile@3x.png"
+                srcSet="images/i-phone-x-in-hand-mobile@3x.png"
               />
               <source
                 media="(min-width: 800px)"
-                srcset="images/i-phone-x-in-hand@2x.png"
+                srcSet="images/i-phone-x-in-hand@2x.png"
               />
               <img
                 className="object-cover max-h-104 lg:mt-0 mt-11"
@@ -301,36 +314,32 @@ function Restaurants() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
-          <div className="flex justify-center w-full">
-            <picture>
-              <source
-                media="(max-width: 799px)"
-                srcset="images/hands-photo@3x.png"
-              />
-              <source
-                media="(min-width: 800px)"
-                srcset="images/hands-photo@2x.png"
-              />
-              <img
-                className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10"
-                src="images/hands-photo.png"
-                alt=""
-              />
-            </picture>
-          </div>
-          <div className="flex flex-col items-center justify-center px-10 lg:px-0">
-            <p className="font-openSans font-extrabold lg:text-7xl text-5xl text-black italic text-center">
-              HAI SA <br /> EXPLORAM <br /> HORECA <br />
-              ORDERS
-            </p>
-            <Button
-              styles="mt-12 lg:mb-0 mb-10 text-center"
-              text="Inregistrare"
-              link="https://app.horecaorders.com/users/register"
-            />
-          </div>
+      <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcSet="images/hands-photo@3x.png"
+          />
+          <source
+            media="(min-width: 800px)"
+            srcSet="images/hands-photo@2x.png"
+          />
+          <img
+            className="object-fit max-h-180 2xl:max-h-full lg:p-0 p-10"
+            src="images/hands-photo.png"
+            alt=""
+          />
+        </picture>
+        <div className="flex flex-col items-center justify-center px-10 lg:px-0">
+          <p className="font-openSans font-extrabold lg:text-7xl text-5xl text-black italic text-center">
+            HAI SA <br /> EXPLORAM <br /> HORECA <br />
+            ORDERS
+          </p>
+          <Button
+            styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-4"
+            text="Inregistrare"
+            link="https://app.horecaorders.com/users/register"
+          />
         </div>
       </div>
     </div>
