@@ -49,7 +49,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
     };
-  }, []);
+  });
 
   return (
     <div id="parent" className="relative">
