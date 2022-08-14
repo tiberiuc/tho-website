@@ -1,8 +1,8 @@
 import Button from "Atoms/Button";
+import SliderWhirligig from "Atoms/Button/SliderWhirligig";
 import FirstSection from "Components/FirstSection";
 import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
-import Whirligig from "react-whirligig";
 
 function Suppliers() {
   const information = [
@@ -53,7 +53,8 @@ function Suppliers() {
       pictureStyles: "object-scale-down lg:w-86 w-80 h-72",
     },
     {
-      subTitle: "Seteaza zile de livrare si ora limita pentru ultima comanda",
+      subTitle:
+        "Furnizati clientilor cea mai buna experienta de plasat comenzi",
       description:
         "Alegeți în ce zile clienții dvs. pot solicita livrări. Adăugați o oră limită pentru livrarea în ziua următoare. Schimbați acest lucru pentru toți clienții sau doar unul.",
       img: "images/i-phone-x.png",
@@ -102,15 +103,6 @@ function Suppliers() {
       img3: "images/barman-image@3x.png",
     },
   ];
-
-  let whirligig;
-
-  const next = () => whirligig.next();
-  const prev = () => whirligig.prev();
-
-  setInterval(function () {
-    whirligig.next();
-  }, 5000);
 
   return (
     <div>
@@ -167,62 +159,7 @@ function Suppliers() {
           ],
         }}
       />
-      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 lg:py-20 py-14 px-5">
-        <div className="flex justify-center w-full lg:max-w-4xl">
-          <button onClick={prev}>
-            <img className="w-8" src="SVGs/left-arrow.svg" alt="Arrow left" />
-          </button>
-          <Whirligig
-            visibleSlides={1}
-            gutter="1em"
-            ref={(_whirligigInstance) => {
-              whirligig = _whirligigInstance;
-            }}
-            infinte
-            snapToSlide
-            slideClass={"flex justify-center"}
-            className={"scrollbar-hide w-full"}
-          >
-            {slider.map((sliderItem) => {
-              return (
-                <div className="flex lg:flex-row flex-col items-center">
-                  <div className="flex flex-col lg:pr-4">
-                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-md">
-                      {sliderItem.paragraphDescription}
-                    </p>
-                    <p className="font-openSans font-semibold text-base lg:text-start text-center text-white lg:mt-0 mt-6">
-                      {sliderItem.personDescription}
-                    </p>
-                  </div>
-                  <picture>
-                    <source
-                      media="(max-width: 799px)"
-                      srcSet={sliderItem.img3}
-                    />
-                    <source
-                      media="(min-width: 800px)"
-                      srcSet={sliderItem.img2}
-                    />
-                    <img
-                      className="object-cover h-85 lg:mt-0 mt-8"
-                      src={sliderItem.img}
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              );
-            })}
-          </Whirligig>
-          <button onClick={next}>
-            <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
-          </button>
-        </div>
-        <Button
-          styles="lg:mt-16 mt-8"
-          text="Inregistrare"
-          link="https://app.horecaorders.com/users/register"
-        />
-      </div>
+      <SliderWhirligig sliderInfo={slider} />
       <div className="flex flex-col w-full items-center lg:mt-13">
         <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0 lg:my-0 my-13">
           COMENZI PLASATE MULT MAI BINE
@@ -251,7 +188,7 @@ function Suppliers() {
               FUNCTIONEAZA <br /> IN CEL MAI <br /> SCURT TIMP
             </p>
             <Button
-              styles="mt-10 lg:mb-0 mb-10 text-center"
+              styles="mt-10 lg:mb-0 mb-10 text-center px-10 py-4"
               text="Inregistrare"
               link="https://app.horecaorders.com/users/register"
             />
@@ -268,7 +205,7 @@ function Suppliers() {
           SI MAI PUTINE BATAI DE CAP?
         </p>
         <Button
-          styles="mt-12 lg:mb-0 text-center"
+          styles="mt-12 lg:mb-0 text-center px-10 py-4"
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />

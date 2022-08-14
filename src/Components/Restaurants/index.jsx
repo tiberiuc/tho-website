@@ -1,8 +1,8 @@
 import Button from "Atoms/Button";
+import SliderWhirligig from "Atoms/Button/SliderWhirligig";
 import FirstSection from "Components/FirstSection";
 import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
-import Whirligig from "react-whirligig";
 
 function Restaurants() {
   const cardSection = [
@@ -102,15 +102,6 @@ function Restaurants() {
       img3: "images/barman-image@3x.png",
     },
   ];
-
-  let whirligig;
-
-  const next = () => whirligig.next();
-  const prev = () => whirligig.prev();
-
-  setInterval(function () {
-    whirligig.next();
-  }, 5000);
 
   return (
     <div>
@@ -219,70 +210,7 @@ function Restaurants() {
         </p>
         <InformationsCard data={information} />
       </div>
-      <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 lg:py-20 py-14 px-5">
-        <div className="flex justify-center w-full lg:max-w-4xl">
-          <button onClick={prev}>
-            <img className="w-8" src="SVGs/left-arrow.svg" alt="Arrow left" />
-          </button>
-          <Whirligig
-            visibleSlides={1}
-            gutter="1em"
-            ref={(_whirligigInstance) => {
-              whirligig = _whirligigInstance;
-            }}
-            infinite
-            snapToSlide
-            slideClass={"flex justify-center"}
-            className={"scrollbar-hide w-full"}
-          >
-            {slider.map((sliderItem) => {
-              return (
-                <div className="flex lg:flex-row flex-col items-center">
-                  <div className="flex flex-col lg:pr-4">
-                    <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-md">
-                      {sliderItem.paragraphDescription}
-                    </p>
-                    <p className="font-openSans font-semibold text-base text-center text-white lg:mt-2 mt-6">
-                      {sliderItem.personDescription}
-                    </p>
-                    {sliderItem.linkOfWebsite && (
-                      <a
-                        href={sliderItem.linkOfWebsite}
-                        className="font-openSans font-semibold text-base text-center text-white lg:mt-0 mt-6"
-                      >
-                        {sliderItem.linkOfWebsite}
-                      </a>
-                    )}
-                  </div>
-                  <picture>
-                    <source
-                      media="(max-width: 799px)"
-                      srcSet={sliderItem.img3}
-                    />
-                    <source
-                      media="(min-width: 800px)"
-                      srcSet={sliderItem.img2}
-                    />
-                    <img
-                      className="object-cover h-85 lg:mt-0 mt-8"
-                      src={sliderItem.img}
-                      alt=""
-                    />
-                  </picture>
-                </div>
-              );
-            })}
-          </Whirligig>
-          <button onClick={next}>
-            <img className="w-8" src="SVGs/right-arrow.svg" alt="Arrow right" />
-          </button>
-        </div>
-        <Button
-          styles="lg:mt-16 mt-8 px-10 py-4"
-          text="Inregistrare"
-          link="https://app.horecaorders.com/users/register"
-        />
-      </div>
+      <SliderWhirligig sliderInfo={slider} />
       <div className="flex justify-center bg-greyBg lg:pt-8 pt-10">
         <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">
           <div className="flex flex-col items-center justify-center px-10 lg:px-0">
@@ -294,7 +222,11 @@ function Restaurants() {
               furnizori, având disponibile funcții opționale plătite. Vorbeste
               cu echipa noastra pentru a afla mai multe!
             </p>
-            <Button link="/intrebari-frecvente" text="Intrebari Frecvente" />
+            <Button
+              styles="px-10 py-4"
+              link="/intrebari-frecvente"
+              text="Intrebari Frecvente"
+            />
           </div>
           <div className="flex lg:justify-center justify-start w-full">
             <picture>

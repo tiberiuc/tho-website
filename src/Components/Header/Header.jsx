@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "Atoms/Button";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header({
   bgHeader,
@@ -17,6 +17,14 @@ export default function Header({
   noButtonsWithoutModificationText,
 }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const navLinkStyles = ({ isActive }) => {
+    return {
+      textDecoration: isActive ? "underline" : "",
+      textUnderlineOffset: isActive ? "8px" : "",
+      textDecorationThickness: isActive ? "3px" : "",
+    };
+  };
 
   return (
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
@@ -132,39 +140,42 @@ export default function Header({
           </div>
         </section>
         <div className="hidden lg:flex md:space-x-10">
-          <Link
+          <NavLink
+            style={navLinkStyles}
             to="/restaurante"
             className={`text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
           >
             Restaurante
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            style={navLinkStyles}
             to="/furnizori"
             className={`text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
           >
             Furnizori
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            style={navLinkStyles}
             to="/povesti"
             className={`hidden text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
           >
             Povesti
-          </Link>
+          </NavLink>
         </div>
       </div>
       <h1
@@ -178,7 +189,7 @@ export default function Header({
         ${supplier && "text-black"} 
         ${
           noButtonsWithoutModificationText && "lg:pb-32 pb-14"
-        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl  mt-12 lg:whitespace-pre-line`}
+        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl mt-12 lg:whitespace-pre-line`}
       >
         {headingText}
       </h1>
@@ -188,13 +199,13 @@ export default function Header({
             <Link to={headerButtonLeft?.link}>
               <Button
                 text={headerButtonLeft?.text}
-                styles="lg:w-48 w-64 justify-center"
+                styles="lg:w-48 w-64 justify-center px-2 py-4"
               />
             </Link>
           ) : (
             <Button
               text={headerButtonLeft?.text}
-              styles="lg:w-48 w-64 justify-center"
+              styles="lg:w-48 w-64 justify-center px-2 py-4"
               link={headerButtonLeft?.externalLink}
             />
           )}
@@ -202,13 +213,13 @@ export default function Header({
             <Link to={headerButtonRight?.link}>
               <Button
                 text={headerButtonRight?.text}
-                styles="lg:w-48 w-64 justify-center"
+                styles="lg:w-48 w-64 justify-center px-2 py-4"
               />
             </Link>
           ) : (
             <Button
               text={headerButtonRight?.text}
-              styles="lg:w-48 w-64 justify-center"
+              styles="lg:w-48 w-64 justify-center px-2 py-4"
               link={headerButtonRight?.externalLink}
             />
           )}

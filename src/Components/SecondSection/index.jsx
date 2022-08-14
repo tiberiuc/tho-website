@@ -17,7 +17,7 @@ const SecondSection = ({ information }) => {
           <Button
             text={"Inregistrare"}
             link="https://app.horecaorders.com/users/register"
-            styles="w-auto justify-center mt-8 rounded-full"
+            styles="w-auto justify-center mt-8 rounded-full px-10 py-4"
           />
         </a>
       </div>
