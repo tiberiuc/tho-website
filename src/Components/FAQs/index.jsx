@@ -61,7 +61,11 @@ function FAQs() {
                   {question?.description}
                 </p>
                 {question?.button && (
-                  <Button styles={"mt-4 text-black"} text={question?.button} />
+                  <Button
+                    styles={"mt-4 text-black"}
+                    text={question?.button}
+                    link="https://app.horecaorders.com/users/register"
+                  />
                 )}
               </div>
             </div>

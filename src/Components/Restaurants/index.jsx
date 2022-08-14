@@ -103,14 +103,15 @@ function Restaurants() {
     },
   ];
 
-  var autoplayInterval = setInterval(function () {
+  let whirligig;
+
+  const next = () => whirligig.next();
+  const prev = () => whirligig.prev();
+
+  setInterval(function () {
     whirligig.next();
   }, 5000);
 
-  let whirligig;
-
-  const next = () => autoplayInterval;
-  const prev = () => whirligig.prev();
   return (
     <div>
       <Header

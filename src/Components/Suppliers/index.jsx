@@ -103,14 +103,14 @@ function Suppliers() {
     },
   ];
 
-  var autoplayInterval = setInterval(function () {
-    whirligig.next();
-  }, 5000);
-
   let whirligig;
 
-  const next = () => autoplayInterval;
+  const next = () => whirligig.next();
   const prev = () => whirligig.prev();
+
+  setInterval(function () {
+    whirligig.next();
+  }, 5000);
 
   return (
     <div>
