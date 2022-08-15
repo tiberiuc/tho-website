@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "Components/Home";
 import Footer from "Components/Footer";
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import Restaurants from "Components/Restaurants";
 import Suppliers from "Components/Suppliers";
 import TermsAndConditions from "Components/ Terms&Conditions";
@@ -51,6 +51,14 @@ function App() {
     };
   });
 
+  const navLinkStyles = ({ isActive }) => {
+    return {
+      textDecoration: isActive ? "underline" : "",
+      textUnderlineOffset: isActive ? "8px" : "",
+      textDecorationThickness: isActive ? "3px" : "",
+    };
+  };
+
   return (
     <div id="parent" className="relative">
       <nav
@@ -69,24 +77,27 @@ function App() {
           </a>
         </div>
         <div className="hidden lg:flex md:space-x-10">
-          <Link
+          <NavLink
+            style={navLinkStyles}
             to="/restaurante"
             className={`text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Restaurante
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            style={navLinkStyles}
             to="/furnizori"
             className={`text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Furnizori
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            style={navLinkStyles}
             to="/povesti"
             className={`hidden text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3	`}
           >
             Povesti
-          </Link>
+          </NavLink>
         </div>
       </nav>
       <Routes>
