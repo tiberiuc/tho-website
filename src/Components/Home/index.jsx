@@ -12,7 +12,7 @@ const secondSection = [
     img3: "images/i-phone-x@3x.png",
     componentStyles: "bg-yellowSection justify-items-center items-end lg:h-98",
     textColor: "text-black",
-    pictureStyles: "object-scale-down h-86 w-64",
+    pictureStyles: "object-scale-down lg:h-86 h-80 w-64",
   },
   {
     subTitle: "Pentru furnizori",
@@ -49,7 +49,9 @@ function Home() {
           textTitle: "ALEGE SA MUNCESTI MAI EFICIENT",
           paragraph: `HORECA ORDERS face plasarea și primirea comenzilor mai eficientă. 
             Aplicația noastră intuitivă și instrumentele web simplifică operațiunile pentru bucătari, proprietari și reprezentanții de vânzări.`,
-          secondParagraph: `Salveaza timp. Salveaza bani. Salveaza mancare.`,
+          secondParagraph: `Salveaza timp. 
+          Salveaza bani. 
+          Salveaza mancare.`,
           imgSet: {
             img: "images/manCooking.png",
             img2x: "images/manCooking@2x.png",

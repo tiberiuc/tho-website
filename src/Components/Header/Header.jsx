@@ -189,12 +189,12 @@ export default function Header({
         ${supplier && "text-black"} 
         ${
           noButtonsWithoutModificationText && "lg:pb-32 pb-14"
-        } font-extrabold font-openSans italic text-4xl sm:text-5xl lg:text-7xl mt-12 lg:whitespace-pre-line`}
+        } font-extrabold font-openSans italic text-4.5xl sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10`}
       >
         {headingText}
       </h1>
       {(!noButtons || noButtonsWithoutModificationText) && (
-        <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-14">
+        <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-10">
           {!headerButtonLeft?.externalLink ? (
             <Link to={headerButtonLeft?.link}>
               <Button
@@ -229,7 +229,7 @@ export default function Header({
         <div
           className={`${
             restaurant ? "text-black" : "text-white"
-          } font-bold font-openSans text-3xl lg:ml-52 lg:pb-32 pb-14 mt-10 lg:mx-0 mx-8`}
+          } font-bold font-openSans text-3xl lg:ml-52 lg:pb-32 pb-10 mt-10 lg:mx-0 mx-8`}
         >
           {lastModificationDate}
         </div>

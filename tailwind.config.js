@@ -56,6 +56,9 @@ module.exports = {
       textDecorationThickness: {
         3: "3px",
       },
+      fontSize: {
+        "4.5xl": "2.5rem",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

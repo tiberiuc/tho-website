@@ -10,14 +10,14 @@ function FirstSection({ colors, subHeader }) {
           <div
             className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-3xl justify-items-center ${colors.text}`}
           >
-            <span className="text-4xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-15">
+            <span className="lg:text-4xl text-2xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-7 leading-6">
               {subHeader?.textTitle}
             </span>
-            <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line">
+            <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6">
               {subHeader?.paragraph}
             </span>
             {subHeader?.secondParagraph && (
-              <span className="font-semibold font-openSans mt-5 2xl:text-center">
+              <span className="font-semibold font-openSans mt-5 2xl:text-center whitespace-pre-line lg:whitespace-normal">
                 {subHeader?.secondParagraph}
               </span>
             )}
@@ -50,12 +50,12 @@ function FirstSection({ colors, subHeader }) {
         >
           {subHeader?.info.map((item) => {
             return (
-              <div className="grid grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-34 lg:mt-0">
+              <div className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0">
                 <picture>
                   <source media="(max-width: 799px)" srcSet={item.img3} />
                   <source media="(min-width: 800px)" srcSet={item.img2} />
                   <img
-                    className="object-cover w-52 h-52"
+                    className="object-cover lg:w-52 lg:h-52"
                     src={item.img}
                     alt=""
                   />
@@ -63,7 +63,7 @@ function FirstSection({ colors, subHeader }) {
                 <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
                   {item.subtitle}
                 </span>
-                <span className="font-openSans lg:font-semibold lg:text-base text-lg text-center">
+                <span className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center">
                   {item.description}
                 </span>
               </div>

@@ -131,7 +131,7 @@ function Restaurants() {
             img2x: "images/ustensila-bucatarie@2x.png",
             img3x: "images/ustensila-bucatarie@3x.png",
           },
-          marginOfSection: "mb-10",
+          marginOfSection: "mb-14 lg:mb-8",
           info: [
             {
               img: "images/adio-greseli.png",
@@ -167,7 +167,7 @@ function Restaurants() {
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />
-        <div className="flex flex-col w-full items-center mt-20 pt-20 lg:pb-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
+        <div className="flex flex-col w-full items-center lg:mt-14 pt-20 lg:pb-0 mt-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center ">
             CUM FUNCTIONEAZA
           </p>

@@ -7,12 +7,12 @@ const InformationsCard = ({ data }) => {
     <>
       {data.map((item) => {
         return (
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center lg:mt-4 mt-14">
             <div
               className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl ${item.componentStyles}  `}
             >
               <div
-                className={`flex flex-col items-start justify-center w-full lg:pl-17 pl-5 pr-5 lg:pr-0 my-17 ${item?.subComponentStyles}`}
+                className={`flex flex-col items-start justify-center w-full lg:pl-17 pl-5 pr-5 lg:pr-0 lg:my-17 my-10 ${item?.subComponentStyles}`}
               >
                 <span
                   className={`font-openSans font-bold text-3xl ${item.textColor}`}
@@ -20,7 +20,7 @@ const InformationsCard = ({ data }) => {
                   {item.subTitle}
                 </span>
                 <span
-                  className={`font-openSans font-semibold text-base mt-3 whitespace-pre-line ${item.textColor}`}
+                  className={`font-openSans font-semibold lg:text-base mt-3 whitespace-pre-line text-lg leading-6 ${item.textColor}`}
                 >
                   {item.description}
                 </span>
