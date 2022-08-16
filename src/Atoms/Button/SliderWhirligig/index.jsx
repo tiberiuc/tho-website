@@ -25,7 +25,7 @@ export default function SliderWhirligig({ sliderInfo }) {
           }}
           infinite
           snapToSlide
-          slideClass={"flex justify-center"}
+          slideClass={"flex justify-center lg:px-0 px-2"}
           className={"scrollbar-hide w-full"}
         >
           {sliderInfo.map((sliderItem) => {
@@ -51,7 +51,7 @@ export default function SliderWhirligig({ sliderInfo }) {
                   <source media="(max-width: 799px)" srcSet={sliderItem.img3} />
                   <source media="(min-width: 800px)" srcSet={sliderItem.img2} />
                   <img
-                    className="object-fit h-104 lg:mt-0 mt-8"
+                    className="object-fit lg:h-104 h-76 lg:mt-0 mt-8"
                     src={sliderItem.img}
                     alt=""
                   />

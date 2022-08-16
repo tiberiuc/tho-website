@@ -48,7 +48,7 @@ function Restaurants() {
       img2: "images/i-phone-x@2x.png",
       img3: "images/i-phone-x@3x.png",
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
-      subComponentStyles: "my-28",
+      subComponentStyles: "lg:my-28 my-10",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
@@ -59,7 +59,7 @@ function Restaurants() {
       img2: "images/iphone-x-mockup-information@2x.png",
       img3: "images/iphone-x-mockup-information@3x.png",
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
-      subComponentStyles: "my-22",
+      subComponentStyles: "lg:my-22 my-10",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
@@ -167,15 +167,15 @@ function Restaurants() {
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />
-        <div className="flex flex-col w-full items-center lg:mt-14 pt-20 lg:pb-0 mt-0 pb-20 px-10 lg:px-0 bg-bluePrimary relative">
-          <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center ">
+        <div className="flex flex-col w-full items-center lg:mt-14 pt-14 lg:pb-0 mt-0 pb-14 px-10 lg:px-0 bg-bluePrimary relative">
+          <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center">
             CUM FUNCTIONEAZA
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 lg:mt-13 mt-5 max-w-5xl">
             {cardSection.map((card) => {
               return (
                 <div className="flex flex-col items-center relative lg:px-0 sm:px-24 px-6">
-                  <p className="h-12 w-12 bg-yellowButton rounded-full font-bold text-2xl flex justify-center items-center mt-8 lg:mt-0">
+                  <p className="h-12 w-12 bg-yellowButton rounded-full font-bold text-2xl flex justify-center items-center mt-4 lg:mt-0">
                     {card?.number ? (
                       card?.number
                     ) : (
@@ -195,7 +195,11 @@ function Restaurants() {
                   <picture>
                     <source media="(max-width: 799px)" srcSet={card.img3} />
                     <source media="(min-width: 800px)" srcSet={card.img2} />
-                    <img className="mt-2" src={card.img} alt="" />
+                    <img
+                      className="mt-2 lg:h-auto h-120"
+                      src={card.img}
+                      alt=""
+                    />
                   </picture>
                 </div>
               );
@@ -204,14 +208,14 @@ function Restaurants() {
           <div className="absolute bottom-0 left-0 h-7 w-full flex bg-white lg:flex hidden" />
         </div>
       </div>
-      <div className="flex flex-col w-full items-center mt-13">
-        <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0">
+      <div className="flex flex-col w-full items-center mt-14">
+        <p className="uppercase font-openSans font-extrabold lg:text-4xl text-5xl leading-10 text-center text-bluePrimary px-10 lg:px-0">
           Plasezi comenzile mult mai bine
         </p>
         <InformationsCard data={information} />
       </div>
       <SliderWhirligig sliderInfo={slider} />
-      <div className="flex justify-center bg-greyBg lg:pt-8 pt-10">
+      <div className="flex justify-center bg-greyBg lg:pt-8 pt-14">
         <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">
           <div className="flex flex-col items-center justify-center px-10 lg:px-0">
             <p className="font-openSans font-extrabold text-5xl text-bluePrimary text-center">
@@ -239,7 +243,7 @@ function Restaurants() {
                 srcSet="images/i-phone-x-in-hand@2x.png"
               />
               <img
-                className="object-cover max-h-104 lg:mt-0 mt-11"
+                className="object-cover lg:max-h-104 max-h-112 lg:mt-0 mt-11"
                 src="images/i-phone-x-in-hand.png"
                 alt=""
               />
@@ -264,7 +268,7 @@ function Restaurants() {
           />
         </picture>
         <div className="flex flex-col items-center justify-center px-10 lg:px-0">
-          <p className="font-openSans font-extrabold lg:text-7xl text-5xl text-black italic text-center">
+          <p className="font-openSans font-extrabold lg:text-7xl text-5xl leading-10 text-black italic text-center">
             HAI SA <br /> EXPLORAM <br /> HORECA <br />
             ORDERS
           </p>

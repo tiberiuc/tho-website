@@ -71,10 +71,13 @@ export default function Header({
                 alt="Close Header Dropdown"
               />
             </div>
-            <img
-              src="SVGs/horeca-orders-logo-yellow.svg"
-              alt="Logo of Horeca Orders"
-            />
+            <a href="/">
+              <img
+                src="SVGs/horeca-orders-logo-yellow.svg"
+                alt="Logo of Horeca Orders"
+              />
+            </a>
+
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
               <li
@@ -114,7 +117,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/portfolio">Despre</a>
+                <a href="/despre">Despre</a>
               </li>
               <li
                 className={`my-4 ${
@@ -123,7 +126,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/contact">Intrebari frecvente</a>
+                <a href="/intrebari-frecvente">Intrebari frecvente</a>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
