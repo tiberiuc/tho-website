@@ -161,7 +161,7 @@ function Suppliers() {
       />
       <SliderWhirligig sliderInfo={slider} />
       <div className="flex flex-col w-full items-center lg:mt-13">
-        <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0 lg:my-0 my-13">
+        <p className="uppercase font-openSans font-extrabold text-4xl text-center text-bluePrimary px-10 lg:px-0 lg:mt-0 mt-14">
           COMENZI PLASATE MULT MAI BINE
         </p>
         <InformationsCard data={information} />
@@ -178,7 +178,7 @@ function Suppliers() {
               srcSet="images/functioneaza-in-scurt-timp@2x.png"
             />
             <img
-              className="object-cover max-h-180 2xl:max-h-full lg:p-0 p-10 h-full"
+              className="object-fit max-h-180 2xl:max-h-full lg:p-0 p-10"
               src="images/functioneaza-in-scurt-timp.png"
               alt=""
             />

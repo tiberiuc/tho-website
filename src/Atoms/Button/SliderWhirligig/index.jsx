@@ -32,7 +32,7 @@ export default function SliderWhirligig({ sliderInfo }) {
             return (
               <div className="flex lg:flex-row flex-col items-center">
                 <div className="flex flex-col lg:pr-4">
-                  <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-lg">
+                  <p className="font-openSans text-white lg:text-start text-center font-bold lg:text-3xl text-2xl lg:max-w-lg lg:line-clamp-none line-clamp-5">
                     {sliderItem.paragraphDescription}
                   </p>
                   <p className="font-openSans font-semibold text-base text-center text-white lg:mt-2 mt-6">

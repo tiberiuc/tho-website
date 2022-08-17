@@ -26,7 +26,10 @@ const InformationsCard = ({ data }) => {
                 </span>
                 {item?.buttonLink && (
                   <Link to={item.buttonLink}>
-                    <Button styles="mt-6 font-semibold" text="Afla mai multe" />
+                    <Button
+                      styles="mt-6 font-semibold text-lg"
+                      text="Afla mai multe"
+                    />
                   </Link>
                 )}
               </div>
