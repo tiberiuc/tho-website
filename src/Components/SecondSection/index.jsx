@@ -24,13 +24,13 @@ const SecondSection = ({ information }) => {
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
         <a
           href="/restaurante"
-          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 transition ease-in-out delay-100 duration-300"
         >
           Restaurante
         </a>
         <a
           href="/furnizori"
-          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl	py-11"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 transition ease-in-out delay-100 duration-300"
         >
           Furnizori
         </a>

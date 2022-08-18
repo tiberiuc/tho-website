@@ -8,16 +8,16 @@ function FirstSection({ colors, subHeader }) {
           className={`grid lg:grid-cols-2 grid-cols-1 w-full items-center ${colors?.background}`}
         >
           <div
-            className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-7xl justify-items-center ${colors.text}`}
+            className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:max-w-7xl justify-items-center ${colors.text}`}
           >
-            <span className="lg:text-4xl text-2xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-7 leading-6">
+            <span className="lg:text-4xl text-2xl font-extrabold font-openSans max-w-lg mt-7 leading-6">
               {subHeader?.textTitle}
             </span>
-            <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6">
+            <span className="font-medium font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6">
               {subHeader?.paragraph}
             </span>
             {subHeader?.secondParagraph && (
-              <span className="font-semibold font-openSans mt-5 2xl:text-center whitespace-pre-line lg:whitespace-normal">
+              <span className="font-semibold font-openSans mt-5 whitespace-pre-line lg:whitespace-normal">
                 {subHeader?.secondParagraph}
               </span>
             )}
@@ -51,21 +51,23 @@ function FirstSection({ colors, subHeader }) {
           {subHeader?.info.map((item) => {
             return (
               <div className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0">
-                <picture>
-                  <source media="(max-width: 799px)" srcSet={item.img3} />
-                  <source media="(min-width: 800px)" srcSet={item.img2} />
-                  <img
-                    className="object-cover lg:w-52 lg:h-52"
-                    src={item.img}
-                    alt=""
-                  />
-                </picture>
-                <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
-                  {item.subtitle}
-                </span>
-                <span className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0">
-                  {item.description}
-                </span>
+                <div className="flex flex-col items-center">
+                  <picture>
+                    <source media="(max-width: 799px)" srcSet={item.img3} />
+                    <source media="(min-width: 800px)" srcSet={item.img2} />
+                    <img
+                      className="object-cover lg:w-52 lg:h-52"
+                      src={item.img}
+                      alt=""
+                    />
+                  </picture>
+                  <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
+                    {item.subtitle}
+                  </span>
+                  <span className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0">
+                    {item.description}
+                  </span>
+                </div>
               </div>
             );
           })}

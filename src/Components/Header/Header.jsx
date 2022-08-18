@@ -107,6 +107,17 @@ export default function Header({
               >
                 <Link to="/povesti">Povesti</Link>
               </li>
+              <li
+                className="my-4
+                   lg:text-bluePrimary text-white
+                uppercase font-openSans"
+              >
+                <Button
+                  link="https://app.horecaorders.com/login"
+                  text="Login"
+                  styles={"text-black text-lg"}
+                />
+              </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
@@ -142,16 +153,16 @@ export default function Header({
             </ul>
           </div>
         </section>
-        <div className="hidden lg:flex md:space-x-10">
+        <div className="hidden lg:flex md:space-x-10 items-center">
           <NavLink
             style={navLinkStyles}
             to="/restaurante"
-            className={`text-base font-semibold 
-            ${restaurant && "text-bluePrimary"} 
-            ${home && "text-white"} 
+            className={`text-base font-semibold
+            ${restaurant && "text-bluePrimary"}
+            ${home && "text-white"}
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
           >
             Restaurante
           </NavLink>
@@ -163,7 +174,7 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
           >
             Furnizori
           </NavLink>
@@ -175,10 +186,15 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
           >
             Povesti
           </NavLink>
+          <Button
+            link="https://app.horecaorders.com/login"
+            text="Login"
+            styles={"text-black text-lg py-"}
+          />
         </div>
       </div>
       <h1
