@@ -70,20 +70,24 @@ function Restaurants() {
       paragraphDescription: `Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
       Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
       Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
-      personDescription: `
-      Gabi Herdean - Papila, Bucuresti
+      personDescription1: `
+      Gabi Herdean - 
       `,
+      hyperLink: "Papila",
       linkOfWebsite: "https://papilakitchen.ro/",
+      personDescription2: ", Bucuresti",
       img: "images/gabi-papila.png",
       img2: "images/gabi-papila.png",
       img3: "images/gabi-papila.png",
     },
     {
       paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.`,
-      personDescription: `
-      Nadia Mihai (Manager) - Sushi Master, Bucuresti
+      personDescription1: `
+      Nadia Mihai (Manager) - 
       `,
+      hyperLink: "Sushi Master",
       linkOfWebsite: "https://sushimaster.ro/",
+      personDescription2: ", Bucuresti",
       img: "images/Nadia-Sushi-Master.png",
       img2: "images/Nadia-Sushi-Master.png",
       img3: "images/Nadia-Sushi-Master.png",
@@ -94,7 +98,7 @@ function Restaurants() {
       furnizor. Trebuia să-mi amintesc să verific din nou comenzile
       pentru că le tastam pe toate. HORECA ORDERS este atât de
       convenabil și eficient!`,
-      personDescription: `
+      personDescription1: `
       Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
       `,
       img: "images/barman-image.png",
@@ -163,7 +167,7 @@ function Restaurants() {
       />
       <div className="flex flex-col items-center w-full">
         <Button
-          styles="lg:flex hidden px-10 py-4"
+          styles="lg:flex hidden px-10 py-3"
           text="Inregistrare"
           link="https://app.horecaorders.com/users/register"
         />
@@ -227,7 +231,7 @@ function Restaurants() {
               cu echipa noastra pentru a afla mai multe!
             </p>
             <Button
-              styles="px-10 py-4"
+              styles="px-10 py-3"
               link="/intrebari-frecvente"
               text="Intrebari Frecvente"
             />
@@ -273,7 +277,7 @@ function Restaurants() {
             ORDERS
           </p>
           <Button
-            styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-4"
+            styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-3"
             text="Inregistrare"
             link="https://app.horecaorders.com/users/register"
           />

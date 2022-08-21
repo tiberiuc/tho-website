@@ -12,7 +12,11 @@ const InformationsCard = ({ data }) => {
               className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl ${item.componentStyles}  `}
             >
               <div
-                className={`flex flex-col items-start justify-center w-full lg:pl-17 pl-5 pr-5 lg:pr-0 lg:my-17 my-10 ${item?.subComponentStyles}`}
+                className={`flex flex-col items-start justify-center w-full lg:pl-17 pl-5 pr-5 lg:pr-0 ${
+                  item?.subComponentStyles
+                    ? item?.subComponentStyles
+                    : "lg:my-17 my-10"
+                }`}
               >
                 <span
                   className={`font-openSans font-bold text-3xl ${item.textColor}`}
@@ -27,7 +31,7 @@ const InformationsCard = ({ data }) => {
                 {item?.buttonLink && (
                   <Link to={item.buttonLink}>
                     <Button
-                      styles="mt-6 font-semibold text-lg"
+                      styles="mt-6 font-semibold text-lg px-10 py-3"
                       text="Afla mai multe"
                     />
                   </Link>

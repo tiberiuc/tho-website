@@ -39,8 +39,8 @@ function FAQs() {
   return (
     <>
       <Header
-        headingText={`Intrebari 
-        Frecvente`}
+        headingText={`INTREBARI 
+        FRECVENTE`}
         home
         noButtons={"justify-center lg:px-8 px-16 text-center ml-0"}
         logoYellow

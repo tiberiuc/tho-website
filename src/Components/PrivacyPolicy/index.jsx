@@ -7,7 +7,7 @@ function PrivacyPolicy() {
       <Header
         headingText={`POLITICA DE 
         CONFIDENTIALITATE`}
-        home
+        home={"text-2xl"}
         noButtons={"lg:ml-52 lg:mx-0 mx-8 "}
         bgHeader="bg-bluePrimary"
         lastModificationDate="Data intrarii in vigoare: 8 August 2022"

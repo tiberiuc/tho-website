@@ -119,8 +119,8 @@ function About() {
             <p className="font-openSans font-semibold lg:text-2xl text-xl text-center mt-6">
               HORECA reprezinta abrevierea a trei cuvinte: Hotel, Restaurant şi
               Catering. Afacerile din HORECA sunt cele pentru care ne trezim
-              dimineata si pentru care ne straduim sa-si pastreze magia
-              sizambetul.
+              dimineata si pentru care ne straduim sa-si pastreze magia si
+              zambetul.
             </p>
           </div>
         </div>

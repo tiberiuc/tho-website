@@ -13,6 +13,7 @@ const secondSection = [
     componentStyles: "bg-yellowSection justify-items-center items-end lg:h-98",
     textColor: "text-black",
     pictureStyles: "object-scale-down lg:h-86 h-80 w-64",
+    subComponentStyles: "lg:my-14 my-10",
   },
   {
     subTitle: "Pentru furnizori",
@@ -24,7 +25,7 @@ const secondSection = [
     img3: "images/comenzi@3x.png",
     componentStyles: "bg-bluePrimary justify-items-end items-center lg:h-98",
     textColor: "text-white",
-    pictureStyles: "object-scale-down lg:w-86 w-80 h-72",
+    pictureStyles: "object-scale-down lg:w-86 w-85 h-72",
   },
 ];
 function Home() {
@@ -41,7 +42,7 @@ function Home() {
           text: "Pentru Furnizori",
           link: "/furnizori",
         }}
-        home
+        home={"text-4.5xl"}
       />
       <FirstSection
         colors={{ background: "bg-greyBg", text: "text-black" }}

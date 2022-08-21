@@ -115,7 +115,7 @@ export default function Header({
                 <Button
                   link="https://app.horecaorders.com/login"
                   text="Login"
-                  styles={"text-black text-lg"}
+                  styles={"text-black text-xl py-1"}
                 />
               </li>
             </ul>
@@ -162,7 +162,7 @@ export default function Header({
             ${home && "text-white"}
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             Restaurante
           </NavLink>
@@ -174,7 +174,7 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             Furnizori
           </NavLink>
@@ -186,14 +186,14 @@ export default function Header({
             ${home && "text-white"} 
             ${
               supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150 hover:delay-300`}
+            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             Povesti
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"
             text="Login"
-            styles={"text-black text-lg py-"}
+            styles={"text-black text-lg py-1"}
           />
         </div>
       </div>
@@ -203,12 +203,12 @@ export default function Header({
             ? `${noButtons}`
             : "justify-center lg:px-8 px-16 text-center"
         }   
-        ${restaurant && "text-bluePrimary"} 
-        ${home && "text-white"} 
-        ${supplier && "text-black"} 
+        ${restaurant && "text-bluePrimary text-4.5xl"} 
+        ${home && `text-white ${home}`} 
+        ${supplier && "text-black text-4.5xl"} 
         ${
           noButtonsWithoutModificationText && "lg:pb-32 pb-14"
-        } font-extrabold font-openSans italic text-4.5xl sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10`}
+        } font-extrabold font-openSans italic  sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10 text-ellipsis overflow-hidden`}
       >
         {headingText}
       </h1>
@@ -218,13 +218,13 @@ export default function Header({
             <Link to={headerButtonLeft?.link}>
               <Button
                 text={headerButtonLeft?.text}
-                styles="lg:w-48 w-64 justify-center px-2 py-4"
+                styles="lg:w-48 w-64 justify-center px-2 py-3"
               />
             </Link>
           ) : (
             <Button
               text={headerButtonLeft?.text}
-              styles="lg:w-48 w-64 justify-center px-2 py-4"
+              styles="lg:w-48 w-64 justify-center px-2 py-3"
               link={headerButtonLeft?.externalLink}
             />
           )}
@@ -232,13 +232,13 @@ export default function Header({
             <Link to={headerButtonRight?.link}>
               <Button
                 text={headerButtonRight?.text}
-                styles="lg:w-48 w-64 justify-center px-2 py-4"
+                styles="lg:w-48 w-64 justify-center px-2 py-3"
               />
             </Link>
           ) : (
             <Button
               text={headerButtonRight?.text}
-              styles="lg:w-48 w-64 justify-center px-2 py-4"
+              styles="lg:w-48 w-64 justify-center px-2 py-3"
               link={headerButtonRight?.externalLink}
             />
           )}

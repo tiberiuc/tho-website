@@ -17,20 +17,20 @@ const SecondSection = ({ information }) => {
           <Button
             text={"Inregistrare"}
             link="https://app.horecaorders.com/users/register"
-            styles="w-auto justify-center mt-8 rounded-full px-10 py-4"
+            styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
           />
         </a>
       </div>
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
         <a
           href="/restaurante"
-          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 transition ease-in-out delay-100 duration-300"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
           Restaurante
         </a>
         <a
           href="/furnizori"
-          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 transition ease-in-out delay-100 duration-300"
+          className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
           Furnizori
         </a>

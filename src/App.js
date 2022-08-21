@@ -21,6 +21,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
+
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
     };
@@ -45,7 +46,7 @@ function App() {
         <div className="flex justify-start lg:flex-1">
           <a href="/">
             <img
-              className="h-16"
+              className="h-14"
               src={"SVGs/horeca-orders-logo.svg"}
               alt="Logo of Horeca Orders"
             />
@@ -86,21 +87,27 @@ function App() {
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
               >
-                <Link to="/restaurante">Restaurante</Link>
+                <Link onClick={() => setIsNavOpen(false)} to="/restaurante">
+                  Restaurante
+                </Link>
               </li>
               <li
                 className="my-4 
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
               >
-                <Link to="/furnizori">Furnizori</Link>
+                <Link onClick={() => setIsNavOpen(false)} to="/furnizori">
+                  Furnizori
+                </Link>
               </li>
               <li
                 className="my-4 hidden
                    lg:text-bluePrimary text-white
                 uppercase font-openSans"
               >
-                <Link to="/povesti">Povesti</Link>
+                <Link onClick={() => setIsNavOpen(false)} to="/povesti">
+                  Povesti
+                </Link>
               </li>
               <li
                 className="my-4
@@ -110,7 +117,7 @@ function App() {
                 <Button
                   link="https://app.horecaorders.com/login"
                   text="Login"
-                  styles={"text-black text-lg"}
+                  styles={"text-black text-xl py-1"}
                 />
               </li>
             </ul>
@@ -169,7 +176,7 @@ function App() {
           <Button
             link="https://app.horecaorders.com/login"
             text="Login"
-            styles={"text-black text-lg"}
+            styles={"text-black text-xl py-1"}
           />
         </div>
       </nav>

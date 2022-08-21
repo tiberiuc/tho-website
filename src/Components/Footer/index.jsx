@@ -1,11 +1,10 @@
 import React from "react";
-
 const navigation = {
   info: [
     { name: "Home", href: "/" },
     { name: "Restaurante", href: "/restaurante" },
     { name: "Furnizori", href: "/furnizori" },
-    { name: "FAQ", href: "/intrebari-frecvente" },
+    { name: "Intrebari Frecvente", href: "/intrebari-frecvente" },
   ],
   horecaOrders: [
     { name: "Despre", href: "/despre" },
@@ -63,7 +62,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
                   >
                     {item.name}
                   </a>
@@ -80,7 +79,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
                   >
                     {item.name}
                   </a>
@@ -97,7 +96,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white hover:text-gray-900 font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
                   >
                     {item.name}
                   </a>
