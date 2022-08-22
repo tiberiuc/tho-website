@@ -36,12 +36,12 @@ function App() {
   };
 
   return (
-    <div id="parent" className="relative">
+    <div id="parent" className={`relative`}>
       <nav
         id="navbar"
         className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${
           !navSize && "hidden"
-        }`}
+        }  ${isNavOpen && "overflowHidden"}`}
       >
         <div className="flex justify-start lg:flex-1">
           <a href="/">
@@ -54,6 +54,7 @@ function App() {
         </div>
         <section className="flex lg:hidden">
           <div
+            id="navbarActive"
             className="space-y-2 mt-2 mr-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
@@ -116,8 +117,9 @@ function App() {
               >
                 <Button
                   link="https://app.horecaorders.com/login"
-                  text="Login"
+                  text="Log in"
                   styles={"text-black text-xl py-1"}
+                  fontSizeText={"text-base"}
                 />
               </li>
             </ul>
@@ -175,7 +177,7 @@ function App() {
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"
-            text="Login"
+            text="Log in"
             styles={"text-black text-xl py-1"}
           />
         </div>

@@ -62,7 +62,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
                   </a>
@@ -79,7 +79,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
                   </a>
@@ -96,7 +96,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="font-openSans lg:text-base text-xl text-white underlineCustom font-semibold"
+                    className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
                   </a>

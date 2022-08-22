@@ -60,7 +60,11 @@ export default function Header({
             ></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav pt-4 flex" : "hideMenuNav"}>
+          <div
+            className={`${isNavOpen && "overflowHidden"} ${
+              isNavOpen ? "showMenuNav pt-4 flex" : "hideMenuNav"
+            }`}
+          >
             <div
               className="absolute top-0 right-0 px-6 py-6"
               onClick={() => setIsNavOpen(false)}
@@ -114,8 +118,9 @@ export default function Header({
               >
                 <Button
                   link="https://app.horecaorders.com/login"
-                  text="Login"
-                  styles={"text-black text-xl py-1"}
+                  text="Log in"
+                  styles={"text-black py-1"}
+                  fontSizeText={"text-base"}
                 />
               </li>
             </ul>
@@ -192,7 +197,7 @@ export default function Header({
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"
-            text="Login"
+            text="Log in"
             styles={"text-black text-lg py-1"}
           />
         </div>
@@ -248,7 +253,7 @@ export default function Header({
         <div
           className={`${
             restaurant ? "text-black" : "text-white"
-          } font-bold font-openSans text-3xl lg:ml-52 lg:pb-32 pb-10 mt-10 lg:mx-0 mx-8`}
+          } font-bold font-openSans text-3xl lg:ml-52 2xl:ml-96 3xl:ml-100 lg:pb-32 pb-10 mt-10 lg:mx-0 mx-8`}
         >
           {lastModificationDate}
         </div>

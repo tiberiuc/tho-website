@@ -15,7 +15,7 @@ function Suppliers() {
       img3: "images/comenzi@3x.png",
       componentStyles: "bg-greyBg justify-items-end items-center lg:h-98",
       textColor: "text-black",
-      pictureStyles: "object-scale-down lg:w-86 w-85 h-72",
+      pictureStyles: "object-scale-down lg:w-86 w-85 h-72 mb-10 lg:mb-0",
     },
     {
       subTitle: "Seteaza zile de livrare si ora limita pentru ultima comanda",
@@ -38,7 +38,7 @@ function Suppliers() {
       img3: "images/ho-catalog@3x.png",
       componentStyles: "bg-greyBg justify-items-end items-center lg:h-98",
       textColor: "text-black",
-      pictureStyles: "object-scale-down lg:w-86 w-85 h-72",
+      pictureStyles: "object-scale-down lg:w-86 w-85 h-72 mb-10 lg:mb-0",
     },
     {
       subTitle: "Creste-ti vanzarile prin mesaje trimise simultan",
@@ -50,7 +50,7 @@ function Suppliers() {
       componentStyles:
         "bg-yellowSection justify-items-end items-center lg:h-98",
       textColor: "text-black",
-      pictureStyles: "object-scale-down lg:w-86 w-85 h-72",
+      pictureStyles: "object-scale-down lg:w-86 w-85 h-72 mb-10 lg:mb-0",
     },
     {
       subTitle:

@@ -39,7 +39,7 @@ export default function SliderWhirligig({ sliderInfo }) {
                     {sliderItem.personDescription1}
                     <a
                       href={sliderItem?.linkOfWebsite}
-                      className="font-openSans font-semibold text-base text-center text-white lg:mt-0 mt-6"
+                      className="font-openSans font-semibold text-base text-center text-white lg:mt-0 mt-6 underline"
                     >
                       {sliderItem?.hyperLink}
                     </a>

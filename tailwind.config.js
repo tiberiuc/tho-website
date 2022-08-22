@@ -31,6 +31,7 @@ module.exports = {
         22: "5.5rem",
         26: "6.5rem",
         34: "8.5rem",
+        100: "40rem",
       },
       width: {
         30: "7.5rem",
@@ -60,6 +61,25 @@ module.exports = {
       },
       fontSize: {
         "4.5xl": "2.5rem",
+      },
+      screens: {
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
+
+        "3xl": "2080px",
+        // => @media (min-width: 2080px) { ... }
       },
     },
   },

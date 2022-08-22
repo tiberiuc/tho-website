@@ -8,11 +8,11 @@ function PrivacyPolicy() {
         headingText={`POLITICA DE 
         CONFIDENTIALITATE`}
         home={"text-2xl"}
-        noButtons={"lg:ml-52 lg:mx-0 mx-8 "}
+        noButtons={"lg:ml-52 lg:mx-0 mx-8 2xl:ml-96 3xl:ml-100"}
         bgHeader="bg-bluePrimary"
         lastModificationDate="Data intrarii in vigoare: 8 August 2022"
       />
-      <div className="lg:ml-52 mx-8 lg:mx-0 lg:my-26 my-12 max-w-3.5xl">
+      <div className="lg:ml-52 2xl:ml-96 3xl:ml-100 mx-8 lg:mx-0 lg:my-26 my-12 max-w-3.5xl lg:mr-52">
         <p class="p1">
           Bine ați venit pe horecaorders.com (&bdquo;<strong>Site-ul</strong>
           &rdquo;), un site web al HORECA ORDERS SRL, (&bdquo;

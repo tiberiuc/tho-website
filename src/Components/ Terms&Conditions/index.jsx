@@ -6,13 +6,13 @@ function TermsAndConditions() {
     <>
       <Header
         headingText={`TERMENI SI CONDITII`}
-        noButtons={"lg:ml-52 lg:mx-0 mx-8 "}
+        noButtons={"lg:ml-52 lg:mx-0 mx-8 2xl:ml-96 3xl:ml-100"}
         restaurant
         logoYellow
         bgHeader="bg-greyBg"
         lastModificationDate="Ultima modificare: 8 August 2022"
       />
-      <div className="lg:ml-52 mx-8 lg:mx-0 lg:my-26 my-12 max-w-3.5xl">
+      <div className="lg:ml-52 2xl:ml-96 3xl:ml-100 mx-8 lg:mx-0 lg:my-26 my-12 max-w-3.5xl lg:mr-52">
         <p class="p1">
           Bine ați venit pe horecaorders.com, site-ul web și serviciul online
           și/sau mobil al HORECA ORDERS SRL, &icirc;mpreună cu afiliații săi
