@@ -10,6 +10,7 @@ import FAQs from "Components/FAQs";
 import About from "Components/About";
 import { useEffect, useState } from "react";
 import Button from "Atoms/Button";
+import Pricing from "Components/Pricing";
 
 function App() {
   const [navSize, setnavSize] = useState(false);
@@ -193,6 +194,7 @@ function App() {
         />
         <Route path="intrebari-frecvente" element={<FAQs />} />
         <Route path="despre" element={<About />} />
+        <Route path="preturi" element={<Pricing />} />
       </Routes>
       <Footer />
     </div>

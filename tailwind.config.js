@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         bluePrimary: "#485696",
         yellowButton: "#ffdc0a",
+        yellowPricing: "#FFDC0B",
         yellowSection: "#fff2a4",
         greyHairline: "rgb(151,151,151)",
         greyBg: "#f5f5f5",

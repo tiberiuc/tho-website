@@ -9,6 +9,7 @@ const navigation = {
   horecaOrders: [
     { name: "Despre", href: "/despre" },
     { name: "Contacteaza-ne", href: "mailto:denis@horecaorders.com" },
+    { name: "Preturi", href: "/preturi" },
   ],
   povesti: [
     { name: "Toate povestile", href: "#" },
