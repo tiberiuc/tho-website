@@ -136,6 +136,11 @@ function Footer() {
             </a>
           </div>
         </div>
+        <img
+          className="lg:h-9 h-12"
+          src="SVGs/netopia.svg"
+          alt="Appstore button"
+        />
         <div className="flex space-x-3 lg:mt-0 mt-14">
           {navigation.social.map((item) => (
             <a

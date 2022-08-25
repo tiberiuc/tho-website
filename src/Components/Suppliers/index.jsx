@@ -68,43 +68,18 @@ function Suppliers() {
 
   const slider = [
     {
-      paragraphDescription: `Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
-      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
-      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
-      personDescription1: `
-      Gabi Herdean - 
+      paragraphDescription: `  
+      Horeca Orders imi permite să adun toate comenzile sub o singură umbrelă, astfel încât conversația să fie mult mai bine organizată.
+Ii pot oferi clientului propriul catalog, astfel încât în loc să trebuiască să îi spun că trebuie să comande o anumita cantitate, o vede direct si este la un clic distanță, ei știu numele produselor, este foarte clar pentru ei.
+Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organiza afacerea!  
       `,
-      hyperLink: "Papila",
-      linkOfWebsite: "https://papilakitchen.ro/",
+      personDescription1: `Tolga Cingiz - Batiatus`,
+      hyperLink: "",
+      linkOfWebsite: "",
       personDescription2: ", Bucuresti",
-      img: "images/gabi-papila.png",
-      img2: "images/gabi-papila.png",
-      img3: "images/gabi-papila.png",
-    },
-    {
-      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.`,
-      personDescription1: `
-      Nadia Mihai (Manager) - 
-      `,
-      hyperLink: "Sushi Master",
-      linkOfWebsite: "https://sushimaster.ro/",
-      personDescription2: ", Bucuresti",
-      img: "images/Nadia-Sushi-Master.png",
-      img2: "images/Nadia-Sushi-Master.png",
-      img3: "images/Nadia-Sushi-Master.png",
-    },
-    {
-      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
-      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
-      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
-      pentru că le tastam pe toate. HORECA ORDERS este atât de
-      convenabil și eficient!`,
-      personDescription1: `
-      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
-      `,
-      img: "images/barman-image.png",
-      img2: "images/barman-image@2x.png",
-      img3: "images/barman-image@3x.png",
+      img: "images/review-tolga.png",
+      img2: "images/review-tolga.png",
+      img3: "images/review-tolga.png",
     },
   ];
 

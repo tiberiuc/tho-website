@@ -38,6 +38,7 @@ export default function SliderWhirligig({ sliderInfo }) {
                   <p className="font-openSans font-semibold text-base text-center text-white lg:mt-2 mt-6">
                     {sliderItem.personDescription1}
                     <a
+                      target="blank"
                       href={sliderItem?.linkOfWebsite}
                       className="font-openSans font-semibold text-base text-center text-white lg:mt-0 mt-6 underline"
                     >

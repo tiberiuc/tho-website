@@ -93,14 +93,13 @@ function Restaurants() {
       img3: "images/Nadia-Sushi-Master.png",
     },
     {
-      paragraphDescription: `Înainte de HORECA ORDERS, trebuia să mă asigur că trimiteam un
-      SMS persoanei potrivite sau că e-mailul sau SMS-ul a ajuns la
-      furnizor. Trebuia să-mi amintesc să verific din nou comenzile
-      pentru că le tastam pe toate. HORECA ORDERS este atât de
-      convenabil și eficient!`,
+      paragraphDescription: `Folosind aplicația, am salvat foarte mult timp, deoarece fiecare comandă durează maxim 2 3 minute și putem fi mult mai organizați, toate comenzile și toți furnizorii fiind centralizați într-un singur loc!`,
       personDescription1: `
-      Marcel Popescu (Bucatar Sef) - Blue Margarita, Bucuresti
+      Andrei Iulian Dumitru - 
       `,
+      hyperLink: "FoodKit",
+      linkOfWebsite: "https://foodkit.ro/",
+      personDescription2: ", Bucuresti",
       img: "images/barman-image.png",
       img2: "images/barman-image@2x.png",
       img3: "images/barman-image@3x.png",

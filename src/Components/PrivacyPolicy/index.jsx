@@ -590,10 +590,11 @@ function PrivacyPolicy() {
         <p class="p1">
           Pentru a afla mai multe despre preferințele de publicitate pe
           Companiile Facebook, vă rugăm să vizitați:{" "}
-          <a href="https://www.facebook.com/help/109378269482053.">
-            <span class="s1">
-              https://www.facebook.com/help/109378269482053.
-            </span>
+          <a
+            target="blank"
+            href="https://www.facebook.com/help/109378269482053."
+          >
+            <span class="s1">https://www.facebook.com/help</span>
           </a>
         </p>
         <p class="p2">
@@ -826,6 +827,13 @@ function PrivacyPolicy() {
         </p>
         <p class="p1">Alternativ, &icirc;ntrebările pot fi adresate la:</p>
         <p class="p1">HORECA ORDERS SRL</p>
+        <p class="p1">CUI: 46504332</p>
+        <div className="flex items-center space-x-1">
+          <p class="p1">Email:</p>
+          <a href="mailto:contact@horecaorders.com">
+            <span class="s1">contact@horecaorders.com</span>
+          </a>
+        </div>
         <p class="p1">Attn: Departamentul Juridic</p>
         <p class="p1">Dulgherului, nr. 6D</p>
         <p class="p1">Brasov</p>
