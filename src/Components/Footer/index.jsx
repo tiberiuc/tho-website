@@ -114,7 +114,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
+      <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end items-start max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
           <p className="font-openSans text-white font-bold lg:text-base text-xl">
             Pune-ti comenzile in ordine
@@ -137,11 +137,11 @@ function Footer() {
           </div>
         </div>
         <img
-          className="lg:h-9 h-12"
+          className="lg:h-9 h-12 mt-8 lg:mt-0"
           src="SVGs/netopia.svg"
           alt="Appstore button"
         />
-        <div className="flex space-x-3 lg:mt-0 mt-14">
+        <div className="flex space-x-3 lg:mt-0 mt-8">
           {navigation.social.map((item) => (
             <a
               key={item.name}

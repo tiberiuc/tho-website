@@ -73,13 +73,13 @@ function Suppliers() {
 Ii pot oferi clientului propriul catalog, astfel încât în loc să trebuiască să îi spun că trebuie să comande o anumita cantitate, o vede direct si este la un clic distanță, ei știu numele produselor, este foarte clar pentru ei.
 Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organiza afacerea!  
       `,
-      personDescription1: `Tolga Cingiz - Batiatus`,
+      personDescription1: `Tolga Cingiz - Batiatus Express, Furnizor HoReCa`,
       hyperLink: "",
       linkOfWebsite: "",
       personDescription2: ", Bucuresti",
-      img: "images/review-tolga.png",
-      img2: "images/review-tolga.png",
-      img3: "images/review-tolga.png",
+      img: "images/tolga.png",
+      img2: "images/tolga.png",
+      img3: "images/tolga.png",
     },
   ];
 

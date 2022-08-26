@@ -995,6 +995,34 @@ function TermsAndConditions() {
           15.5 Contact. Vă rugăm să ne contactați la pentru orice
           &icirc;ntrebări referitoare la acest Acord.
         </p>
+        <p class="p2">
+          <br />
+        </p>
+        <p class="p1">
+          <strong>16. Livrare / intrare in posesie</strong>
+        </p>
+        <p class="p1">Prin intermediul mail in timp de 1-2 ore.</p>
+        <p class="p2">
+          <br />
+        </p>
+        <p class="p1">
+          <strong>17. Retur</strong>
+        </p>
+        <p class="p1">
+          Returul si rambursările vor fi acordate numai pentru abonamentele de
+          mai mult de o lună care sunt anulate în termen de 30 de zile de la
+          data intrării în vigoare sau de la data reînnoirii abonamentului. În
+          caz contrar, nu va exista nicio rambursare.
+        </p>
+        <p class="p2">
+          <br />
+        </p>
+        <p class="p1">
+          Acest lucru funcționează pentru ca dacă cineva comandă un abonament de
+          12 luni, persoana respectivă trebuie să anuleze în primele 30 de zile
+          pentru a primi o rambursare pentru ultimele 11 luni, altfel toate cele
+          12 luni trebuie plătite.
+        </p>
       </div>
     </>
   );
