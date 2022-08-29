@@ -93,7 +93,7 @@ function Pricing() {
       <div className="max-w-7xl mx-auto px-4 bg-white sm:px-6 lg:px-8 z-50">
         <div className="items-end space-y-12 lg:space-y-0 parent marginTop mb-14">
           <div
-            className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl shadow-sm flex flex-col items-center `}
+            className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-center `}
           >
             <span className="font-openSans text-4xl text-white">
               Comenzi plasate
@@ -157,7 +157,7 @@ function Pricing() {
               {!tier.toggle ? (
                 <div
                   key={tier.title}
-                  className={`relative lg:h-168 p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col items-center ${tier.styleOfCard}`}
+                  className={`relative lg:h-168 p-8 bg-white border border-gray-200 rounded-2xl flex flex-col items-center ${tier.styleOfCard}`}
                 >
                   <div className="flex-1">
                     <div className="flex justify-between items-end">
