@@ -63,10 +63,10 @@ function Pricing() {
               "Mai multi furnizori in aceeasi lista. Trimiti o singura comanda catre mai multi furnizori.",
           },
           { feature: "Comanda minima / Cantitate minima" },
-          { feature: "Multiutilizatori (in curand)" },
-          { feature: "Multilocatii (in curand)" },
-          { feature: "Statistici (in curand)" },
-          { feature: "Verificarea comenzilor (in curand)" },
+          { feature: "Multiutilizatori", commingSoon: "(in curand)" },
+          { feature: "Multilocatii", commingSoon: "(in curand)" },
+          { feature: "Statistici", commingSoon: "(in curand)" },
+          { feature: "Verificarea comenzilor", commingSoon: "(in curand)" },
         ],
         button: "Incearca gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
@@ -93,7 +93,7 @@ function Pricing() {
       <div className="max-w-7xl mx-auto px-4 bg-white sm:px-6 lg:px-8 z-50">
         <div className="items-end space-y-12 lg:space-y-0 parent marginTop mb-14">
           <div
-            className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-center `}
+            className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-start `}
           >
             <span className="font-openSans text-4xl text-white">
               Comenzi plasate
@@ -126,28 +126,30 @@ function Pricing() {
             </picture>
           </div>
           <div className="div2 flex flex-col ">
-            <p className="font-openSans text-4.5xl font-light text-bluePrimary">
+            <p className="font-openSans text-4xl leading-5 font-light text-bluePrimary">
               Incepe acum
             </p>
-            <p className="font-openSans text-4.5xl font-bold text-bluePrimary">
+            <p className="font-openSans text-4xl font-bold text-bluePrimary">
               planul tau gratuit.
             </p>
           </div>
 
-          <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-4">
-            <p className="font-openSans font-medium text-sm text-bluePrimary">
+          <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
+            <p className="font-openSans font-semibold text-sm text-bluePrimary">
               Plateste Anual
             </p>
             <Switch
               onColor="#0000"
               offColor="#485696"
               handleDiameter={20}
+              className=" justify-center items-center scale-75"
+              height={32}
               checkedIcon={false}
               uncheckedIcon={false}
               onChange={setCheckbox}
               checked={checkbox}
             />
-            <p className="font-openSans font-medium text-sm text-bluePrimary">
+            <p className="font-openSans font-semibold text-sm text-bluePrimary">
               Plateste Lunar
             </p>
           </div>
@@ -192,8 +194,11 @@ function Pricing() {
                             alt="Checkmark"
                           />
                           <div className="flex flex-col">
-                            <span className="ml-3 text-black font-medium text-base font-openSans">
-                              {feature.feature}
+                            <span className="ml-3 text-black font-semibold text-base font-openSans">
+                              {feature.feature}{" "}
+                              <span className="font-normal">
+                                {feature.commingSoon}
+                              </span>
                             </span>
                             <span className="ml-3 text-black text-sm font-openSans whitespace-pre-line">
                               {feature.subFeature}
@@ -207,7 +212,7 @@ function Pricing() {
                     href={tier.buttonLink}
                     className={classNames(
                       tier?.backgroundButton,
-                      "flex justify-center w-40 rounded-full lg:font-semibold lg:font-medium font-semibold font-openSans text-base py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 mt-4"
+                      "flex justify-center w-40 rounded-full font-semibold font-openSans text-base py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 mt-4"
                     )}
                   >
                     {tier.button}

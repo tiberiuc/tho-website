@@ -1,13 +1,17 @@
-import React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import 'index.css';
-import App from 'App';
-import ScrollToTop from 'helpers/ScrollToTop';
+import React from "react";
+import * as ReactDOM from "react-dom/client";
+import "index.css";
+import App from "App";
+import ScrollToTop from "helpers/ScrollToTop";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
+    <Helmet>
+      <script src="/path/to/resource.js" type="text/javascript" />
+    </Helmet>
     <ScrollToTop />
     <App />
   </Router>
