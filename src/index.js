@@ -10,7 +10,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Helmet>
-      <script src="/path/to/resource.js" type="text/javascript" />
+      <script
+        defer
+        data-domain="horecaorders.com"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     </Helmet>
     <ScrollToTop />
     <App />
