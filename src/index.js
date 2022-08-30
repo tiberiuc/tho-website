@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <Router>
     <Helmet>
@@ -14,6 +15,7 @@ root.render(
         defer
         data-domain="horecaorders.com"
         src="https://plausible.io/js/plausible.js"
+        type="text/javascript"
       ></script>
     </Helmet>
     <ScrollToTop />
