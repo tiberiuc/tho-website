@@ -6,7 +6,6 @@ import Switch from "react-switch";
 function Pricing() {
   const [checkbox, setCheckbox] = useState(false);
   const priceOfPlan = checkbox ? 25 : 20;
-  console.log(priceOfPlan);
   const pricing = {
     tiers: [
       {
@@ -48,7 +47,7 @@ function Pricing() {
         toggle: false,
         title: "Pro",
         price: priceOfPlan,
-        frequency: "/ luna",
+        frequency: "€ / luna",
         frequencyTips: checkbox ? "Plata lunara" : "Plata anuala",
         description: "Tot ce e in oferta Starter plus:",
         features: [
@@ -125,7 +124,7 @@ function Pricing() {
               />
             </picture>
           </div>
-          <div className="div2 flex flex-col ">
+          <div className="div2 flex flex-col lg:pb-10 pb-0">
             <p className="font-openSans text-4xl leading-5 font-light text-bluePrimary">
               Incepe acum
             </p>
@@ -168,7 +167,8 @@ function Pricing() {
                       </h3>
                       <div className="flex flex-col items-end">
                         <span className="text-3xl font-semibold font-openSans">
-                          {tier.price} {tier.frequency}
+                          {tier.price}
+                          {tier.frequency}
                         </span>
                       </div>
                     </div>
