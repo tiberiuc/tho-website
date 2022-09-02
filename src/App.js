@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "Components/Home";
 import Footer from "Components/Footer";
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { Link, Navigate, NavLink, Route, Routes } from "react-router-dom";
 import Restaurants from "Components/Restaurants";
 import Suppliers from "Components/Suppliers";
 import TermsAndConditions from "Components/ Terms&Conditions";
@@ -186,7 +186,8 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="*" element={<ErrorPage />}></Route>
+        <Route path="not-found" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/not-found" replace />} />
         <Route path="restaurante" element={<Restaurants />} />
         <Route path="furnizori" element={<Suppliers />} />
         <Route path="termeni-conditii" element={<TermsAndConditions />} />
