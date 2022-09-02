@@ -185,6 +185,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/*" element={<Home />}></Route>
         <Route path="restaurante" element={<Restaurants />} />
         <Route path="furnizori" element={<Suppliers />} />
         <Route path="termeni-conditii" element={<TermsAndConditions />} />
