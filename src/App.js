@@ -11,6 +11,7 @@ import About from "Components/About";
 import { useEffect, useState } from "react";
 import Button from "Atoms/Button";
 import Pricing from "Components/Pricing";
+import ErrorPage from "Components/ErrorPage";
 
 function App() {
   const [navSize, setnavSize] = useState(false);
@@ -185,7 +186,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/*" element={<Home />}></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
         <Route path="restaurante" element={<Restaurants />} />
         <Route path="furnizori" element={<Suppliers />} />
         <Route path="termeni-conditii" element={<TermsAndConditions />} />
