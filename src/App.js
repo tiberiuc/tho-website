@@ -186,8 +186,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="not-found" element={<ErrorPage />} />
-        <Route path="*" element={<Navigate to="/not-found" replace />} />
+        <Route path="*" element={<ErrorPage />} />
         <Route path="restaurante" element={<Restaurants />} />
         <Route path="furnizori" element={<Suppliers />} />
         <Route path="termeni-conditii" element={<TermsAndConditions />} />
