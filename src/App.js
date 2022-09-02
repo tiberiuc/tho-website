@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "Components/Home";
 import Footer from "Components/Footer";
-import { Link, Navigate, NavLink, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
 import Restaurants from "Components/Restaurants";
 import Suppliers from "Components/Suppliers";
 import TermsAndConditions from "Components/ Terms&Conditions";
