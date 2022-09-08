@@ -52,28 +52,20 @@ function PricingFurnizori() {
         description: "Tot ce e in oferta Starter plus:",
         features: [
           {
-            feature: "Onboarding+",
-            subFeature: `Access la documentatie si video-uri pentru echipa`,
+            feature: "Notificari",
+            subFeature: `La confirmarea comenzii 
+              La ora limita pentru plasarea comenzii cu livrare a doua zi`,
           },
           {
-            feature: "Catalog",
+            feature: "Liste de produse",
             subFeature:
-              "Incarcati produsele, id-ul de preturi, unitatea de masura, disponibilitatea in stoc sau epuizat",
+              "Mai multi furnizori in aceeasi lista. Trimiti o singura comanda catre mai multi furnizori.",
           },
           { feature: "Comanda minima / Cantitate minima" },
-          {
-            feature: "Zile de livrare si ora limita",
-            subFeature: `Alegeti in ce zile clientii dvs. pot solicita livrari. 
-              Adaugati o ora limita pentru livrarea a doua zi`,
-          },
-          {
-            feature: "Multiutilizatori",
-            commingSoon: "(in curand)",
-            subFeature:
-              "Manager/Reprezentant de vanzari/Contabilitate/Suport clienti",
-          },
-          { feature: "Promotii", commingSoon: "(in curand)" },
-          { feature: "Integrare ERP" },
+          { feature: "Multiutilizatori", commingSoon: "(in curand)" },
+          { feature: "Multilocatii", commingSoon: "(in curand)" },
+          { feature: "Statistici", commingSoon: "(in curand)" },
+          { feature: "Verificarea comenzilor", commingSoon: "(in curand)" },
         ],
         button: "Incearca gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
@@ -93,7 +85,7 @@ function PricingFurnizori() {
       <Header
         bgHeader={"bg-white"}
         headingText={`PRETURI FURNIZORI`}
-        noButtons={"flex justify-center"}
+        noButtons={"flex justify-center px-4"}
         logoYellow
         supplier
       />
