@@ -115,15 +115,15 @@ function PricingFurnizori() {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet="images/pricing-hand@3x.png"
+                srcSet="images/comenzi@3x.png"
               />
               <source
                 media="(min-width: 800px)"
-                srcSet="images/pricing-hand@2x.png"
+                srcSet="images/comenzi@2x.png"
               />
               <img
-                className="absolute bottom-0 left-0 object-cover lg:max-h-104 max-h-112"
-                src="images/pricing-hand.png"
+                className="absolute right-0 pl-8 lg:pl-0 w-85 mt-14 object-cover"
+                src="images/comenzi.png"
                 alt=""
               />
             </picture>
