@@ -1,11 +1,8 @@
 import Header from "Components/Header/Header";
-import { useState } from "react";
 import "./style.css";
-import Switch from "react-switch";
 
 function PricingFurnizori() {
-  const [checkbox, setCheckbox] = useState(false);
-  const priceOfPlan = checkbox ? 25 : 20;
+  const priceOfPlan = 8;
   const pricing = {
     tiers: [
       {
@@ -18,20 +15,19 @@ function PricingFurnizori() {
         features: [
           {
             feature: "Onboarding",
-            subFeature:
-              "Realizarea listelor de produse, conectarea cu furnizorii si agentii de vanzari",
+            subFeature: "Avantajele ultilizarii si functionalitatea",
           },
-          { feature: "Trimiti comenzi catre furnizori" },
-          { feature: "Comentarii" },
-          { feature: "Adauga/Sterge Furnizori si Produse" },
+          {
+            feature: "Primiti comenzi prin Aplicatiile mobile / SMS / Email",
+            subFeature:
+              "Comenzile contin numarul de client, ID-uri de produs, unitatea de masura, data de livrare si metoda de plata",
+          },
+          { feature: "Schimbarea statusului comenzilor" },
           {
             feature: "Istoricul de comenzi",
-            subFeature: `Vezi comenzile plasate, statusul lor si
-            comentariile din partea furnizorilor`,
+            subFeature: `Vezi comenzile primite si comentariile din partea restaurantelor`,
           },
-          { feature: "Repeta comanda" },
-          { feature: "Data livrarii" },
-          { feature: "Metoda de plata" },
+          { feature: "Notificari" },
           { feature: "Suport 24/7" },
         ],
         button: "Inregistrare",
@@ -48,24 +44,32 @@ function PricingFurnizori() {
         title: "Pro",
         price: priceOfPlan,
         frequency: "€ / luna",
-        frequencyTips: checkbox ? "Plata lunara" : "Plata anuala",
+        frequencyTips: "per restaurant",
         description: "Tot ce e in oferta Starter plus:",
         features: [
           {
-            feature: "Notificari",
-            subFeature: `La confirmarea comenzii 
-              La ora limita pentru plasarea comenzii cu livrare a doua zi`,
+            feature: "Onboarding+",
+            subFeature: `Access la documentatie si video-uri pentru echipa`,
           },
           {
-            feature: "Liste de produse",
+            feature: "Catalog",
             subFeature:
-              "Mai multi furnizori in aceeasi lista. Trimiti o singura comanda catre mai multi furnizori.",
+              "Incarcati produsele, id-ul de preturi, unitatea de masura, disponibilitatea in stoc sau epuizat",
           },
           { feature: "Comanda minima / Cantitate minima" },
-          { feature: "Multiutilizatori", commingSoon: "(in curand)" },
-          { feature: "Multilocatii", commingSoon: "(in curand)" },
-          { feature: "Statistici", commingSoon: "(in curand)" },
-          { feature: "Verificarea comenzilor", commingSoon: "(in curand)" },
+          {
+            feature: "Zile de livrare si ora limita",
+            subFeature: `Alegeti in ce zile clientii dvs. pot solicita livrari. 
+              Adaugati o ora limita pentru livrarea a doua zi`,
+          },
+          {
+            feature: "Multiutilizatori",
+            commingSoon: "(in curand)",
+            subFeature:
+              "Manager/Reprezentant de vanzari/Contabilitate/Suport clienti",
+          },
+          { feature: "Promotii", commingSoon: "(in curand)" },
+          { feature: "Integrare ERP" },
         ],
         button: "Incearca gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
@@ -95,18 +99,18 @@ function PricingFurnizori() {
             className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-start `}
           >
             <span className="font-openSans text-4xl text-white">
-              Comenzi plasate
+              Comenzi primite
             </span>
             <span className="font-openSans text-4xl font-bold text-white -mt-2">
-              mult mai bine
+              mai eficient
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Plaseaza comenzile si discuta cu toti furnizorii intr-o singura
-              aplicatie.
+              Utilizati platforma HORECA ORDERS pentru a gestiona comenzile,
+              edita catalogul sau promova produse - totul intr-un singur loc.
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Comenzile sunt convertite in formatul dorit de furnizor - e-mail,
-              SMS sau integrare directa in ERP-ul furnizorului.
+              Permiteti echipei dvs. sa economiseasca timp, sa reduca erorile si
+              sa imbunatateasca relatiile cu clientii.
             </span>
             <picture>
               <source
@@ -130,26 +134,6 @@ function PricingFurnizori() {
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
               planul tau gratuit.
-            </p>
-          </div>
-
-          <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
-            <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plateste Anual
-            </p>
-            <Switch
-              onColor="#0000"
-              offColor="#485696"
-              handleDiameter={20}
-              className=" justify-center items-center scale-75"
-              height={32}
-              checkedIcon={false}
-              uncheckedIcon={false}
-              onChange={setCheckbox}
-              checked={checkbox}
-            />
-            <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plateste Lunar
             </p>
           </div>
 
@@ -219,23 +203,7 @@ function PricingFurnizori() {
                   </a>
                 </div>
               ) : (
-                <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">
-                  <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Plateste Anual
-                  </p>
-                  <Switch
-                    onColor="#0000"
-                    offColor="#485696"
-                    handleDiameter={20}
-                    checkedIcon={false}
-                    uncheckedIcon={false}
-                    onChange={setCheckbox}
-                    checked={checkbox}
-                  />
-                  <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Plateste Lunar
-                  </p>
-                </div>
+                <div></div>
               )}
             </>
           ))}

@@ -1,8 +1,11 @@
 import Header from "Components/Header/Header";
+import { useState } from "react";
 import "./style.css";
+import Switch from "react-switch";
 
 function PricingRestaurante() {
-  const priceOfPlan = 8;
+  const [checkbox, setCheckbox] = useState(false);
+  const priceOfPlan = checkbox ? 25 : 20;
   const pricing = {
     tiers: [
       {
@@ -45,32 +48,24 @@ function PricingRestaurante() {
         title: "Pro",
         price: priceOfPlan,
         frequency: "€ / luna",
-        frequencyTips: "per restaurant",
+        frequencyTips: checkbox ? "Plata lunara" : "Plata anuala",
         description: "Tot ce e in oferta Starter plus:",
         features: [
           {
-            feature: "Onboarding+",
-            subFeature: `Access la documentatie si video-uri pentru echipa`,
+            feature: "Notificari",
+            subFeature: `La confirmarea comenzii 
+              La ora limita pentru plasarea comenzii cu livrare a doua zi`,
           },
           {
-            feature: "Catalog",
+            feature: "Liste de produse",
             subFeature:
-              "Incarcati produsele, id-ul de preturi, unitatea de masura, disponibilitatea in stoc sau epuizat",
+              "Mai multi furnizori in aceeasi lista. Trimiti o singura comanda catre mai multi furnizori.",
           },
           { feature: "Comanda minima / Cantitate minima" },
-          {
-            feature: "Zile de livrare si ora limita",
-            subFeature: `Alegeti in ce zile clientii dvs. pot solicita livrari. 
-              Adaugati o ora limita pentru livrarea a doua zi`,
-          },
-          {
-            feature: "Multiutilizatori",
-            commingSoon: "(in curand)",
-            subFeature:
-              "Manager/Reprezentant de vanzari/Contabilitate/Suport clienti",
-          },
-          { feature: "Promotii", commingSoon: "(in curand)" },
-          { feature: "Integrare ERP" },
+          { feature: "Multiutilizatori", commingSoon: "(in curand)" },
+          { feature: "Multilocatii", commingSoon: "(in curand)" },
+          { feature: "Statistici", commingSoon: "(in curand)" },
+          { feature: "Verificarea comenzilor", commingSoon: "(in curand)" },
         ],
         button: "Incearca gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
@@ -135,6 +130,26 @@ function PricingRestaurante() {
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
               planul tau gratuit.
+            </p>
+          </div>
+
+          <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
+            <p className="font-openSans font-semibold text-sm text-bluePrimary">
+              Plateste Anual
+            </p>
+            <Switch
+              onColor="#0000"
+              offColor="#485696"
+              handleDiameter={20}
+              className=" justify-center items-center scale-75"
+              height={32}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              onChange={setCheckbox}
+              checked={checkbox}
+            />
+            <p className="font-openSans font-semibold text-sm text-bluePrimary">
+              Plateste Lunar
             </p>
           </div>
 
@@ -204,7 +219,23 @@ function PricingRestaurante() {
                   </a>
                 </div>
               ) : (
-                <div></div>
+                <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">
+                  <p className="font-openSans font-medium text-sm text-bluePrimary">
+                    Plateste Anual
+                  </p>
+                  <Switch
+                    onColor="#0000"
+                    offColor="#485696"
+                    handleDiameter={20}
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                    onChange={setCheckbox}
+                    checked={checkbox}
+                  />
+                  <p className="font-openSans font-medium text-sm text-bluePrimary">
+                    Plateste Lunar
+                  </p>
+                </div>
               )}
             </>
           ))}
