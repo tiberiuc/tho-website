@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./style.css";
 import Switch from "react-switch";
 
-function Pricing() {
+function PricingRestaurante() {
   const [checkbox, setCheckbox] = useState(false);
   const priceOfPlan = checkbox ? 25 : 20;
   const pricing = {
@@ -19,7 +19,7 @@ function Pricing() {
           {
             feature: "Onboarding",
             subFeature:
-              "Realizarea listelor de produse, conebuttonrea cu furnizorii si agentii de vanzari",
+              "Realizarea listelor de produse, conectarea cu furnizorii si agentii de vanzari",
           },
           { feature: "Trimiti comenzi catre furnizori" },
           { feature: "Comentarii" },
@@ -84,7 +84,7 @@ function Pricing() {
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`PRETURI`}
+        headingText={`PRETURI RESTAURANTE`}
         noButtons={"flex justify-center"}
         logoYellow
         supplier
@@ -245,4 +245,4 @@ function Pricing() {
   );
 }
 
-export default Pricing;
+export default PricingRestaurante;

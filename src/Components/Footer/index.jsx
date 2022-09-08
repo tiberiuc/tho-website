@@ -9,7 +9,8 @@ const navigation = {
   horecaOrders: [
     { name: "Despre", href: "/despre" },
     { name: "Contacteaza-ne", href: "mailto:denis@horecaorders.com" },
-    { name: "Preturi", href: "/preturi" },
+    { name: "Preturi Restaurante", href: "/preturi-restaurante" },
+    { name: "Preturi Furnizori", href: "/preturi-furnizori" },
   ],
   povesti: [
     { name: "Toate povestile", href: "#" },
