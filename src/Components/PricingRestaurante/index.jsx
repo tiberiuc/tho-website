@@ -1,6 +1,5 @@
 import Header from "Components/Header/Header";
 import "./style.css";
-import Switch from "react-switch";
 
 function PricingRestaurante() {
   const priceOfPlan = 8;
