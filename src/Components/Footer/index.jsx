@@ -8,12 +8,12 @@ const navigation = {
   ],
   horecaOrders: [
     { name: "Despre", href: "/despre" },
-    { name: "Contacteaza-ne", href: "mailto:denis@horecaorders.com" },
-    { name: "Preturi Restaurante", href: "/preturi-restaurante" },
-    { name: "Preturi Furnizori", href: "/preturi-furnizori" },
+    { name: "Contactează-ne", href: "mailto:denis@horecaorders.com" },
+    { name: "Prețuri Restaurante", href: "/preturi-restaurante" },
+    { name: "Prețuri Furnizori", href: "/preturi-furnizori" },
   ],
   povesti: [
-    { name: "Toate povestile", href: "#" },
+    { name: "Toate poveștile", href: "#" },
     { name: "Managementul Restaurantului", href: "#" },
     { name: "Lumea Culinara", href: "#" },
     { name: "Ghidul Producatorului", href: "#" },
@@ -118,7 +118,7 @@ function Footer() {
       <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end items-start max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
           <p className="font-openSans text-white font-bold lg:text-base text-xl">
-            Pune-ti comenzile in ordine
+            Pune-ți comenzile in ordine
           </p>
           <div className="flex flex-row lg:mt-1 mt-4">
             <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
@@ -175,13 +175,13 @@ function Footer() {
             className="text-xs text-white opacity-50 font-openSans"
             href="/politica-de-confidentialitate"
           >
-            Politica de confidentialitate
+            Politica de confidențialitate
           </a>
           <a
             className="text-xs text-white opacity-50 font-openSans"
             href="/termeni-conditii"
           >
-            Termeni si conditii
+            Termeni și condiții
           </a>
         </div>
       </div>

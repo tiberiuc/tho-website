@@ -90,7 +90,7 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
         headingText={`GESTIONEAZA COMENZILE
         MAI USOR`}
         headerButtonLeft={{
-          text: "Inregistrare",
+          text: "Înregistrare",
           externalLink: "https://app.horecaorders.com/users/register",
         }}
         headerButtonRight={{
@@ -185,7 +185,7 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
         </p>
         <Button
           styles="mt-12 lg:mb-0 text-center px-10 py-3"
-          text="Inregistrare"
+          text="Înregistrare"
           link="https://app.horecaorders.com/users/register"
         />
       </div>

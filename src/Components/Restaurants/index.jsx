@@ -167,7 +167,7 @@ function Restaurants() {
       <div className="flex flex-col items-center w-full">
         <Button
           styles="lg:flex hidden px-10 py-3"
-          text="Inregistrare"
+          text="Înregistrare"
           link="https://app.horecaorders.com/users/register"
         />
         <div className="flex flex-col w-full items-center lg:mt-14 pt-14 lg:pb-0 mt-0 pb-14 px-10 lg:px-0 bg-bluePrimary relative">
@@ -232,7 +232,7 @@ function Restaurants() {
             <Button
               styles="px-10 py-3"
               link="/intrebari-frecvente"
-              text="Intrebari Frecvente"
+              text="Întrebări Frecvente"
             />
           </div>
           <div className="flex lg:justify-center justify-start w-full">

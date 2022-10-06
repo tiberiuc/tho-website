@@ -32,7 +32,7 @@ const InformationsCard = ({ data }) => {
                   <Link to={item.buttonLink}>
                     <Button
                       styles="mt-6 font-semibold text-lg px-10 py-3"
-                      text="Afla mai multe"
+                      text="Află mai multe"
                     />
                   </Link>
                 )}

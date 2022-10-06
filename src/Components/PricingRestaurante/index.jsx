@@ -34,7 +34,7 @@ function PricingRestaurante() {
           { feature: "Metoda de plata" },
           { feature: "Suport 24/7" },
         ],
-        button: "Inregistrare",
+        button: "Înregistrare",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
