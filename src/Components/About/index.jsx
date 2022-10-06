@@ -21,7 +21,7 @@ function About() {
             className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-3xl justify-items-center text-white`}
           >
             <span className="text-4xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-15">
-              MAI MULT SUCCES PENTRU AFACERILE DIN INDUSTRIA OSPITALITATII
+              MAI MULT SUCCES PENTRU AFACERILE DIN INDUSTRIA OSPITALITĂȚII
             </span>
             <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line">
               Afacerea dvs. din industria ospitalității reprezintă sufletul
