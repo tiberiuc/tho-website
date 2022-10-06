@@ -25,7 +25,7 @@ function PricingFurnizori() {
           { feature: "Schimbarea statusului comenzilor" },
           {
             feature: "Istoricul de comenzi",
-            subFeature: `Vezi comenzile primite si comentariile din partea restaurantelor`,
+            subFeature: `Vezi comenzile primite și comentariile din partea restaurantelor`,
           },
           { feature: "Notificări" },
           { feature: "Suport 24/7" },
@@ -45,7 +45,7 @@ function PricingFurnizori() {
         price: priceOfPlan,
         frequency: "€ / lună",
         frequencyTips: "per restaurant",
-        description: "Tot ce e in oferta Starter plus:",
+        description: "Tot ce e în oferta Starter plus:",
         features: [
           {
             feature: "Onboarding+",

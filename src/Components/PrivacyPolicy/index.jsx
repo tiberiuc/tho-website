@@ -6,11 +6,11 @@ function PrivacyPolicy() {
     <>
       <Header
         headingText={`POLITICA DE 
-        CONFIDENTIALITATE`}
+        CONFIDENȚIALITATE`}
         home={"text-2xl"}
         noButtons={"lg:ml-52 lg:mx-0 mx-8 2xl:ml-96 3xl:ml-100"}
         bgHeader="bg-bluePrimary"
-        lastModificationDate="Data intrarii in vigoare: 8 August 2022"
+        lastModificationDate="Data intrării în vigoare: 8 August 2022"
       />
       <div className="lg:ml-52 2xl:ml-96 3xl:ml-100 mx-8 lg:mx-0 lg:my-26 my-12 max-w-3.5xl lg:mr-52">
         <p class="p1">
