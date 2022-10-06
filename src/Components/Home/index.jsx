@@ -33,7 +33,7 @@ function Home() {
     <>
       <Header
         headingText={`PLATFORMA DE COMENZI 
-        PENTRU INDUSTRIA OSPITALITATII`}
+        PENTRU INDUSTRIA OSPITALITATII!`}
         headerButtonLeft={{
           text: "Pentru Restaurante",
           link: "/restaurante",
