@@ -10,27 +10,27 @@ function PricingFurnizori() {
         title: "Starter",
         price: "Gratis",
         frequency: "",
-        frequencyTips: "cu limitari",
+        frequencyTips: "cu limitări",
         description: "Planul include",
         features: [
           {
             feature: "Onboarding",
-            subFeature: "Avantajele ultilizarii si functionalitatea",
+            subFeature: "Avantajele ultilizării si funcționalitatea",
           },
           {
-            feature: "Primiti comenzi prin Aplicatiile mobile / SMS / Email",
+            feature: "Primiți comenzi prin Aplicațile mobile / SMS / Email",
             subFeature:
-              "Comenzile contin numarul de client, ID-uri de produs, unitatea de masura, data de livrare si metoda de plata",
+              "Comenzile conțin numărul de client, ID-uri de produs, unitatea de masura, data de livrare si metoda de plată",
           },
           { feature: "Schimbarea statusului comenzilor" },
           {
             feature: "Istoricul de comenzi",
             subFeature: `Vezi comenzile primite si comentariile din partea restaurantelor`,
           },
-          { feature: "Notificari" },
+          { feature: "Notificări" },
           { feature: "Suport 24/7" },
         ],
-        button: "Inregistrare",
+        button: "Înregistrare",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
@@ -43,35 +43,35 @@ function PricingFurnizori() {
         toggle: false,
         title: "Pro",
         price: priceOfPlan,
-        frequency: "€ / luna",
+        frequency: "€ / lună",
         frequencyTips: "per restaurant",
         description: "Tot ce e in oferta Starter plus:",
         features: [
           {
             feature: "Onboarding+",
-            subFeature: `Access la documentatie si video-uri pentru echipa`,
+            subFeature: `Access la documentație și video-uri pentru echipă`,
           },
           {
             feature: "Catalog",
             subFeature:
-              "Incarcati produsele, id-ul de preturi, unitatea de masura, disponibilitatea in stoc sau epuizat",
+              "Incărcați produsele, id-ul de prețuri, unitatea de masură, disponibilitatea în stoc sau epuizat",
           },
-          { feature: "Comanda minima / Cantitate minima" },
+          { feature: "Comandă minimă / Cantitate minimă" },
           {
-            feature: "Zile de livrare si ora limita",
-            subFeature: `Alegeti in ce zile clientii dvs. pot solicita livrari. 
-              Adaugati o ora limita pentru livrarea a doua zi`,
+            feature: "Zile de livrare și ora limită",
+            subFeature: `Alegeți în ce zile clienții dvs. pot solicita livrări. 
+              Adăugați o oră limită pentru livrarea a doua zi`,
           },
           {
             feature: "Multiutilizatori",
-            commingSoon: "(in curand)",
+            commingSoon: "(în curând)",
             subFeature:
-              "Manager/Reprezentant de vanzari/Contabilitate/Suport clienti",
+              "Manager/Reprezentant de vânzări/Contabilitate/Suport clienți",
           },
-          { feature: "Promotii", commingSoon: "(in curand)" },
+          { feature: "Promoții", commingSoon: "(în curând)" },
           { feature: "Integrare ERP" },
         ],
-        button: "Incearca gratuit",
+        button: "Încearcă gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
@@ -88,7 +88,7 @@ function PricingFurnizori() {
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`PRETURI FURNIZORI`}
+        headingText={`PREȚURI FURNIZORI`}
         noButtons={"flex justify-center px-4"}
         logoYellow
         supplier
@@ -105,12 +105,12 @@ function PricingFurnizori() {
               mai eficient
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Utilizati platforma HORECA ORDERS pentru a gestiona comenzile,
-              edita catalogul sau promova produse - totul intr-un singur loc.
+              Utilizați platforma HORECA ORDERS pentru a gestiona comenzile,
+              edita catalogul sau promova produse - totul într-un singur loc.
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Permiteti echipei dvs. sa economiseasca timp, sa reduca erorile si
-              sa imbunatateasca relatiile cu clientii.
+              Permiteți echipei dvs. să economisească timp, să reducă erorile și
+              să imbunătătească relațiile cu clienții.
             </span>
             <picture>
               <source
@@ -130,10 +130,10 @@ function PricingFurnizori() {
           </div>
           <div className="div2 flex flex-col lg:pb-10 pb-0">
             <p className="font-openSans text-4xl leading-5 font-light text-bluePrimary">
-              Incepe acum
+              Începe acum
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
-              planul tau gratuit.
+              planul tău gratuit.
             </p>
           </div>
 
