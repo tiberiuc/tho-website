@@ -33,7 +33,7 @@ function Restaurants() {
     },
     {
       icon: "SVGs/notif-icon.svg",
-      subTitle: "Te notificam cand se confirma comanda",
+      subTitle: "Te notificăm când se confirmă comanda",
       img: "images/notificare-img.png",
       img2: "images/notificare-img@2x.png",
       img3: "images/notificare-img@3x.png",
@@ -41,7 +41,7 @@ function Restaurants() {
   ];
   const information = [
     {
-      subTitle: "Comanda de la furnizori",
+      subTitle: "Comandă de la furnizori",
       description: `Plasați comenzi și discutați cu toți furnizorii dvs. într-o singură aplicație. Comenzile sunt convertite în formatul dorit de furnizor – 
         e-mail, SMS sau integrare directă in ERP-ul furnizorului. Da, chiar funcționează cu toți furnizorii tăi.`,
       img: "images/i-phone-x.png",
@@ -54,7 +54,7 @@ function Restaurants() {
     },
     {
       subTitle: "Organizezi cataloagele de comanda",
-      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de masura și numarul de produse incluse intr-o unitate de masura pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
+      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de măsură și numărul de produse incluse într-o unitate de măsură pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
       img: "images/iphone-x-mockup-information.png",
       img2: "images/iphone-x-mockup-information@2x.png",
       img3: "images/iphone-x-mockup-information@3x.png",
@@ -111,10 +111,10 @@ function Restaurants() {
       <Header
         bgHeader={"bg-greyBg"}
         restaurant={true}
-        headingText={`PLASEAZA COMENZILE 
-        CATRE TOTI FURNIZORII TAI`}
+        headingText={`PLASEAZĂ COMENZILE 
+        CĂTRE TOȚI FURNIZORII TĂI`}
         headerButtonLeft={{
-          text: "Inregistrare",
+          text: "Înregistrare",
           externalLink: "https://app.horecaorders.com/users/register",
         }}
         headerButtonRight={{
@@ -126,9 +126,9 @@ function Restaurants() {
       <FirstSection
         colors={{ background: "bg-bluePrimary", text: "text-white" }}
         subHeader={{
-          textTitle: "CEA MAI BUNA USTENSILA DIN BUCATARIA TA",
-          paragraph: `Foloseste gratuit HORECA ORDERS sa comunici si sa plasezi comenzile catre furnizorii tai in secunde. 
-          Gata cu erorile de livrare, așteptările la telefon noaptea tarziu sau cu foile de comandă nesfârșite.`,
+          textTitle: "CEA MAI BUNĂ USTENSILĂ DIN BUCĂTĂRIA TA",
+          paragraph: `Folosește gratuit HORECA ORDERS să comunici și să plasezi comenzile către furnizorii tăi în secunde. 
+          Gata cu erorile de livrare, așteptările la telefon noaptea târziu sau cu foile de comandă nesfârșite.`,
           imgSet: {
             img: "images/ustensila-bucatarie.png",
             img2x: "images/ustensila-bucatarie@2x.png",
@@ -140,25 +140,25 @@ function Restaurants() {
               img: "images/adio-greseli.png",
               img2: "images/adio-greseli@2x.png",
               img3: "images/adio-greseli@3x.png",
-              subtitle: "Spune adio greselior",
-              description: `Comanda ca un profesionist – Comenzile au mereu codul unic al produselor, unitatea de masura, data de livrare si confirmarea livrarii. 
-                Reduceti greselile cu 85%.`,
+              subtitle: "Spune adio greșelior",
+              description: `Comandă ca un profesionist – Comenzile au mereu codul unic al produselor, unitatea de masură, data de livrare și confirmarea livrării. 
+                Reduceți greșelile cu 85%.`,
             },
             {
               img: "images/castiga-timp.png",
               img2: "images/castiga-timp@2x.png",
               img3: "images/castiga-timp@3x.png",
-              subtitle: "Castiga timp",
+              subtitle: "Câștigă timp",
               description:
-                "Plasati rapid toate comenzile furnizorilor dvs. dintr-o singură aplicație. Plasați comenzi în doar trei atingeri. Castigati peste 4 ore pe săptămână.",
+                "Plasați rapid toate comenzile furnizorilor dvs. dintr-o singură aplicație. Plasați comenzi în doar trei atingeri. Câștigați peste 4 ore pe săptămână.",
             },
             {
               img: "images/suport-rapid.png",
               img2: "images/suport-rapid@2x.png",
               img3: "images/suport-rapid@3x.png",
               subtitle: "Suport rapid",
-              description: `Discutati cu echipa
-                HORECA ORDERS în aplicație. Aveti asistență rapida. 
+              description: `Discutați cu echipa
+                HORECA ORDERS în aplicație. Aveți asistență rapidă. 
                În plus, vă vom configura în mai puțin de 24 de ore.`,
             },
           ],
@@ -172,7 +172,7 @@ function Restaurants() {
         />
         <div className="flex flex-col w-full items-center lg:mt-14 pt-14 lg:pb-0 mt-0 pb-14 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center">
-            CUM FUNCTIONEAZA
+            CUM FUNCȚIONEAZĂ
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 lg:mt-13 mt-5 max-w-5xl">
             {cardSection.map((card) => {
@@ -226,8 +226,8 @@ function Restaurants() {
             </p>
             <p className="font-openSans font-semibold text-base py-6 text-center text-bluePrimary">
               Platforma HORECA ORDERS este gratuită pentru restaurante și
-              furnizori, având disponibile funcții opționale plătite. Vorbeste
-              cu echipa noastra pentru a afla mai multe!
+              furnizori, având disponibile funcții opționale plătite. Vorbește
+              cu echipa noastră pentru a afla mai multe!
             </p>
             <Button
               styles="px-10 py-3"
@@ -272,12 +272,12 @@ function Restaurants() {
         </picture>
         <div className="flex flex-col items-center justify-center px-10 lg:px-0">
           <p className="font-openSans font-extrabold lg:text-7xl text-5xl leading-10 text-black italic text-center">
-            HAI SA <br /> EXPLORAM <br /> HORECA <br />
+            HAI SĂ <br /> EXPLORĂM <br /> HORECA <br />
             ORDERS
           </p>
           <Button
             styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-3"
-            text="Inregistrare"
+            text="Înregistrare"
             link="https://app.horecaorders.com/users/register"
           />
         </div>

@@ -101,12 +101,12 @@ function PricingRestaurante() {
               mult mai bine
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Plaseaza comenzile si discuta cu toti furnizorii intr-o singura
-              aplicatie.
+              Plasează comenzile si discută cu toți furnizorii într-o singură
+              aplicație.
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Comenzile sunt convertite in formatul dorit de furnizor - e-mail,
-              SMS sau integrare directa in ERP-ul furnizorului.
+              Comenzile sunt convertite în formatul dorit de furnizor - e-mail,
+              SMS sau integrare directa în ERP-ul furnizorului.
             </span>
             <picture>
               <source
