@@ -70,7 +70,7 @@ export default function SliderWhirligig({ sliderInfo }) {
       </div>
       <Button
         styles="lg:mt-16 mt-8 px-10 py-3"
-        text="Inregistrare"
+        text="Înregistrare"
         link="https://app.horecaorders.com/users/register"
       />
     </div>

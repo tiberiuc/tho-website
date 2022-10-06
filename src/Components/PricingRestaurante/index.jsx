@@ -13,28 +13,28 @@ function PricingRestaurante() {
         title: "Starter",
         price: "Gratis",
         frequency: "",
-        frequencyTips: "cu limitari",
+        frequencyTips: "cu limitări",
         description: "Planul include",
         features: [
           {
             feature: "Onboarding",
             subFeature:
-              "Realizarea listelor de produse, conectarea cu furnizorii si agentii de vanzari",
+              "Realizarea listelor de produse, conectarea cu furnizorii și agenții de vânzări",
           },
-          { feature: "Trimiti comenzi catre furnizori" },
+          { feature: "Trimiți comenzi către furnizori" },
           { feature: "Comentarii" },
-          { feature: "Adauga/Sterge Furnizori si Produse" },
+          { feature: "Adaugă/Șterge Furnizori si Produse" },
           {
             feature: "Istoricul de comenzi",
             subFeature: `Vezi comenzile plasate, statusul lor si
             comentariile din partea furnizorilor`,
           },
-          { feature: "Repeta comanda" },
-          { feature: "Data livrarii" },
-          { feature: "Metoda de plata" },
+          { feature: "Repetă comanda" },
+          { feature: "Data livrării" },
+          { feature: "Metoda de plată" },
           { feature: "Suport 24/7" },
         ],
-        button: "Inregistrare",
+        button: "Înregistrare",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
@@ -47,27 +47,27 @@ function PricingRestaurante() {
         toggle: false,
         title: "Pro",
         price: priceOfPlan,
-        frequency: "€ / luna",
-        frequencyTips: checkbox ? "Plata lunara" : "Plata anuala",
+        frequency: "€ / lună",
+        frequencyTips: checkbox ? "Plata lunară" : "Plata anuală",
         description: "Tot ce e in oferta Starter plus:",
         features: [
           {
-            feature: "Notificari",
+            feature: "Notificări",
             subFeature: `La confirmarea comenzii 
-              La ora limita pentru plasarea comenzii cu livrare a doua zi`,
+              La ora limită pentru plasarea comenzii cu livrare a doua zi`,
           },
           {
             feature: "Liste de produse",
             subFeature:
-              "Mai multi furnizori in aceeasi lista. Trimiti o singura comanda catre mai multi furnizori.",
+              "Mai mulți furnizori în aceeași listă. Trimiți o singura comandă către mai mulți furnizori.",
           },
-          { feature: "Comanda minima / Cantitate minima" },
-          { feature: "Multiutilizatori", commingSoon: "(in curand)" },
-          { feature: "Multilocatii", commingSoon: "(in curand)" },
-          { feature: "Statistici", commingSoon: "(in curand)" },
-          { feature: "Verificarea comenzilor", commingSoon: "(in curand)" },
+          { feature: "Comandă minimă / Cantitate minimă" },
+          { feature: "Multiutilizatori", commingSoon: "(in curând)" },
+          { feature: "Multilocații", commingSoon: "(in curând)" },
+          { feature: "Statistici", commingSoon: "(in curând)" },
+          { feature: "Verificarea comenzilor", commingSoon: "(in curând)" },
         ],
-        button: "Incearca gratuit",
+        button: "Incearcă gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
@@ -84,7 +84,7 @@ function PricingRestaurante() {
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`PRETURI RESTAURANTE`}
+        headingText={`PREȚURI RESTAURANTE`}
         noButtons={"flex justify-center px-4"}
         logoYellow
         supplier
@@ -101,12 +101,12 @@ function PricingRestaurante() {
               mult mai bine
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Plaseaza comenzile si discuta cu toti furnizorii intr-o singura
-              aplicatie.
+              Plasează comenzile si discută cu toți furnizorii într-o singură
+              aplicație.
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Comenzile sunt convertite in formatul dorit de furnizor - e-mail,
-              SMS sau integrare directa in ERP-ul furnizorului.
+              Comenzile sunt convertite în formatul dorit de furnizor - e-mail,
+              SMS sau integrare directa în ERP-ul furnizorului.
             </span>
             <picture>
               <source
@@ -129,13 +129,13 @@ function PricingRestaurante() {
               Incepe acum
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
-              planul tau gratuit.
+              planul tău gratuit.
             </p>
           </div>
 
           <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plateste Anual
+              Platește Anual
             </p>
             <Switch
               onColor="#0000"
@@ -149,7 +149,7 @@ function PricingRestaurante() {
               checked={checkbox}
             />
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plateste Lunar
+              Plăteste Lunar
             </p>
           </div>
 
@@ -221,7 +221,7 @@ function PricingRestaurante() {
               ) : (
                 <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">
                   <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Plateste Anual
+                    Platește Anual
                   </p>
                   <Switch
                     onColor="#0000"
@@ -233,7 +233,7 @@ function PricingRestaurante() {
                     checked={checkbox}
                   />
                   <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Plateste Lunar
+                    Plătește Lunar
                   </p>
                 </div>
               )}

@@ -5,7 +5,7 @@ const secondSection = [
   {
     subTitle: "Pentru restaurante",
     description:
-      "Scapa de formularele de comandă și de asteptatul nesfarsit la telefon noaptea târziu. Aplicația noastră este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasa mai devreme.",
+      "Scapă de formularele de comandă și de așteptatul nesfârșit la telefon noaptea târziu. Aplicația noastră este cel mai eficient mod de a comanda de la toți furnizorii. Plasezi comenzile mai rapid, ajungi acasă mai devreme.",
     buttonLink: "/restaurante",
     img: "images/i-phone-x.png",
     img2: "images/i-phone-x@2x.png",
@@ -18,7 +18,7 @@ const secondSection = [
   {
     subTitle: "Pentru furnizori",
     description:
-      "Indiferent dacă aveti o afacere de familie sau sunteti un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri.",
+      "Indiferent dacă aveți o afacere de familie sau sunteți un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri.",
     buttonLink: "/furnizori",
     img: "images/comenzi.png",
     img2: "images/comenzi@2x.png",
@@ -33,7 +33,7 @@ function Home() {
     <>
       <Header
         headingText={`PLATFORMA DE COMENZI 
-        PENTRU INDUSTRIA OSPITALITATII`}
+        PENTRU INDUSTRIA OSPITALITĂȚII`}
         headerButtonLeft={{
           text: "Pentru Restaurante",
           link: "/restaurante",
@@ -47,12 +47,12 @@ function Home() {
       <FirstSection
         colors={{ background: "bg-greyBg", text: "text-black" }}
         subHeader={{
-          textTitle: "ALEGE SA MUNCESTI MAI EFICIENT",
+          textTitle: "ALEGE SĂ MUNCEȘTI MAI EFICIENT",
           paragraph: `HORECA ORDERS face plasarea și primirea comenzilor mai eficientă. 
             Aplicația noastră intuitivă și instrumentele web simplifică operațiunile pentru bucătari, proprietari și reprezentanții de vânzări.`,
-          secondParagraph: `Salveaza timp. 
-          Salveaza bani. 
-          Salveaza mancare.`,
+          secondParagraph: `Salvează timp. 
+          Salvează bani. 
+          Salvează mâncare.`,
           imgSet: {
             img: "images/manCooking.png",
             img2x: "images/manCooking@2x.png",
@@ -63,25 +63,25 @@ function Home() {
               img: "images/Gata-cu-hartia.png",
               img2: "images/Gata-cu-hartia@2x.png",
               img3: "images/Gata-cu-hartia@3x.png",
-              subtitle: "Gata cu hartia",
+              subtitle: "Gata cu hârtia",
               description:
-                "Totul este in aplicatie, gata cu teancurile de hartie.",
+                "Totul este în aplicație, gata cu teancurile de hârtie.",
             },
             {
               img: "images/castiga-timp.png",
               img2: "images/castiga-timp@2x.png",
               img3: "images/castiga-timp@3x.png",
-              subtitle: "Castiga timp",
+              subtitle: "Câștigă timp",
               description:
-                "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri castiga peste 4 ore pe săptămână.",
+                "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri câștigă peste 4 ore pe săptămână.",
             },
             {
               img: "images/salveaza-mai-mult.png",
               img2: "images/salveaza-mai-mult@2x.png",
               img3: "images/salveaza-mai-mult@3x.png",
-              subtitle: "Risipeste mai putin, salveaza mai mult",
+              subtitle: "Risipește mai puțin, salvează mai mult",
               description:
-                "Comenzi mai precise înseamnă mai puține greșeli, mai puțina risipa și costuri mai mici.",
+                "Comenzi mai precise înseamnă mai puține greșeli, mai puțină risipă și costuri mai mici.",
             },
           ],
         }}

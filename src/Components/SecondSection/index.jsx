@@ -11,11 +11,11 @@ const SecondSection = ({ information }) => {
         className={`lg:mt-22 mt-4 bg-opacity-50 flex flex-col items-center lg:py-40 py-20 lg:px-0 px-12`}
       >
         <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl leading-10 text-center max-w-3xl">
-          PUNE-TI COMENZILE IN ORDINE
+          PUNE-ȚI COMENZILE ÎN ORDINE
         </span>
         <a href="https://app.horecaorders.com/users/register">
           <Button
-            text={"Inregistrare"}
+            text={"Înregistrare"}
             link="https://app.horecaorders.com/users/register"
             styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
           />

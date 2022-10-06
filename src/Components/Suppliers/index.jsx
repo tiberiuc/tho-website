@@ -18,7 +18,7 @@ function Suppliers() {
       pictureStyles: "object-scale-down lg:w-86 w-85 h-72 mb-10 lg:mb-0",
     },
     {
-      subTitle: "Seteaza zile de livrare si ora limita pentru ultima comanda",
+      subTitle: "Setează zile de livrare și ora limită pentru ultima comandă",
       description:
         "Alegeți în ce zile clienții dvs. pot solicita livrări. Adăugați o oră limită pentru livrarea în ziua următoare. Schimbați acest lucru pentru toți clienții sau doar unul.",
       img: "images/i-phone-x-time-elapse.png",
@@ -30,9 +30,9 @@ function Suppliers() {
       pictureStyles: "object-scale-down h-86 w-64",
     },
     {
-      subTitle: "Promoveaza-ti catalogul",
+      subTitle: "Promovează-ți catalogul",
       description:
-        "Menținerea catalogului actualizat este una, dar să-ti informezi clienții despre el este alta. Gestionarea catalogului dvs. online cu Horeca Orders înseamnă că informațiile despre produse (unități, ID-uri de produse, disponibilitate) sunt întotdeauna actualizate și vizibile pentru clienți.",
+        "Menținerea catalogului actualizat este una, dar să-ți informezi clienții despre el este alta. Gestionarea catalogului dvs. online cu Horeca Orders înseamnă că informațiile despre produse (unități, ID-uri de produse, disponibilitate) sunt întotdeauna actualizate și vizibile pentru clienți.",
       img: "images/ho-catalog.png",
       img2: "images/ho-catalog@2x.png",
       img3: "images/ho-catalog@3x.png",
@@ -41,9 +41,9 @@ function Suppliers() {
       pictureStyles: "object-scale-down lg:w-86 w-85 h-72 mb-10 lg:mb-0",
     },
     {
-      subTitle: "Creste-ti vanzarile prin mesaje trimise simultan",
+      subTitle: "Crește-ți vanzarile prin mesaje trimise simultan",
       description:
-        "Promovați oferte speciale și produsele sezoniere prin mesaje mai multor clienți simultan. Clientii primesc mesajul în aplicația lor Horeca Orders și pot comanda in doar trei pasi simplii.",
+        "Promovați oferte speciale și produsele sezoniere prin mesaje mai multor clienți simultan. Clienții primesc mesajul în aplicația lor Horeca Orders și pot comanda in doar trei pași simplii.",
       img: "images/ho-oferte.png",
       img2: "images/ho-oferte@2x.png",
       img3: "images/ho-oferte@3x.png",
@@ -54,7 +54,7 @@ function Suppliers() {
     },
     {
       subTitle:
-        "Furnizati clientilor cea mai buna experienta de plasat comenzi",
+        "Furnizați clienților cea mai buna experiență de plasat comenzi",
       description:
         "Alegeți în ce zile clienții dvs. pot solicita livrări. Adăugați o oră limită pentru livrarea în ziua următoare. Schimbați acest lucru pentru toți clienții sau doar unul.",
       img: "images/i-phone-x.png",
@@ -69,9 +69,9 @@ function Suppliers() {
   const slider = [
     {
       paragraphDescription: `  
-      Horeca Orders imi permite să adun toate comenzile sub o singură umbrelă, astfel încât conversația să fie mult mai bine organizată.
-Ii pot oferi clientului propriul catalog, astfel încât în loc să trebuiască să îi spun că trebuie să comande o anumita cantitate, o vede direct si este la un clic distanță, ei știu numele produselor, este foarte clar pentru ei.
-Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organiza afacerea!  
+      Horeca Orders îmi permite să adun toate comenzile sub o singură umbrelă, astfel încât conversația să fie mult mai bine organizată.
+Îi pot oferi clientului propriul catalog, astfel încât în loc să trebuiască să îi spun că trebuie să comande o anumita cantitate, o vede direct si este la un click distanță, ei știu numele produselor, este foarte clar pentru ei.
+Ceea ce mă surprinde plăcut la Horeca Orders este cât de bine imi poate organiza afacerea!  
       `,
       personDescription1: `Tolga Cingiz - Batiatus Express, Furnizor HoReCa`,
       hyperLink: "",
@@ -87,10 +87,10 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`GESTIONEAZA COMENZILE
-        MAI USOR`}
+        headingText={`GESTIONEAZĂ COMENZILE
+        MAI UȘOR`}
         headerButtonLeft={{
-          text: "Inregistrare",
+          text: "Înregistrare",
           externalLink: "https://app.horecaorders.com/users/register",
         }}
         headerButtonRight={{
@@ -103,7 +103,7 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
       <FirstSection
         colors={{ background: "bg-greyBg", text: "text-black" }}
         subHeader={{
-          textTitle: "COMUNICARE MAI PRECISA CU PARTENERII",
+          textTitle: "COMUNICARE MAI PRECISĂ CU PARTENERII",
           paragraph: `Utilizați platforma HORECA ORDERS pentru a gestiona comenzile, edita catalogul sau promova produse - totul într-un singur loc. Permiteți echipei dvs. să economisească timp, să reducă erorile și să îmbunătățească relațiile cu clienții.`,
           imgSet: {
             img: "images/comunicare-cu-partenerii.png",
@@ -117,23 +117,23 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
               img2: "images/integrare-erp@2x.png",
               img3: "images/integrare-erp@3x.png",
               subtitle: "Integrare ERP",
-              description: `HORECA ORDERS se integreaza cu ERP-ul pentru a renunta la introducerea manuala a comenzilor pentru totdeauna. Economisiti timp. Reduceti costuri.`,
+              description: `HORECA ORDERS se integrează cu ERP-ul pentru a renunța la introducerea manuala a comenzilor pentru totdeauna. Economisiți timp. Reduceți costuri.`,
             },
             {
               img: "images/fara-comenzi-gresite.png",
               img2: "images/fara-comenzi-gresite@2x.png",
               img3: "images/fara-comenzi-gresite@3x.png",
-              subtitle: "Fara comenzi gresite",
+              subtitle: "Fără comenzi greșite",
               description:
-                "Obtineti comenzile de la clienti cu coduri de produs si date de livrare. Adio presupuneri. Cresteti precizia livrarii cu 85%",
+                "Obțineți comenzile de la clienți cu coduri de produs si date de livrare. Adio presupuneri. Creșteți precizia livrării cu 85%",
             },
             {
               img: "images/vindeti-mai-mult.png",
               img2: "images/vindeti-mai-mult@2x.png",
               img3: "images/vindeti-mai-mult@3x.png",
-              subtitle: "Vindeti mai mult",
-              description: `Deblocati un nou tip de marketing trimitand oferte direct in aplicatia HORECA ORDERS a clientilor. 20-30% din
-              produsele promovate clientilor prin HORECA ORDERS sunt achizitionate`,
+              subtitle: "Vindeți mai mult",
+              description: `Deblocați un nou tip de marketing trimițând oferte direct în aplicația HORECA ORDERS a clienților. 20-30% din
+              produsele promovate clienților prin HORECA ORDERS sunt achiziționate`,
             },
           ],
         }}
@@ -164,11 +164,11 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
           </picture>
           <div className="flex flex-col items-center justify-center px-10 lg:px-0">
             <p className="font-openSans font-extrabold lg:text-7xl text-4xl text-black italic text-center">
-              FUNCTIONEAZA <br /> IN CEL MAI <br /> SCURT TIMP
+              FUNCȚIONEAZĂ <br /> ÎN CEL MAI <br /> SCURT TIMP
             </p>
             <Button
               styles="mt-10 lg:mb-0 mb-10 text-center px-10 py-3"
-              text="Inregistrare"
+              text="Înregistrare"
               link="https://app.horecaorders.com/users/register"
             />
           </div>
@@ -179,13 +179,13 @@ Ceea ce mă surprinde placut la Horeca Orders este cât de bine imi poate organi
         className="bg-opacity-25 flex flex-col justify-center items-center w-full lg:py-28 py-16 lg:px-0 px-10"
       >
         <p className="font-openSans font-extrabold italic lg:text-7xl text-4xl text-white text-center">
-          ESTI PREGATIT PENTRU <br />
-          MAI PUTIN STRES <br />
-          SI MAI PUTINE BATAI DE CAP?
+          EȘTI PREGĂTIT PENTRU <br />
+          MAI PUȚIN STRES <br />
+          ȘI MAI PUȚINE BĂTĂI DE CAP?
         </p>
         <Button
           styles="mt-12 lg:mb-0 text-center px-10 py-3"
-          text="Inregistrare"
+          text="Înregistrare"
           link="https://app.horecaorders.com/users/register"
         />
       </div>

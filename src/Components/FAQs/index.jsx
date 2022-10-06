@@ -28,7 +28,7 @@ function FAQs() {
       styles: "bg-greyBg text-bluePrimary",
       title: "CUM MĂ POT ÎNSCRIE?",
       description: `Inregistrați-vă aici și echipa noastră vă va contacta pentru a vă configura în mai puțin de 24 de ore!`,
-      button: "Inregistrare",
+      button: "Înregistrare",
     },
     {
       styles: "",
@@ -39,7 +39,7 @@ function FAQs() {
   return (
     <>
       <Header
-        headingText={`INTREBARI 
+        headingText={`ÎNTREBĂRI 
         FRECVENTE`}
         home
         noButtons={"justify-center lg:px-8 px-16 text-center ml-0"}
