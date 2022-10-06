@@ -17,7 +17,7 @@ function Restaurants() {
     {
       number: "2",
       subTitle: "Adaugi detaliile comenzii",
-      details: "Data livrarii / Alte detalii",
+      details: "Data livrării / Alte detalii",
       img: "images/finalizeaza-datele-comenzii.png",
       img2: "images/finalizeaza-datele-comenzii@2x.png",
       img3: "images/finalizeaza-datele-comenzii@3x.png",
@@ -25,7 +25,7 @@ function Restaurants() {
     {
       number: "3",
       subTitle: `Comanda 
-      trimisa`,
+      trimisă`,
       details: "SMS, e-mail, ERP",
       img: "images/comanda-trimisa-img.png",
       img2: "images/comanda-trimisa-img@2x.png",
@@ -53,7 +53,7 @@ function Restaurants() {
       pictureStyles: "object-scale-down h-104 w-72",
     },
     {
-      subTitle: "Organizezi cataloagele de comanda",
+      subTitle: "Organizezi cataloagele de comandă",
       description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de măsură și numărul de produse incluse într-o unitate de măsură pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
       img: "images/iphone-x-mockup-information.png",
       img2: "images/iphone-x-mockup-information@2x.png",
@@ -67,9 +67,9 @@ function Restaurants() {
 
   const slider = [
     {
-      paragraphDescription: `Inainte de Horeca Orders plasam comenzi in maniera clasica, dezorganizata, prin poze trimise la furnizori, conversatii lungi la telefon, whatsapp, sms, email, foarte complicat.
-      Acum totul e mai simplu, mai integrat si cel mai important am castigat timp si siguranţă.
-      Sistemul odata pus in functiune poate fi folosit de orice coleg din echipa noastra, e excelent.`,
+      paragraphDescription: `Înainte de Horeca Orders plasam comenzi în maniera clasică, dezorganizată, prin poze trimise la furnizori, conversații lungi la telefon, whatsapp, sms, email, foarte complicat.
+      Acum totul e mai simplu, mai integrat și cel mai important am câștigat timp și siguranţă.
+      Sistemul odată pus în funcțiune poate fi folosit de orice coleg din echipa noastră, e excelent.`,
       personDescription1: `
       Gabi Herdean - 
       `,
@@ -93,7 +93,7 @@ function Restaurants() {
       img3: "images/Nadia-Sushi-Master.png",
     },
     {
-      paragraphDescription: `Folosind aplicația, am salvat foarte mult timp, deoarece fiecare comandă durează maxim 2 3 minute și putem fi mult mai organizați, toate comenzile și toți furnizorii fiind centralizați într-un singur loc!`,
+      paragraphDescription: `Folosind aplicația, am salvat foarte mult timp, deoarece fiecare comandă durează maxim 2-3 minute și putem fi mult mai organizați, toate comenzile și toți furnizorii fiind centralizați într-un singur loc!`,
       personDescription1: `
       Andrei Iulian Dumitru - 
       `,

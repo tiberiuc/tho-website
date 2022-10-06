@@ -65,15 +65,15 @@ function Home() {
               img3: "images/Gata-cu-hartia@3x.png",
               subtitle: "Gata cu hârtia",
               description:
-                "Totul este in aplicație, gata cu teancurile de hârtie.",
+                "Totul este în aplicație, gata cu teancurile de hârtie.",
             },
             {
               img: "images/castiga-timp.png",
               img2: "images/castiga-timp@2x.png",
               img3: "images/castiga-timp@3x.png",
-              subtitle: "Câstigă timp",
+              subtitle: "Câștigă timp",
               description:
-                "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri câstigă peste 4 ore pe săptămână.",
+                "Comenzile pe mobil sunt mai rapide. Utilizatorii noștri câștigă peste 4 ore pe săptămână.",
             },
             {
               img: "images/salveaza-mai-mult.png",

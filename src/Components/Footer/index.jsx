@@ -4,7 +4,7 @@ const navigation = {
     { name: "Home", href: "/" },
     { name: "Restaurante", href: "/restaurante" },
     { name: "Furnizori", href: "/furnizori" },
-    { name: "Intrebari Frecvente", href: "/intrebari-frecvente" },
+    { name: "Întrebari Frecvente", href: "/intrebari-frecvente" },
   ],
   horecaOrders: [
     { name: "Despre", href: "/despre" },

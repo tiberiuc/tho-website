@@ -582,7 +582,7 @@ function PrivacyPolicy() {
           direcționate pe rețelele sale de socializare, este posibil să
           &icirc;și ajusteze preferințele de publicitate prin setările pe acele
           rețele. O persoană poate afla mai multe despre preferințele de
-          publicitate făc&acirc;nd clic pe linkurile de mai jos. Vă rugăm să
+          publicitate făc&acirc;nd click pe linkurile de mai jos. Vă rugăm să
           rețineți că aceste link-uri sunt furnizate doar pentru comoditate și
           nu controlăm conținutul sau caracteristicile care pot fi disponibile
           pe aceste servicii terțe.

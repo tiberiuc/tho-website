@@ -5,7 +5,7 @@ function TermsAndConditions() {
   return (
     <>
       <Header
-        headingText={`TERMENI SI CONDITII`}
+        headingText={`TERMENI ȘI CONDIȚII`}
         noButtons={"lg:ml-52 lg:mx-0 mx-8 2xl:ml-96 3xl:ml-100"}
         restaurant
         logoYellow
@@ -21,7 +21,7 @@ function TermsAndConditions() {
           puteți utiliza serviciile noastre online și/sau mobile, site-ul web și
           software-ul furnizat pe sau &icirc;n legătură cu serviciul (colectiv,
           &bdquo;Serviciul&rdquo;). Prin accesarea sau utilizarea Serviciului
-          sau făc&acirc;nd clic pe un buton sau bif&acirc;nd o casetă marcată
+          sau făc&acirc;nd click pe un buton sau bif&acirc;nd o casetă marcată
           &bdquo;Sunt de acord&rdquo; (sau ceva similar), agreati că ați citit,
           &icirc;nțeles și sunteți de acord să respectați acești Termeni și
           condiții (acest &bdquo;Acord &quot;) și ați citit și &icirc;nțeles
