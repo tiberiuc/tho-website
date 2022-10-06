@@ -23,11 +23,7 @@ function PricingRestaurante() {
           },
           { feature: "Trimiți comenzi către furnizori" },
           { feature: "Comentarii" },
-<<<<<<< HEAD
           { feature: "Adaugă/Șterge Furnizori și Produse" },
-=======
-          { feature: "Adaugă/Șterge Furnizori si Produse" },
->>>>>>> main
           {
             feature: "Istoricul de comenzi",
             subFeature: `Vezi comenzile plasate, statusul lor și
@@ -63,7 +59,6 @@ function PricingRestaurante() {
           {
             feature: "Liste de produse",
             subFeature:
-<<<<<<< HEAD
               "Mai mulți furnizori în aceeași listă. Trimiți o singură comandă către mai mulți furnizori.",
           },
           { feature: "Comandă minimă / Cantitate minimă" },
@@ -73,17 +68,6 @@ function PricingRestaurante() {
           { feature: "Verificarea comenzilor", commingSoon: "(în curând)" },
         ],
         button: "Încearcă gratuit",
-=======
-              "Mai mulți furnizori în aceeași listă. Trimiți o singura comandă către mai mulți furnizori.",
-          },
-          { feature: "Comandă minimă / Cantitate minimă" },
-          { feature: "Multiutilizatori", commingSoon: "(in curând)" },
-          { feature: "Multilocații", commingSoon: "(in curând)" },
-          { feature: "Statistici", commingSoon: "(in curând)" },
-          { feature: "Verificarea comenzilor", commingSoon: "(in curând)" },
-        ],
-        button: "Incearcă gratuit",
->>>>>>> main
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
@@ -151,11 +135,7 @@ function PricingRestaurante() {
 
           <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-<<<<<<< HEAD
               Plătește Anual
-=======
-              Platește Anual
->>>>>>> main
             </p>
             <Switch
               onColor="#0000"
@@ -169,11 +149,7 @@ function PricingRestaurante() {
               checked={checkbox}
             />
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-<<<<<<< HEAD
               Plătește Lunar
-=======
-              Plăteste Lunar
->>>>>>> main
             </p>
           </div>
 
