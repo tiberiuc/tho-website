@@ -5,7 +5,7 @@ import Switch from "react-switch";
 
 function PricingRestaurante() {
   const [checkbox, setCheckbox] = useState(false);
-  const priceOfPlan = checkbox ? 25 : 20;
+  const priceOfPlan = checkbox ? 30 : 25;
   const pricing = {
     tiers: [
       {
