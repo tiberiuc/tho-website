@@ -23,10 +23,10 @@ function PricingRestaurante() {
           },
           { feature: "Trimiți comenzi către furnizori" },
           { feature: "Comentarii" },
-          { feature: "Adaugă/Șterge Furnizori si Produse" },
+          { feature: "Adaugă/Șterge Furnizori și Produse" },
           {
             feature: "Istoricul de comenzi",
-            subFeature: `Vezi comenzile plasate, statusul lor si
+            subFeature: `Vezi comenzile plasate, statusul lor și
             comentariile din partea furnizorilor`,
           },
           { feature: "Repetă comanda" },
@@ -59,15 +59,15 @@ function PricingRestaurante() {
           {
             feature: "Liste de produse",
             subFeature:
-              "Mai mulți furnizori în aceeași listă. Trimiți o singura comandă către mai mulți furnizori.",
+              "Mai mulți furnizori în aceeași listă. Trimiți o singură comandă către mai mulți furnizori.",
           },
           { feature: "Comandă minimă / Cantitate minimă" },
-          { feature: "Multiutilizatori", commingSoon: "(in curând)" },
-          { feature: "Multilocații", commingSoon: "(in curând)" },
-          { feature: "Statistici", commingSoon: "(in curând)" },
-          { feature: "Verificarea comenzilor", commingSoon: "(in curând)" },
+          { feature: "Multiutilizatori", commingSoon: "(în curând)" },
+          { feature: "Multilocații", commingSoon: "(în curând)" },
+          { feature: "Statistici", commingSoon: "(în curând)" },
+          { feature: "Verificarea comenzilor", commingSoon: "(în curând)" },
         ],
-        button: "Incearcă gratuit",
+        button: "Încearcă gratuit",
         buttonLink: "https://app.horecaorders.com/users/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
@@ -135,7 +135,7 @@ function PricingRestaurante() {
 
           <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Platește Anual
+              Plătește Anual
             </p>
             <Switch
               onColor="#0000"
@@ -149,7 +149,7 @@ function PricingRestaurante() {
               checked={checkbox}
             />
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plăteste Lunar
+              Plătește Lunar
             </p>
           </div>
 
@@ -221,7 +221,7 @@ function PricingRestaurante() {
               ) : (
                 <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">
                   <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Platește Anual
+                    Plătește Anual
                   </p>
                   <Switch
                     onColor="#0000"
