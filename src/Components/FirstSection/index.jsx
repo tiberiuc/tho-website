@@ -48,9 +48,12 @@ function FirstSection({ colors, subHeader }) {
             subHeader?.marginOfSection ? subHeader?.marginOfSection : "mb-0"
           } max-w-3.5xl`}
         >
-          {subHeader?.info.map((item) => {
+          {subHeader?.info.map((item, key) => {
             return (
-              <div className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0">
+              <div
+                key={key}
+                className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0"
+              >
                 <div className="flex flex-col items-center">
                   <picture>
                     <source media="(max-width: 799px)" srcSet={item.img3} />

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const InformationsCard = ({ data }) => {
   return (
     <>
-      {data.map((item) => {
+      {data.map((item, key) => {
         return (
-          <div className="flex justify-center lg:mt-4 mt-14">
+          <div key={key} className="flex justify-center lg:mt-4 mt-14">
             <div
               className={`grid lg:grid-cols-2 lg:gap-x-12 grid-cols-1 w-full max-w-3.5xl ${item.componentStyles}  `}
             >

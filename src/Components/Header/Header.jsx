@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "Atoms/Button";
 import "./style.css";
 import { Link, NavLink } from "react-router-dom";
+import Dropdown from "Atoms/Button/Dropdown";
 
 export default function Header({
   bgHeader,
@@ -147,14 +148,11 @@ export default function Header({
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start">
-              <li className="flex items-center my-4 text-white uppercase font-openSans">
-                <img
-                  className="w-4 h-4 mr-2"
-                  src="SVGs/translationIcon.svg"
-                  alt="Translations"
-                />
-                <a href="/portfolio">RO</a>
-              </li>
+              <Dropdown
+                restaurant={restaurant}
+                home={home}
+                supplier={supplier}
+              />
             </ul>
           </div>
         </section>
@@ -200,6 +198,8 @@ export default function Header({
             text="Log in"
             styles={"text-black text-lg py-1"}
           />
+          {console.log({ home })}
+          <Dropdown restaurant={restaurant} home={home} supplier={supplier} />
         </div>
       </div>
       <h1

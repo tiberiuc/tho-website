@@ -13,10 +13,18 @@ import Button from "Atoms/Button";
 import ErrorPage from "Components/ErrorPage";
 import PricingRestaurante from "Components/PricingRestaurante";
 import PricingFurnizori from "Components/PricingFurnizori";
+import { useTranslation } from "react-i18next";
+
+export const languages = [
+  { code: "ro", name: "Romana" },
+  { code: "en", name: "English" },
+  { code: "fr", name: "Français" },
+];
 
 function App() {
   const [navSize, setnavSize] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { t } = useTranslation("translation");
 
   const listenScrollEvent = () => {
     window.scrollY > 150 ? setnavSize(true) : setnavSize(false);
