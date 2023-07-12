@@ -1,10 +1,12 @@
 import Button from "..";
 import Whirligig from "react-whirligig";
+import { useTranslation } from "react-i18next";
 
 export default function SliderWhirligig({ sliderInfo }) {
   let whirligig;
   const next = () => whirligig.next();
   const prev = () => whirligig.prev();
+  const { t } = useTranslation("translation");
 
   return (
     <div className="flex flex-col items-center justify-center bg-bluePrimary mt-5 py-14 px-5">
@@ -28,9 +30,12 @@ export default function SliderWhirligig({ sliderInfo }) {
           slideClass={"flex justify-center lg:px-0 px-2"}
           className={"scrollbar-hide w-full"}
         >
-          {sliderInfo.map((sliderItem) => {
+          {sliderInfo.map((sliderItem, key) => {
             return (
-              <div className="flex lg:flex-row flex-col items-center lg:space-x-14">
+              <div
+                key={key}
+                className="flex lg:flex-row flex-col items-center lg:space-x-14"
+              >
                 <div className="flex flex-col items-center justify-center lg:pr-4">
                   <p className="font-openSans text-white text-center font-bold lg:text-3xl text-xl leading-6 lg:max-w-lg">
                     {sliderItem.paragraphDescription}
@@ -70,8 +75,8 @@ export default function SliderWhirligig({ sliderInfo }) {
       </div>
       <Button
         styles="lg:mt-16 mt-8 px-10 py-3"
-        text="Înregistrare"
-        link="https://app.horecaorders.com/users/register"
+        text={t("register")}
+        link="https://app.horecaorders.com/user/register"
       />
     </div>
   );

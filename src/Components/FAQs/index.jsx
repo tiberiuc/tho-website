@@ -47,9 +47,10 @@ function FAQs() {
         bgHeader="bg-bluePrimary"
       />
       <div className="flex flex-col items-center">
-        {faqs.map((question) => {
+        {faqs.map((question, key) => {
           return (
             <div
+              key={key}
               className={`flex justify-center w-full py-14 px-8 lg:px-0 ${question.styles}`}
             >
               <div className="max-w-xl flex flex-col items-center">
@@ -64,7 +65,7 @@ function FAQs() {
                   <Button
                     styles={"mt-4 text-black"}
                     text={question?.button}
-                    link="https://app.horecaorders.com/users/register"
+                    link="https://app.horecaorders.com/user/register"
                   />
                 )}
               </div>

@@ -91,7 +91,7 @@ Ceea ce mă surprinde plăcut la Horeca Orders este cât de bine imi poate organ
         MAI UȘOR`}
         headerButtonLeft={{
           text: "Înregistrare",
-          externalLink: "https://app.horecaorders.com/users/register",
+          externalLink: "https://app.horecaorders.com/user/register",
         }}
         headerButtonRight={{
           text: "Autentificare",
@@ -169,7 +169,7 @@ Ceea ce mă surprinde plăcut la Horeca Orders este cât de bine imi poate organ
             <Button
               styles="mt-10 lg:mb-0 mb-10 text-center px-10 py-3"
               text="Înregistrare"
-              link="https://app.horecaorders.com/users/register"
+              link="https://app.horecaorders.com/user/register"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@ Ceea ce mă surprinde plăcut la Horeca Orders este cât de bine imi poate organ
         <Button
           styles="mt-12 lg:mb-0 text-center px-10 py-3"
           text="Înregistrare"
-          link="https://app.horecaorders.com/users/register"
+          link="https://app.horecaorders.com/user/register"
         />
       </div>
     </div>

@@ -22,7 +22,7 @@ const Dropdown = ({ children, ...props }) => {
   const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   const isOnDesktop = useDesktopCheck();
-  console.log(isOnDesktop);
+
   useEffect(() => {
     i18n.on("languageChanged", (lang) => {
       setCurrentLanguage(lang);

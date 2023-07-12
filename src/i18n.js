@@ -18,7 +18,7 @@ i18n.use(initReactI18next).init({
     },
   },
   lng: "ro",
-  fallbackLng: "ro",
+  // fallbackLng: "ro",
   interpolation: {
     escapeValue: false,
   },

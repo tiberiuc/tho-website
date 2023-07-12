@@ -31,7 +31,7 @@ function PricingFurnizori() {
           { feature: "Suport 24/7" },
         ],
         button: "Înregistrare",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
         styleOfCard: "bg-greyBg div3",
@@ -72,7 +72,7 @@ function PricingFurnizori() {
           { feature: "Integrare ERP" },
         ],
         button: "Încearcă gratuit",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
         mostPopular: false,
@@ -137,7 +137,7 @@ function PricingFurnizori() {
             </p>
           </div>
 
-          {pricing.tiers.map((tier) => (
+          {pricing.tiers.map((tier, key) => (
             <>
               {!tier.toggle ? (
                 <div
@@ -170,8 +170,8 @@ function PricingFurnizori() {
                     </p>
 
                     <ul className="mt-6 space-y-3">
-                      {tier.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
+                      {tier.features.map((feature, key) => (
+                        <li key={key} className="flex items-start">
                           <img
                             className="h-2.5 mt-2"
                             src="images/shape.png"
@@ -203,7 +203,7 @@ function PricingFurnizori() {
                   </a>
                 </div>
               ) : (
-                <div></div>
+                <div key={key}></div>
               )}
             </>
           ))}

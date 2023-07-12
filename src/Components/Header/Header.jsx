@@ -198,7 +198,6 @@ export default function Header({
             text="Log in"
             styles={"text-black text-lg py-1"}
           />
-          {console.log({ home })}
           <Dropdown restaurant={restaurant} home={home} supplier={supplier} />
         </div>
       </div>

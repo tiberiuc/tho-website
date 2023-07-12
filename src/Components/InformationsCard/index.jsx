@@ -38,8 +38,8 @@ const InformationsCard = ({ data }) => {
                 )}
               </div>
               <picture>
-                <source media="(max-width: 799px)" srcset={item.img3} />
-                <source media="(min-width: 800px)" srcset={item.img2} />
+                <source media="(max-width: 799px)" srcSet={item.img3} />
+                <source media="(min-width: 800px)" srcSet={item.img2} />
                 <img
                   className={`${item.pictureStyles}`}
                   src={item.img}

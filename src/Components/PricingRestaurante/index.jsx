@@ -35,7 +35,7 @@ function PricingRestaurante() {
           { feature: "Suport 24/7" },
         ],
         button: "Înregistrare",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
         styleOfCard: "bg-greyBg div3",
@@ -68,7 +68,7 @@ function PricingRestaurante() {
           { feature: "Verificarea comenzilor", commingSoon: "(in curând)" },
         ],
         button: "Incearcă gratuit",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
         mostPopular: false,
@@ -187,7 +187,7 @@ function PricingRestaurante() {
 
                     <ul className="mt-6 space-y-3">
                       {tier.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
+                        <li key={feature.feature} className="flex items-start">
                           <img
                             className="h-2.5 mt-2"
                             src="images/shape.png"

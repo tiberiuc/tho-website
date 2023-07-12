@@ -13,13 +13,11 @@ const SecondSection = ({ information }) => {
         <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl leading-10 text-center max-w-3xl">
           PUNE-ȚI COMENZILE ÎN ORDINE
         </span>
-        <a href="https://app.horecaorders.com/users/register">
-          <Button
-            text={"Înregistrare"}
-            link="https://app.horecaorders.com/users/register"
-            styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
-          />
-        </a>
+        <Button
+          text={"Înregistrare"}
+          link="https://app.horecaorders.com/user/register"
+          styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
+        />
       </div>
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
         <a

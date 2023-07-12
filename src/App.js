@@ -49,7 +49,6 @@ function App() {
 
   return (
     <div id="parent" className={`relative`}>
-      <h1>{t("greeting")}</h1>
       <nav
         id="navbar"
         className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${
@@ -102,7 +101,7 @@ function App() {
              uppercase font-openSans"
               >
                 <Link onClick={() => setIsNavOpen(false)} to="/restaurante">
-                  Restaurante
+                  {t("restaurants")}
                 </Link>
               </li>
               <li
@@ -111,7 +110,7 @@ function App() {
              uppercase font-openSans"
               >
                 <Link onClick={() => setIsNavOpen(false)} to="/furnizori">
-                  Furnizori
+                  {t("suppliers")}
                 </Link>
               </li>
               <li
@@ -120,7 +119,7 @@ function App() {
                 uppercase font-openSans"
               >
                 <Link onClick={() => setIsNavOpen(false)} to="/povesti">
-                  Povesti
+                  {t("stories")}
                 </Link>
               </li>
               <li
@@ -129,7 +128,7 @@ function App() {
                 uppercase font-openSans"
               >
                 <Button
-                  link="https://app.horecaorders.com/login"
+                  link="https://horecaorders.com/login"
                   text="Log in"
                   styles={"text-black text-xl py-1"}
                   fontSizeText={"text-base"}
@@ -143,26 +142,19 @@ function App() {
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
               >
-                <a href="/despre">Despre</a>
+                <a href="/despre"> {t("about")}</a>
               </li>
               <li
                 className="my-4  
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
               >
-                <a href="/intrebari-frecvente">Intrebari frecvente</a>
+                <a href="/intrebari-frecvente">{t("faq")}</a>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start">
-              <li className="flex items-center my-4 text-white uppercase font-openSans">
-                <img
-                  className="w-4 h-4 mr-2"
-                  src="SVGs/translationIcon.svg"
-                  alt="Translations"
-                />
-                <a href="/portfolio">RO</a>
-              </li>
+              <Dropdown />
             </ul>
           </div>
         </section>
@@ -172,21 +164,21 @@ function App() {
             to="/restaurante"
             className={`text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition ease-in-out delay-150`}
           >
-            Restaurante
+            {t("restaurants")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
             to="/furnizori"
             className={`text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition ease-in-out delay-150`}
           >
-            Furnizori
+            {t("suppliers")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
             to="/povesti"
             className={`hidden text-base font-semibold text-white font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition ease-in-out delay-150`}
           >
-            Povesti
+            {t("stories")}
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"

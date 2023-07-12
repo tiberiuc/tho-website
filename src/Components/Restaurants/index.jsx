@@ -115,7 +115,7 @@ function Restaurants() {
         CĂTRE TOȚI FURNIZORII TĂI`}
         headerButtonLeft={{
           text: "Înregistrare",
-          externalLink: "https://app.horecaorders.com/users/register",
+          externalLink: "https://app.horecaorders.com/user/register",
         }}
         headerButtonRight={{
           text: "Autentificare",
@@ -168,16 +168,19 @@ function Restaurants() {
         <Button
           styles="lg:flex hidden px-10 py-3"
           text="Înregistrare"
-          link="https://app.horecaorders.com/users/register"
+          link="https://app.horecaorders.com/user/register"
         />
         <div className="flex flex-col w-full items-center lg:mt-14 pt-14 lg:pb-0 mt-0 pb-14 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center">
             CUM FUNCȚIONEAZĂ
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 lg:mt-13 mt-5 max-w-5xl">
-            {cardSection.map((card) => {
+            {cardSection.map((card, key) => {
               return (
-                <div className="flex flex-col items-center relative lg:px-0 sm:px-24 px-6">
+                <div
+                  key={key}
+                  className="flex flex-col items-center relative lg:px-0 sm:px-24 px-6"
+                >
                   <p className="h-12 w-12 bg-yellowButton rounded-full font-bold text-2xl flex justify-center items-center mt-4 lg:mt-0">
                     {card?.number ? (
                       card?.number
@@ -278,7 +281,7 @@ function Restaurants() {
           <Button
             styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-3"
             text="Înregistrare"
-            link="https://app.horecaorders.com/users/register"
+            link="https://app.horecaorders.com/user/register"
           />
         </div>
       </div>
