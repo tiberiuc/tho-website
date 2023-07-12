@@ -33,11 +33,11 @@ const Dropdown = ({ children, ...props }) => {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
-          className={`flex items-center w-full justify-center rounded-m text-white ${
-            props.restaurant && isOnDesktop && "text-bluePrimary"
-          } 
+          className={`flex items-center w-full justify-center rounded-m  
+            ${props.restaurant && isOnDesktop && "text-bluePrimary"} 
             ${props.home && isOnDesktop && "text-white"} 
-            ${props.supplier && isOnDesktop && "text-black"}`}
+            ${props.supplier && isOnDesktop && "text-black"}
+            ${!isOnDesktop && "text-white"}`}
         >
           <div className="w-4 h-4 mr-2 ">
             <Icon />
@@ -48,9 +48,9 @@ const Dropdown = ({ children, ...props }) => {
               props.restaurant && isOnDesktop && "text-bluePrimary"
             } 
             ${props.home && isOnDesktop && "text-white"} 
-            ${
-              props.supplier && isOnDesktop && "text-black"
-            } text-white uppercase font-openSans`}
+            ${props.supplier && isOnDesktop && "text-black"} ${
+              !isOnDesktop && "text-white"
+            } uppercase font-openSans`}
           >
             {i18n.language}
           </span>
