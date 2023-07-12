@@ -14,6 +14,7 @@ import ErrorPage from "Components/ErrorPage";
 import PricingRestaurante from "Components/PricingRestaurante";
 import PricingFurnizori from "Components/PricingFurnizori";
 import { useTranslation } from "react-i18next";
+import Dropdown from "Atoms/Button/Dropdown";
 
 export const languages = [
   { code: "ro", name: "Romana" },
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div id="parent" className={`relative`}>
+      <h1>{t("greeting")}</h1>
       <nav
         id="navbar"
         className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${

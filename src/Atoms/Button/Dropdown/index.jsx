@@ -68,7 +68,7 @@ const Dropdown = ({ children, ...props }) => {
       >
         <Menu.Items
           className={`absolute z-10 mt-4 ${
-            isOnDesktop ? "w-56 right-0" : "w-auto -left-0.5"
+            isOnDesktop ? "w-28 right-0" : "w-auto -left-0.5"
           } origin-top-right rounded-md 
           ${
             (props.restaurant && isOnDesktop && "bg-greyBg") ||
