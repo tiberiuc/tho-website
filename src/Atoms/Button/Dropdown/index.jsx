@@ -48,9 +48,9 @@ const Dropdown = ({ children, ...props }) => {
               props.restaurant && isOnDesktop && "text-bluePrimary"
             } 
             ${props.home && isOnDesktop && "text-white"} 
-            ${
-              props.supplier && isOnDesktop && "text-black"
-            } text-white uppercase font-openSans`}
+            ${props.supplier && isOnDesktop && "text-black"} ${
+              !isOnDesktop && "text-white"
+            } uppercase font-openSans`}
           >
             {i18n.language}
           </span>
