@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <Header
-        headingText={t("about.title")}
+        headingText={t("about-page.title")}
         restaurant
         noButtons={"justify-center lg:px-8 px-16 text-center ml-0"}
         logoYellow
@@ -21,10 +21,10 @@ function About() {
             className={`flex flex-col justify-start lg:pl-32 lg:pr-16 pl-10 pr-10 mb-7 2xl:items-center 2xl:max-w-3xl justify-items-center text-white`}
           >
             <span className="text-4xl 2xl:text-center font-extrabold font-openSans max-w-lg mt-15">
-              {t("about.section1")}
+              {t("about-page.section1")}
             </span>
             <span className="font-medium 2xl:text-center font-openSans mt-5 whitespace-pre-line">
-              {t("about.section1-description")}
+              {t("about-page.section1-description")}
             </span>
           </div>
           <div>
@@ -49,19 +49,19 @@ function About() {
       <div className="flex justify-center lg:my-14 my-10 mx-8">
         <div className="flex flex-col items-center max-w-3xl">
           <p className="font-openSans font-extrabold lg:text-5xl text-3xl">
-            {t("about.section2")}
+            {t("about-page.section2")}
           </p>
           <p className="font-openSans lg:font-semibold font-normal lg:text-3xl text-2xl lg:mt-14 mt-8">
-            {t("about.section2-description1")}
+            {t("about-page.section2-description1")}
           </p>
           <p className="font-openSans lg:font-semibold font-normal lg:text-3xl text-2xl lg:mt-8 mt-4">
-            {t("about.section2-description2")}
+            {t("about-page.section2-description2")}
           </p>
           <p className="font-openSans lg:font-semibold font-normal lg:text-3xl text-2xl lg:mt-8 mt-4">
-            {t("about.section2-description3")}
+            {t("about-page.section2-description3")}
           </p>
           <p className="font-openSans font-bold lg:text-3xl text-2xl lg:mt-8 mt-4">
-            {t("about.section2-description4")}
+            {t("about-page.section2-description4")}
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ function About() {
       >
         <p
           dangerouslySetInnerHTML={{
-            __html: `${t("about.section3")}`,
+            __html: `${t("about-page.section3")}`,
           }}
           className="font-openSans font-extrabold italic lg:text-7xl text-4xl text-white text-center"
         ></p>
@@ -98,12 +98,12 @@ function About() {
           <div className="flex flex-col items-center justify-center px-10 lg:pb-0 pb-10">
             <p
               dangerouslySetInnerHTML={{
-                __html: `${t("about.section4")}`,
+                __html: `${t("about-page.section4")}`,
               }}
               className="font-openSans font-extrabold lg:text-7xl text-4xl text-black italic text-center"
             ></p>
             <p className="font-openSans font-semibold lg:text-2xl text-xl text-center mt-6">
-              {t("about.section4-description")}
+              {t("about-page.section4-description")}
             </p>
           </div>
         </div>

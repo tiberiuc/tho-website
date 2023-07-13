@@ -5,6 +5,10 @@
     "about": "Despre",
     "faq": "Întrebări frecvente",
     "register": "Înregistrare",
+    "home": "Acasa",
+    "contact-us": "Contactează-ne",
+    "restaurants-prices": "Prețuri Restaurante",
+    "suppliers-prices": "Prețuri Furnizori",
     "terms-and-conditions": {
         "terms-and-conditions": "Termeni și condiții",
         "last-update": "Ultima modificare: 8 August 2022",
@@ -104,7 +108,7 @@
         "refund-description1": "Returul si rambursările vor fi acordate numai pentru abonamentele de mai mult de o lună care sunt anulate în termen de 30 de zile de la data intrării în vigoare sau de la data reînnoirii abonamentului. În caz contrar, nu va exista nicio rambursare.",   
         "refund-description2": "Acest lucru funcționează pentru ca dacă cineva comandă un abonament de 12 luni, persoana respectivă trebuie să anuleze în primele 30 de zile pentru a primi o rambursare pentru ultimele 11 luni, altfel toate cele 12 luni trebuie plătite."
     },
-    "about": {
+    "about-page": {
         "title": "SPRIJINIM OAMENII ȘI AFACERILE DIN INDUSTRIA OSPITALITĂȚII PRIN TEHNOLOGIE",
         "section1": "MAI MULT SUCCES PENTRU AFACERILE DIN INDUSTRIA OSPITALITĂȚII",    
         "section1-description": "Afacerea dvs. din industria ospitalității reprezintă sufletul comunității. Noi suntem aici pentru a vă ajuta să aveți și mai mult succes. Construim tehnologia de care aveți nevoie pentru a concura cu francizele globale (fără să acționați ca una), astfel încât să puteți crește în moduri care să vă servească cifrele, viziunea și comunitatea.",
@@ -117,5 +121,44 @@
         "section4": "DE CE </br> “HORECA </br> ORDERS”?",
         "section4-description": "HORECA reprezintă abrevierea a trei cuvinte: Hotel, Restaurant şi Catering. Afacerile din HORECA sunt cele pentru care ne trezim dimineața şi pentru care ne străduim să-şi păstreze magia si zâmbetul."
 
+    },
+    "error-page": {
+        "name": "Horeca Orders",
+        "error-number": "404",
+        "error": "Pagina nu a fost gasita.",
+        "error-description": "Ne pare rău, nu am putut găsi pagina pe care o căutați.",
+        "go-home": "Întoarce-te acasă"
+    },
+    "faq-page": {
+        "title": "ÎNTREBĂRI FRECVENTE",
+        "section1": "CE ESTE HORECA ORDERS?",
+        "section1-description": "Pentru restaurante, HORECA ORDERS este o aplicație mobilă care le permite bucătarilor și managerilor să comande și să discute cu furnizorii. Pentru furnizori, HORECA ORDERS este o aplicație web și mobilă care le permite să gestioneze relațiile cu clienții și comenzile.",
+        "section2": "PENTRU CINE ESTE HORECA ORDERS?",
+        "section2-description": "Oricine cumpără produse de la furnizori – bucătari, manageri de comenzi, proprietari, manageri de bar – și oricine vinde lucruri restaurantelor – furnizori și agenti de vânzări. Oricine din industrie este interesat să optimizeze modul în care comandă, să înlăture greșelile și să reducă risipa.",
+        "section3": "FURNIZORII MEI TREBUIE SĂ FIE PE HORECA ORDERS?",
+        "section3-description": "Nu. Puteți comanda de la toți furnizorii dvs. de pe HORECA ORDERS, indiferent dacă sunt sau nu înscriși pe platformă. Comenzile plasate în aplicație sunt convertite în formatul ales de furnizorul dvs. - e-mail, text și prin integrare directă.",
+        "section4": "CUM MĂ POT ÎNSCRIE?",
+        "section4-description": "Inregistrați-vă aici și echipa noastră vă va contacta pentru a vă configura în mai puțin de 24 de ore!",
+        "section5": "EXISTĂ PREȚURI ÎN APLICAȚIE?",
+        "section5-description": "Aplicația HORECA ORDERS nu afișează prețuri și nu compară prețurile între diferiți furnizori. HORECA ORDERS conectează bucătarii și managerii cu furnizorii lor existenți pentru a-și digitaliza procesul de comandă curent."
+    },
+    "footer": {
+        "stories": {
+            "all-stories": "Toate poveștile",
+            "restaurant-management": "Managementul Restaurantului",
+            "culinary-world": "Lumea Culinara",
+            "manufacturer-guide": "Ghidul Producatorului",
+            "hc-life": "Viata lui HORECA ORDERS",
+            "hc-laboratory": "Laboratorul HORECA ORDERS pentru bucatari"
+        },
+        "footer": "Footer",
+        "info": "Info",
+        "hc": "Horeca Orders",
+        "orders-in-order": "Pune-ți comenzile in ordine",
+        "google-play-image": "SVGs/google-play-ro.svg",
+        "appstore-image": "SVGs/appstore-ro.svg",
+        "contact": "Contact",
+		"privacy-policy": "Politica de confidențialitate",
+		"terms-and-conditions": "Termeni și condiții"
     }
 }

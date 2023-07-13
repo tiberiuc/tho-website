@@ -1,63 +1,67 @@
 import React from "react";
-const navigation = {
-  info: [
-    { name: "Home", href: "/" },
-    { name: "Restaurante", href: "/restaurante" },
-    { name: "Furnizori", href: "/furnizori" },
-    { name: "Întrebări Frecvente", href: "/intrebari-frecvente" },
-  ],
-  horecaOrders: [
-    { name: "Despre", href: "/despre" },
-    { name: "Contactează-ne", href: "mailto:denis@horecaorders.com" },
-    { name: "Prețuri Restaurante", href: "/preturi-restaurante" },
-    { name: "Prețuri Furnizori", href: "/preturi-furnizori" },
-  ],
-  povesti: [
-    { name: "Toate poveștile", href: "#" },
-    { name: "Managementul Restaurantului", href: "#" },
-    { name: "Lumea Culinara", href: "#" },
-    { name: "Ghidul Producatorului", href: "#" },
-    { name: "Viata lui HORECA ORDERS", href: "#" },
-    { name: "Laboratorul HORECA ORDERS pentru bucatari", href: "#" },
-  ],
-  social: [
-    {
-      name: "YouTube",
-      href: "https://www.youtube.com/channel/UCZEmGsfqjxY-i1MDt4SAC2g",
-      icon: "SVGs/youtube.svg",
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/HORECAORDERS",
-      icon: "SVGs/facebook.svg",
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/horeca.orders/",
-      icon: "SVGs/instagram.svg",
-    },
-    {
-      name: "Linkedin",
-      href: "https://www.linkedin.com/company/82645202",
-      icon: "SVGs/linkedin.svg",
-    },
-  ],
-};
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation("translation");
+
+  const navigation = {
+    info: [
+      { name: t("home"), href: "/" },
+      { name: t("restaurants"), href: "/restaurante" },
+      { name: t("suppliers"), href: "/furnizori" },
+      { name: t("faq"), href: "/intrebari-frecvente" },
+    ],
+    horecaOrders: [
+      { name: t("about"), href: "/despre" },
+      { name: t("contact-us"), href: "mailto:denis@horecaorders.com" },
+      { name: t("restaurants-prices"), href: "/preturi-restaurante" },
+      { name: t("suppliers-prices"), href: "/preturi-furnizori" },
+    ],
+    povesti: [
+      { name: t("footer.stories.all-stories"), href: "#" },
+      { name: t("footer.stories.restaurant-management"), href: "#" },
+      { name: t("footer.stories.culinary-world"), href: "#" },
+      { name: t("footer.stories.manufacturer-guide"), href: "#" },
+      { name: t("footer.stories.hc-life"), href: "#" },
+      { name: t("footer.stories.hc-laboratory"), href: "#" },
+    ],
+    social: [
+      {
+        name: "YouTube",
+        href: "https://www.youtube.com/channel/UCZEmGsfqjxY-i1MDt4SAC2g",
+        icon: "SVGs/youtube.svg",
+      },
+      {
+        name: "Facebook",
+        href: "https://www.facebook.com/HORECAORDERS",
+        icon: "SVGs/facebook.svg",
+      },
+      {
+        name: "Instagram",
+        href: "https://www.instagram.com/horeca.orders/",
+        icon: "SVGs/instagram.svg",
+      },
+      {
+        name: "Linkedin",
+        href: "https://www.linkedin.com/company/82645202",
+        icon: "SVGs/linkedin.svg",
+      },
+    ],
+  };
+
   return (
     <footer
       className="bg-bluePrimary flex flex-col items-center"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
-        Footer
+        {t("footer.footer")}
       </h2>
       <div className="max-w-3.5xl items-center w-full lg:pt-12">
         <div className="flex lg:flex-row justify-between flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
             <h3 className="lg:text-base text-xl font-bold text-white font-openSans">
-              Info
+              {t("footer.info")}
             </h3>
             <ul className="mt-4">
               {navigation.info.map((item) => (
@@ -74,7 +78,7 @@ function Footer() {
           </div>
           <div>
             <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
-              Horeca Orders
+              {t("footer.hc")}
             </h3>
             <ul className="mt-4">
               {navigation.horecaOrders.map((item) => (
@@ -91,7 +95,7 @@ function Footer() {
           </div>
           <div className="hidden">
             <h3 className="lg:text-base text-xl font-bold text-white uppercase font-openSans">
-              Povesti
+              {t("stories")}
             </h3>
             <ul className="mt-4">
               {navigation.povesti.map((item) => (
@@ -118,20 +122,20 @@ function Footer() {
       <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end items-start max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
         <div className="flex flex-col">
           <p className="font-openSans text-white font-bold lg:text-base text-xl">
-            Pune-ți comenzile in ordine
+            {t("footer.orders-in-order")}
           </p>
           <div className="flex flex-row lg:mt-1 mt-4">
             <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474">
               <img
                 className="lg:h-9 h-12"
-                src="SVGs/appstore.svg"
+                src={t("footer.appstore-image")}
                 alt="Appstore button"
               />
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.horecaorders.app">
               <img
                 className="lg:h-9 h-12 ml-1"
-                src="SVGs/google-play.svg"
+                src={t("footer.google-play-image")}
                 alt="Google play button"
               />
             </a>
@@ -169,19 +173,19 @@ function Footer() {
             className="text-xs text-white opacity-50 font-openSans"
             href="mailto:denis@horecaorders.com"
           >
-            Contact
+            {t("footer.contact")}
           </a>
           <a
             className="text-xs text-white opacity-50 font-openSans"
             href="/politica-de-confidentialitate"
           >
-            Politica de confidențialitate
+            {t("footer.privacy-policy")}
           </a>
           <a
             className="text-xs text-white opacity-50 font-openSans"
             href="/termeni-conditii"
           >
-            Termeni și condiții
+            {t("footer.terms-and-conditions")}
           </a>
         </div>
       </div>

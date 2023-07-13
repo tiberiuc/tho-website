@@ -1,8 +1,39 @@
 {
-        "restaurants": "Restaurants",
-        "suppliers": "Suppliers",
-        "stories": "Stories",
-        "about": "About",
-        "faq": "FAQ",
-        "register": "Register"
+	"restaurants": "Restaurants",
+	"suppliers": "Suppliers",
+	"stories": "Stories",
+	"about": "About",
+	"faq": "FAQ",
+	"register": "Register",
+	"home": "Home",
+	"contact-us": "Contact us",
+	"restaurants-prices": "Restaurants prices",
+    "suppliers-prices": "Suppliers prices",
+	"error-page": {
+		"name": "Horeca Orders",
+		"error-number": "404",
+		"error": "Page not found.",
+		"error-description": "Sorry, we couldn’t find the page you’re looking for.",
+		"go-home": "Go back home"
+	},
+	"footer": {
+        "stories": {
+            "all-stories": "",
+            "restaurant-management": "",
+            "culinary-world": "",
+            "manufacturer-guide": "",
+            "hc-life": "",
+            "hc-laboratory": ""
+        },
+        "footer": "Footer",
+        "info": "Info",
+        "hc": "Horeca Orders",
+        "orders-in-order": "Put your orders in order",
+        "google-play-image": "SVGs/google-play-en.svg",
+        "appstore-image": "SVGs/appstore-en.svg",
+		"contact": "Contact",
+		"privacy-policy": "Privacy policy",
+		"terms-and-conditions": "Terms and conditions"
+
+    }
 }
