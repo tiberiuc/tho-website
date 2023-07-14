@@ -9,6 +9,7 @@
 	"contact-us": "Contact us",
 	"restaurants-prices": "Restaurants prices",
     "suppliers-prices": "Suppliers prices",
+	"login": "Log in",
 	"error-page": {
 		"name": "Horeca Orders",
 		"error-number": "404",
@@ -33,7 +34,8 @@
         "appstore-image": "SVGs/appstore-en.svg",
 		"contact": "Contact",
 		"privacy-policy": "Privacy policy",
-		"terms-and-conditions": "Terms and conditions"
-
+		"terms-and-conditions": "Terms and conditions",
+		"copyright-name": "HORECA ORDERS SRL"
     }
+	
 }

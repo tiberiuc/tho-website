@@ -1,36 +1,37 @@
 import Header from "Components/Header/Header";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function PricingFurnizori() {
+  const { t } = useTranslation("translation");
   const priceOfPlan = 8;
   const pricing = {
     tiers: [
       {
         toggle: false,
-        title: "Starter",
-        price: "Gratis",
-        frequency: "",
-        frequencyTips: "cu limitări",
-        description: "Planul include",
+        title: t("suppliers-price.free-tier.title"),
+        price: t("suppliers-price.free-tier.price"),
+        frequency: t("suppliers-price.free-tier.frequency"),
+        frequencyTips: t("suppliers-price.free-tier.frequency-tips"),
+        description: t("suppliers-price.free-tier.description"),
         features: [
           {
-            feature: "Onboarding",
-            subFeature: "Avantajele ultilizării si funcționalitatea",
+            feature: t("suppliers-price.free-tier.feature1"),
+            subFeature: t("suppliers-price.free-tier.sub-feature1"),
           },
           {
-            feature: "Primiți comenzi prin Aplicațile mobile / SMS / Email",
-            subFeature:
-              "Comenzile conțin numărul de client, ID-uri de produs, unitatea de masura, data de livrare si metoda de plată",
+            feature: t("suppliers-price.free-tier.feature2"),
+            subFeature: t("suppliers-price.free-tier.sub-feature2"),
           },
-          { feature: "Schimbarea statusului comenzilor" },
+          { feature: t("suppliers-price.free-tier.feature3") },
           {
-            feature: "Istoricul de comenzi",
-            subFeature: `Vezi comenzile primite si comentariile din partea restaurantelor`,
+            feature: t("suppliers-price.free-tier.feature4"),
+            subFeature: t("suppliers-price.free-tier.sub-feature4"),
           },
-          { feature: "Notificări" },
-          { feature: "Suport 24/7" },
+          { feature: t("suppliers-price.free-tier.feature5") },
+          { feature: t("suppliers-price.free-tier.feature6") },
         ],
-        button: "Înregistrare",
+        button: t("register"),
         buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
@@ -41,37 +42,37 @@ function PricingFurnizori() {
       },
       {
         toggle: false,
-        title: "Pro",
+        title: t("suppliers-price.pro-tier.title"),
         price: priceOfPlan,
-        frequency: "€ / lună",
-        frequencyTips: "per restaurant",
-        description: "Tot ce e in oferta Starter plus:",
+        frequency: t("suppliers-price.pro-tier.frequency"),
+        frequencyTips: t("suppliers-price.pro-tier.frequency-tips"),
+        description: t("suppliers-price.pro-tier.description"),
         features: [
           {
-            feature: "Onboarding+",
-            subFeature: `Access la documentație și video-uri pentru echipă`,
+            feature: t("suppliers-price.pro-tier.feature1"),
+            subFeature: t("suppliers-price.pro-tier.sub-feature1"),
           },
           {
-            feature: "Catalog",
-            subFeature:
-              "Incărcați produsele, id-ul de prețuri, unitatea de masură, disponibilitatea în stoc sau epuizat",
+            feature: t("suppliers-price.pro-tier.feature2"),
+            subFeature: t("suppliers-price.pro-tier.sub-feature2"),
           },
-          { feature: "Comandă minimă / Cantitate minimă" },
+          { feature: t("suppliers-price.pro-tier.feature3") },
           {
-            feature: "Zile de livrare și ora limită",
-            subFeature: `Alegeți în ce zile clienții dvs. pot solicita livrări. 
-              Adăugați o oră limită pentru livrarea a doua zi`,
+            feature: t("suppliers-price.pro-tier.feature4"),
+            subFeature: t("suppliers-price.pro-tier.sub-feature4"),
           },
           {
-            feature: "Multiutilizatori",
-            commingSoon: "(în curând)",
-            subFeature:
-              "Manager/Reprezentant de vânzări/Contabilitate/Suport clienți",
+            feature: t("suppliers-price.pro-tier.feature5"),
+            commingSoon: t("suppliers-price.pro-tier.cooming-soon"),
+            subFeature: t("suppliers-price.pro-tier.sub-feature5"),
           },
-          { feature: "Promoții", commingSoon: "(în curând)" },
-          { feature: "Integrare ERP" },
+          {
+            feature: t("suppliers-price.pro-tier.feature6"),
+            commingSoon: t("suppliers-price.pro-tier.cooming-soon"),
+          },
+          { feature: t("suppliers-price.pro-tier.feature7") },
         ],
-        button: "Încearcă gratuit",
+        button: t("suppliers-price.pro-tier.try-free"),
         buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
@@ -88,7 +89,7 @@ function PricingFurnizori() {
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`PREȚURI FURNIZORI`}
+        headingText={t("suppliers-price.title")}
         noButtons={"flex justify-center px-4"}
         logoYellow
         supplier
@@ -99,41 +100,39 @@ function PricingFurnizori() {
             className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-start `}
           >
             <span className="font-openSans text-4xl text-white">
-              Comenzi primite
+              {t("suppliers-price.description1")}
             </span>
             <span className="font-openSans text-4xl font-bold text-white -mt-2">
-              mai eficient
+              {t("suppliers-price.description2")}
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Utilizați platforma HORECA ORDERS pentru a gestiona comenzile,
-              edita catalogul sau promova produse - totul într-un singur loc.
+              {t("suppliers-price.description3")}
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Permiteți echipei dvs. să economisească timp, să reducă erorile și
-              să imbunătătească relațiile cu clienții.
+              {t("suppliers-price.description4")}
             </span>
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet="images/comenzi@3x.png"
+                srcSet={t("suppliers-price.img-order3")}
               />
               <source
                 media="(min-width: 800px)"
-                srcSet="images/comenzi@2x.png"
+                srcSet={t("suppliers-price.img-order2")}
               />
               <img
                 className="absolute right-0 pl-8 lg:pl-0 w-85 mt-14 object-cover"
-                src="images/comenzi.png"
+                src={t("suppliers-price.img-order1")}
                 alt=""
               />
             </picture>
           </div>
           <div className="div2 flex flex-col lg:pb-10 pb-0">
             <p className="font-openSans text-4xl leading-5 font-light text-bluePrimary">
-              Începe acum
+              {t("suppliers-price.try-now1")}
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
-              planul tău gratuit.
+              {t("suppliers-price.try-now2")}
             </p>
           </div>
 
@@ -161,7 +160,7 @@ function PricingFurnizori() {
                     </span>
                     {tier.mostPopular ? (
                       <p className="absolute top-0 py-1.5 px-4 bg-indigo-500 rounded-full text-sm font-semibold text-white transform -translate-y-1/2">
-                        Most popular
+                        {t("suppliers-price.most-popular")}
                       </p>
                     ) : null}
 
@@ -184,9 +183,12 @@ function PricingFurnizori() {
                                 {feature.commingSoon}
                               </span>
                             </span>
-                            <span className="ml-3 text-black text-sm font-openSans whitespace-pre-line">
-                              {feature.subFeature}
-                            </span>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: feature.subFeature,
+                              }}
+                              className="ml-3 text-black text-sm font-openSans whitespace-pre-line"
+                            ></p>
                           </div>
                         </li>
                       ))}

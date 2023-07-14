@@ -1,8 +1,10 @@
 import Button from "Atoms/Button";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const InformationsCard = ({ data }) => {
+  const { t } = useTranslation("translation");
   return (
     <>
       {data.map((item, key) => {
@@ -32,7 +34,7 @@ const InformationsCard = ({ data }) => {
                   <Link to={item.buttonLink}>
                     <Button
                       styles="mt-6 font-semibold text-lg px-10 py-3"
-                      text="Află mai multe"
+                      text={t("information-card.find-out-more")}
                     />
                   </Link>
                 )}

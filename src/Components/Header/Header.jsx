@@ -3,6 +3,7 @@ import Button from "Atoms/Button";
 import "./style.css";
 import { Link, NavLink } from "react-router-dom";
 import Dropdown from "Atoms/Button/Dropdown";
+import { useTranslation } from "react-i18next";
 
 export default function Header({
   bgHeader,
@@ -17,6 +18,7 @@ export default function Header({
   lastModificationDate,
   noButtonsWithoutModificationText,
 }) {
+  const { t } = useTranslation("translation");
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navLinkStyles = ({ isActive }) => {
@@ -92,7 +94,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/restaurante">Restaurante</Link>
+                <Link to="/restaurante">{t("restaurants")}</Link>
               </li>
               <li
                 className={`my-4 ${
@@ -101,7 +103,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/furnizori">Furnizori</Link>
+                <Link to="/furnizori">{t("suppliers")}</Link>
               </li>
               <li
                 className={`my-4 hidden ${
@@ -110,7 +112,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/povesti">Povesti</Link>
+                <Link to="/povesti">{t("stories")}</Link>
               </li>
               <li
                 className="my-4
@@ -119,7 +121,7 @@ export default function Header({
               >
                 <Button
                   link="https://app.horecaorders.com/login"
-                  text="Log in"
+                  text={t("login")}
                   styles={"text-black py-1"}
                   fontSizeText={"text-base"}
                 />
@@ -134,7 +136,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/despre">Despre</a>
+                <a href="/despre">{t("about")}</a>
               </li>
               <li
                 className={`my-4 ${
@@ -143,7 +145,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/intrebari-frecvente">Intrebari frecvente</a>
+                <a href="/intrebari-frecvente">{t("faq")}</a>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
@@ -167,7 +169,7 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Restaurante
+            {t("restaurants")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
@@ -179,7 +181,7 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Furnizori
+            {t("suppliers")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
@@ -191,7 +193,7 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Povesti
+            {t("stories")}
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"

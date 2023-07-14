@@ -167,7 +167,7 @@ function Footer() {
       <div className="flex justify-between w-full items-end max-w-3.5xl mt-16 mb-12">
         <div className="flex lg:flex-row flex-col lg:space-x-10 space-x-0 lg:px-0 px-5 lg:gap-0 gap-1">
           <p className="text-xs text-white opacity-50 font-openSans">
-            {new Date().getFullYear()} &copy; HORECA ORDERS SRL
+            {new Date().getFullYear()} &copy; {t("footer.copyright-name")}
           </p>
           <a
             className="text-xs text-white opacity-50 font-openSans"

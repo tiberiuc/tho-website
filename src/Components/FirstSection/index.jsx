@@ -13,9 +13,12 @@ function FirstSection({ colors, subHeader }) {
             <span className="lg:text-4xl text-2xl font-extrabold font-openSans max-w-lg mt-7 leading-6">
               {subHeader?.textTitle}
             </span>
-            <span className="font-medium font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6">
-              {subHeader?.paragraph}
-            </span>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: subHeader?.paragraph,
+              }}
+              className="font-medium font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6"
+            ></p>
             {subHeader?.secondParagraph && (
               <span className="font-semibold font-openSans mt-5 whitespace-pre-line lg:whitespace-normal">
                 {subHeader?.secondParagraph}
