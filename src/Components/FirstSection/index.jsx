@@ -67,12 +67,18 @@ function FirstSection({ colors, subHeader }) {
                       alt=""
                     />
                   </picture>
-                  <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
-                    {item.subtitle}
-                  </span>
-                  <span className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0">
-                    {item.description}
-                  </span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.subtitle,
+                    }}
+                    className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center"
+                  ></span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.description,
+                    }}
+                    className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0"
+                  ></span>
                 </div>
               </div>
             );

@@ -3,61 +3,60 @@ import SliderWhirligig from "Atoms/Button/SliderWhirligig";
 import FirstSection from "Components/FirstSection";
 import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
+import { useTranslation } from "react-i18next";
 
 function Restaurants() {
+  const { t } = useTranslation("translation");
   const cardSection = [
     {
       number: "1",
-      subTitle: `Alegi 
-      produsele`,
-      img: "images/i-phone-x-mockup.png",
-      img2: "images/i-phone-x-mockup@2x.png",
-      img3: "images/i-phone-x-mockup@3x.png",
+      subTitle: t("restaurants-page.card-section.sub-title1"),
+      img: t("restaurants-page.card-section.img-iphone1"),
+      img2: t("restaurants-page.card-section.img-iphone2"),
+      img3: t("restaurants-page.card-section.img-iphone3"),
     },
     {
       number: "2",
-      subTitle: "Adaugi detaliile comenzii",
-      details: "Data livrării / Alte detalii",
-      img: "images/finalizeaza-datele-comenzii.png",
-      img2: "images/finalizeaza-datele-comenzii@2x.png",
-      img3: "images/finalizeaza-datele-comenzii@3x.png",
+      subTitle: t("restaurants-page.card-section.sub-title2"),
+      details: t("restaurants-page.card-section.details2"),
+      img: t("restaurants-page.card-section.img-order1"),
+      img2: t("restaurants-page.card-section.img-order2"),
+      img3: t("restaurants-page.card-section.img-order3"),
     },
     {
       number: "3",
-      subTitle: `Comanda 
-      trimisă`,
-      details: "SMS, e-mail, ERP",
-      img: "images/comanda-trimisa-img.png",
-      img2: "images/comanda-trimisa-img@2x.png",
-      img3: "images/comanda-trimisa-img@3x.png",
+      subTitle: t("restaurants-page.card-section.sub-title3"),
+      details: t("restaurants-page.card-section.details3"),
+      img: t("restaurants-page.card-section.img-sent1"),
+      img2: t("restaurants-page.card-section.img-sent2"),
+      img3: t("restaurants-page.card-section.img-sent3"),
     },
     {
       icon: "SVGs/notif-icon.svg",
-      subTitle: "Te notificăm când se confirmă comanda",
-      img: "images/notificare-img.png",
-      img2: "images/notificare-img@2x.png",
-      img3: "images/notificare-img@3x.png",
+      subTitle: t("restaurants-page.card-section.sub-title4"),
+      img: t("restaurants-page.card-section.img-order-confirmed1"),
+      img2: t("restaurants-page.card-section.img-order-confirmed2"),
+      img3: t("restaurants-page.card-section.img-order-confirmed3"),
     },
   ];
   const information = [
     {
-      subTitle: "Comandă de la furnizori",
-      description: `Plasați comenzi și discutați cu toți furnizorii dvs. într-o singură aplicație. Comenzile sunt convertite în formatul dorit de furnizor – 
-        e-mail, SMS sau integrare directă in ERP-ul furnizorului. Da, chiar funcționează cu toți furnizorii tăi.`,
-      img: "images/i-phone-x.png",
-      img2: "images/i-phone-x@2x.png",
-      img3: "images/i-phone-x@3x.png",
+      subTitle: t("restaurants-page.place-orders.sub-title1"),
+      description: t("restaurants-page.place-orders.description1"),
+      img: t("restaurants-page.place-orders.img-iphone1"),
+      img2: t("restaurants-page.place-orders.img-iphone2"),
+      img3: t("restaurants-page.place-orders.img-iphone3"),
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
       subComponentStyles: "lg:my-28 my-10",
       textColor: "text-black",
       pictureStyles: "object-scale-down h-104 w-72",
     },
     {
-      subTitle: "Organizezi cataloagele de comandă",
-      description: `Vizualizați și editați online toate foile de comandă. Uitați de teancurile de hârtie fixate pe pereți. Produsele, codurile unice, unitățile de măsură și numărul de produse incluse într-o unitate de măsură pot fi adăugate in HORECA ORDERS și organizate pe categorii. Trimiteți comenzi perfecte furnizorului dvs. Obțineți livrări mai precise.`,
-      img: "images/iphone-x-mockup-information.png",
-      img2: "images/iphone-x-mockup-information@2x.png",
-      img3: "images/iphone-x-mockup-information@3x.png",
+      subTitle: t("restaurants-page.place-orders.sub-title2"),
+      description: t("restaurants-page.place-orders.description2"),
+      img: t("restaurants-page.place-orders.img-iphone1"),
+      img2: t("restaurants-page.place-orders.img-iphone2"),
+      img3: t("restaurants-page.place-orders.img-iphone3"),
       componentStyles: "bg-greyBg justify-items-center items-end lg:h-113",
       subComponentStyles: "lg:my-22 my-10",
       textColor: "text-black",
@@ -67,39 +66,37 @@ function Restaurants() {
 
   const slider = [
     {
-      paragraphDescription: `Înainte de Horeca Orders plasam comenzi în maniera clasică, dezorganizată, prin poze trimise la furnizori, conversații lungi la telefon, whatsapp, sms, email, foarte complicat.
-      Acum totul e mai simplu, mai integrat și cel mai important am câștigat timp și siguranţă.
-      Sistemul odată pus în funcțiune poate fi folosit de orice coleg din echipa noastră, e excelent.`,
+      paragraphDescription: t("restaurants-page.slider.paragraphDescription1"),
       personDescription1: `
       Gabi Herdean - 
       `,
       hyperLink: "Papila",
       linkOfWebsite: "https://papilakitchen.ro/",
-      personDescription2: ", Bucuresti",
+      personDescription2: t("restaurants-page.slider.city"),
       img: "images/gabi-papila.png",
       img2: "images/gabi-papila.png",
       img3: "images/gabi-papila.png",
     },
     {
-      paragraphDescription: `Înainte petreceam cel puțin 1 oră comandând în fiecare zi, acum pot face asta în doar 5-10 minute. Nu există tensiune sau presiune.`,
+      paragraphDescription: t("restaurants-page.slider.paragraphDescription2"),
       personDescription1: `
       Nadia Mihai (Manager) - 
       `,
       hyperLink: "Sushi Master",
       linkOfWebsite: "https://sushimaster.ro/",
-      personDescription2: ", Bucuresti",
+      personDescription2: t("restaurants-page.slider.city"),
       img: "images/Nadia-Sushi-Master.png",
       img2: "images/Nadia-Sushi-Master.png",
       img3: "images/Nadia-Sushi-Master.png",
     },
     {
-      paragraphDescription: `Folosind aplicația, am salvat foarte mult timp, deoarece fiecare comandă durează maxim 2-3 minute și putem fi mult mai organizați, toate comenzile și toți furnizorii fiind centralizați într-un singur loc!`,
+      paragraphDescription: t("restaurants-page.slider.paragraphDescription3"),
       personDescription1: `
       Andrei Iulian Dumitru - 
       `,
       hyperLink: "FoodKit",
       linkOfWebsite: "https://foodkit.ro/",
-      personDescription2: ", Bucuresti",
+      personDescription2: t("restaurants-page.slider.city"),
       img: "images/barman-image.png",
       img2: "images/barman-image@2x.png",
       img3: "images/barman-image@3x.png",
@@ -111,14 +108,13 @@ function Restaurants() {
       <Header
         bgHeader={"bg-greyBg"}
         restaurant={true}
-        headingText={`PLASEAZĂ COMENZILE 
-        CĂTRE TOȚI FURNIZORII TĂI`}
+        headingText={t("restaurants-page.title")}
         headerButtonLeft={{
-          text: "Înregistrare",
+          text: t("register"),
           externalLink: "https://app.horecaorders.com/user/register",
         }}
         headerButtonRight={{
-          text: "Autentificare",
+          text: t("login"),
           externalLink: "https://app.horecaorders.com/login",
         }}
         logoYellow
@@ -126,9 +122,8 @@ function Restaurants() {
       <FirstSection
         colors={{ background: "bg-bluePrimary", text: "text-white" }}
         subHeader={{
-          textTitle: "CEA MAI BUNĂ USTENSILĂ DIN BUCĂTĂRIA TA",
-          paragraph: `Folosește gratuit HORECA ORDERS să comunici și să plasezi comenzile către furnizorii tăi în secunde. 
-          Gata cu erorile de livrare, așteptările la telefon noaptea târziu sau cu foile de comandă nesfârșite.`,
+          textTitle: t("restaurants-page.first-section.text-title"),
+          paragraph: t("restaurants-page.first-section.paragraph"),
           imgSet: {
             img: "images/ustensila-bucatarie.png",
             img2x: "images/ustensila-bucatarie@2x.png",
@@ -140,26 +135,28 @@ function Restaurants() {
               img: "images/adio-greseli.png",
               img2: "images/adio-greseli@2x.png",
               img3: "images/adio-greseli@3x.png",
-              subtitle: "Spune adio greșelior",
-              description: `Comandă ca un profesionist – Comenzile au mereu codul unic al produselor, unitatea de masură, data de livrare și confirmarea livrării. 
-                Reduceți greșelile cu 85%.`,
+              subtitle: t("restaurants-page.first-section.info-subtitle1"),
+              description: t(
+                "restaurants-page.first-section.info-description1"
+              ),
             },
             {
               img: "images/castiga-timp.png",
               img2: "images/castiga-timp@2x.png",
               img3: "images/castiga-timp@3x.png",
-              subtitle: "Câștigă timp",
-              description:
-                "Plasați rapid toate comenzile furnizorilor dvs. dintr-o singură aplicație. Plasați comenzi în doar trei atingeri. Câștigați peste 4 ore pe săptămână.",
+              subtitle: t("restaurants-page.first-section.info-subtitle2"),
+              description: t(
+                "restaurants-page.first-section.info-description2"
+              ),
             },
             {
               img: "images/suport-rapid.png",
               img2: "images/suport-rapid@2x.png",
               img3: "images/suport-rapid@3x.png",
-              subtitle: "Suport rapid",
-              description: `Discutați cu echipa
-                HORECA ORDERS în aplicație. Aveți asistență rapidă. 
-               În plus, vă vom configura în mai puțin de 24 de ore.`,
+              subtitle: t("restaurants-page.first-section.info-subtitle3"),
+              description: t(
+                "restaurants-page.first-section.info-description3"
+              ),
             },
           ],
         }}
@@ -167,12 +164,12 @@ function Restaurants() {
       <div className="flex flex-col items-center w-full">
         <Button
           styles="lg:flex hidden px-10 py-3"
-          text="Înregistrare"
+          text={t("register")}
           link="https://app.horecaorders.com/user/register"
         />
         <div className="flex flex-col w-full items-center lg:mt-14 pt-14 lg:pb-0 mt-0 pb-14 px-10 lg:px-0 bg-bluePrimary relative">
           <p className="font-openSans font-extrabold lg:text-5xl text-4xl text-white text-center">
-            CUM FUNCȚIONEAZĂ
+            {t("restaurants-page.how-it-works")}
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 lg:mt-13 mt-5 max-w-5xl">
             {cardSection.map((card, key) => {
@@ -189,9 +186,12 @@ function Restaurants() {
                     )}
                   </p>
                   <div className="flex flex-col items-center justify-start text-center h-20 mt-3">
-                    <p className="font-openSans font-bold leading-7	text-2xl text-white text-center whitespace-pre-line">
-                      {card.subTitle}
-                    </p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: card.subTitle,
+                      }}
+                      className="font-openSans font-bold leading-7	text-2xl text-white text-center whitespace-pre-line"
+                    ></p>
                     {card.details && (
                       <p className="text-sm font-semibold font-openSans opacity-50 text-white mt-2">
                         {card.details}
@@ -216,7 +216,7 @@ function Restaurants() {
       </div>
       <div className="flex flex-col w-full items-center mt-14">
         <p className="uppercase font-openSans font-extrabold lg:text-4xl text-5xl leading-10 text-center text-bluePrimary px-10 lg:px-0">
-          Plasezi comenzile mult mai bine
+          {t("restaurants-page.order-placed")}
         </p>
         <InformationsCard data={information} />
       </div>
@@ -225,12 +225,10 @@ function Restaurants() {
         <div className="grid lg:grid-cols-2 grid-cols-1 max-w-4xl w-full">
           <div className="flex flex-col items-center justify-center px-10 lg:px-0">
             <p className="font-openSans font-extrabold text-5xl text-bluePrimary text-center">
-              E GRATIS
+              {t("restaurants-page.its-free")}
             </p>
             <p className="font-openSans font-semibold text-base py-6 text-center text-bluePrimary">
-              Platforma HORECA ORDERS este gratuită pentru restaurante și
-              furnizori, având disponibile funcții opționale plătite. Vorbește
-              cu echipa noastră pentru a afla mai multe!
+              {t("restaurants-page.free-platform-for")}
             </p>
             <Button
               styles="px-10 py-3"
@@ -242,15 +240,15 @@ function Restaurants() {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet="images/i-phone-x-in-hand-mobile@3x.png"
+                srcSet={t("restaurants-page.iphone-image3")}
               />
               <source
                 media="(min-width: 800px)"
-                srcSet="images/i-phone-x-in-hand@2x.png"
+                srcSet={t("restaurants-page.iphone-image2")}
               />
               <img
                 className="object-cover lg:max-h-104 max-h-112 lg:mt-0 mt-11"
-                src="images/i-phone-x-in-hand.png"
+                src={t("restaurants-page.iphone-image1")}
                 alt=""
               />
             </picture>
@@ -274,13 +272,15 @@ function Restaurants() {
           />
         </picture>
         <div className="flex flex-col items-center justify-center px-10 lg:px-0">
-          <p className="font-openSans font-extrabold lg:text-7xl text-5xl leading-10 text-black italic text-center">
-            HAI SĂ <br /> EXPLORĂM <br /> HORECA <br />
-            ORDERS
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("restaurants-page.lets-explore"),
+            }}
+            className="font-openSans font-extrabold lg:text-7xl text-5xl leading-10 text-black italic text-center"
+          ></p>
           <Button
             styles="mt-12 lg:mb-0 mb-10 text-center px-10 py-3"
-            text="Înregistrare"
+            text={t("register")}
             link="https://app.horecaorders.com/user/register"
           />
         </div>

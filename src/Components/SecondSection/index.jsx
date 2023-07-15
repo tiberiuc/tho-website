@@ -1,8 +1,10 @@
 import Button from "Atoms/Button";
 import InformationsCard from "Components/InformationsCard";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const SecondSection = ({ information }) => {
+  const { t } = useTranslation("translation");
   return (
     <div>
       <InformationsCard data={information} />
@@ -11,10 +13,10 @@ const SecondSection = ({ information }) => {
         className={`lg:mt-22 mt-4 bg-opacity-50 flex flex-col items-center lg:py-40 py-20 lg:px-0 px-12`}
       >
         <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl leading-10 text-center max-w-3xl">
-          PUNE-ȚI COMENZILE ÎN ORDINE
+          {t("second-section.put-orders")}
         </span>
         <Button
-          text={"Înregistrare"}
+          text={t("register")}
           link="https://app.horecaorders.com/user/register"
           styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
         />
@@ -24,13 +26,13 @@ const SecondSection = ({ information }) => {
           href="/restaurante"
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
-          Restaurante
+          {t("restaurants")}
         </a>
         <a
           href="/furnizori"
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
-          Furnizori
+          {t("suppliers")}
         </a>
       </div>
     </div>

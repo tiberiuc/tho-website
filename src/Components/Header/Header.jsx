@@ -204,6 +204,9 @@ export default function Header({
         </div>
       </div>
       <h1
+        dangerouslySetInnerHTML={{
+          __html: headingText,
+        }}
         className={`flex ${
           noButtons
             ? `${noButtons}`
@@ -215,9 +218,7 @@ export default function Header({
         ${
           noButtonsWithoutModificationText && "lg:pb-32 pb-14"
         } font-extrabold font-openSans italic  sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10 text-ellipsis overflow-hidden`}
-      >
-        {headingText}
-      </h1>
+      ></h1>
       {(!noButtons || noButtonsWithoutModificationText) && (
         <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-10">
           {!headerButtonLeft?.externalLink ? (
