@@ -24,6 +24,7 @@ import { useTranslation } from "react-i18next";
 import Dropdown from "Atoms/Button/Dropdown";
 import i18n from "i18n";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 export const languages = [
   { code: "ro", name: "Romana" },
@@ -94,6 +95,7 @@ function App() {
 
   return (
     <LanguageMiddleware>
+      <Helmet htmlAttributes={{ lang: lang }} />
       <div id="parent" className={`relative`}>
         <nav
           id="navbar"
