@@ -14,7 +14,7 @@ export default function SliderWhirligig({ sliderInfo }) {
         <button onClick={prev}>
           <img
             className="lg:w-8 w-5"
-            src="SVGs/left-arrow.svg"
+            src="/SVGs/left-arrow.svg"
             alt="Arrow left"
           />
         </button>
@@ -68,7 +68,7 @@ export default function SliderWhirligig({ sliderInfo }) {
         <button onClick={next}>
           <img
             className="lg:w-8 w-5"
-            src="SVGs/right-arrow.svg"
+            src="/SVGs/right-arrow.svg"
             alt="Arrow right"
           />
         </button>

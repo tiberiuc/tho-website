@@ -8,6 +8,7 @@ function PricingRestaurante() {
   const { t } = useTranslation("translation");
   const [checkbox, setCheckbox] = useState(false);
   const priceOfPlan = checkbox ? 30 : 25;
+
   const pricing = {
     tiers: [
       {
@@ -200,7 +201,7 @@ function PricingRestaurante() {
                         <li key={feature.feature} className="flex items-start">
                           <img
                             className="h-2.5 mt-2"
-                            src="images/shape.png"
+                            src="/images/shape.png"
                             alt="Checkmark"
                           />
                           <div className="flex flex-col">

@@ -173,7 +173,7 @@ function PricingFurnizori() {
                         <li key={key} className="flex items-start">
                           <img
                             className="h-2.5 mt-2"
-                            src="images/shape.png"
+                            src="/images/shape.png"
                             alt="Checkmark"
                           />
                           <div className="flex flex-col">

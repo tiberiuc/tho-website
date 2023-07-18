@@ -2,9 +2,12 @@ import Button from "Atoms/Button";
 import InformationsCard from "Components/InformationsCard";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useParams } from "react-router-dom";
 
 const SecondSection = ({ information }) => {
   const { t } = useTranslation("translation");
+  const { lang } = useParams();
+
   return (
     <div>
       <InformationsCard data={information} />
@@ -22,18 +25,18 @@ const SecondSection = ({ information }) => {
         />
       </div>
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
-        <a
-          href="/restaurante"
+        <Link
+          to={`/${lang}/restaurante`}
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
           {t("restaurants")}
-        </a>
-        <a
-          href="/furnizori"
+        </Link>
+        <Link
+          to={`/${lang}/furnizori`}
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
           {t("suppliers")}
-        </a>
+        </Link>
       </div>
     </div>
   );

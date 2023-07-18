@@ -69,9 +69,9 @@ function Suppliers() {
       hyperLink: "",
       linkOfWebsite: "",
       personDescription2: t("suppliers-page.slider.city"),
-      img: "images/tolga.png",
-      img2: "images/tolga.png",
-      img3: "images/tolga.png",
+      img: "/images/tolga.png",
+      img2: "/images/tolga.png",
+      img3: "/images/tolga.png",
     },
   ];
 
@@ -97,30 +97,30 @@ function Suppliers() {
           textTitle: t("suppliers-page.first-section.text-title"),
           paragraph: t("suppliers-page.first-section.paragraph"),
           imgSet: {
-            img: "images/comunicare-cu-partenerii.png",
-            img2x: "images/comunicare-cu-partenerii@2x.png",
-            img3x: "images/comunicare-cu-partenerii@3x.png",
+            img: "/images/comunicare-cu-partenerii.png",
+            img2x: "/images/comunicare-cu-partenerii@2x.png",
+            img3x: "/images/comunicare-cu-partenerii@3x.png",
           },
           marginOfSection: "mb-16",
           info: [
             {
-              img: "images/integrare-erp.png",
-              img2: "images/integrare-erp@2x.png",
-              img3: "images/integrare-erp@3x.png",
+              img: "/images/integrare-erp.png",
+              img2: "/images/integrare-erp@2x.png",
+              img3: "/images/integrare-erp@3x.png",
               subtitle: t("suppliers-page.first-section.info-subtitle1"),
               description: t("suppliers-page.first-section.info-description1"),
             },
             {
-              img: "images/fara-comenzi-gresite.png",
-              img2: "images/fara-comenzi-gresite@2x.png",
-              img3: "images/fara-comenzi-gresite@3x.png",
+              img: "/images/fara-comenzi-gresite.png",
+              img2: "/images/fara-comenzi-gresite@2x.png",
+              img3: "/images/fara-comenzi-gresite@3x.png",
               subtitle: t("suppliers-page.first-section.info-subtitle2"),
               description: t("suppliers-page.first-section.info-description2"),
             },
             {
-              img: "images/vindeti-mai-mult.png",
-              img2: "images/vindeti-mai-mult@2x.png",
-              img3: "images/vindeti-mai-mult@3x.png",
+              img: "/images/vindeti-mai-mult.png",
+              img2: "/images/vindeti-mai-mult@2x.png",
+              img3: "/images/vindeti-mai-mult@3x.png",
               subtitle: t("suppliers-page.first-section.info-subtitle3"),
               description: t("suppliers-page.first-section.info-description3"),
             },
@@ -139,15 +139,15 @@ function Suppliers() {
           <picture>
             <source
               media="(max-width: 799px)"
-              srcSet="images/functioneaza-in-scurt-timp@3x.png"
+              srcSet="/images/functioneaza-in-scurt-timp@3x.png"
             />
             <source
               media="(min-width: 800px)"
-              srcSet="images/functioneaza-in-scurt-timp@2x.png"
+              srcSet="/images/functioneaza-in-scurt-timp@2x.png"
             />
             <img
               className="object-fit max-h-180 2xl:max-h-full lg:p-0 p-10"
-              src="images/functioneaza-in-scurt-timp.png"
+              src="/images/functioneaza-in-scurt-timp.png"
               alt=""
             />
           </picture>

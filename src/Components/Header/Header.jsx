@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Button from "Atoms/Button";
 import "./style.css";
-import { Link, NavLink } from "react-router-dom";
-import Dropdown from "Atoms/Button/Dropdown";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Dropdown, { Icon } from "Atoms/Button/Dropdown";
 import { useTranslation } from "react-i18next";
+import ModalLanguage from "Atoms/Button/Modal";
+import i18n from "i18n";
 
 export default function Header({
   bgHeader,
@@ -20,6 +22,9 @@ export default function Header({
 }) {
   const { t } = useTranslation("translation");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
+  const [openLanguageModal, setOpenLanguageModal] = useState(false);
+  const lang = location.pathname.split("/")[1];
 
   const navLinkStyles = ({ isActive }) => {
     return {
@@ -33,18 +38,22 @@ export default function Header({
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
-          <a href="/">
+          <a href={`/${lang}`}>
             <img
               src={
                 logoYellow
-                  ? "SVGs/horeca-orders-logo-yellow.svg"
-                  : "SVGs/horeca-orders-logo.svg"
+                  ? "/SVGs/horeca-orders-logo-yellow.svg"
+                  : "/SVGs/horeca-orders-logo.svg"
               }
               alt="Logo of Horeca Orders"
             />
           </a>
         </div>
         <section className="flex lg:hidden">
+          <ModalLanguage
+            show={openLanguageModal}
+            onClose={() => setOpenLanguageModal(false)}
+          ></ModalLanguage>
           <div
             className="space-y-2 mt-2 mr-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -74,13 +83,13 @@ export default function Header({
             >
               <img
                 className="w-7 h-7"
-                src="SVGs/closeBtn.svg"
+                src="/SVGs/closeBtn.svg"
                 alt="Close Header Dropdown"
               />
             </div>
-            <a href="/">
+            <a href={`/${lang}`}>
               <img
-                src="SVGs/horeca-orders-logo-yellow.svg"
+                src="/SVGs/horeca-orders-logo-yellow.svg"
                 alt="Logo of Horeca Orders"
               />
             </a>
@@ -94,7 +103,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/restaurante">{t("restaurants")}</Link>
+                <Link to={`/${lang}/restaurante`}>{t("restaurants")}</Link>
               </li>
               <li
                 className={`my-4 ${
@@ -103,7 +112,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/furnizori">{t("suppliers")}</Link>
+                <Link to={`/${lang}/furnizori`}>{t("suppliers")}</Link>
               </li>
               <li
                 className={`my-4 hidden ${
@@ -112,7 +121,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/povesti">{t("stories")}</Link>
+                <Link to={`/${lang}/povesti`}>{t("stories")}</Link>
               </li>
               <li
                 className="my-4
@@ -136,7 +145,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/despre">{t("about")}</a>
+                <a href={`/${lang}/despre`}>{t("about")}</a>
               </li>
               <li
                 className={`my-4 ${
@@ -145,23 +154,25 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/intrebari-frecvente">{t("faq")}</a>
+                <a href={`/${lang}/intrebari-frecvente`}>{t("faq")}</a>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
-            <ul className="flex flex-col items-center justify-start">
-              <Dropdown
-                restaurant={restaurant}
-                home={home}
-                supplier={supplier}
-              />
-            </ul>
+            <div
+              onClick={() => setOpenLanguageModal(true)}
+              className="flex justify-start items-center text-white"
+            >
+              <div className="w-4 h-4 mr-2 ">
+                <Icon />
+              </div>
+              <span className={`uppercase font-openSans`}>{i18n.language}</span>
+            </div>
           </div>
         </section>
         <div className="hidden lg:flex md:space-x-10 items-center">
           <NavLink
             style={navLinkStyles}
-            to="/restaurante"
+            to={`/${lang}/restaurante`}
             className={`text-base font-semibold
             ${restaurant && "text-bluePrimary"}
             ${home && "text-white"}
@@ -173,7 +184,7 @@ export default function Header({
           </NavLink>
           <NavLink
             style={navLinkStyles}
-            to="/furnizori"
+            to={`/${lang}/furnizori`}
             className={`text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
@@ -185,7 +196,7 @@ export default function Header({
           </NavLink>
           <NavLink
             style={navLinkStyles}
-            to="/povesti"
+            to={`/${lang}/povesti`}
             className={`hidden text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 

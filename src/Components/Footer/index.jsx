@@ -1,21 +1,24 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
   const { t } = useTranslation("translation");
+  const location = useLocation();
+  const lang = location.pathname.split("/")[1];
 
   const navigation = {
     info: [
-      { name: t("home"), href: "/" },
-      { name: t("restaurants"), href: "/restaurante" },
-      { name: t("suppliers"), href: "/furnizori" },
-      { name: t("faq"), href: "/intrebari-frecvente" },
+      { name: t("home"), href: `/${lang}` },
+      { name: t("restaurants"), href: `/${lang}/restaurante` },
+      { name: t("suppliers"), href: `/${lang}/furnizori` },
+      { name: t("faq"), href: `/${lang}/intrebari-frecvente` },
     ],
     horecaOrders: [
-      { name: t("about"), href: "/despre" },
+      { name: t("about"), href: `/${lang}/despre` },
       { name: t("contact-us"), href: "mailto:denis@horecaorders.com" },
-      { name: t("restaurants-prices"), href: "/preturi-restaurante" },
-      { name: t("suppliers-prices"), href: "/preturi-furnizori" },
+      { name: t("restaurants-prices"), href: `/${lang}/preturi-restaurante` },
+      { name: t("suppliers-prices"), href: `/${lang}/preturi-furnizori` },
     ],
     povesti: [
       { name: t("footer.stories.all-stories"), href: "#" },
@@ -29,22 +32,22 @@ function Footer() {
       {
         name: "YouTube",
         href: "https://www.youtube.com/channel/UCZEmGsfqjxY-i1MDt4SAC2g",
-        icon: "SVGs/youtube.svg",
+        icon: "/SVGs/youtube.svg",
       },
       {
         name: "Facebook",
         href: "https://www.facebook.com/HORECAORDERS",
-        icon: "SVGs/facebook.svg",
+        icon: "/SVGs/facebook.svg",
       },
       {
         name: "Instagram",
         href: "https://www.instagram.com/horeca.orders/",
-        icon: "SVGs/instagram.svg",
+        icon: "/SVGs/instagram.svg",
       },
       {
         name: "Linkedin",
         href: "https://www.linkedin.com/company/82645202",
-        icon: "SVGs/linkedin.svg",
+        icon: "/SVGs/linkedin.svg",
       },
     ],
   };
@@ -58,7 +61,7 @@ function Footer() {
         {t("footer.footer")}
       </h2>
       <div className="max-w-3.5xl items-center w-full lg:pt-12">
-        <div className="flex lg:flex-row justify-between flex-col justify-center lg:gap-22 gap-6 lg:px-0 px-5">
+        <div className="flex lg:flex-row justify-between flex-col lg:gap-22 gap-6 lg:px-0 px-5">
           <div className="mt-12 md:mt-0">
             <h3 className="lg:text-base text-xl font-bold text-white font-openSans">
               {t("footer.info")}
@@ -110,10 +113,10 @@ function Footer() {
               ))}
             </ul>
           </div>
-          <a href="/">
+          <a href={`/${lang}`}>
             <img
               className="w-30 h-24 lg:mt-0 mt-8"
-              src="SVGs/horeca-orders-logo.svg"
+              src="/SVGs/horeca-orders-logo.svg"
               alt="Horeca Orders Logo"
             />
           </a>
@@ -143,7 +146,7 @@ function Footer() {
         </div>
         <img
           className="lg:h-9 h-12 mt-8 lg:mt-0"
-          src="SVGs/netopia.svg"
+          src="/SVGs/netopia.svg"
           alt="Appstore button"
         />
         <div className="flex space-x-3 lg:mt-0 mt-8">
@@ -175,18 +178,18 @@ function Footer() {
           >
             {t("footer.contact")}
           </a>
-          <a
+          <Link
             className="text-xs text-white opacity-50 font-openSans"
-            href="/politica-de-confidentialitate"
+            to={`/${lang}/politica-de-confidentialitate`}
           >
             {t("footer.privacy-policy")}
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white opacity-50 font-openSans"
-            href="/termeni-conditii"
+            to={`/${lang}/termeni-conditii`}
           >
             {t("footer.terms-and-conditions")}
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,17 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 function ErrorPage() {
   const { t } = useTranslation("translation");
+  const location = useLocation();
+  const lang = location.pathname.split("/")[1];
   return (
     <>
       <div className="flex min-h-full flex-col bg-white pt-16 pb-12">
         <main className="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
           <div className="flex flex-shrink-0 justify-center">
-            <a href="/" className="inline-flex">
+            <a href={`/${lang}`} className="inline-flex">
               <span className="sr-only">{t("error-page.name")}</span>
               <img
-                src={"SVGs/horeca-orders-logo-yellow.svg"}
+                src={"/SVGs/horeca-orders-logo-yellow.svg"}
                 alt="Logo of Horeca Orders"
               />
             </a>
@@ -29,7 +32,7 @@ function ErrorPage() {
               </p>
               <div className="mt-6">
                 <a
-                  href="/"
+                  href={`/${lang}`}
                   className="text-base font-medium text-bluePrimary hover:text-indigo-500"
                 >
                   {t("error-page.go-home")}

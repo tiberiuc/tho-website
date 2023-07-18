@@ -3,6 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { useTranslation } from "react-i18next";
 import { languages } from "App";
 import useDesktopCheck from "helpers/useDesktopCheck";
+import { useNavigate } from "react-router-dom";
 
 export const Icon = () => (
   <svg
@@ -22,6 +23,16 @@ const Dropdown = ({ children, ...props }) => {
   const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   const isOnDesktop = useDesktopCheck();
+  const navigate = useNavigate();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    const remainingPath = window.location.pathname
+      .split("/")
+      .slice(2)
+      .join("/");
+    navigate(`/${lang}/${remainingPath}`);
+  };
 
   useEffect(() => {
     i18n.on("languageChanged", (lang) => {
@@ -72,7 +83,7 @@ const Dropdown = ({ children, ...props }) => {
           } origin-top-right rounded-md 
           ${
             (props.restaurant && isOnDesktop && "bg-greyBg") ||
-            (props.home && isOnDesktop && "bg-bluePrimary text-white") ||
+            (props.home && isOnDesktop && "bg-white") ||
             (props.supplier && isOnDesktop && "bg-white") ||
             (!isOnDesktop && "bg-white")
           }
@@ -83,11 +94,11 @@ const Dropdown = ({ children, ...props }) => {
               return (
                 <Menu.Item key={code}>
                   <div
-                    onClick={() => i18n.changeLanguage(code)}
+                    onClick={() => changeLanguage(code)}
                     className={`${
                       code === currentLanguage
                         ? ` ${
-                            props.home && isOnDesktop && "text-yellowButton"
+                            props.home && isOnDesktop && "text-bluePrimary"
                           } ${
                             props.restaurant &&
                             isOnDesktop &&
@@ -107,7 +118,7 @@ const Dropdown = ({ children, ...props }) => {
                     ${
                       props.home &&
                       isOnDesktop &&
-                      "hover:bg-yellowButton hover:text-gray-900 text-white"
+                      "hover:bg-yellowButton hover:text-gray-900 text-black"
                     }  
                     ${
                       props.supplier &&

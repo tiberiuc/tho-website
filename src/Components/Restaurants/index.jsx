@@ -4,9 +4,13 @@ import FirstSection from "Components/FirstSection";
 import Header from "Components/Header/Header";
 import InformationsCard from "Components/InformationsCard";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 function Restaurants() {
   const { t } = useTranslation("translation");
+  const location = useLocation();
+  const lang = location.pathname.split("/")[1];
+
   const cardSection = [
     {
       number: "1",
@@ -32,7 +36,7 @@ function Restaurants() {
       img3: t("restaurants-page.card-section.img-sent3"),
     },
     {
-      icon: "SVGs/notif-icon.svg",
+      icon: "/SVGs/notif-icon.svg",
       subTitle: t("restaurants-page.card-section.sub-title4"),
       img: t("restaurants-page.card-section.img-order-confirmed1"),
       img2: t("restaurants-page.card-section.img-order-confirmed2"),
@@ -73,9 +77,9 @@ function Restaurants() {
       hyperLink: "Papila",
       linkOfWebsite: "https://papilakitchen.ro/",
       personDescription2: t("restaurants-page.slider.city"),
-      img: "images/gabi-papila.png",
-      img2: "images/gabi-papila.png",
-      img3: "images/gabi-papila.png",
+      img: "/images/gabi-papila.png",
+      img2: "/images/gabi-papila.png",
+      img3: "/images/gabi-papila.png",
     },
     {
       paragraphDescription: t("restaurants-page.slider.paragraphDescription2"),
@@ -85,9 +89,9 @@ function Restaurants() {
       hyperLink: "Sushi Master",
       linkOfWebsite: "https://sushimaster.ro/",
       personDescription2: t("restaurants-page.slider.city"),
-      img: "images/Nadia-Sushi-Master.png",
-      img2: "images/Nadia-Sushi-Master.png",
-      img3: "images/Nadia-Sushi-Master.png",
+      img: "/images/Nadia-Sushi-Master.png",
+      img2: "/images/Nadia-Sushi-Master.png",
+      img3: "/images/Nadia-Sushi-Master.png",
     },
     {
       paragraphDescription: t("restaurants-page.slider.paragraphDescription3"),
@@ -97,9 +101,9 @@ function Restaurants() {
       hyperLink: "FoodKit",
       linkOfWebsite: "https://foodkit.ro/",
       personDescription2: t("restaurants-page.slider.city"),
-      img: "images/barman-image.png",
-      img2: "images/barman-image@2x.png",
-      img3: "images/barman-image@3x.png",
+      img: "/images/barman-image.png",
+      img2: "/images/barman-image@2x.png",
+      img3: "/images/barman-image@3x.png",
     },
   ];
 
@@ -125,34 +129,34 @@ function Restaurants() {
           textTitle: t("restaurants-page.first-section.text-title"),
           paragraph: t("restaurants-page.first-section.paragraph"),
           imgSet: {
-            img: "images/ustensila-bucatarie.png",
-            img2x: "images/ustensila-bucatarie@2x.png",
-            img3x: "images/ustensila-bucatarie@3x.png",
+            img: "/images/ustensila-bucatarie.png",
+            img2x: "/images/ustensila-bucatarie@2x.png",
+            img3x: "/images/ustensila-bucatarie@3x.png",
           },
           marginOfSection: "mb-14 lg:mb-8",
           info: [
             {
-              img: "images/adio-greseli.png",
-              img2: "images/adio-greseli@2x.png",
-              img3: "images/adio-greseli@3x.png",
+              img: "/images/adio-greseli.png",
+              img2: "/images/adio-greseli@2x.png",
+              img3: "/images/adio-greseli@3x.png",
               subtitle: t("restaurants-page.first-section.info-subtitle1"),
               description: t(
                 "restaurants-page.first-section.info-description1"
               ),
             },
             {
-              img: "images/castiga-timp.png",
-              img2: "images/castiga-timp@2x.png",
-              img3: "images/castiga-timp@3x.png",
+              img: "/images/castiga-timp.png",
+              img2: "/images/castiga-timp@2x.png",
+              img3: "/images/castiga-timp@3x.png",
               subtitle: t("restaurants-page.first-section.info-subtitle2"),
               description: t(
                 "restaurants-page.first-section.info-description2"
               ),
             },
             {
-              img: "images/suport-rapid.png",
-              img2: "images/suport-rapid@2x.png",
-              img3: "images/suport-rapid@3x.png",
+              img: "/images/suport-rapid.png",
+              img2: "/images/suport-rapid@2x.png",
+              img3: "/images/suport-rapid@3x.png",
               subtitle: t("restaurants-page.first-section.info-subtitle3"),
               description: t(
                 "restaurants-page.first-section.info-description3"
@@ -232,7 +236,7 @@ function Restaurants() {
             </p>
             <Button
               styles="px-10 py-3"
-              link="/intrebari-frecvente"
+              link={`/${lang}/intrebari-frecvente`}
               text="Întrebări Frecvente"
             />
           </div>
@@ -259,15 +263,15 @@ function Restaurants() {
         <picture>
           <source
             media="(max-width: 799px)"
-            srcSet="images/hands-photo@3x.png"
+            srcSet="/images/hands-photo@3x.png"
           />
           <source
             media="(min-width: 800px)"
-            srcSet="images/hands-photo@2x.png"
+            srcSet="/images/hands-photo@2x.png"
           />
           <img
             className="object-fit max-h-180 2xl:max-h-full lg:p-0 p-10"
-            src="images/hands-photo.png"
+            src="/images/hands-photo.png"
             alt=""
           />
         </picture>
