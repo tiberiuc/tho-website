@@ -75,9 +75,8 @@ function Home() {
             subComponentStyles: "lg:my-14 my-10",
           },
           {
-            subTitle: "Pentru furnizori",
-            description:
-              "Indiferent dacă aveți o afacere de familie sau sunteți un distribuitor național, platforma noastră personalizată va schimba modul în care faceți afaceri.",
+            subTitle: t("home-page.second-section.sub-title2"),
+            description: t("home-page.second-section.description2"),
             buttonLink: `${lang}/furnizori`,
             img: t("home-page.second-section.img-order1"),
             img2: t("home-page.second-section.img-order2"),
