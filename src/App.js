@@ -23,6 +23,7 @@ import PricingFurnizori from "Components/PricingFurnizori";
 import { useTranslation } from "react-i18next";
 import Dropdown from "Atoms/Button/Dropdown";
 import i18n from "i18n";
+import axios from "axios";
 
 export const languages = [
   { code: "ro", name: "Romana" },
@@ -30,11 +31,16 @@ export const languages = [
   { code: "fr", name: "Français" },
 ];
 
+export const countriesLanguages = {
+  "RO": "ro"
+}
+
 function LanguageMiddleware({ children }) {
   const navigate = useNavigate();
 
-  const handleLanguageRedirection = () => {
-    const defaultLocale = "ro";
+  const handleLanguageRedirection = async () => {
+    const result = await axios.get("https://ipapi.co/json/")
+    const defaultLocale = countriesLanguages[result.data.country_code] || "en"
     const currentPath = window.location.pathname;
     const currentLanguageCode = currentPath.split("/")[1];
 
@@ -91,9 +97,8 @@ function App() {
       <div id="parent" className={`relative`}>
         <nav
           id="navbar"
-          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${
-            !navSize && "hidden"
-          }  ${isNavOpen && "overflowHidden"}`}
+          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${!navSize && "hidden"
+            }  ${isNavOpen && "overflowHidden"}`}
         >
           <div className="flex justify-start lg:flex-1">
             <Link to={`/${lang}`}>
@@ -239,7 +244,9 @@ function App() {
           </div>
         </nav>
         <Routes>
+          <Route path="/" element={<div />} />
           <Route path="/:lang" element={<Home />} />
+          <Route path="/:lang/" element={<Home />} />
           <Route path="/:lang/restaurante" element={<Restaurants />} />
           <Route path="/:lang/furnizori" element={<Suppliers />} />
           <Route
