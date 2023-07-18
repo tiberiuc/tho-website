@@ -1,6 +1,7 @@
 import Header from "Components/Header/Header";
 import "./style.css";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function PricingFurnizori() {
   const { t } = useTranslation("translation");
@@ -194,15 +195,15 @@ function PricingFurnizori() {
                       ))}
                     </ul>
                   </div>
-                  <a
-                    href={tier.buttonLink}
+                  <Link
+                    to={tier.buttonLink}
                     className={classNames(
                       tier?.backgroundButton,
                       "flex justify-center w-40 rounded-full font-semibold font-openSans text-base py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 mt-4"
                     )}
                   >
                     {tier.button}
-                  </a>
+                  </Link>
                 </div>
               ) : (
                 <div key={key}></div>

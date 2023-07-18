@@ -38,7 +38,7 @@ export default function Header({
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
-          <a href={`/${lang}`}>
+          <Link to={`/${lang}`}>
             <img
               src={
                 logoYellow
@@ -47,7 +47,7 @@ export default function Header({
               }
               alt="Logo of Horeca Orders"
             />
-          </a>
+          </Link>
         </div>
         <section className="flex lg:hidden">
           <ModalLanguage
@@ -87,12 +87,12 @@ export default function Header({
                 alt="Close Header Dropdown"
               />
             </div>
-            <a href={`/${lang}`}>
+            <Link to={`/${lang}`}>
               <img
                 src="/SVGs/horeca-orders-logo-yellow.svg"
                 alt="Logo of Horeca Orders"
               />
-            </a>
+            </Link>
 
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
@@ -145,7 +145,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href={`/${lang}/despre`}>{t("about")}</a>
+                <Link to={`/${lang}/despre`}>{t("about")}</Link>
               </li>
               <li
                 className={`my-4 ${
@@ -154,7 +154,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href={`/${lang}/intrebari-frecvente`}>{t("faq")}</a>
+                <Link to={`/${lang}/intrebari-frecvente`}>{t("faq")}</Link>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />

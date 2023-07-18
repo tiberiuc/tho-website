@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./style.css";
 import Switch from "react-switch";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function PricingRestaurante() {
   const { t } = useTranslation("translation");
@@ -222,15 +223,15 @@ function PricingRestaurante() {
                       ))}
                     </ul>
                   </div>
-                  <a
-                    href={tier.buttonLink}
+                  <Link
+                    to={tier.buttonLink}
                     className={classNames(
                       tier?.backgroundButton,
                       "flex justify-center w-40 rounded-full font-semibold font-openSans text-base py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 mt-4"
                     )}
                   >
                     {tier.button}
-                  </a>
+                  </Link>
                 </div>
               ) : (
                 <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">

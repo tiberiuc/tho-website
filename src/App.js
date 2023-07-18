@@ -96,13 +96,13 @@ function App() {
           }  ${isNavOpen && "overflowHidden"}`}
         >
           <div className="flex justify-start lg:flex-1">
-            <a href={`/${lang}`}>
+            <Link to={`/${lang}`}>
               <img
                 className="h-14"
                 src={"/SVGs/horeca-orders-logo.svg"}
                 alt="Logo of Horeca Orders"
               />
-            </a>
+            </Link>
           </div>
           <section className="flex lg:hidden">
             <div
@@ -128,12 +128,12 @@ function App() {
                   alt="Close Header Dropdown"
                 />
               </div>
-              <a href={`/${lang}`}>
+              <Link to={`/${lang}`}>
                 <img
                   src="/SVGs/horeca-orders-logo-yellow.svg"
                   alt="Logo of Horeca Orders"
                 />
-              </a>
+              </Link>
 
               <div className="w-full bg-greyHairline h-px my-4" />
               <ul className="flex flex-col items-center justify-start ">
@@ -193,14 +193,14 @@ function App() {
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
                 >
-                  <a href={`/${lang}/despre`}> {t("about")}</a>
+                  <Link to={`/${lang}/despre`}> {t("about")}</Link>
                 </li>
                 <li
                   className="my-4  
                 lg:text-bluePrimary text-white
              uppercase font-openSans"
                 >
-                  <a href={`/${lang}/intrebari-frecvente`}>{t("faq")}</a>
+                  <Link to={`/${lang}/intrebari-frecvente`}>{t("faq")}</Link>
                 </li>
               </ul>
               <div className="w-full bg-greyHairline h-px my-4" />

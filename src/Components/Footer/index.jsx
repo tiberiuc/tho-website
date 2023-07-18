@@ -69,12 +69,12 @@ function Footer() {
             <ul className="mt-4">
               {navigation.info.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -86,12 +86,12 @@ function Footer() {
             <ul className="mt-4">
               {navigation.horecaOrders.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -103,23 +103,23 @@ function Footer() {
             <ul className="mt-4">
               {navigation.povesti.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="font-openSans lg:text-base text-xl text-white hover:underline font-semibold"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <a href={`/${lang}`}>
+          <Link to={`/${lang}`}>
             <img
               className="w-30 h-24 lg:mt-0 mt-8"
               src="/SVGs/horeca-orders-logo.svg"
               alt="Horeca Orders Logo"
             />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end items-start max-w-3.5xl lg:mt-20 mt-14 lg:px-0 px-5">
@@ -151,9 +151,9 @@ function Footer() {
         />
         <div className="flex space-x-3 lg:mt-0 mt-8">
           {navigation.social.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-white hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
@@ -163,7 +163,7 @@ function Footer() {
                 className="lg:h-6 lg:w-6 h-12 w-12"
                 aria-hidden="true"
               />
-            </a>
+            </Link>
           ))}
         </div>
       </div>
