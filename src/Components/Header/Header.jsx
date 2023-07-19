@@ -53,6 +53,7 @@ export default function Header({
           <ModalLanguage
             show={openLanguageModal}
             onClose={() => setOpenLanguageModal(false)}
+            onCloseMenu={() => setIsNavOpen(false)}
           ></ModalLanguage>
           <div
             className="space-y-2 mt-2 mr-2"

@@ -15,11 +15,11 @@ function Home() {
         headingText={t("home-page.title")}
         headerButtonLeft={{
           text: t("home-page.header-button-left"),
-          link: `${lang}/restaurante`,
+          link: `/${lang}/restaurante`,
         }}
         headerButtonRight={{
           text: t("home-page.header-button-right"),
-          link: `${lang}/furnizori`,
+          link: `/${lang}/furnizori`,
         }}
         home={"text-4.5xl"}
       />

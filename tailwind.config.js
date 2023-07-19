@@ -10,6 +10,7 @@ module.exports = {
         bluePrimary: "#485696",
         yellowButton: "#ffdc0a",
         yellowPricing: "#FFDC0B",
+        blueModal: "#1C357C",
         yellowSection: "#fff2a4",
         greyHairline: "rgb(151,151,151)",
         greyBg: "#f5f5f5",

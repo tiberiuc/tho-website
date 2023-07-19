@@ -237,7 +237,7 @@ function Restaurants() {
             <Button
               styles="px-10 py-3"
               link={`/${lang}/intrebari-frecvente`}
-              text="Întrebări Frecvente"
+              text={t("faq")}
             />
           </div>
           <div className="flex lg:justify-center justify-start w-full">

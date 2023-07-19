@@ -3,19 +3,20 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-const ModalLanguage = ({ show, onClose }) => {
+const ModalLanguage = ({ show, onClose, onCloseMenu }) => {
   const { t, i18n } = useTranslation("translation");
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   const navigate = useNavigate();
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    const remainingPath = window.location.pathname
-      .split("/")
-      .slice(2)
-      .join("/");
-    navigate(`/${lang}/${remainingPath}`);
+    // const remainingPath = window.location.pathname
+    //   .split("/")
+    //   .slice(2)
+    //   .join("/");
+    navigate(`/${lang}/`);
     onClose();
+    onCloseMenu();
   };
 
   useEffect(() => {
@@ -26,12 +27,11 @@ const ModalLanguage = ({ show, onClose }) => {
 
   return (
     <div
-      className={`fixed w-full h-full top-0 left-0 flex items-center justify-center transition-all ease-in-out duration-500 transform ${
+      className={`fixed w-full h-full top-0 left-0 flex items-center justify-center  transform ${
         show ? "scale-100" : "scale-0"
       } z-[100]`}
-      style={{ transformOrigin: "center" }}
     >
-      <div className="absolute flex items-center justify-left px-10 w-full h-full bg-bluePrimary">
+      <div className="absolute flex items-center justify-left px-10 w-full h-full bg-blueModal">
         <div style={{ maxHeight: "90vh", overflowY: "auto", width: "100%" }}>
           <p className="text-white font-bold text-2xl mb-2">
             {t("header.description-for-translation")}
