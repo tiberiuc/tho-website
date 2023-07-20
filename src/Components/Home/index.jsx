@@ -64,7 +64,7 @@ function Home() {
           {
             subTitle: t("home-page.second-section.sub-title1"),
             description: t("home-page.second-section.description1"),
-            buttonLink: `${lang}/restaurante`,
+            buttonLink: `/${lang}/restaurante`,
             img: t("home-page.second-section.img-iphone1"),
             img2: t("home-page.second-section.img-iphone2"),
             img3: t("home-page.second-section.img-iphone3"),
@@ -77,7 +77,7 @@ function Home() {
           {
             subTitle: t("home-page.second-section.sub-title2"),
             description: t("home-page.second-section.description2"),
-            buttonLink: `${lang}/furnizori`,
+            buttonLink: `/${lang}/furnizori`,
             img: t("home-page.second-section.img-order1"),
             img2: t("home-page.second-section.img-order2"),
             img3: t("home-page.second-section.img-order3"),
