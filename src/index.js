@@ -5,6 +5,7 @@ import App from "App";
 import ScrollToTop from "helpers/ScrollToTop";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import "./i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

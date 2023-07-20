@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Button from "Atoms/Button";
 import "./style.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Dropdown, { Icon } from "Atoms/Button/Dropdown";
+import { useTranslation } from "react-i18next";
+import ModalLanguage from "Atoms/Button/Modal";
+import i18n from "i18n";
 
 export default function Header({
   bgHeader,
@@ -16,7 +20,11 @@ export default function Header({
   lastModificationDate,
   noButtonsWithoutModificationText,
 }) {
+  const { t } = useTranslation("translation");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
+  const [openLanguageModal, setOpenLanguageModal] = useState(false);
+  const lang = location.pathname.split("/")[1];
 
   const navLinkStyles = ({ isActive }) => {
     return {
@@ -30,18 +38,23 @@ export default function Header({
     <nav className={`relative ${!!bgHeader ? bgHeader : "bg-bluePrimary"}`}>
       <div className="flex justify-between items-start lg:pt-10 pt-4 lg:px-10 px-4">
         <div className="flex justify-start lg:flex-1">
-          <a href="/">
+          <Link to={`/${lang}`}>
             <img
               src={
                 logoYellow
-                  ? "SVGs/horeca-orders-logo-yellow.svg"
-                  : "SVGs/horeca-orders-logo.svg"
+                  ? "/SVGs/horeca-orders-logo-yellow.svg"
+                  : "/SVGs/horeca-orders-logo.svg"
               }
               alt="Logo of Horeca Orders"
             />
-          </a>
+          </Link>
         </div>
         <section className="flex lg:hidden">
+          <ModalLanguage
+            show={openLanguageModal}
+            onClose={() => setOpenLanguageModal(false)}
+            onCloseMenu={() => setIsNavOpen(false)}
+          ></ModalLanguage>
           <div
             className="space-y-2 mt-2 mr-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -71,16 +84,16 @@ export default function Header({
             >
               <img
                 className="w-7 h-7"
-                src="SVGs/closeBtn.svg"
+                src="/SVGs/closeBtn.svg"
                 alt="Close Header Dropdown"
               />
             </div>
-            <a href="/">
+            <Link to={`/${lang}`}>
               <img
-                src="SVGs/horeca-orders-logo-yellow.svg"
+                src="/SVGs/horeca-orders-logo-yellow.svg"
                 alt="Logo of Horeca Orders"
               />
-            </a>
+            </Link>
 
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
@@ -91,7 +104,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/restaurante">Restaurante</Link>
+                <Link to={`/${lang}/restaurante`}>{t("restaurants")}</Link>
               </li>
               <li
                 className={`my-4 ${
@@ -100,7 +113,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/furnizori">Furnizori</Link>
+                <Link to={`/${lang}/furnizori`}>{t("suppliers")}</Link>
               </li>
               <li
                 className={`my-4 hidden ${
@@ -109,7 +122,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <Link to="/povesti">Povesti</Link>
+                <Link to={`/${lang}/povesti`}>{t("stories")}</Link>
               </li>
               <li
                 className="my-4
@@ -118,7 +131,7 @@ export default function Header({
               >
                 <Button
                   link="https://app.horecaorders.com/login"
-                  text="Log in"
+                  text={t("login")}
                   styles={"text-black py-1"}
                   fontSizeText={"text-base"}
                 />
@@ -133,7 +146,7 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/despre">Despre</a>
+                <Link to={`/${lang}/despre`}>{t("about")}</Link>
               </li>
               <li
                 className={`my-4 ${
@@ -142,26 +155,25 @@ export default function Header({
                   (home || supplier) && "text-white"
                 } uppercase font-openSans`}
               >
-                <a href="/intrebari-frecvente">Intrebari frecvente</a>
+                <Link to={`/${lang}/intrebari-frecvente`}>{t("faq")}</Link>
               </li>
             </ul>
             <div className="w-full bg-greyHairline h-px my-4" />
-            <ul className="flex flex-col items-center justify-start">
-              <li className="flex items-center my-4 text-white uppercase font-openSans">
-                <img
-                  className="w-4 h-4 mr-2"
-                  src="SVGs/translationIcon.svg"
-                  alt="Translations"
-                />
-                <a href="/portfolio">RO</a>
-              </li>
-            </ul>
+            <div
+              onClick={() => setOpenLanguageModal(true)}
+              className="flex justify-start items-center text-white"
+            >
+              <div className="w-4 h-4 mr-2 ">
+                <Icon />
+              </div>
+              <span className={`uppercase font-openSans`}>{i18n.language}</span>
+            </div>
           </div>
         </section>
         <div className="hidden lg:flex md:space-x-10 items-center">
           <NavLink
             style={navLinkStyles}
-            to="/restaurante"
+            to={`/${lang}/restaurante`}
             className={`text-base font-semibold
             ${restaurant && "text-bluePrimary"}
             ${home && "text-white"}
@@ -169,11 +181,11 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Restaurante
+            {t("restaurants")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
-            to="/furnizori"
+            to={`/${lang}/furnizori`}
             className={`text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
@@ -181,11 +193,11 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Furnizori
+            {t("suppliers")}
           </NavLink>
           <NavLink
             style={navLinkStyles}
-            to="/povesti"
+            to={`/${lang}/povesti`}
             className={`hidden text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
@@ -193,16 +205,20 @@ export default function Header({
               supplier && "text-black"
             } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
-            Povesti
+            {t("stories")}
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"
             text="Log in"
             styles={"text-black text-lg py-1"}
           />
+          <Dropdown restaurant={restaurant} home={home} supplier={supplier} />
         </div>
       </div>
       <h1
+        dangerouslySetInnerHTML={{
+          __html: headingText,
+        }}
         className={`flex ${
           noButtons
             ? `${noButtons}`
@@ -214,9 +230,7 @@ export default function Header({
         ${
           noButtonsWithoutModificationText && "lg:pb-32 pb-14"
         } font-extrabold font-openSans italic  sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10 text-ellipsis overflow-hidden`}
-      >
-        {headingText}
-      </h1>
+      ></h1>
       {(!noButtons || noButtonsWithoutModificationText) && (
         <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-10">
           {!headerButtonLeft?.externalLink ? (

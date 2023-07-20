@@ -2,40 +2,42 @@ import Header from "Components/Header/Header";
 import { useState } from "react";
 import "./style.css";
 import Switch from "react-switch";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function PricingRestaurante() {
+  const { t } = useTranslation("translation");
   const [checkbox, setCheckbox] = useState(false);
   const priceOfPlan = checkbox ? 30 : 25;
+
   const pricing = {
     tiers: [
       {
         toggle: false,
-        title: "Starter",
-        price: "Gratis",
-        frequency: "",
-        frequencyTips: "cu limitări",
-        description: "Planul include",
+        title: t("restaurants-price.free-tier.title"),
+        price: t("restaurants-price.free-tier.price"),
+        frequency: t("restaurants-price.free-tier.frequency"),
+        frequencyTips: t("restaurants-price.free-tier.frequency-tips"),
+        description: t("restaurants-price.free-tier.description"),
         features: [
           {
-            feature: "Onboarding",
-            subFeature:
-              "Realizarea listelor de produse, conectarea cu furnizorii și agenții de vânzări",
+            feature: t("restaurants-price.free-tier.feature1"),
+            subFeature: t("restaurants-price.free-tier.sub-feature1"),
           },
-          { feature: "Trimiți comenzi către furnizori" },
-          { feature: "Comentarii" },
-          { feature: "Adaugă/Șterge Furnizori si Produse" },
+          { feature: t("restaurants-price.free-tier.feature2") },
+          { feature: t("restaurants-price.free-tier.feature3") },
+          { feature: t("restaurants-price.free-tier.feature4") },
           {
-            feature: "Istoricul de comenzi",
-            subFeature: `Vezi comenzile plasate, statusul lor si
-            comentariile din partea furnizorilor`,
+            feature: t("restaurants-price.free-tier.feature5"),
+            subFeature: t("restaurants-price.free-tier.sub-feature5"),
           },
-          { feature: "Repetă comanda" },
-          { feature: "Data livrării" },
-          { feature: "Metoda de plată" },
-          { feature: "Suport 24/7" },
+          { feature: t("restaurants-price.free-tier.feature6") },
+          { feature: t("restaurants-price.free-tier.feature7") },
+          { feature: t("restaurants-price.free-tier.feature8") },
+          { feature: t("restaurants-price.free-tier.feature9") },
         ],
-        button: "Înregistrare",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        button: t("register"),
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-yellowButton text-black",
         mostPopular: false,
         styleOfCard: "bg-greyBg div3",
@@ -45,30 +47,42 @@ function PricingRestaurante() {
       },
       {
         toggle: false,
-        title: "Pro",
+        title: t("restaurants-price.pro-tier.title"),
         price: priceOfPlan,
-        frequency: "€ / lună",
-        frequencyTips: checkbox ? "Plata lunară" : "Plata anuală",
-        description: "Tot ce e in oferta Starter plus:",
+        frequency: t("restaurants-price.pro-tier.frequency"),
+        frequencyTips: checkbox
+          ? t("restaurants-price.pro-tier.frequency-tips1")
+          : t("restaurants-price.pro-tier.frequency-tips2"),
+        description: t("restaurants-price.pro-tier.description"),
         features: [
           {
-            feature: "Notificări",
-            subFeature: `La confirmarea comenzii 
-              La ora limită pentru plasarea comenzii cu livrare a doua zi`,
+            feature: t("restaurants-price.pro-tier.feature1"),
+            subFeature: t("restaurants-price.pro-tier.sub-feature1"),
           },
           {
-            feature: "Liste de produse",
-            subFeature:
-              "Mai mulți furnizori în aceeași listă. Trimiți o singura comandă către mai mulți furnizori.",
+            feature: t("restaurants-price.pro-tier.feature2"),
+            subFeature: t("restaurants-price.pro-tier.sub-feature2"),
           },
-          { feature: "Comandă minimă / Cantitate minimă" },
-          { feature: "Multiutilizatori", commingSoon: "(in curând)" },
-          { feature: "Multilocații", commingSoon: "(in curând)" },
-          { feature: "Statistici", commingSoon: "(in curând)" },
-          { feature: "Verificarea comenzilor", commingSoon: "(in curând)" },
+          { feature: t("restaurants-price.pro-tier.feature3") },
+          {
+            feature: t("restaurants-price.pro-tier.feature4"),
+            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+          },
+          {
+            feature: t("restaurants-price.pro-tier.feature5"),
+            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+          },
+          {
+            feature: t("restaurants-price.pro-tier.feature6"),
+            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+          },
+          {
+            feature: t("restaurants-price.pro-tier.feature7"),
+            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+          },
         ],
-        button: "Incearcă gratuit",
-        buttonLink: "https://app.horecaorders.com/users/register",
+        button: t("restaurants-price.pro-tier.try-free"),
+        buttonLink: "https://app.horecaorders.com/user/register",
         backgroundButton: "bg-bluePrimary text-white",
         styleOfCard: "bg-yellowPricing div5",
         mostPopular: false,
@@ -84,7 +98,7 @@ function PricingRestaurante() {
     <div>
       <Header
         bgHeader={"bg-white"}
-        headingText={`PREȚURI RESTAURANTE`}
+        headingText={t("restaurants-price.title")}
         noButtons={"flex justify-center px-4"}
         logoYellow
         supplier
@@ -95,47 +109,45 @@ function PricingRestaurante() {
             className={` div1 bg-bluePrimary relative h-204 max-h-4xl p-8 border border-gray-200 rounded-2xl flex flex-col items-start `}
           >
             <span className="font-openSans text-4xl text-white">
-              Comenzi plasate
+              {t("restaurants-price.description1")}
             </span>
             <span className="font-openSans text-4xl font-bold text-white -mt-2">
-              mult mai bine
+              {t("restaurants-price.description2")}
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Plasează comenzile si discută cu toți furnizorii într-o singură
-              aplicație.
+              {t("restaurants-price.description3")}
             </span>
             <span className="font-openSans text-lg font-semibold text-white mt-5">
-              Comenzile sunt convertite în formatul dorit de furnizor - e-mail,
-              SMS sau integrare directa în ERP-ul furnizorului.
+              {t("restaurants-price.description4")}
             </span>
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet="images/pricing-hand@3x.png"
+                srcSet={t("restaurants-price.pricing-hand3")}
               />
               <source
                 media="(min-width: 800px)"
-                srcSet="images/pricing-hand@2x.png"
+                srcSet={t("restaurants-price.pricing-hand2")}
               />
               <img
                 className="absolute bottom-0 left-0 object-cover lg:max-h-104 max-h-112"
-                src="images/pricing-hand.png"
+                src={t("restaurants-price.pricing-hand1")}
                 alt=""
               />
             </picture>
           </div>
           <div className="div2 flex flex-col lg:pb-10 pb-0">
             <p className="font-openSans text-4xl leading-5 font-light text-bluePrimary">
-              Incepe acum
+              {t("restaurants-price.try-now1")}
             </p>
             <p className="font-openSans text-4xl font-bold text-bluePrimary">
-              planul tău gratuit.
+              {t("restaurants-price.try-now2")}
             </p>
           </div>
 
           <div className="div4 hidden lg:flex flex-row justify-center w-full items-center space-x-2">
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Platește Anual
+              {t("restaurants-price.annual-payment")}
             </p>
             <Switch
               onColor="#0000"
@@ -149,7 +161,7 @@ function PricingRestaurante() {
               checked={checkbox}
             />
             <p className="font-openSans font-semibold text-sm text-bluePrimary">
-              Plăteste Lunar
+              {t("restaurants-price.monthly-payment")}
             </p>
           </div>
 
@@ -177,7 +189,7 @@ function PricingRestaurante() {
                     </span>
                     {tier.mostPopular ? (
                       <p className="absolute top-0 py-1.5 px-4 bg-indigo-500 rounded-full text-sm font-semibold text-white transform -translate-y-1/2">
-                        Most popular
+                        {t("restaurants-price.most-popular")}
                       </p>
                     ) : null}
 
@@ -187,10 +199,10 @@ function PricingRestaurante() {
 
                     <ul className="mt-6 space-y-3">
                       {tier.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
+                        <li key={feature.feature} className="flex items-start">
                           <img
                             className="h-2.5 mt-2"
-                            src="images/shape.png"
+                            src="/images/shape.png"
                             alt="Checkmark"
                           />
                           <div className="flex flex-col">
@@ -200,28 +212,31 @@ function PricingRestaurante() {
                                 {feature.commingSoon}
                               </span>
                             </span>
-                            <span className="ml-3 text-black text-sm font-openSans whitespace-pre-line">
-                              {feature.subFeature}
-                            </span>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: feature.subFeature,
+                              }}
+                              className="ml-3 text-black text-sm font-openSans whitespace-pre-line"
+                            ></p>
                           </div>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <a
-                    href={tier.buttonLink}
+                  <Link
+                    to={tier.buttonLink}
                     className={classNames(
                       tier?.backgroundButton,
                       "flex justify-center w-40 rounded-full font-semibold font-openSans text-base py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 mt-4"
                     )}
                   >
                     {tier.button}
-                  </a>
+                  </Link>
                 </div>
               ) : (
                 <div className="div4 flex lg:hidden flex-row justify-center w-full items-center space-x-4">
                   <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Platește Anual
+                    {t("restaurants-price.annual-payment")}
                   </p>
                   <Switch
                     onColor="#0000"
@@ -233,7 +248,7 @@ function PricingRestaurante() {
                     checked={checkbox}
                   />
                   <p className="font-openSans font-medium text-sm text-bluePrimary">
-                    Plătește Lunar
+                    {t("restaurants-price.monthly-payment")}
                   </p>
                 </div>
               )}

@@ -1,8 +1,13 @@
 import Button from "Atoms/Button";
 import InformationsCard from "Components/InformationsCard";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useParams } from "react-router-dom";
 
 const SecondSection = ({ information }) => {
+  const { t } = useTranslation("translation");
+  const { lang } = useParams();
+
   return (
     <div>
       <InformationsCard data={information} />
@@ -11,29 +16,27 @@ const SecondSection = ({ information }) => {
         className={`lg:mt-22 mt-4 bg-opacity-50 flex flex-col items-center lg:py-40 py-20 lg:px-0 px-12`}
       >
         <span className="font-openSans font-extrabold italic lg:text-7xl text-5xl leading-10 text-center max-w-3xl">
-          PUNE-ȚI COMENZILE ÎN ORDINE
+          {t("second-section.put-orders")}
         </span>
-        <a href="https://app.horecaorders.com/users/register">
-          <Button
-            text={"Înregistrare"}
-            link="https://app.horecaorders.com/users/register"
-            styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
-          />
-        </a>
+        <Button
+          text={t("register")}
+          link="https://app.horecaorders.com/user/register"
+          styles="w-auto justify-center mt-8 rounded-full px-10 py-3"
+        />
       </div>
       <div className="flex lg:flex-row flex-col w-full lg:divide-x-2 lg:divide-y-0 divide-y-2 divide-black">
-        <a
-          href="/restaurante"
+        <Link
+          to={`/${lang}/restaurante`}
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
-          Restaurante
-        </a>
-        <a
-          href="/furnizori"
+          {t("restaurants")}
+        </Link>
+        <Link
+          to={`/${lang}/furnizori`}
           className="bg-yellowButton hover:bg-blue uppercase lg:w-1/2 w-full text-center font-openSans font-extrabold lg:text-5xl text-3xl py-11 hover:underline"
         >
-          Furnizori
-        </a>
+          {t("suppliers")}
+        </Link>
       </div>
     </div>
   );

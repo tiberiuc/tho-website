@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Button({
   onClickButton,
   text,
@@ -17,14 +19,14 @@ export default function Button({
           {text}
         </button>
       ) : (
-        <a
-          href={link}
+        <Link
+          to={link}
           className={`flex bg-yellowButton rounded-full lg:font-semibold font-medium font-openSans ${
             fontSizeText ? fontSizeText : "lg:text-lg text-2xl"
           } px-4 py-2 hover:bg-blue transition ease-in-out delay-100 duration-300 ${styles}`}
         >
           {text}
-        </a>
+        </Link>
       )}
     </>
   );

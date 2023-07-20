@@ -13,9 +13,12 @@ function FirstSection({ colors, subHeader }) {
             <span className="lg:text-4xl text-2xl font-extrabold font-openSans max-w-lg mt-7 leading-6">
               {subHeader?.textTitle}
             </span>
-            <span className="font-medium font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6">
-              {subHeader?.paragraph}
-            </span>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: subHeader?.paragraph,
+              }}
+              className="font-medium font-openSans mt-5 whitespace-pre-line text-lg lg:text-base leading-6"
+            ></p>
             {subHeader?.secondParagraph && (
               <span className="font-semibold font-openSans mt-5 whitespace-pre-line lg:whitespace-normal">
                 {subHeader?.secondParagraph}
@@ -48,9 +51,12 @@ function FirstSection({ colors, subHeader }) {
             subHeader?.marginOfSection ? subHeader?.marginOfSection : "mb-0"
           } max-w-3.5xl`}
         >
-          {subHeader?.info.map((item) => {
+          {subHeader?.info.map((item, key) => {
             return (
-              <div className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0">
+              <div
+                key={key}
+                className="grid lg:grid-rows-[200px_minmax(100px,_1fr)_150px] justify-center w-60 w-full mt-16 lg:mt-0"
+              >
                 <div className="flex flex-col items-center">
                   <picture>
                     <source media="(max-width: 799px)" srcSet={item.img3} />
@@ -61,12 +67,18 @@ function FirstSection({ colors, subHeader }) {
                       alt=""
                     />
                   </picture>
-                  <span className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center">
-                    {item.subtitle}
-                  </span>
-                  <span className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0">
-                    {item.description}
-                  </span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.subtitle,
+                    }}
+                    className="font-openSans font-bold text-2xl lg:mt-9 mt-12 text-center"
+                  ></span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.description,
+                    }}
+                    className="font-openSans lg:font-semibold lg:text-base text-xl leading-6 text-center mt-3 lg:mt-0"
+                  ></span>
                 </div>
               </div>
             );

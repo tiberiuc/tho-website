@@ -1,55 +1,52 @@
 import Button from "Atoms/Button";
 import Header from "Components/Header/Header";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function FAQs() {
+  const { t } = useTranslation("translation");
   const faqs = [
     {
       styles: "",
-      title: "CE ESTE HORECA ORDERS?",
-      description: `Pentru restaurante, HORECA ORDERS este o aplicație mobilă care le
-      permite bucătarilor și managerilor să comande și să discute cu
-      furnizorii. Pentru furnizori, HORECA ORDERS este o aplicație web și
-      mobilă care le permite să gestioneze relațiile cu clienții și
-      comenzile.`,
+      title: t("faq-page.section1"),
+      description: t("faq-page.section1-description"),
     },
     {
       styles: "bg-greyBg text-bluePrimary",
-      title: "PENTRU CINE ESTE HORECA ORDERS?",
-      description: `Oricine cumpără produse de la furnizori – bucătari, manageri de comenzi, proprietari, manageri de bar – și oricine vinde lucruri restaurantelor – furnizori și agenti de vânzări. Oricine din industrie este interesat să optimizeze modul în care comandă, să înlăture greșelile și să reducă risipa.`,
+      title: t("faq-page.section2"),
+      description: t("faq-page.section2-description"),
     },
     {
       styles: "",
-      title: "FURNIZORII MEI TREBUIE SĂ FIE PE HORECA ORDERS?",
-      description: `Nu. Puteți comanda de la toți furnizorii dvs. de pe HORECA ORDERS, indiferent dacă sunt sau nu înscriși pe platformă. Comenzile plasate în aplicație sunt convertite în formatul ales de furnizorul dvs. - e-mail, text 
-      și prin integrare directă.`,
+      title: t("faq-page.section3"),
+      description: t("faq-page.section3-description"),
     },
     {
       styles: "bg-greyBg text-bluePrimary",
-      title: "CUM MĂ POT ÎNSCRIE?",
-      description: `Inregistrați-vă aici și echipa noastră vă va contacta pentru a vă configura în mai puțin de 24 de ore!`,
-      button: "Înregistrare",
+      title: t("faq-page.section4"),
+      description: t("faq-page.section4-description"),
+      button: t("register"),
     },
     {
       styles: "",
-      title: "EXISTĂ PREȚURI ÎN APLICAȚIE?",
-      description: `Aplicația HORECA ORDERS nu afișează prețuri și nu compară prețurile între diferiți furnizori. HORECA ORDERS conectează bucătarii și managerii cu furnizorii lor existenți pentru a-și digitaliza procesul de comandă curent.`,
+      title: t("faq-page.section5"),
+      description: t("faq-page.section5-description"),
     },
   ];
   return (
     <>
       <Header
-        headingText={`ÎNTREBĂRI 
-        FRECVENTE`}
+        headingText={t("faq-page.title")}
         home
         noButtons={"justify-center lg:px-8 px-16 text-center ml-0"}
         logoYellow
         bgHeader="bg-bluePrimary"
       />
       <div className="flex flex-col items-center">
-        {faqs.map((question) => {
+        {faqs.map((question, key) => {
           return (
             <div
+              key={key}
               className={`flex justify-center w-full py-14 px-8 lg:px-0 ${question.styles}`}
             >
               <div className="max-w-xl flex flex-col items-center">
@@ -64,7 +61,7 @@ function FAQs() {
                   <Button
                     styles={"mt-4 text-black"}
                     text={question?.button}
-                    link="https://app.horecaorders.com/users/register"
+                    link="https://app.horecaorders.com/user/register"
                   />
                 )}
               </div>
