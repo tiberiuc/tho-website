@@ -29,7 +29,7 @@ import { Helmet } from "react-helmet";
 export const languages = [
   { code: "ro", name: "Romana" },
   { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
+  //  { code: "fr", name: "Français" },
 ];
 
 export const countriesLanguages = {
