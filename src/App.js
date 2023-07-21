@@ -21,10 +21,11 @@ import ErrorPage from "Components/ErrorPage";
 import PricingRestaurante from "Components/PricingRestaurante";
 import PricingFurnizori from "Components/PricingFurnizori";
 import { useTranslation } from "react-i18next";
-import Dropdown from "Atoms/Button/Dropdown";
+import { Icon } from "Atoms/Button/Dropdown";
 import i18n from "i18n";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import ModalLanguage from "Atoms/Button/Modal";
 
 export const languages = [
   { code: "ro", name: "Romana" },
@@ -33,15 +34,15 @@ export const languages = [
 ];
 
 export const countriesLanguages = {
-  "RO": "ro"
-}
+  RO: "ro",
+};
 
 function LanguageMiddleware({ children }) {
   const navigate = useNavigate();
 
   const handleLanguageRedirection = async () => {
-    const result = await axios.get("https://ipapi.co/json/")
-    const defaultLocale = countriesLanguages[result.data.country_code] || "en"
+    const result = await axios.get("https://ipapi.co/json/");
+    const defaultLocale = countriesLanguages[result.data.country_code] || "en";
     const currentPath = window.location.pathname;
     const currentLanguageCode = currentPath.split("/")[1];
 
@@ -69,6 +70,8 @@ function LanguageMiddleware({ children }) {
 function App() {
   const [navSize, setnavSize] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [openLanguageModal, setOpenLanguageModal] = useState(false);
+
   const { t } = useTranslation("translation");
   const location = useLocation();
   const lang = location.pathname.split("/")[1];
@@ -95,12 +98,18 @@ function App() {
 
   return (
     <LanguageMiddleware>
+      <ModalLanguage
+        show={openLanguageModal}
+        onClose={() => setOpenLanguageModal(false)}
+        onCloseMenu={() => setIsNavOpen(false)}
+      ></ModalLanguage>
       <Helmet htmlAttributes={{ lang: lang }} />
       <div id="parent" className={`relative`}>
         <nav
           id="navbar"
-          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${!navSize && "hidden"
-            }  ${isNavOpen && "overflowHidden"}`}
+          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${
+            !navSize && "hidden"
+          }  ${isNavOpen && "overflowHidden"}`}
         >
           <div className="flex justify-start lg:flex-1">
             <Link to={`/${lang}`}>
@@ -212,7 +221,17 @@ function App() {
               </ul>
               <div className="w-full bg-greyHairline h-px my-4" />
               <ul className="flex flex-col items-center justify-start">
-                <Dropdown />
+                <div
+                  onClick={() => setOpenLanguageModal(true)}
+                  className="flex justify-start items-center text-white"
+                >
+                  <div className="w-4 h-4 mr-2 ">
+                    <Icon />
+                  </div>
+                  <span className={`uppercase font-openSans`}>
+                    {i18n.language}
+                  </span>
+                </div>
               </ul>
             </div>
           </section>
