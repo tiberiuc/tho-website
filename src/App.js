@@ -30,6 +30,7 @@ import ModalLanguage from "Atoms/Button/Modal";
 export const languages = [
   { code: "ro", name: "Romana" },
   { code: "en", name: "English" },
+  { code: "tr", name: "Türk" },
   //  { code: "fr", name: "Français" },
 ];
 
@@ -107,9 +108,8 @@ function App() {
       <div id="parent" className={`relative`}>
         <nav
           id="navbar"
-          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${
-            !navSize && "hidden"
-          }  ${isNavOpen && "overflowHidden"}`}
+          className={`flex justify-between items-center py-2 px-4 bg-bluePrimary w-full fixed z-50 top-0 ${!navSize && "hidden"
+            }  ${isNavOpen && "overflowHidden"}`}
         >
           <div className="flex justify-start lg:flex-1">
             <Link to={`/${lang}`}>
