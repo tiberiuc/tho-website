@@ -30,7 +30,7 @@ import ModalLanguage from "Atoms/Button/Modal";
 export const languages = [
   { code: "ro", name: "Romana" },
   { code: "en", name: "English" },
-  { code: "tr", name: "Türk" },
+  { code: "tr", name: "Türkçe" },
   //  { code: "fr", name: "Français" },
 ];
 
