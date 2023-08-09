@@ -44,7 +44,7 @@
     "google-play-image": "/SVGs/google-play-ro.svg",
     "hc": "Horeca Siparişleri",
     "info": "Bilgi",
-    "orders-in-order": "Siparişlerinizi sıraya koyun",
+    "orders-in-order": "Uygulamayı indirin",
     "privacy-policy": "Gizlilik Politikası",
     "stories": {
       "all-stories": "Tüm geçmişler",
@@ -331,7 +331,7 @@
   },
   "restaurants-prices": "Restoran Fiyatları",
   "second-section": {
-    "put-orders": "SİPARİŞLERİNİZİ SIRAYLA ALIN"
+    "put-orders": "SİPARİŞLERİNİZİ VERİN VEYA ALIN"
   },
   "stories": "Hikayeler",
   "suppliers": "Tedarikçiler",
