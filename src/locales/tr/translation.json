@@ -22,6 +22,7 @@
     "name": "Horeca Siparişleri"
   },
   "faq": "SSS",
+  "log_in": "Giriş Yap",
   "faq-page": {
     "section1": "HORECA SİPARİŞLERİ NEDİR?",
     "section1-description": "Restoranlar için HORECA ORDERS, şeflerin ve yöneticilerin tedarikçilerle sipariş vermesine ve sohbet etmesine olanak tanıyan bir mobil uygulamadır. Tedarikçiler için HORECA ORDERS, müşteri ilişkilerini ve siparişlerini yönetmelerini sağlayan bir web ve mobil uygulamadır.",
@@ -67,7 +68,7 @@
       "info-subtitle1": "Daha fazla kağıt yok",
       "info-subtitle2": "Zamanınızı geri alın",
       "info-subtitle3": "Daha az israf edin, daha fazla tasarruf edin",
-      "paragraph": "HORECA ORDERS, sipariş almayı ve vermeyi daha verimli hale getirir</br>. Sezgisel uygulamamız ve web araçlarımız şefler, işletmeciler ve satış temsilcileri için işlemleri basitleştirir.",
+      "paragraph": "HORECA ORDERS, sipariş almayı ve vermeyi daha verimli hale getirir.</br> Sezgisel uygulamamız ve web araçlarımız şefler, işletmeciler ve satış temsilcileri için işlemleri basitleştirir.",
       "second-paragraph": "Zamandan tasarruf edin. Paradan tasarruf edin. Yiyecekten tasarruf edin.",
       "text-title": "DAHA VERİMLİ ÇALIŞMAYI SEÇİN"
     },
@@ -85,7 +86,7 @@
       "sub-title1": "Restoranlar için",
       "sub-title2": "Tedarikçiler için"
     },
-    "title": "KONAKLAMA ENDÜSTRİSİ <br /> İÇİN SİPARİŞ PLATFORMU"
+    "title": "İŞLETMELERİNİZ VE MÜŞTERİLERİNİZ <br /> İÇİN SİPARİŞ PLATFORMU"
   },
   "information-card": {
     "find-out-more": "Daha fazlasını bul"

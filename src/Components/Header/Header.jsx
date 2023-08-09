@@ -74,9 +74,8 @@ export default function Header({
           </div>
 
           <div
-            className={`${isNavOpen && "overflowHidden"} ${
-              isNavOpen ? "showMenuNav pt-4 flex" : "hideMenuNav"
-            }`}
+            className={`${isNavOpen && "overflowHidden"} ${isNavOpen ? "showMenuNav pt-4 flex" : "hideMenuNav"
+              }`}
           >
             <div
               className="absolute top-0 right-0 px-6 py-6"
@@ -98,29 +97,23 @@ export default function Header({
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
               <li
-                className={`my-4 ${
-                  restaurant && "lg:text-bluePrimary text-white"
-                } ${
-                  (home || supplier) && "text-white"
-                } uppercase font-openSans`}
+                className={`my-4 ${restaurant && "lg:text-bluePrimary text-white"
+                  } ${(home || supplier) && "text-white"
+                  } uppercase font-openSans`}
               >
                 <Link to={`/${lang}/restaurante`}>{t("restaurants")}</Link>
               </li>
               <li
-                className={`my-4 ${
-                  restaurant && "lg:text-bluePrimary text-white"
-                } ${
-                  (home || supplier) && "text-white"
-                } uppercase font-openSans`}
+                className={`my-4 ${restaurant && "lg:text-bluePrimary text-white"
+                  } ${(home || supplier) && "text-white"
+                  } uppercase font-openSans`}
               >
                 <Link to={`/${lang}/furnizori`}>{t("suppliers")}</Link>
               </li>
               <li
-                className={`my-4 hidden ${
-                  restaurant && "lg:text-bluePrimary text-white"
-                } ${
-                  (home || supplier) && "text-white"
-                } uppercase font-openSans`}
+                className={`my-4 hidden ${restaurant && "lg:text-bluePrimary text-white"
+                  } ${(home || supplier) && "text-white"
+                  } uppercase font-openSans`}
               >
                 <Link to={`/${lang}/povesti`}>{t("stories")}</Link>
               </li>
@@ -140,20 +133,16 @@ export default function Header({
             <div className="w-full bg-greyHairline h-px my-4" />
             <ul className="flex flex-col items-center justify-start ">
               <li
-                className={`my-4 ${
-                  restaurant && "lg:text-bluePrimary text-white"
-                } ${
-                  (home || supplier) && "text-white"
-                } uppercase font-openSans`}
+                className={`my-4 ${restaurant && "lg:text-bluePrimary text-white"
+                  } ${(home || supplier) && "text-white"
+                  } uppercase font-openSans`}
               >
                 <Link to={`/${lang}/despre`}>{t("about")}</Link>
               </li>
               <li
-                className={`my-4 ${
-                  restaurant && "lg:text-bluePrimary text-white"
-                } ${
-                  (home || supplier) && "text-white"
-                } uppercase font-openSans`}
+                className={`my-4 ${restaurant && "lg:text-bluePrimary text-white"
+                  } ${(home || supplier) && "text-white"
+                  } uppercase font-openSans`}
               >
                 <Link to={`/${lang}/intrebari-frecvente`}>{t("faq")}</Link>
               </li>
@@ -177,9 +166,8 @@ export default function Header({
             className={`text-base font-semibold
             ${restaurant && "text-bluePrimary"}
             ${home && "text-white"}
-            ${
-              supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
+            ${supplier && "text-black"
+              } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             {t("restaurants")}
           </NavLink>
@@ -189,9 +177,8 @@ export default function Header({
             className={`text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
-            ${
-              supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
+            ${supplier && "text-black"
+              } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             {t("suppliers")}
           </NavLink>
@@ -201,15 +188,14 @@ export default function Header({
             className={`hidden text-base font-semibold 
             ${restaurant && "text-bluePrimary"} 
             ${home && "text-white"} 
-            ${
-              supplier && "text-black"
-            } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
+            ${supplier && "text-black"
+              } font-openSans uppercase hover:underline hover:underline-offset-8 decoration-3 transition duration-300 delay-150`}
           >
             {t("stories")}
           </NavLink>
           <Button
             link="https://app.horecaorders.com/login"
-            text="Log in"
+            text={t("log_in")}
             styles={"text-black text-lg py-1"}
           />
           <Dropdown restaurant={restaurant} home={home} supplier={supplier} />
@@ -219,17 +205,15 @@ export default function Header({
         dangerouslySetInnerHTML={{
           __html: headingText,
         }}
-        className={`flex ${
-          noButtons
+        className={`flex ${noButtons
             ? `${noButtons}`
             : "justify-center lg:px-8 px-16 text-center"
-        }   
+          }   
         ${restaurant && "text-bluePrimary text-4.5xl"} 
         ${home && `text-white ${home}`} 
         ${supplier && "text-black text-4.5xl"} 
-        ${
-          noButtonsWithoutModificationText && "lg:pb-32 pb-14"
-        } font-extrabold font-openSans italic  sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10 text-ellipsis overflow-hidden`}
+        ${noButtonsWithoutModificationText && "lg:pb-32 pb-14"
+          } font-extrabold font-openSans italic  sm:text-5xl lg:text-7xl lg:mt-12 mt-8 lg:whitespace-pre-line leading-10 text-ellipsis overflow-hidden`}
       ></h1>
       {(!noButtons || noButtonsWithoutModificationText) && (
         <div className="flex flex-col lg:flex-row lg:flex justify-center items-center lg:space-x-4 lg:space-y-0 space-y-4 mt-8 lg:pb-32 pb-10">
@@ -265,9 +249,8 @@ export default function Header({
       )}
       {noButtons && (
         <div
-          className={`${
-            restaurant ? "text-black" : "text-white"
-          } font-bold font-openSans text-3xl lg:ml-52 2xl:ml-96 3xl:ml-100 lg:pb-32 pb-10 mt-10 lg:mx-0 mx-8`}
+          className={`${restaurant ? "text-black" : "text-white"
+            } font-bold font-openSans text-3xl lg:ml-52 2xl:ml-96 3xl:ml-100 lg:pb-32 pb-10 mt-10 lg:mx-0 mx-8`}
         >
           {lastModificationDate}
         </div>

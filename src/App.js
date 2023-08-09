@@ -196,7 +196,7 @@ function App() {
                 >
                   <Button
                     link="https://horecaorders.com/login"
-                    text="Log in"
+                    text={t("log_in")}
                     styles={"text-black text-xl py-1"}
                     fontSizeText={"text-base"}
                   />
@@ -259,7 +259,7 @@ function App() {
             </NavLink>
             <Button
               link="https://app.horecaorders.com/login"
-              text="Log in"
+              text={t("log_in")}
               styles={"text-black text-xl py-1"}
             />
           </div>
