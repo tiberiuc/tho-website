@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function PricingRestaurante() {
   const { t } = useTranslation("translation");
   const [checkbox, setCheckbox] = useState(false);
-  const priceOfPlan = checkbox ? 30 : 25;
+  const priceOfPlan = checkbox ? t("pop-restaurant-monthly") : t("pop-restaurant-yearly");
 
   const pricing = {
     tiers: [

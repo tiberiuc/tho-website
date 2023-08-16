@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function PricingFurnizori() {
   const { t } = useTranslation("translation");
-  const priceOfPlan = 8;
+  const priceOfPlan = t("pop-supplier");
   const pricing = {
     tiers: [
       {

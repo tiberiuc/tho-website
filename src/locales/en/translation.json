@@ -1,4 +1,7 @@
 {
+  "pop-restaurant-yearly": "25",
+  "pop-restaurant-monthly": "30",
+  "pop-supplier": "8",
   "restaurants": "Restaurants",
   "suppliers": "Suppliers",
   "stories": "Stories",
