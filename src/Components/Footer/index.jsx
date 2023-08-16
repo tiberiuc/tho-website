@@ -174,7 +174,7 @@ function Footer() {
           </p>
           <a
             className="text-xs text-white opacity-50 font-openSans"
-            href="mailto:denis@horecaorders.com"
+            href={"mailto:" + t("contact-email")}
           >
             {t("footer.contact")}
           </a>
