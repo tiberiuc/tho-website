@@ -66,11 +66,11 @@ function PricingRestaurante() {
           { feature: t("restaurants-price.pro-tier.feature3") },
           {
             feature: t("restaurants-price.pro-tier.feature4"),
-            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+            // commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
           },
           {
             feature: t("restaurants-price.pro-tier.feature5"),
-            commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
+            // commingSoon: t("restaurants-price.pro-tier.cooming-soon"),
           },
           {
             feature: t("restaurants-price.pro-tier.feature6"),

@@ -64,7 +64,7 @@ function PricingFurnizori() {
           },
           {
             feature: t("suppliers-price.pro-tier.feature5"),
-            commingSoon: t("suppliers-price.pro-tier.cooming-soon"),
+            // commingSoon: t("suppliers-price.pro-tier.cooming-soon"),
             subFeature: t("suppliers-price.pro-tier.sub-feature5"),
           },
           {
