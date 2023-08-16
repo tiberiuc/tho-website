@@ -16,7 +16,7 @@ function Footer() {
     ],
     horecaOrders: [
       { name: t("about"), href: `/${lang}/despre` },
-      { name: t("contact-us"), href: "mailto:denis@horecaorders.com" },
+      { name: t("contact-us"), href: "mailto:" + t("contact-email") },
       { name: t("restaurants-prices"), href: `/${lang}/preturi-restaurante` },
       { name: t("suppliers-prices"), href: `/${lang}/preturi-furnizori` },
     ],
