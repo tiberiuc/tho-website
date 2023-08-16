@@ -1,25 +1,26 @@
 {
   "about": "Hakkında",
   "about-page": {
-    "section1": "KONAKLAMA SEKTÖRÜNDEKİ İŞLETMELER İÇİN DAHA FAZLA BAŞARI",
-    "section1-description": "Misafirperverlik işiniz topluluğunuzun ruhudur. Daha da başarılı olmanıza yardımcı olmak için buradayız. Sayılarınıza, vizyonunuza ve topluluğunuza hizmet edecek şekilde büyüyebilmeniz için küresel franchise'larla (bir tane gibi davranmadan) rekabet etmek için ihtiyaç duyduğunuz teknolojiyi geliştiriyoruz.",
-    "section2": "PERSONEL GÜLÜMSERSE, MÜŞTERİLER GÜLÜMSER VE BU ŞEKİLDE DAHA İYİ BİR DÜNYADA YAŞAYACAĞIZ",
-    "section2-description1": "Müşteriler bir restorana girip doğru yemeği ve güler yüzlü, mutlu personeli bulmak istiyor. Masadaki yemek için tüm malzemeleri almak için perde arkasında kurulan kabusu bilmek istemiyorlar.",
-    "section2-description2": "Restoranların malzemelerini sipariş etme şeklinin kusurlu bir süreç olduğunu gördük, hem restoran hem de tedarikçi için.",
-    "section2-description3": "Bu nedenle, her iki taraf için de bu süreci iyileştirecek bir yazılım oluşturmaya ve tüm tedarik zincirini oradan dijitalleştirmeye karar verdik.",
+    "section1": "İŞLETMENİZ İÇİN DAHA FAZLA BAŞARI",
+    "section1-description": "Misafirperverlik işiniz topluluğunuzun ruhudur. Daha da başarılı olmanıza yardımcı olmak için buradayız. Sayılarınıza, vizyonunuza ve topluluğunuza hizmet edecek şekilde büyüyebilmeniz için küresel oyuncularla (bir tane gibi davranmadan) rekabette ihtiyaç duyduğunuz teknolojiyi geliştiriyoruz.",
+    "section2": "ÇALIŞAN GÜLÜMSERSE MÜŞTERİ DE GÜLÜMSER VE BÖYLECE DAHA İYİ BİR ATMOSFER YARATIRIZ",
+    "section2-description1": "Müşteriler bir restorana girip doğru yemeği ve güler yüzlü personeli bulmak istiyor. Masaya gelen yemeğin malzemelerini tedarik edebilmek için perde arkasında yaşanan kabusu bilmek istemiyorlar.",
+    "section2-description2": "İşletmelerin malzeme siparişi süreçlerinin kusurlu olduğunu gördük, hem restoranlar hem de tedarikçiler için.",
+    "section2-description3": "Bu nedenle, her iki taraf için de bu süreci iyileştirecek bir yazılım oluşturmaya ve tüm tedarik zincirini dijitalleştirmeye karar verdik.",
     "section2-description4": "HORECA ORDERS, sadece bir işletme için bir fikir değil, bir sorunun çözümüdür.",
-    "section3": "GIDA SİSTEMİ VERİMLİ OLABİLİR</br> VE MİLYONLARCA İNSANIN HAYATI</br></br> İYİLEŞTİRİLEBİLİR",
+    "section3": "GIDA SİSTEMİ DAHA VERİMLİ OLABİLİR<br/>VE MİLYONLARCA İNSANIN HAYATI İYİLEŞTİRİLEBİLİR",
     "section4": "NEDEN </br>“HORECA </br>ORDERS”?",
-    "section4-description": "HORECA üç kelimenin kısaltmasıdır: Otel, Restoran ve Catering. HORECA işletmeleri, sabahları uyandığımız ve sihirlerini ve gülümsemelerini korumak için çabaladığımız işletmelerdir.",
-    "title": "OTELCİLİK SEKTÖRÜNDEKİ İNSANLARI VE İŞLETMELERİ TEKNOLOJİ YOLUYLA DESTEKLEMEK"
+    "section4-description": "HORECA üç kelimenin kısaltmasıdır: Otel, Restoran ve Catering. HORECA işletmeleri, sabahları uyandığımız ve gülümsemelerini korumak için çabaladığımız işletmelerdir.",
+    "title": "İŞLETMELERİ VE ÇALIŞANLARINI TEKNOLOJİ YARDIMIYLA DESTEKLİYORUZ"
   },
   "contact-us": "Bize ulaşın",
+  "contact-email": "alper@horecaorders.com",
   "error-page": {
     "error": "Sayfa bulunamadı.",
     "error-description": "Üzgünüz, aradığınız sayfayı bulamadık.",
     "error-number": "404",
     "go-home": "Ana Sayfa",
-    "name": "Horeca Siparişleri"
+    "name": "HORECA ORDERS"
   },
   "faq": "SSS",
   "log_in": "Giriş Yap",
@@ -42,7 +43,7 @@
     "copyright-name": "HORECA ORDERS SRL",
     "footer": "Altbilgi",
     "google-play-image": "/SVGs/google-play-ro.svg",
-    "hc": "Horeca Siparişleri",
+    "hc": "HORECA ORDERS",
     "info": "Bilgi",
     "orders-in-order": "Uygulamayı indirin",
     "privacy-policy": "Gizlilik Politikası",
@@ -116,7 +117,7 @@
     "consent": "• Bunu yapmak için izninizi aldığımızda. (Onayınızı istediğiniz zaman geri çekebilirsiniz.)",
     "contact-info": "• Ad, soyadı, işveren, unvan, hesap durumu, e-posta adresi, posta adresi, telefon numarası ve iletişim tercihleri dahil olmak üzere İletişim <strong>Bilgileri</strong>.",
     "contact-us": "Bir kişi bizimle iletişime geçmeyi seçerse, talebi yerine getirmek veya soruları yanıtlamak için ek bilgilere ihtiyacımız olabilir. Talep/talep ve/veya talep ettiğimiz kişisel bilgilerin kapsamı bu Gizlilik Politikasının kapsamına girmiyorsa ek gizlilik bilgileri sağlayabiliriz. Bu durumda, ek gizlilik açıklamaları, o sırada sağlanan bilgileri nasıl işleyebileceğimizi yönetecektir.",
-    "contact-us-for-questions": "Bu Gizlilik Politikası veya gizlilikle ilgili diğer konularla ilgili sorularınız veya talepleriniz için, please send an email to ",
+    "contact-us-for-questions": "Bu Gizlilik Politikası veya gizlilikle ilgili diğer konularla ilgili sorularınız veya talepleriniz için, lütfen şu adrese e-posta gönderin",
     "contact-us-privacy": "<strong>Bize Ulaşın</strong>",
     "contests": "• Çekilişlerin, yarışmaların, ortak tanıtım faaliyetlerinin veya ortak markalı hizmetlerin yönetimi;",
     "copy-info": "• Bu bilgileri nasıl işlediğimize ilişkin ayrıntılar da dahil olmak üzere, hakkınızda tuttuğumuz bilgilere erişim ve bu bilgilerin bir kopyasını talep etme hakkı.",
@@ -280,10 +281,10 @@
   },
   "restaurants-price": {
     "annual-payment": "Yıllık Ödeme",
-    "description1": "Verilen siparişler",
-    "description2": "daha iyi",
+    "description1": "Daha iyi",
+    "description2": "sipariş verme deneyimi",
     "description3": "Tek bir uygulamada sipariş verin ve tüm tedarikçilerle sohbet edin.",
-    "description4": "Siparişler tedarikçi tarafından istenen formata dönüştürülür - e-posta, SMS veya tedarikçinin ERP'lerine doğrudan entegrasyon.",
+    "description4": "Siparişler tedarikçilerinize istenen formatta iletilir. E-posta, SMS veya ERP sistemlerine doğrudan entegrasyon.",
     "free-tier": {
       "description": "Plan şunları içerir:",
       "feature1": "İşe Başlatma",
@@ -296,7 +297,7 @@
       "feature8": "Ödeme yöntemi",
       "feature9": "7/24 destek",
       "frequency": "",
-      "frequency-tips": "sınırlamaları olan",
+      "frequency-tips": "Sınırlamaları olan",
       "price": "Ücretsiz",
       "sub-feature1": "Ürün listelerinin yapılması, tedarikçiler ve satış acenteleri ile bağlantı kurma",
       "sub-feature5": "Verilen siparişleri, durumlarını ve tedarikçilerin yorumlarını görün",
@@ -309,7 +310,7 @@
     "pricing-hand3": "/images/pricing-hand@3x.png",
     "pro-tier": {
       "cooming-soon": "(Çok Yakında)",
-      "description": "Başlangıç+ planındaki her şey:",
+      "description": "Başlangıç planındaki her şey ve daha fazlası:",
       "feature1": "Bildirimler",
       "feature2": "Ürün listeleri",
       "feature3": "Minimum sipariş/Minimum miktar",
@@ -320,14 +321,14 @@
       "frequency": "₺ / ay",
       "frequency-tips1": "Aylık ödeme",
       "frequency-tips2": "Yıllık Ödeme",
-      "sub-feature1": "Sipariş onayı üzerine.</br> Ertesi gün teslimat ile sipariş vermek için son tarihte",
+      "sub-feature1": "Sipariş onayı üzerine.</br> Ertesi gün teslimat ile sipariş vermek için son sipariş saatinde",
       "sub-feature2": "Aynı listede birden fazla tedarikçi. Birden fazla tedarikçiye tek bir sipariş gönderin.",
       "title": "Profesyonel",
       "try-free": "Ücretsiz deneyin!"
     },
     "title": "RESTORAN FİYATLARI",
-    "try-now1": "Hemen başlayın",
-    "try-now2": "ücretsiz planınızla."
+    "try-now1": "Ücretsiz planınızla",
+    "try-now2": "hemen başlayın."
   },
   "restaurants-prices": "Restoran Fiyatları",
   "second-section": {
@@ -337,19 +338,19 @@
   "suppliers": "Tedarikçiler",
   "suppliers-page": {
     "first-section": {
-      "info-description1": "HORECA ORDERS, siparişlerin manuel girişinden sonsuza kadar vazgeçmek için ERP ile entegre olur. Zamandan tasarruf edin. Maliyetleri düşürün.",
+      "info-description1": "HORECA ORDERS, siparişlerin elle işlenmesini ortadan kaldırmak için ERP sisteminiz ile entegre olur. Zamandan tasarruf edin. Maliyetleri düşürün.",
       "info-description2": "Ürün kodları ve teslimat tarihleri ile müşterilerden sipariş alın. Varsayımlara elveda diyin. Teslimat doğruluğunu %85 artırın",
-      "info-description3": "HORECA ORDERS uygulamasında doğrudan müşterilerinize teklif göndererek yeni bir pazarlama türünün kilidini açın. HORECA ORDERS aracılığıyla müşterilere tanıtılan ürünlerin% 20-30'u satın alınmaktadır.",
+      "info-description3": "HORECA ORDERS uygulamasında doğrudan müşterilerinize teklif göndererek yeni bir pazarlama türünün kilidini açın. HORECA ORDERS aracılığıyla müşterilere tanıtılan ürünlerin % 20-30'u satılmaktadır.",
       "info-subtitle1": "ERP entegrasyonu",
       "info-subtitle2": "Yanlış sipariş yok",
       "info-subtitle3": "Daha fazla satış yapın",
-      "paragraph": "Siparişleri yönetmek, kataloğu düzenlemek veya ürünleri tanıtmak için HORECA ORDERS platformunu kullanın - hepsi tek bir yerde. Ekibinizin zamandan tasarruf etmesini, hataları azaltmasını ve müşteri ilişkilerini geliştirmesini sağlayın.",
-      "text-title": "ORTAKLARINIZLA DAHA DOĞRU İLETİŞİM"
+      "paragraph": "Siparişlerinizi yönetmek, kataloglarınızı düzenlemek veya ürünlerinizi tanıtmak için HORECA ORDERS platformunu kullanın. Hepsi tek bir yerde. Ekibinizin zamandan tasarruf etmesini, hataları azaltmasını ve müşteri ilişkilerini geliştirmesini sağlayın.",
+      "text-title": "MÜŞTERİLERİNİZLE DAHA DOĞRU İLETİŞİ?M"
     },
     "info-cards": {
-      "description1": "Gece geç saatlerde karalamaları ve sesli mesajları deşifre etmek eğlenceli değil. HORECA ORDERS ile siparişlerin müşteri numaraları, ürün kimlikleri ve teslimat tarihleri vardır. Ek olarak, ERP\"nizle entegre ediyoruz. İyi yapılmış bir iş.",
-      "description2": "Müşterilerinizin hangi günlerde teslimat talep edebileceğini seçin. Ertesi gün teslimat için bir kesme süresi ekleyin. Bunu tüm müşteriler için veya sadece bir tanesi için değiştirin.",
-      "description3": "Kataloğunuzu güncel tutmak bir şeydir, ancak müşterilerinizi bu konuda bilgilendirmek başka bir şeydir. Çevrimiçi kataloğunuzu Horeca Orders ile yönetmek, ürün bilgilerinin (birimler, ürün kimlikleri, kullanılabilirlik) her zaman güncel ve müşteriler tarafından görülebileceği anlamına gelir.",
+      "description1": "Gece geç saatlere yazıları ve sesli mesajları deşifre etmek hiç eğlenceli değil. HORECA ORDERS ile siparişlerin müşteri numaraları, ürün kimlikleri ve teslimat tarihleri vardır. Ek olarak, ERP sisteminizle entegre ediyoruz. Akıllıca!",
+      "description2": "Müşterilerinizin hangi günlerde teslimat talep edebileceğini seçin. Ertesi gün teslimat için son sipariş saati belirleyin. Bunu tüm müşteriler için veya sadece bir tanesi için değiştirin.",
+      "description3": "Kataloğunuzu güncel tutmak iyi bir şeydir, ancak müşterilerinizi bu konuda bilgilendirmek başka bir şeydir. Çevrimiçi kataloğunuzu Horeca Orders ile yönetmek, ürün bilgilerinin (birimler, ürün kimlikleri, kullanılabilirlik) her zaman güncel kalması ve müşteriler tarafından görülebileceği anlamına gelir.",
       "description4": "Aynı anda birden fazla müşteriye mesaj göndererek özel teklifleri ve mevsimlik ürünleri tanıtın. Müşteriler mesajı Horeca Orders uygulamasında alırlar ve yalnızca üç basit adımda sipariş verebilirler.",
       "description5": "Müşterilerinizin hangi günlerde teslimat talep edebileceğini seçin. Ertesi gün teslimat için bir son teslim zamanı ekleyin. Bunu tüm müşteriler için veya sadece bir tanesi için değiştirin.",
       "img-catalog1": "/images/ho-catalog.png",
@@ -367,17 +368,17 @@
       "img-orders1": "/images/comenzi.png",
       "img-orders2": "/images/comenzi@2x.png",
       "img-orders3": "/images/comenzi@3x.png",
-      "sub-title1": "Otopilotta siparişler",
-      "sub-title2": "Son sipariş için teslimat günlerini ve son teslim süresini ayarlayın",
+      "sub-title1": "Siparişler Otopilotta",
+      "sub-title2": "Siparişler için teslimat günlerini ve son sipariş saatini ayarlayın",
       "sub-title3": "Kataloğunuzu tanıtın",
       "sub-title4": "Eşzamanlı mesajlar göndererek satışlarınızı artırın",
       "sub-title5": "Müşterilere en iyi sipariş deneyimini yaşatın"
     },
     "less-stress": " <br />DAHA AZ STRES <br /> VE DAHA AZ BAŞ AĞRISINA HAZIR MISINIZ?",
-    "order-placed": "Siparişleri çok daha iyi verin",
+    "order-placed": "DAHA İYİ SİPARİŞ ALMA DENEYİMİ",
     "slider": {
       "city": ", Bükreş",
-      "paragraphDescription1": "Horeca Orders, tüm siparişleri tek bir şemsiye altında toplamama izin veriyor, böylece konuşma çok daha iyi organize ediliyor. Müşteriye kendi kataloğunu verebilirim, bu yüzden onlara belirli bir miktar sipariş etmeleri gerektiğini söylemek yerine, doğrudan görüyorlar ve bir tık uzakta, ürünlerin adlarını biliyorlar, onlar için çok açık. Horeca Siparişleri hakkında beni hoş bir şekilde şaşırtan şey, işimi ne kadar iyi organize edebileceğidir!",
+      "paragraphDescription1": "Horeca Orders, tüm siparişleri tek bir yerde toplamama izin veriyor, böylece çok daha organize çalışabiliyorum. Müşterilerime kendi ürün kataloglarını verebiliyorum, hangi ürünü ne kadar sipariş edebildiklerini doğrudan görebiliyorlar ve yalnızca bir tık uzaklarında! Horeca Orders'ı kullanmaya başladıktan sonra işlerimin ne kadar düzene girdiğini görünce çok şaşırdım!",
       "personDescription1": "Tolga Cingiz - Batiatus Express, HORECA Tedarikçisi"
     },
     "title": "SİPARİŞLERİNİZİ DAHA KOLAY YÖNETİN</br>",
@@ -386,8 +387,8 @@
   "suppliers-price": {
     "description1": "Alınan siparişler",
     "description2": "Daha Etkin",
-    "description3": "Siparişleri yönetmek, kataloğu düzenlemek veya ürünleri tanıtmak için HORECA ORDERS platformunu kullanın - hepsi tek bir yerde.",
-    "description4": "Ekibinizin zamandan tasarruf etmesini, hataları azaltmasını ve müşteri ilişkilerini geliştirmesini sağlayın.",
+    "description3": "Siparişlerinizi yönetmek, kataloglarınızı düzenlemek veya ürünlerinizi tanıtmak için HORECA ORDERS platformunu kullanın.",
+    "description4": "Ekibinizin zamandan tasarruf etmesini, hataları azaltmasını ve müşteri ilişkilerini geliştirmesini sağlayın. Hepsi tek bir yerde!",
     "free-tier": {
       "description": "Plan şunları içerir:",
       "feature1": "İşe Başlatma",
@@ -397,7 +398,7 @@
       "feature5": "Bildirimler",
       "feature6": "7/24 destek",
       "frequency": "",
-      "frequency-tips": "sınırlamaları olan",
+      "frequency-tips": "Sınırlamaları olan",
       "price": "Ücretsiz",
       "sub-feature1": "Kullanım ve işlevselliğin avantajları",
       "sub-feature2": "Siparişler müşteri numarasını, ürün kimliklerini, ölçü birimini, teslim tarihini ve ödeme yöntemini içerir",
@@ -410,7 +411,7 @@
     "most-popular": "En popüler",
     "pro-tier": {
       "cooming-soon": "(Çok Yakında)",
-      "description": "Başlangıç+ planındaki her şey:",
+      "description": "Başlangıç planındaki her şey ve daha fazlası:",
       "feature1": "İşe Başlatma",
       "feature2": "Katalog",
       "feature3": "Minimum sipariş/Minimum miktar",
@@ -419,7 +420,7 @@
       "feature6": "Promosyonlar",
       "feature7": "ERP entegrasyonu",
       "frequency": "₺ / ay",
-      "frequency-tips": "restoran başına",
+      "frequency-tips": "Restoran başına",
       "sub-feature1": "Ekip belgelerine ve videolarına erişim",
       "sub-feature2": "Ürünleri, fiyat kimliğini, ölçü birimini, stokta veya stokta bulunmamayı yükleyin",
       "sub-feature4": "Müşterilerinizin hangi günlerde teslimat talep edebileceğini seçin. Ertesi gün teslimat için son tarih ekleyin",
@@ -428,8 +429,8 @@
       "try-free": "Ücretsiz deneyin!"
     },
     "title": "Tedarikçiler için",
-    "try-now1": "Şimdi Başla",
-    "try-now2": "ücretsiz planınızla."
+    "try-now1": "Ücretsiz planınızla",
+    "try-now2": "şimdi başlayın."
   },
   "suppliers-prices": "Tedarikçi Fiyatları",
   "terms-and-conditions": {

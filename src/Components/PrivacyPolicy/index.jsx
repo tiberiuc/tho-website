@@ -753,8 +753,8 @@ function PrivacyPolicy() {
         </p>
         <p class="p1">
           {t("privacy-policy.see-personal-info")}
-          <a href="mailto:contact@horecaorders.com">
-            <span class="s1">contact@horecaorders.com</span>
+          <a href={"mailto:" + t("contact-email")}>
+            <span class="s1">{t("contact-email")}</span>
           </a>
           <span class="Apple-converted-space">&nbsp;</span>
         </p>
@@ -808,8 +808,8 @@ function PrivacyPolicy() {
         </p>
         <p class="p1">
           {t("privacy-policy.contact-us-for-questions")}
-          <a href="mailto:contact@horecaorders.com">
-            <span class="s1">contact@horecaorders.com</span>
+          <a href={"mailto:" + t("contact-email")}>
+            <span class="s1">{t("contact-email")}</span>
           </a>
           <span class="Apple-converted-space">&nbsp;</span>
         </p>
@@ -841,8 +841,8 @@ function PrivacyPolicy() {
             }}
             class="p1"
           ></p>
-          <a href="mailto:contact@horecaorders.com">
-            <span class="s1">contact@horecaorders.com</span>
+          <a href={"mailto:" + t("contact-email")}>
+            <span class="s1">{t("contact-email")}</span>
           </a>
         </div>
         <p
@@ -869,7 +869,7 @@ function PrivacyPolicy() {
           }}
           class="p1"
         ></p>
-      </div>
+      </div >
     </>
   );
 }
