@@ -4,6 +4,7 @@ import { Cookies } from "react-cookie";
 
 import roTranslation from "./locales/ro/translation.json";
 import enTranslation from "./locales/en/translation.json";
+import esTranslation from "./locales/es/translation.json";
 import frTranslation from "./locales/fr/translation.json";
 import trTranslation from "./locales/tr/translation.json";
 
@@ -18,6 +19,9 @@ i18n.use(initReactI18next).init({
     en: {
       translation: enTranslation,
     },
+    es: {
+      translation: esTranslation,
+    },
     tr: {
       translation: trTranslation,
     },
@@ -31,7 +35,7 @@ i18n.use(initReactI18next).init({
   },
 });
 
-i18n.on("languageChanged", function (lng) {
+i18n.on("languageChanged", function(lng) {
   cookies.set("i18nextLng", lng, { path: "/" });
 });
 
