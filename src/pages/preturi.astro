@@ -1,0 +1,264 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTAForm from '../components/CTAForm.astro';
+---
+
+<Base
+  title="Prețuri HORECA ORDERS — Plan Starter gratuit, Pro de la 45€/lună"
+  description="HORECA ORDERS este gratuit cu planul Starter. Planul Pro oferă funcții avansate pentru restaurante și furnizori. Începe acum gratuit."
+  canonicalPath="/preturi"
+>
+  <Header slot="header" current="preturi" />
+
+  <!-- Hero -->
+  <section class="bg-white py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold italic text-gray-900">PREȚURI</h1>
+      <p class="mt-4 text-lg text-gray-600">
+        Începe acum planul tău gratuit. Fără card. Fără obligații.
+      </p>
+    </div>
+  </section>
+
+  <!-- Restaurant Pricing -->
+  <section class="py-16 px-4 bg-grey-bg">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-brand text-center mb-4">Prețuri Restaurante</h2>
+      <p class="text-center text-gray-600 mb-10">
+        Plasează comenzile și discută cu toți furnizorii într-o singură aplicație.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Starter -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col">
+          <h3 class="text-3xl font-bold">Starter</h3>
+          <div class="mt-2">
+            <span class="text-2xl font-bold">Gratis</span>
+            <span class="text-sm text-gray-500 ml-2">cu limitări</span>
+          </div>
+          <p class="mt-4 font-bold text-sm">Planul include:</p>
+          <ul class="mt-4 space-y-3 text-sm flex-1">
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Onboarding</span>
+                <p class="text-gray-500">Realizarea listelor de produse, conectarea cu furnizorii</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Trimiți comenzi către furnizori</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Comentarii</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Adaugă/Șterge Furnizori și Produse</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Istoricul de comenzi</span>
+                <p class="text-gray-500">Comenzile plasate, statusul lor și comentarii</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Repetă comanda</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Data livrării &amp; Metoda de plată</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Suport 24/7</span>
+            </li>
+          </ul>
+          <a
+            href="https://app.horecaorders.com/user/register"
+            class="mt-6 bg-accent text-gray-900 font-bold py-3 rounded-full text-center hover:bg-yellow-400 transition"
+          >
+            Înregistrare
+          </a>
+        </div>
+
+        <!-- Pro -->
+        <div class="bg-accent-light border-2 border-accent rounded-2xl p-8 flex flex-col relative">
+          <h3 class="text-3xl font-bold">Pro</h3>
+          <div class="mt-2">
+            <span class="text-2xl font-bold">45€</span>
+            <span class="text-sm text-gray-600 ml-1">/ lună (plata anuală)</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">sau 50€ / lună (plata lunară)</p>
+          <p class="mt-4 font-bold text-sm">Tot ce e în Starter plus:</p>
+          <ul class="mt-4 space-y-3 text-sm flex-1">
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Notificări</span>
+                <p class="text-gray-500">La confirmarea comenzii și ora limită pentru comenzi</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Liste de produse avansate</span>
+                <p class="text-gray-500">Mai mulți furnizori în aceeași listă</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Comandă minimă / Cantitate minimă</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Multiutilizatori</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Multilocații</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Statistici <span class="text-gray-400 font-normal">(în curând)</span></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Verificarea comenzilor <span class="text-gray-400 font-normal">(în curând)</span></span>
+            </li>
+          </ul>
+          <a
+            href="https://app.horecaorders.com/user/register"
+            class="mt-6 bg-brand text-white font-bold py-3 rounded-full text-center hover:bg-brand-dark transition"
+          >
+            Încearcă gratuit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supplier Pricing -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-brand text-center mb-4">Prețuri Furnizori</h2>
+      <p class="text-center text-gray-600 mb-10">
+        Gestionați comenzile, edita catalogul sau promovați produse — totul într-un singur loc.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Starter -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col">
+          <h3 class="text-3xl font-bold">Starter</h3>
+          <div class="mt-2">
+            <span class="text-2xl font-bold">Gratis</span>
+            <span class="text-sm text-gray-500 ml-2">cu limitări</span>
+          </div>
+          <p class="mt-4 font-bold text-sm">Planul include:</p>
+          <ul class="mt-4 space-y-3 text-sm flex-1">
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Onboarding</span>
+                <p class="text-gray-500">Avantajele utilizării și funcționalitatea</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Primiți comenzi prin App / SMS / Email</span>
+                <p class="text-gray-500">Client, produse, unitate de măsură, data de livrare</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Schimbarea statusului comenzilor</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Istoricul de comenzi</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Notificări</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Suport 24/7</span>
+            </li>
+          </ul>
+          <a
+            href="https://app.horecaorders.com/user/register"
+            class="mt-6 bg-accent text-gray-900 font-bold py-3 rounded-full text-center hover:bg-yellow-400 transition"
+          >
+            Înregistrare
+          </a>
+        </div>
+
+        <!-- Pro -->
+        <div class="bg-accent-light border-2 border-accent rounded-2xl p-8 flex flex-col">
+          <h3 class="text-3xl font-bold">Pro</h3>
+          <div class="mt-2">
+            <span class="text-2xl font-bold">8€</span>
+            <span class="text-sm text-gray-600 ml-1">/ lună per restaurant</span>
+          </div>
+          <p class="mt-4 font-bold text-sm">Tot ce e în Starter plus:</p>
+          <ul class="mt-4 space-y-3 text-sm flex-1">
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Onboarding+</span>
+                <p class="text-gray-500">Documentație și video-uri pentru echipă</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Catalog</span>
+                <p class="text-gray-500">Produse, prețuri, stoc, disponibilitate</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Comandă minimă / Cantitate minimă</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <div>
+                <span class="font-semibold">Zile de livrare și ora limită</span>
+                <p class="text-gray-500">Setați zilele de livrare și ora limită</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Multiutilizatori <span class="text-gray-400 font-normal">(în curând)</span></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Promoții</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand font-bold mt-0.5">&#10003;</span>
+              <span class="font-semibold">Integrare ERP</span>
+            </li>
+          </ul>
+          <a
+            href="https://app.horecaorders.com/user/register"
+            class="mt-6 bg-brand text-white font-bold py-3 rounded-full text-center hover:bg-brand-dark transition"
+          >
+            Încearcă gratuit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTAForm heading="Ai întrebări despre prețuri?" />
+
+  <Footer slot="footer" />
+</Base>

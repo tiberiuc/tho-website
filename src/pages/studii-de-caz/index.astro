@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const studies = (await getCollection('case-studies'))
+  .filter((s) => !s.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('ro-RO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<Base title="Studii de Caz | HORECA ORDERS" description="Descoperă cum restaurante și furnizori din România au transformat procesul de comenzi cu HORECA ORDERS." canonicalPath="/studii-de-caz">
+  <Header slot="header" current="studii-de-caz" />
+
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Studii de Caz</h1>
+      <p class="text-lg opacity-80">Povești reale de la clienții care au transformat procesul de comenzi</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      {studies.length === 0 && (
+        <p class="text-center text-gray-500 text-lg">Niciun studiu de caz încă. Reveniti curând!</p>
+      )}
+      <div class="grid gap-8 md:grid-cols-2">
+        {studies.map((study) => (
+          <a href={`/studii-de-caz/${study.id}`} class="group block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden">
+            {study.data.ogImage && (
+              <img src={study.data.ogImage} alt={study.data.title} class="w-full h-48 object-cover" />
+            )}
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                <span class="bg-brand/10 text-brand px-2 py-0.5 rounded-full font-semibold">{study.data.industry}</span>
+                <time datetime={study.data.date.toISOString()}>{formatDate(study.data.date)}</time>
+              </div>
+              <h2 class="text-lg font-bold text-gray-900 group-hover:text-brand transition mb-2">
+                {study.data.title}
+              </h2>
+              <p class="text-sm text-gray-600 line-clamp-3">{study.data.description}</p>
+              <p class="text-sm text-brand font-semibold mt-4">Client: {study.data.client}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Base>

@@ -1,0 +1,106 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts
+    .filter((post) => !post.data.draft)
+    .map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('ro-RO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+const canonicalURL = `/blog/${post.id}`;
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.date.toISOString(),
+  "author": {
+    "@type": "Organization",
+    "name": post.data.author,
+    "url": "https://horecaorders.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HORECA ORDERS SRL",
+    "url": "https://horecaorders.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://horecaorders.com/SVGs/horeca-orders-logo.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://horecaorders.com${canonicalURL}`
+  },
+  ...(post.data.ogImage ? { "image": `https://horecaorders.com${post.data.ogImage}` } : {}),
+};
+---
+
+<Base title={`${post.data.title} | HORECA ORDERS`} description={post.data.description} canonicalPath={canonicalURL}>
+  <Fragment slot="header">
+    <Header current="blog" />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </Fragment>
+
+  <article class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="mb-8">
+        <a href="/blog" class="text-brand text-sm font-semibold hover:underline">&larr; Înapoi la blog</a>
+      </div>
+
+      <header class="mb-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{post.data.title}</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500">
+          <span>{post.data.author}</span>
+          <span>·</span>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          <span>·</span>
+          <span>{readingTime(post.body ?? '')} min citire</span>
+        </div>
+        {post.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mt-4">
+            {post.data.tags.map((tag: string) => (
+              <span class="text-xs bg-grey-bg text-gray-600 px-2 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-brand prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl">
+        <Content />
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <div class="bg-grey-bg rounded-xl p-8 text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Gata să digitalizezi comenzile?</h3>
+          <p class="text-gray-600 mb-6">Începe gratuit cu HORECA ORDERS și vezi diferența.</p>
+          <a href="/preturi" class="inline-block bg-accent text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">
+            Vezi prețurile
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</Base>

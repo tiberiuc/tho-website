@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTAForm from '../components/CTAForm.astro';
+---
+
+<Base
+  title="HORECA ORDERS pentru Restaurante — Comandă mai rapid de la toți furnizorii"
+  description="Plasează comenzi către toți furnizorii tăi dintr-o singură aplicație. Gratis pentru restaurante. Economisești timp, elimini greșelile, ajungi acasă mai devreme."
+  canonicalPath="/pentru-restaurante"
+>
+  <Header slot="header" current="restaurante" />
+
+  <!-- Hero -->
+  <section class="bg-grey-bg py-16 md:py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold italic text-brand leading-tight">
+        PLASEAZĂ COMENZILE<br />CĂTRE TOȚI FURNIZORII TĂI
+      </h1>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://app.horecaorders.com/user/register"
+          class="bg-accent text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition"
+        >
+          Înregistrare
+        </a>
+        <a
+          href="https://app.horecaorders.com/login"
+          class="bg-brand text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-dark transition"
+        >
+          Autentificare
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best tool in kitchen -->
+  <section class="bg-brand text-white py-16 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold mb-4">CEA MAI BUNĂ USTENSILĂ DIN BUCĂTĂRIA TA</h2>
+        <p class="text-lg leading-relaxed text-white/90">
+          Folosește gratuit HORECA ORDERS să comunici și să plasezi comenzile către furnizorii tăi în secunde.
+          Gata cu erorile de livrare, așteptările la telefon noaptea târziu sau cu foile de comandă nesfârșite.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/ustensila-bucatarie.png"
+          srcset="/images/ustensila-bucatarie.png 1x, /images/ustensila-bucatarie@2x.png 2x"
+          alt="HORECA ORDERS pe telefon în bucătărie"
+          class="w-full rounded-lg"
+          width="600"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+      <div>
+        <img src="/images/adio-greseli.png" alt="Spune adio greșelilor" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Spune adio greșelilor</h3>
+        <p class="mt-2 text-gray-600">Comenzile au mereu codul unic al produselor, unitatea de măsură, data de livrare și confirmarea livrării. Reduceți greșelile cu 85%.</p>
+      </div>
+      <div>
+        <img src="/images/castiga-timp.png" alt="Câștigă timp" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Câștigă timp</h3>
+        <p class="mt-2 text-gray-600">Plasați rapid toate comenzile furnizorilor dvs. dintr-o singură aplicație. Plasați comenzi în doar trei atingeri. Câștigați peste 4 ore pe săptămână.</p>
+      </div>
+      <div>
+        <img src="/images/suport-rapid.png" alt="Suport rapid" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Suport rapid</h3>
+        <p class="mt-2 text-gray-600">Discutați cu echipa HORECA ORDERS în aplicație. Aveți asistență rapidă. Vă vom configura în mai puțin de 24 de ore.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="bg-brand text-white py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12">CUM FUNCȚIONEAZĂ</h2>
+      <div class="grid md:grid-cols-4 gap-6 text-center">
+        <div>
+          <span class="bg-accent text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mx-auto">1</span>
+          <h3 class="font-bold text-lg mt-4">Alegi produsele</h3>
+          <img src="/images/i-phone-x-mockup.png" alt="Selectare produse" class="h-64 mx-auto mt-4 object-contain" width="180" height="256" loading="lazy" />
+        </div>
+        <div>
+          <span class="bg-accent text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mx-auto">2</span>
+          <h3 class="font-bold text-lg mt-4">Finalizezi detaliile comenzii</h3>
+          <img src="/images/finalizeaza-datele-comenzii.png" alt="Finalizare comandă" class="h-64 mx-auto mt-4 object-contain" width="180" height="256" loading="lazy" />
+        </div>
+        <div>
+          <span class="bg-accent text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mx-auto">3</span>
+          <h3 class="font-bold text-lg mt-4">Trimiți comanda</h3>
+          <img src="/images/comanda-trimisa-img.png" alt="Trimitere comandă" class="h-64 mx-auto mt-4 object-contain" width="180" height="256" loading="lazy" />
+        </div>
+        <div>
+          <span class="bg-accent text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mx-auto">
+            <img src="/SVGs/notif-icon.svg" alt="" class="w-5 h-6" width="20" height="24" />
+          </span>
+          <h3 class="font-bold text-lg mt-4">Primești confirmarea</h3>
+          <img src="/images/notificare-img.png" alt="Notificare confirmare" class="h-64 mx-auto mt-4 object-contain" width="180" height="256" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features detail -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-brand text-center mb-12">Plasezi comenzile mult mai bine</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Toate comenzile într-un singur loc</h3>
+          <p class="text-gray-600">
+            Indiferent câți furnizori ai, toate comenzile sunt gestionate din aceeași aplicație.
+            Istoricul de comenzi, statusul livrării și comentariile — totul la un click distanță.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="/images/comenziInOrdine.png"
+            srcset="/images/comenziInOrdine.png 1x, /images/comenziInOrdine@2x.png 2x"
+            alt="Toate comenzile într-un singur loc"
+            class="h-72 object-contain"
+            width="240"
+            height="288"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Cu Horeca Orders primesc comenzile fără greșeli și de cele mai multe ori nu mai trebuie să sun clientul înapoi pentru confirmare."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Gabi Herdean — <a href="https://papilakitchen.ro/" class="text-brand hover:underline">Papila</a>
+          </footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Am reușit să trecem de la comenzi pe hârtie la digital în mai puțin de o săptămână."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Nadia Mihai — <a href="https://sushimaster.ro/" class="text-brand hover:underline">Sushi Master</a>
+          </footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Horeca Orders mi-a simplificat foarte mult comenzile de la furnizori."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Andrei Iulian Dumitru — <a href="https://foodkit.ro/" class="text-brand hover:underline">FoodKit</a>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free CTA -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-brand">E GRATIS</h2>
+        <p class="mt-4 text-gray-700">
+          Platforma HORECA ORDERS este gratuită pentru restaurante și furnizori,
+          având disponibile funcții opționale plătite.
+          Vorbește cu echipa noastră pentru a afla mai multe!
+        </p>
+        <a href="/preturi" class="inline-block mt-6 bg-accent text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition">
+          Vezi prețurile
+        </a>
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/i-phone-x-in-hand.png"
+          srcset="/images/i-phone-x-in-hand.png 1x, /images/i-phone-x-in-hand@2x.png 2x"
+          alt="Aplicația HORECA ORDERS în mână"
+          class="h-80 object-contain"
+          width="280"
+          height="320"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <CTAForm />
+
+  <Footer slot="footer" />
+</Base>

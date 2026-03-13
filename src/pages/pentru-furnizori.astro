@@ -1,0 +1,165 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTAForm from '../components/CTAForm.astro';
+---
+
+<Base
+  title="HORECA ORDERS pentru Furnizori — Primește comenzi mai eficient"
+  description="Gestionează comenzile, edita catalogul și promovează produse. HORECA ORDERS ajută furnizorii din industria ospitalității să reducă erorile și să crească vânzările."
+  canonicalPath="/pentru-furnizori"
+>
+  <Header slot="header" current="furnizori" />
+
+  <!-- Hero -->
+  <section class="bg-white py-16 md:py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold italic text-gray-900 leading-tight">
+        PRIMEȘTE COMENZILE<br />MAI EFICIENT
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+        Utilizați platforma HORECA ORDERS pentru a gestiona comenzile, edita catalogul sau promova produse — totul într-un singur loc.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://app.horecaorders.com/user/register"
+          class="bg-accent text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition"
+        >
+          Înregistrare
+        </a>
+        <a
+          href="https://app.horecaorders.com/users/log_in"
+          class="bg-brand text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-dark transition"
+        >
+          Autentificare
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Prop -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold mb-4">MAI MULT TIMP PENTRU CEEA CE CONTEAZĂ</h2>
+        <p class="text-lg leading-relaxed text-gray-700">
+          Permiteți echipei dvs. să economisească timp, să reducă erorile și să îmbunătățească relațiile cu clienții.
+          Comenzile vin structurate, cu toate detaliile, fără telefoane și confuzii.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/comunicare-cu-partenerii.png"
+          srcset="/images/comunicare-cu-partenerii.png 1x, /images/comunicare-cu-partenerii@2x.png 2x"
+          alt="Comunicare eficientă cu partenerii"
+          class="w-full rounded-lg"
+          width="600"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Benefits -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+      <div>
+        <img src="/images/integrare-erp.png" alt="Integrare ERP" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Integrare ERP</h3>
+        <p class="mt-2 text-gray-600">Conectați-vă cu sistemul ERP existent. Comenzile sunt sincronizate automat.</p>
+      </div>
+      <div>
+        <img src="/images/fara-comenzi-gresite.png" alt="Fără comenzi greșite" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Fără comenzi greșite</h3>
+        <p class="mt-2 text-gray-600">Eliminați erorile de transcriere. Comenzile digitale sunt mereu corecte și complete.</p>
+      </div>
+      <div>
+        <img src="/images/vindeti-mai-mult.png" alt="Vindeți mai mult" class="w-28 h-28 mx-auto" width="112" height="112" loading="lazy" />
+        <h3 class="font-bold text-xl mt-4">Vindeți mai mult</h3>
+        <p class="mt-2 text-gray-600">Promovați produse și oferte direct în aplicație. Clienții dvs. văd ce este nou și ce este la promoție.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-brand text-center mb-12">Tot ce aveți nevoie</h2>
+      <div class="space-y-12">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-xl font-bold mb-3">Gestionarea comenzilor</h3>
+            <p class="text-gray-600">Primiți, confirmați și gestionați toate comenzile într-un singur tablou de bord. Filtrați după client, status sau dată de livrare.</p>
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="/images/comenzi.png"
+              srcset="/images/comenzi.png 1x, /images/comenzi@2x.png 2x"
+              alt="Dashboard comenzi furnizor"
+              class="rounded-lg shadow-lg max-w-sm w-full"
+              width="400"
+              height="280"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1 flex justify-center">
+            <img
+              src="/images/ho-catalog.png"
+              srcset="/images/ho-catalog.png 1x, /images/ho-catalog@2x.png 2x"
+              alt="Catalog produse furnizor"
+              class="rounded-lg shadow-lg max-w-sm w-full"
+              width="400"
+              height="280"
+              loading="lazy"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-xl font-bold mb-3">Catalog de produse</h3>
+            <p class="text-gray-600">Încărcați produsele, setați prețuri, unitate de măsură și disponibilitatea. Clienții dvs. comandă doar ce este în stoc.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-xl font-bold mb-3">Promoții și oferte</h3>
+            <p class="text-gray-600">Promovați produse direct în aplicație. Clienții dvs. văd ofertele la plasarea comenzii — cel mai relevant moment.</p>
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="/images/ho-oferte.png"
+              srcset="/images/ho-oferte.png 1x, /images/ho-oferte@2x.png 2x"
+              alt="Promoții și oferte furnizor"
+              class="rounded-lg shadow-lg max-w-sm w-full"
+              width="400"
+              height="280"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA bottom -->
+  <section class="py-16 px-4 text-center bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-extrabold italic">FUNCȚIONEAZĂ<br />ÎN SCURT TIMP</h2>
+      <p class="mt-4 text-gray-600 text-lg">Echipa noastră vă configurează contul în mai puțin de 24 de ore.</p>
+      <a
+        href="https://app.horecaorders.com/user/register"
+        class="inline-block mt-8 bg-accent text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition"
+      >
+        Înregistrare gratuită
+      </a>
+    </div>
+  </section>
+
+  <CTAForm />
+
+  <Footer slot="footer" />
+</Base>

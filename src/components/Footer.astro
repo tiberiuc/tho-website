@@ -1,0 +1,73 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-brand text-white">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Info -->
+      <div>
+        <h3 class="font-bold text-sm mb-4 uppercase">Info</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:underline">Acasă</a></li>
+          <li><a href="/pentru-restaurante" class="hover:underline">Restaurante</a></li>
+          <li><a href="/pentru-furnizori" class="hover:underline">Furnizori</a></li>
+          <li><a href="/cum-functioneaza" class="hover:underline">Cum Funcționează</a></li>
+          <li><a href="/blog" class="hover:underline">Blog</a></li>
+          <li><a href="/studii-de-caz" class="hover:underline">Studii de Caz</a></li>
+        </ul>
+      </div>
+
+      <!-- HORECA ORDERS -->
+      <div>
+        <h3 class="font-bold text-sm mb-4 uppercase">Horeca Orders</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/preturi" class="hover:underline">Prețuri</a></li>
+          <li><a href="mailto:contact@horecaorders.com" class="hover:underline">Contactează-ne</a></li>
+        </ul>
+      </div>
+
+      <!-- App downloads -->
+      <div>
+        <h3 class="font-bold text-sm mb-4">Pune-ți comenzile în ordine</h3>
+        <div class="flex gap-2">
+          <a href="https://apps.apple.com/ro/app/horeca-orders/id1612229474" aria-label="Descarcă din App Store">
+            <img src="/SVGs/appstore-ro.svg" alt="App Store" class="h-10" width="120" height="40" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.horecaorders.app" aria-label="Descarcă din Google Play">
+            <img src="/SVGs/google-play-ro.svg" alt="Google Play" class="h-10" width="135" height="40" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Logo + Social -->
+      <div class="flex flex-col items-start md:items-end gap-4">
+        <a href="/">
+          <img src="/SVGs/horeca-orders-logo.svg" alt="HORECA ORDERS" class="h-14" width="100" height="56" />
+        </a>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/HORECAORDERS" aria-label="Facebook" class="hover:opacity-75">
+            <img src="/SVGs/facebook.svg" alt="Facebook" class="w-6 h-6" width="24" height="24" />
+          </a>
+          <a href="https://www.instagram.com/horeca.orders/" aria-label="Instagram" class="hover:opacity-75">
+            <img src="/SVGs/instagram.svg" alt="Instagram" class="w-6 h-6" width="24" height="24" />
+          </a>
+          <a href="https://www.linkedin.com/company/82645202" aria-label="LinkedIn" class="hover:opacity-75">
+            <img src="/SVGs/linkedin.svg" alt="LinkedIn" class="w-6 h-6" width="24" height="24" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCZEmGsfqjxY-i1MDt4SAC2g" aria-label="YouTube" class="hover:opacity-75">
+            <img src="/SVGs/youtube.svg" alt="YouTube" class="w-6 h-6" width="24" height="24" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="border-t border-white/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs opacity-60">
+      <p>&copy; {year} HORECA ORDERS SRL</p>
+      <div class="flex gap-4">
+        <a href="mailto:contact@horecaorders.com" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

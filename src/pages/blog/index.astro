@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('ro-RO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<Base title="Blog | HORECA ORDERS" description="Articole și sfaturi despre digitalizarea comenzilor în industria HoReCa. Restaurante, furnizori, eficiență." canonicalPath="/blog">
+  <Header slot="header" current="blog" />
+
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Blog</h1>
+      <p class="text-lg opacity-80">Sfaturi, noutăți și bune practici pentru industria HoReCa</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      {posts.length === 0 && (
+        <p class="text-center text-gray-500 text-lg">Niciun articol încă. Reveniti curând!</p>
+      )}
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} class="group block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden">
+            {post.data.ogImage && (
+              <img src={post.data.ogImage} alt={post.data.title} class="w-full h-48 object-cover" />
+            )}
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+                <span>·</span>
+                <span>{readingTime(post.body ?? '')} min citire</span>
+              </div>
+              <h2 class="text-lg font-bold text-gray-900 group-hover:text-brand transition mb-2">
+                {post.data.title}
+              </h2>
+              <p class="text-sm text-gray-600 line-clamp-3">{post.data.description}</p>
+              {post.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-4">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="text-xs bg-grey-bg text-gray-600 px-2 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Base>

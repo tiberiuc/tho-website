@@ -1,0 +1,59 @@
+---
+interface Props {
+  heading?: string;
+  id?: string;
+}
+const { heading = 'Cere demo gratuită', id = 'demo' } = Astro.props;
+---
+
+<section id={id} class="bg-brand py-16 px-4">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">{heading}</h2>
+    <p class="text-white/80 mb-8">
+      Completează formularul și echipa noastră te va contacta în mai puțin de 24 de ore.
+    </p>
+    <form
+      action="https://formsubmit.co/contact@horecaorders.com"
+      method="POST"
+      class="flex flex-col gap-4"
+    >
+      <input type="hidden" name="_subject" value="Demo request de pe horecaorders.com" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://horecaorders.com/?demo=multumim" />
+      <input
+        type="text"
+        name="name"
+        placeholder="Numele tău"
+        required
+        class="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent"
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Număr de telefon"
+        required
+        class="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent"
+      />
+      <select
+        name="type"
+        class="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent"
+      >
+        <option value="restaurant">Sunt Restaurant / Hotel / Catering</option>
+        <option value="furnizor">Sunt Furnizor</option>
+      </select>
+      <button
+        type="submit"
+        class="bg-accent text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition mt-2"
+      >
+        Cere demo gratuită
+      </button>
+    </form>
+  </div>
+</section>

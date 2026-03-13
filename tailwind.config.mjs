@@ -1,0 +1,22 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: '#485696',
+        'brand-dark': '#1C357C',
+        accent: '#ffdc0a',
+        'accent-light': '#fff2a4',
+        'grey-bg': '#f5f5f5',
+      },
+      fontFamily: {
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  plugins: [typography],
+};
