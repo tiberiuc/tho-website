@@ -1,0 +1,82 @@
+---
+interface Props {
+  current?: string;
+}
+const { current = '' } = Astro.props;
+---
+
+<header class="bg-brand sticky top-0 z-50 shadow-md">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="/" class="flex-shrink-0">
+      <img src="/SVGs/horeca-orders-logo.svg" alt="HORECA ORDERS" class="h-10 md:h-12" width="140" height="48" />
+    </a>
+
+    <!-- Mobile toggle -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden flex flex-col gap-1.5 p-2"
+      aria-label="Deschide meniul"
+      aria-expanded="false"
+    >
+      <span class="block w-6 h-0.5 bg-white transition-transform" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-white transition-opacity" id="bar2"></span>
+      <span class="block w-6 h-0.5 bg-white transition-transform" id="bar3"></span>
+    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="/pentru-restaurante" class:list={["text-sm font-semibold uppercase tracking-wide text-white hover:underline underline-offset-8 decoration-2 transition", { "underline": current === 'restaurante' }]}>
+        Restaurante
+      </a>
+      <a href="/pentru-furnizori" class:list={["text-sm font-semibold uppercase tracking-wide text-white hover:underline underline-offset-8 decoration-2 transition", { "underline": current === 'furnizori' }]}>
+        Furnizori
+      </a>
+      <a href="/preturi" class:list={["text-sm font-semibold uppercase tracking-wide text-white hover:underline underline-offset-8 decoration-2 transition", { "underline": current === 'preturi' }]}>
+        Prețuri
+      </a>
+      <a href="/cum-functioneaza" class:list={["text-sm font-semibold uppercase tracking-wide text-white hover:underline underline-offset-8 decoration-2 transition", { "underline": current === 'cum-functioneaza' }]}>
+        Cum Funcționează
+      </a>
+      <a
+        href="https://app.horecaorders.com/login"
+        class="bg-accent text-gray-900 font-bold text-sm px-5 py-2 rounded-full hover:bg-yellow-400 transition"
+      >
+        Log in
+      </a>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark">
+    <div class="flex flex-col items-center gap-4 py-6">
+      <a href="/pentru-restaurante" class="text-white text-lg font-semibold uppercase">Restaurante</a>
+      <a href="/pentru-furnizori" class="text-white text-lg font-semibold uppercase">Furnizori</a>
+      <a href="/preturi" class="text-white text-lg font-semibold uppercase">Prețuri</a>
+      <a href="/cum-functioneaza" class="text-white text-lg font-semibold uppercase">Cum Funcționează</a>
+      <a
+        href="https://app.horecaorders.com/login"
+        class="bg-accent text-gray-900 font-bold px-6 py-2 rounded-full mt-2"
+      >
+        Log in
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(open));
+    bar1?.classList.toggle('translate-y-[4px]', open);
+    bar1?.classList.toggle('rotate-45', open);
+    bar2?.classList.toggle('opacity-0', open);
+    bar3?.classList.toggle('-translate-y-[4px]', open);
+    bar3?.classList.toggle('-rotate-45', open);
+  });
+</script>

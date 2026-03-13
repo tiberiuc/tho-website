@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+}
+
+const { title, description, canonicalPath = '' } = Astro.props;
+const canonicalURL = new URL(canonicalPath, Astro.site);
+---
+
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+
+    <!-- Schema.org SoftwareApplication -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HORECA ORDERS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "url": "https://horecaorders.com",
+      "description": "Platformă B2B de comenzi pentru industria ospitalității din România. Restaurante și furnizori comandă mai rapid, mai simplu, fără erori.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Plan Starter gratuit disponibil"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "120"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HORECA ORDERS SRL",
+        "url": "https://horecaorders.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dulgerului 6D",
+          "addressLocality": "Brașov",
+          "postalCode": "500481",
+          "addressCountry": "RO"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@horecaorders.com",
+          "telephone": "+40744167687",
+          "contactType": "customer support"
+        }
+      }
+    })} />
+  </head>
+  <body class="antialiased text-gray-900 font-sans">
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

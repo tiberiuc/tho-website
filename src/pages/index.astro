@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTAForm from '../components/CTAForm.astro';
+---
+
+<Base
+  title="HORECA ORDERS — Platformă de comenzi pentru industria ospitalității"
+  description="Platformă B2B de comenzi pentru restaurante, hoteluri și catering din România. Plasează comenzi rapid către toți furnizorii tăi dintr-o singură aplicație. Gratuit."
+  canonicalPath="/"
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="bg-brand text-white py-16 md:py-24 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold italic leading-tight">
+        PLATFORMA DE COMENZI<br />PENTRU INDUSTRIA OSPITALITĂȚII
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+        Restaurante și furnizori comandă mai rapid, mai simplu, fără erori. Peste 2.300 de restaurante și 38.000 de comenzi pe lună.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/pentru-restaurante" class="bg-accent text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition">
+          Pentru Restaurante
+        </a>
+        <a href="/pentru-furnizori" class="bg-white text-brand font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition">
+          Pentru Furnizori
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Props -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl md:text-4xl font-extrabold mb-4">ALEGE SĂ MUNCEȘTI MAI EFICIENT</h2>
+          <p class="text-lg leading-relaxed">
+            HORECA ORDERS face plasarea și primirea comenzilor mai eficientă.
+            Aplicația noastră intuitivă și instrumentele web simplifică operațiunile pentru
+            bucătari, proprietari și reprezentanții de vânzări.
+          </p>
+          <p class="font-bold mt-4 text-lg">Salvează timp. Salvează bani. Salvează mâncare.</p>
+        </div>
+        <div>
+          <img
+            src="/images/manCooking.png"
+            srcset="/images/manCooking.png 1x, /images/manCooking@2x.png 2x"
+            alt="Bucătar profesionist folosind HORECA ORDERS"
+            class="w-full rounded-lg"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="grid md:grid-cols-3 gap-10 mt-16 text-center">
+        <div>
+          <img src="/images/Gata-cu-hartia.png" alt="Gata cu hârtia" class="w-32 h-32 mx-auto" width="128" height="128" loading="lazy" />
+          <h3 class="font-bold text-xl mt-4">Gata cu hârtia</h3>
+          <p class="mt-2 text-gray-600">Totul este în aplicație, gata cu teancurile de hârtie.</p>
+        </div>
+        <div>
+          <img src="/images/castiga-timp.png" alt="Câștigă timp" class="w-32 h-32 mx-auto" width="128" height="128" loading="lazy" />
+          <h3 class="font-bold text-xl mt-4">Câștigă timp</h3>
+          <p class="mt-2 text-gray-600">Comenzile pe mobil sunt mai rapide. Utilizatorii noștri câștigă peste 4 ore pe săptămână.</p>
+        </div>
+        <div>
+          <img src="/images/salveaza-mai-mult.png" alt="Risipește mai puțin" class="w-32 h-32 mx-auto" width="128" height="128" loading="lazy" />
+          <h3 class="font-bold text-xl mt-4">Risipește mai puțin, salvează mai mult</h3>
+          <p class="mt-2 text-gray-600">Comenzi mai precise înseamnă mai puține greșeli, mai puțină risipă și costuri mai mici.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Stats -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-brand mb-12">Rezultate reale, clienți reali</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <p class="text-4xl md:text-5xl font-extrabold text-brand">2.300+</p>
+          <p class="mt-2 text-gray-600 font-semibold">Restaurante</p>
+        </div>
+        <div>
+          <p class="text-4xl md:text-5xl font-extrabold text-brand">38.000+</p>
+          <p class="mt-2 text-gray-600 font-semibold">Comenzi / lună</p>
+        </div>
+        <div>
+          <p class="text-4xl md:text-5xl font-extrabold text-brand">4h+</p>
+          <p class="mt-2 text-gray-600 font-semibold">Economisit / săptămână</p>
+        </div>
+        <div>
+          <p class="text-4xl md:text-5xl font-extrabold text-brand">85%</p>
+          <p class="mt-2 text-gray-600 font-semibold">Mai puține greșeli</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Restaurants + Suppliers -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-accent-light rounded-2xl p-8 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-extrabold mb-3">Pentru Restaurante</h3>
+          <p class="text-gray-700">
+            Scapă de formularele de comandă și de așteptatul nesfârșit la telefon noaptea târziu.
+            Aplicația noastră este cel mai eficient mod de a comanda de la toți furnizorii.
+            Plasezi comenzile mai rapid, ajungi acasă mai devreme.
+          </p>
+        </div>
+        <a href="/pentru-restaurante" class="inline-block mt-6 bg-accent text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition text-center">
+          Află mai multe
+        </a>
+      </div>
+      <div class="bg-brand rounded-2xl p-8 flex flex-col justify-between text-white">
+        <div>
+          <h3 class="text-2xl font-extrabold mb-3">Pentru Furnizori</h3>
+          <p class="text-white/80">
+            Indiferent dacă aveți o afacere de familie sau sunteți un distribuitor național,
+            platforma noastră personalizată va schimba modul în care faceți afaceri.
+          </p>
+        </div>
+        <a href="/pentru-furnizori" class="inline-block mt-6 bg-accent text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition text-center">
+          Află mai multe
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-grey-bg py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-10">Ce spun clienții noștri</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Cu Horeca Orders primesc comenzile fără greșeli și de cele mai multe ori nu mai trebuie să sun clientul înapoi pentru confirmare."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Gabi Herdean — <a href="https://papilakitchen.ro/" class="text-brand hover:underline">Papila</a>, Brașov
+          </footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Am reușit să trecem de la comenzi pe hârtie la digital în mai puțin de o săptămână. Echipa de suport este extraordinară."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Nadia Mihai (Manager) — <a href="https://sushimaster.ro/" class="text-brand hover:underline">Sushi Master</a>, Brașov
+          </footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-gray-700 italic">"Horeca Orders mi-a simplificat foarte mult comenzile de la furnizori. Nu mai pierd timp cu apeluri telefonice, totul e clar și rapid."</p>
+          <footer class="mt-4 font-bold text-sm">
+            Andrei Iulian Dumitru — <a href="https://foodkit.ro/" class="text-brand hover:underline">FoodKit</a>, Brașov
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Form -->
+  <CTAForm />
+
+  <Footer slot="footer" />
+</Base>
