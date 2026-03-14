@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://horecaorders.com/sitemap-index.xml

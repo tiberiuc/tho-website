@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>left arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HO-Website---Restaurante" transform="translate(-279.000000, -3673.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Reviews" transform="translate(0.000000, 3350.000000)">
+                <path d="M299,329.333985 C299,329.179828 298.90676,328.974979 298.812128,328.87546 L293.47883,323.208525 C293.229802,322.951128 292.826379,322.921366 292.536196,323.182483 C292.276703,323.416165 292.270191,323.871661 292.510154,324.125355 L296.791293,328.667153 L279.666618,328.667153 C279.298308,328.667153 279,328.965705 279,329.33377 C279,329.70208 279.298552,330.000388 279.666618,330.000388 L296.791293,330.000388 L292.510154,334.542186 C292.270197,334.795863 292.287168,335.240233 292.536196,335.48482 C292.798944,335.743145 293.233766,335.720127 293.47883,335.458778 L298.812128,329.792081 C298.968845,329.638388 298.997446,329.490273 299,329.333788 L299,329.333985 Z" id="left-arrow" transform="translate(289.000000, 329.333805) rotate(-180.000000) translate(-289.000000, -329.333805) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
