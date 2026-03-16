@@ -13,16 +13,11 @@ const { heading = 'Cere demo gratuită', id = 'demo' } = Astro.props;
       Completează formularul și echipa noastră te va contacta în mai puțin de 24 de ore.
     </p>
     <form
-      name="demo-request"
       method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
       action="https://formsubmit.co/contact@horecaorders.com"
       class="flex flex-col gap-4"
       id="cta-form"
     >
-      <input type="hidden" name="form-name" value="demo-request" />
-      <input type="hidden" name="bot-field" />
       <input type="hidden" name="_subject" value="Demo request de pe horecaorders.com" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://horecaorders.com/?demo=multumim" />
