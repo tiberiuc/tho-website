@@ -23,6 +23,8 @@ jobs:
           node-version: '20'
       - run: npm install --legacy-peer-deps
       - run: npm run build
+      - name: Rebase URLs for GitHub Pages subpath
+        run: node scripts/rebase-urls.mjs /tho-website
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
