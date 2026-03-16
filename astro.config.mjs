@@ -4,8 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://tiberiuc.github.io',
-  base: '/tho-website',
+  site: 'https://horecaorders.com',
   integrations: [
     tailwind(),
     mdx(),
